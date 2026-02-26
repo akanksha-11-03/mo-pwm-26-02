@@ -1,8 +1,8 @@
 {
   "mappings": [
-    "/content/aem-boilerplate/:/"
+    "/content/mo-pwm/:/"
   ],
   "includes": [
-    "/content/aem-boilerplate/"
+    "/content/mo-pwm/"
   ]
 }
