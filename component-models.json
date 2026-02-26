@@ -134,16 +134,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "header-blue",
-            "value": "blue-header"
-          },
-          {
-            "name": "header-orange",
-            "value": "orange-header"
-          },
-          {
-            "name": "header-red",
-            "value": "red-header"
+            "name": "Highlight",
+            "value": "highlight"
           }
         ]
       }
