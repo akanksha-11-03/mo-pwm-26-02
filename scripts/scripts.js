@@ -83,6 +83,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  main.parentElement.classList.add('colour')
 }
 
 /**
