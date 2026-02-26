@@ -1,8 +1,8 @@
 {
   "mappings": [
-    "/content/mo-pwm/:/"
+    "/content/header-mo-pwm/:/"
   ],
   "includes": [
-    "/content/mo-pwm/"
+    "/content/header-mo-pwm/"
   ]
 }
