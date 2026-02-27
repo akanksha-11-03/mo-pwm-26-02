@@ -1,57 +1,58 @@
-import { createOptimizedPicture } from '../../scripts/aem.js';
+import { createOptimizedPicture, loadCSS } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
 export default function decorateOurOfferingCards(block) {
-  const cards = [...block.children];
-  const container = document.createElement('div');
-  container.classList.add('ourofferingcards-wrapper');
+  loadCSS(`${window.hlx.codeBasePath}/blocks/cards/ourofferingcards.css`);
 
-  cards.forEach((row) => {
+  const rows = [...block.children];
+  const wrapper = document.createElement('div');
+  wrapper.classList.add('ourofferingcards-wrapper');
+
+  rows.forEach((row) => {
     const card = document.createElement('div');
     card.classList.add('ourofferingcard');
     moveInstrumentation(row, card);
 
-    const children = [...row.children];
-    children.forEach((div) => {
-      if (div.children.length === 1 && div.querySelector('picture')) {
-        div.className = 'ourofferingcard-image';
+    const cols = [...row.children];
+
+    // Column 1 — Image
+    const imageDiv = cols.find((col) => col.querySelector('picture'));
+    if (imageDiv) {
+      imageDiv.className = 'ourofferingcard-image';
+      card.append(imageDiv);
+    }
+
+    // Columns 2-4 — Content (title, description, link)
+    const contentDiv = document.createElement('div');
+    contentDiv.className = 'ourofferingcard-content';
+
+    const textDiv = document.createElement('div');
+    textDiv.className = 'ourofferingcard-text';
+
+    cols.forEach((col) => {
+      if (col === imageDiv) return;
+
+      // Check if this column has a link (the "Know more" column)
+      const anchor = col.querySelector('a');
+      if (anchor) {
+        col.classList.add('ourofferingcard-link');
+        anchor.classList.add('ourofferingcard-know-more');
+        contentDiv.append(col);
       } else {
-        div.className = 'ourofferingcard-content';
-
-        // Wrap title and description in a container
-        const contentContainer = document.createElement('div');
-        contentContainer.classList.add('ourofferingcard-text');
-
-        // Find link and separate it from the rest
-        const allChildren = [...div.children];
-        const linkParagraph = allChildren.find((el) => el.querySelector('a'));
-
-        allChildren.forEach((el) => {
-          if (el !== linkParagraph) {
-            contentContainer.append(el);
-          }
-        });
-
-        div.prepend(contentContainer);
-
-        // Style the link
-        if (linkParagraph) {
-          linkParagraph.classList.add('ourofferingcard-link');
-          const anchor = linkParagraph.querySelector('a');
-          if (anchor) {
-            anchor.classList.add('ourofferingcard-know-more');
-          }
-          div.append(linkParagraph);
+        // Title or description — move children into text container
+        while (col.firstChild) {
+          textDiv.append(col.firstChild);
         }
       }
-      card.append(div);
     });
 
-    container.append(card);
+    contentDiv.prepend(textDiv);
+    card.append(contentDiv);
+    wrapper.append(card);
   });
 
   // Optimize images
-  container.querySelectorAll('picture > img').forEach((img) => {
+  wrapper.querySelectorAll('picture > img').forEach((img) => {
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [
       { width: '750' },
     ]);
@@ -59,5 +60,5 @@ export default function decorateOurOfferingCards(block) {
     img.closest('picture').replaceWith(optimizedPic);
   });
 
-  block.replaceChildren(container);
+  block.replaceChildren(wrapper);
 }
