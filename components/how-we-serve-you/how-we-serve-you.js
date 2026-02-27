@@ -50,5 +50,5 @@ export function linkToBtn(document){ {
         ul.replaceWith(div);
     });
     
-  loadCSS(`${window.hlx.codeBasePath}/components/How-we-serve-you/How-we-serve-you.css`);
+  loadCSS(`${window.hlx.codeBasePath}/components/how-we-serve-you/how-we-serve-you.css`);
 }}
