@@ -59,14 +59,7 @@
           "component": "text",
           "name": "video_imageTitle",
           "label": "Video Image Title"
-        },
-        {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "RTE Text",
-        "valueType": "string"
-      }
+        }
       ]
     }
   ],
