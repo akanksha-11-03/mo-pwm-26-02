@@ -15,7 +15,14 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "feature-card"
+    ]
+  },
+  {
+    "id": "feature-card",
+    "components": [
+      "feature-card-item"
     ]
   },
   {

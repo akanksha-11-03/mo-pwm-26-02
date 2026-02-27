@@ -1,0 +1,124 @@
+/* Feature Card Block */
+.feature-card ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+.feature-card li.feature-card-item {
+  background: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  width: 400px;
+  max-width: 100%;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.feature-card li.feature-card-item:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 14%);
+}
+
+/* Image area */
+.feature-card .feature-card-image {
+  position: relative;
+  width: 100%;
+  height: 317px;
+  overflow: hidden;
+}
+
+.feature-card .feature-card-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.feature-card .feature-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Body / bottom bar */
+.feature-card .feature-card-body {
+  background-color: #f0e6dc;
+  padding: 16px 20px;
+  min-height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.feature-card .feature-card-body > p:first-child,
+.feature-card .feature-card-body > h2,
+.feature-card .feature-card-body > h3,
+.feature-card .feature-card-body > h4 {
+  font-family: 'Inter', var(--body-font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4em;
+  color: #725e38;
+  margin: 0;
+}
+
+/* Description */
+.feature-card .feature-card-body > p:nth-child(2) {
+  font-family: 'Inter', var(--body-font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14em;
+  color: #2e2a94;
+  margin: 4px 0 0;
+}
+
+/* Text wrapper inside body */
+.feature-card .feature-card-body > div,
+.feature-card .feature-card-body > :not(.feature-card-icon) {
+  flex: 1;
+}
+
+/* Plus icon */
+.feature-card .feature-card-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.feature-card .feature-card-icon:hover {
+  transform: scale(1.2);
+}
+
+.feature-card .feature-card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .feature-card ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card li.feature-card-item {
+    width: 100%;
+  }
+
+  .feature-card .feature-card-image {
+    height: 250px;
+  }
+}
