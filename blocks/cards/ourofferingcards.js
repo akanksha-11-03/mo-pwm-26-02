@@ -4,6 +4,16 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 export default function decorateOurOfferingCards(block) {
   loadCSS(`${window.hlx.codeBasePath}/blocks/cards/ourofferingcards.css`);
 
+  // Style the section heading area (default-content-wrapper above the block)
+  const section = block.closest('.section');
+  if (section) {
+    section.classList.add('ourofferingcards-section');
+    const dcw = section.querySelector('.default-content-wrapper');
+    if (dcw) {
+      dcw.classList.add('ourofferingcards-heading');
+    }
+  }
+
   const rows = [...block.children];
   const wrapper = document.createElement('div');
   wrapper.classList.add('ourofferingcards-wrapper');
