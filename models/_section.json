@@ -35,8 +35,17 @@
               "value": "highlight"
             },
             {
-              "name": "Hero Banner",
-              "value": "hero-banner"
+              "name": "Hero Banner Variation",
+              "children": [
+                {
+                  "name": "Hero Image banner",
+                  "value": "hero-image-banner"
+                },
+                {
+                  "name": "Hero Video banner",
+                  "value": "hero-video-banner"
+                }
+              ]
             }
           ]
         }
