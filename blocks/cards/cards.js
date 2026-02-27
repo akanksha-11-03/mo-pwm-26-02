@@ -1,11 +1,17 @@
 import { createOptimizedPicture } from "../../scripts/aem.js";
 import { moveInstrumentation } from "../../scripts/scripts.js";
 import decoratecardwithimgs from "./cardswithimg.js";
+import decorateOurOfferingCards from "./ourofferingcards.js";
 
 export default function decorate(block) {
   // if (block.closest(".cards-container")) {
   //   decoratecardwithimgs(block);
   // }
+
+  if (block.classList.contains("ourofferingcards")) {
+    decorateOurOfferingCards(block);
+    return;
+  }
   /* change to ul, li */
   const ul = document.createElement("ul");
   [...block.children].forEach((row) => {

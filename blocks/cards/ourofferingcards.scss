@@ -1,0 +1,130 @@
+/* Our Offering Cards — matches Figma node 4749-14915 */
+
+.cards.ourofferingcards {
+  /* Section-level spacing */
+  .ourofferingcards-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 104px;
+    width: 100%;
+  }
+
+  /* ---- Single card ---- */
+  .ourofferingcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    background-color: #f8f3ef;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+    min-height: 342px;
+  }
+
+  /* Image half */
+  .ourofferingcard-image {
+    flex: 0 0 49%;
+    max-width: 608px;
+    line-height: 0;
+
+    picture,
+    img {
+      width: 100%;
+      height: 342px;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+  }
+
+  /* Content half */
+  .ourofferingcard-content {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 584px;
+    padding: 24px 32px 24px 0;
+  }
+
+  .ourofferingcard-text {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    /* Title — Desktop/Sub Header/Large */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.333;
+      color: #866e44;
+      margin: 0;
+    }
+
+    /* Description — Desktop/Paragraph/Medium-regular */
+    p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #2e2a94;
+      margin: 0;
+    }
+  }
+
+  /* "Know more" link */
+  .ourofferingcard-link {
+    margin: 0;
+
+    .ourofferingcard-know-more {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #2e2a94;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  /* ---- Responsive (tablet + mobile) ---- */
+  @media (max-width: 900px) {
+    .ourofferingcards-wrapper {
+      gap: 48px;
+    }
+
+    .ourofferingcard {
+      flex-direction: column;
+      gap: 0;
+      min-height: auto;
+    }
+
+    .ourofferingcard-image {
+      flex: none;
+      max-width: 100%;
+      width: 100%;
+
+      picture,
+      img {
+        height: 220px;
+        border-radius: 4px 4px 0 0;
+      }
+    }
+
+    .ourofferingcard-content {
+      max-width: 100%;
+      padding: 24px;
+    }
+  }
+}

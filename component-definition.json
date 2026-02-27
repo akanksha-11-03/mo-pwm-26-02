@@ -158,6 +158,37 @@
           }
         },
         {
+          "title": "Our Offering Cards",
+          "id": "ourofferingcards",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cards",
+                  "classes": ["ourofferingcards"],
+                  "filter": "ourofferingcards"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Our Offering Card",
+          "id": "ourofferingcard",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Our Offering Card",
+                  "model": "ourofferingcard"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Feature Card",
           "id": "feature-card",
           "plugins": {
