@@ -17,7 +17,15 @@ export default function decorate(block) {
       } else {
         div.className = 'feature-card-body';
 
-        // Add plus icon button
+        // Wrap all text content (title + description) in a text-wrapper div
+        const textWrapper = document.createElement('div');
+        textWrapper.className = 'feature-card-text';
+        while (div.firstChild) {
+          textWrapper.appendChild(div.firstChild);
+        }
+        div.appendChild(textWrapper);
+
+        // Add single plus icon on the right
         const plusIcon = document.createElement('span');
         plusIcon.className = 'feature-card-icon';
         plusIcon.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

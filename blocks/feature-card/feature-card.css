@@ -14,6 +14,7 @@
   border-radius: 4px;
   overflow: hidden;
   width: 400px;
+  height: 427px;
   max-width: 100%;
   box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
   display: flex;
@@ -25,11 +26,11 @@
   box-shadow: 0 4px 16px rgb(0 0 0 / 14%);
 }
 
-/* Image area */
+/* Image area — fills remaining space above the 110px body */
 .feature-card .feature-card-image {
   position: relative;
   width: 100%;
-  height: 317px;
+  flex: 1;
   overflow: hidden;
 }
 
@@ -45,48 +46,56 @@
   object-fit: cover;
 }
 
-/* Body / bottom bar */
+/* Body / bottom bar — row layout: text on left, icon on right */
 .feature-card .feature-card-body {
   background-color: #f0e6dc;
   padding: 16px 20px;
-  min-height: 110px;
+  height: 110px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
   box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Text wrapper — column layout for title + description */
+.feature-card .feature-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  min-width: 0;
+  max-width: 275px;
 }
 
 /* Title */
-.feature-card .feature-card-body > p:first-child,
-.feature-card .feature-card-body > h2,
-.feature-card .feature-card-body > h3,
-.feature-card .feature-card-body > h4 {
+.feature-card .feature-card-text > p:first-child,
+.feature-card .feature-card-text > h1,
+.feature-card .feature-card-text > h2,
+.feature-card .feature-card-text > h3,
+.feature-card .feature-card-text > h4 {
   font-family: 'Inter', var(--body-font-family);
   font-weight: 500;
   font-size: 20px;
-  line-height: 1.4em;
+  line-height: 1.4;
   color: #725e38;
   margin: 0;
 }
 
 /* Description */
-.feature-card .feature-card-body > p:nth-child(2) {
+.feature-card .feature-card-text > p:nth-child(2),
+.feature-card .feature-card-text > p:last-child:not(:first-child) {
   font-family: 'Inter', var(--body-font-family);
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.14em;
+  line-height: 1.14;
   color: #2e2a94;
-  margin: 4px 0 0;
+  margin: 0;
 }
 
-/* Text wrapper inside body */
-.feature-card .feature-card-body > div,
-.feature-card .feature-card-body > :not(.feature-card-icon) {
-  flex: 1;
-}
-
-/* Plus icon */
+/* Plus icon — fixed 24px on the right */
 .feature-card .feature-card-icon {
   flex-shrink: 0;
   display: flex;
@@ -116,9 +125,11 @@
 
   .feature-card li.feature-card-item {
     width: 100%;
+    height: auto;
   }
 
   .feature-card .feature-card-image {
     height: 250px;
+    flex: none;
   }
 }
