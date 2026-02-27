@@ -33,6 +33,19 @@
             {
               "name": "Highlight",
               "value": "highlight"
+            },
+            {
+              "name": "Hero Banner Variation",
+              "children": [
+                {
+                  "name": "Hero Image banner",
+                  "value": "hero-image-banner"
+                },
+                {
+                  "name": "Hero Video banner",
+                  "value": "hero-video-banner"
+                }
+              ]
             }
           ]
         }
