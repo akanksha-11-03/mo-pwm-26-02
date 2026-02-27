@@ -11,6 +11,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import {linkToBtn} from '../components/how-we-serve-you/how-we-serve-you.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -144,6 +145,7 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  linkToBtn(document);
 }
 
 loadPage();

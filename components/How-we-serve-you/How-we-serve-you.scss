@@ -1,0 +1,14 @@
+.how-we-serve-you {
+    .columns-wrapper {
+        .divwithlinks {
+            display: flex;
+            flex-direction: column;
+
+            a{
+            display: flex;
+            justify-content: space-between;
+        }
+        }
+        
+    }
+}
