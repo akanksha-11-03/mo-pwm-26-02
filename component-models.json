@@ -180,6 +180,51 @@
     ]
   },
   {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Hero Banner Variation",
+            "children": [
+              {
+                "name": "Hero Image banner",
+                "value": "hero-image-banner"
+              },
+              {
+                "name": "Hero Video banner",
+                "value": "hero-video-banner"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "aem-content",
+        "name": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "component": "reference",
+        "name": "video_image",
+        "label": "Video Image"
+      },
+      {
+        "component": "text",
+        "name": "video_imageAlt",
+        "label": "Video Image Alt"
+      },
+      {
+        "component": "text",
+        "name": "video_imageTitle",
+        "label": "Video Image Title"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
