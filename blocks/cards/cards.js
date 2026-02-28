@@ -1,6 +1,6 @@
 import { createOptimizedPicture } from "../../scripts/aem.js";
 import { moveInstrumentation } from "../../scripts/scripts.js";
-import decoratecardwithimgs from "./cardswithimg.js";
+// import decoratecardwithimgs from "./cardswithimg.js";
 import decorateOurOfferingCards from "./ourofferingcards.js";
 
 export default function decorate(block) {
