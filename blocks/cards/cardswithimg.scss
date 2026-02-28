@@ -1,5 +1,55 @@
 /* Cards with Image — Swiper Carousel + Accordion */
+/* Figma node 4737-6581: image fills card, text overlays at top with gradient */
 
+// ===== Section Heading ("Who we serve" + main heading) =====
+.cardswithimg-section {
+  .cardswithimg-heading {
+    margin-bottom: 40px;
+
+    // Label — "Who we serve"
+    // Inter 500 16px/1.5 #866E44
+    > p:first-child {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5;
+      color: #866e44;
+      margin: 0 0 8px 0;
+    }
+
+    // Main heading
+    // Inter 500 40px/1.2 #2E2A94
+    > h1, > h2, > h3 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.2;
+      color: #2e2a94;
+      margin: 0;
+    }
+
+    > p:nth-child(2) {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.2;
+      color: #2e2a94;
+      margin: 0;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .cardswithimg-heading {
+      margin-bottom: 24px;
+
+      > h1, > h2, > h3, > p:nth-child(2) {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+// ===== Card Block =====
 .cards.cardswithimg {
   padding: 0;
   overflow: visible;
@@ -7,183 +57,239 @@
   // Swiper container
   .cardswithimg-swiper {
     width: 100%;
-    padding-bottom: 48px;
+    padding-bottom: 48px; // room for pagination
     overflow: hidden;
   }
 
-  // ===== Slide (card) — position relative for overlay =====
+  // ===== Slide (card) — image fills, text overlays =====
   .swiper-slide {
-    height: auto;
     box-sizing: border-box;
     border-radius: 8px;
     overflow: hidden;
-    background: #fff;
-    box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
-    display: flex;
-    flex-direction: column;
     position: relative;
+    height: 420px; // fixed card height
+    background: #1a1a1a;
   }
 
-  // ===== Image — fills the card background =====
+  // ===== Image — absolute, fills entire card =====
   .cardswithimg-card-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
     line-height: 0;
-    order: 1; // image below body in DOM, but visually behind via position
 
-    picture,
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     img {
       display: block;
       width: 100%;
-      height: 280px;
+      height: 100%;
+      max-width: none;
       object-fit: cover;
     }
   }
 
-  // ===== Body — overlays from top =====
+  // ===== Body — overlays at top of card =====
   .cardswithimg-card-body {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 8px 8px 0 0;
-    // Default collapsed: only shows header
-    max-height: 72px;
-    overflow: hidden;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                background 0.3s ease;
+    // Gradient: dark at top for text readability, transparent at bottom
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.55) 0%,
+      rgba(0, 0, 0, 0.35) 35%,
+      rgba(0, 0, 0, 0.05) 60%,
+      transparent 100%
+    );
+    padding: 24px;
+    // Collapsed: only title + description visible at top
+    transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  // When accordion is open — text covers the full image
+  // When accordion is open — stronger overlay to make expanded text readable
   .swiper-slide.accordion-open .cardswithimg-card-body {
-    max-height: 100%;
-    height: 100%;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.97);
+    background: rgba(0, 0, 0, 0.75);
   }
 
-  // ===== Accordion Header (title + toggle) =====
+  // ===== Accordion Header (title + toggle button) =====
   .accordion-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
-    padding: 16px 20px;
-    gap: 12px;
+    gap: 16px;
     flex-shrink: 0;
+  }
+
+  .accordion-title {
+    flex: 1;
 
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
-      font-size: 18px;
-      line-height: 1.3;
+      font-family: 'Inter', sans-serif;
       font-weight: 600;
-      color: #131313;
-      flex: 1;
+      font-size: 22px;
+      line-height: 1.3;
+      color: #fff;
     }
 
     p {
       margin: 0;
-      font-size: 16px;
+      font-family: 'Inter', sans-serif;
       font-weight: 600;
+      font-size: 22px;
       line-height: 1.3;
-      color: #131313;
-      flex: 1;
+      color: #fff;
     }
   }
 
-  // ===== Toggle +/- button =====
+  // ===== + / − Toggle Button =====
   .accordion-toggle {
     all: unset;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
     border-radius: 50%;
-    background: #2e2a94;
-    color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    line-height: 1;
     cursor: pointer;
     flex-shrink: 0;
-    transition: transform 0.3s ease, background 0.3s ease;
+    transition: background 0.3s ease, border-color 0.3s ease;
 
     &:hover {
-      background: #1d1a6e;
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.15);
     }
   }
 
-  .swiper-slide.accordion-open .accordion-toggle {
-    transform: rotate(90deg);
+  .accordion-toggle-icon {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1;
   }
 
-  // ===== Accordion Detail (expanded content) =====
-  .accordion-detail {
-    padding: 0 20px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    opacity: 0;
-    transform: translateY(-8px);
-    transition: opacity 0.4s ease 0.1s,
-                transform 0.4s ease 0.1s;
+  .swiper-slide.accordion-open .accordion-toggle {
+    border-color: #fff;
+    background: rgba(255, 255, 255, 0.2);
+  }
+
+  // ===== Visible Description (always shown below title) =====
+  .accordion-desc {
+    margin-top: 12px;
 
     p {
       margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.5;
+      color: rgba(255, 255, 255, 0.85);
+    }
+  }
+
+  // ===== Accordion Detail (hidden, expands on + click) =====
+  .accordion-detail {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.4s ease 0.1s;
+
+    p {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
       font-size: 14px;
       line-height: 1.6;
-      color: #505050;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    a {
+      color: #fff;
+      text-decoration: underline;
     }
   }
 
   .swiper-slide.accordion-open .accordion-detail {
+    max-height: 300px;
     opacity: 1;
-    transform: translateY(0);
-  }
-
-  // ===== Navigation arrows =====
-  .swiper-button-prev,
-  .swiper-button-next {
-    color: #2e2a94;
-
-    &::after {
-      font-size: 20px;
-    }
   }
 
   // ===== Pagination dots =====
+  .swiper-pagination {
+    bottom: 8px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: #c4c4c4;
+    opacity: 1;
+  }
+
   .swiper-pagination-bullet-active {
     background: #2e2a94;
   }
 
   // ===== Responsive =====
-  @media (max-width: 639px) {
-    .cardswithimg-card-image img {
-      height: 220px;
+  @media (max-width: 900px) {
+    .swiper-slide {
+      height: 360px;
     }
 
     .cardswithimg-card-body {
-      max-height: 64px;
+      padding: 20px;
     }
 
-    .accordion-header {
-      padding: 12px 16px;
-
+    .accordion-title {
       h1, h2, h3, h4, h5, h6, p {
-        font-size: 15px;
+        font-size: 18px;
       }
     }
 
     .accordion-toggle {
-      width: 28px;
-      height: 28px;
-      font-size: 18px;
+      width: 32px;
+      height: 32px;
     }
 
-    .accordion-detail {
-      padding: 0 16px 16px;
+    .accordion-toggle-icon {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .swiper-slide {
+      height: 320px;
+    }
+
+    .cardswithimg-card-body {
+      padding: 16px;
+    }
+
+    .accordion-title {
+      h1, h2, h3, h4, h5, h6, p {
+        font-size: 16px;
+      }
+    }
+
+    .accordion-desc p {
+      font-size: 13px;
     }
   }
 }

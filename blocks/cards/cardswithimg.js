@@ -3,7 +3,6 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 
 /**
  * Load Swiper library dynamically (ES module from scripts/swiper/).
- * Returns the Swiper constructor.
  */
 async function loadSwiper() {
   loadCSS(`${window.hlx.codeBasePath}/scripts/swiper/swiper-bundle.min.css`);
@@ -12,33 +11,38 @@ async function loadSwiper() {
 }
 
 /**
- * Toggle accordion — expand text overlay to cover image, or collapse it.
+ * Toggle accordion — expand text overlay to cover image, or collapse back.
  */
 function toggleAccordion(slide) {
   const isOpen = slide.classList.toggle('accordion-open');
-  const btn = slide.querySelector('.accordion-toggle');
-  if (btn) btn.textContent = isOpen ? '−' : '+';
+  const icon = slide.querySelector('.accordion-toggle-icon');
+  if (icon) icon.textContent = isOpen ? '−' : '+';
 }
 
 export default async function decoratecardwithimgs(block) {
   loadCSS(`${window.hlx.codeBasePath}/blocks/cards/cardswithimg.css`);
 
+  // Style the section heading area (default-content-wrapper above the block)
+  const section = block.closest('.section');
+  if (section) {
+    section.classList.add('cardswithimg-section');
+    const dcw = section.querySelector('.default-content-wrapper');
+    if (dcw) dcw.classList.add('cardswithimg-heading');
+  }
+
   const Swiper = await loadSwiper();
 
-  // Build Swiper DOM structure
   const swiperEl = document.createElement('div');
   swiperEl.classList.add('swiper', 'cardswithimg-swiper');
 
   const wrapperEl = document.createElement('div');
   wrapperEl.classList.add('swiper-wrapper');
 
-  // Each row from AEM becomes a slide
   [...block.children].forEach((row) => {
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide');
     moveInstrumentation(row, slide);
 
-    // Separate image from body content
     let imageCol = null;
     let bodyCol = null;
 
@@ -54,36 +58,58 @@ export default async function decoratecardwithimgs(block) {
       slide.append(col);
     }
 
-    // Build accordion overlay structure:
-    // Image is the background, text overlays from the top
+    // Image goes first in DOM (fills card background)
+    // Body overlays on top of image
+    if (imageCol && bodyCol) {
+      slide.prepend(imageCol);
+      slide.append(bodyCol);
+    }
+
+    // Build accordion: title + description visible, + button toggles expanded content
     if (bodyCol) {
-      // Split body into: header (first heading or first p) + detail (rest)
-      const header = document.createElement('div');
-      header.className = 'accordion-header';
-
-      const detail = document.createElement('div');
-      detail.className = 'accordion-detail';
-
       const children = [...bodyCol.children];
-      // First element is the header/title
+
+      // Accordion header: title row with + button
+      const headerRow = document.createElement('div');
+      headerRow.className = 'accordion-header';
+
+      const titleWrap = document.createElement('div');
+      titleWrap.className = 'accordion-title';
+
+      // First child = title (h2/h3/p)
       if (children.length > 0) {
-        header.append(children[0]);
+        titleWrap.append(children[0]);
       }
-      // Rest goes into collapsible detail
-      children.slice(1).forEach((child) => detail.append(child));
 
       // +/- toggle button
       const toggleBtn = document.createElement('button');
       toggleBtn.className = 'accordion-toggle';
-      toggleBtn.textContent = '+';
       toggleBtn.setAttribute('aria-label', 'Toggle card details');
       toggleBtn.addEventListener('click', (e) => {
         e.stopPropagation();
         toggleAccordion(slide);
       });
+      const icon = document.createElement('span');
+      icon.className = 'accordion-toggle-icon';
+      icon.textContent = '+';
+      toggleBtn.append(icon);
 
-      header.append(toggleBtn);
-      bodyCol.replaceChildren(header, detail);
+      headerRow.append(titleWrap, toggleBtn);
+
+      // Visible description (shown in collapsed state, below title)
+      const visibleDesc = document.createElement('div');
+      visibleDesc.className = 'accordion-desc';
+      // Second child = short description
+      if (children.length > 1) {
+        visibleDesc.append(children[1]);
+      }
+
+      // Hidden detail (shown only when expanded)
+      const detail = document.createElement('div');
+      detail.className = 'accordion-detail';
+      children.slice(2).forEach((child) => detail.append(child));
+
+      bodyCol.replaceChildren(headerRow, visibleDesc, detail);
     }
 
     wrapperEl.append(slide);
@@ -91,19 +117,11 @@ export default async function decoratecardwithimgs(block) {
 
   swiperEl.append(wrapperEl);
 
-  // Navigation arrows
-  const prevBtn = document.createElement('div');
-  prevBtn.classList.add('swiper-button-prev');
-  const nextBtn = document.createElement('div');
-  nextBtn.classList.add('swiper-button-next');
-  swiperEl.append(prevBtn, nextBtn);
-
-  // Pagination dots
+  // Pagination dots (no arrows per Figma — just dots)
   const pagination = document.createElement('div');
   pagination.classList.add('swiper-pagination');
   swiperEl.append(pagination);
 
-  // Replace block content
   block.replaceChildren(swiperEl);
 
   // Optimize images
@@ -113,23 +131,19 @@ export default async function decoratecardwithimgs(block) {
     img.closest('picture').replaceWith(pic);
   });
 
-  // Initialize Swiper
+  // Initialize Swiper — 3 visible + partial peek of 4th
   // eslint-disable-next-line no-new
   new Swiper(swiperEl, {
-    slidesPerView: 1,
-    spaceBetween: 24,
+    slidesPerView: 1.15,
+    spaceBetween: 16,
     loop: true,
-    navigation: {
-      nextEl: nextBtn,
-      prevEl: prevBtn,
-    },
     pagination: {
       el: pagination,
       clickable: true,
     },
     breakpoints: {
-      640: { slidesPerView: 2, spaceBetween: 24 },
-      1024: { slidesPerView: 3, spaceBetween: 32 },
+      640: { slidesPerView: 2.15, spaceBetween: 20 },
+      1024: { slidesPerView: 3.15, spaceBetween: 24 },
     },
   });
 }
