@@ -64,7 +64,8 @@
         "cards",
         "columns",
         "fragment",
-        "embed"
+        "embed",
+        "custom-rte"
       ]
     }
   ]

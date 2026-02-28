@@ -193,6 +193,18 @@
     ]
   },
   {
+    "id": "custom-rte",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "RTE Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "embed",
     "fields": [
       {
