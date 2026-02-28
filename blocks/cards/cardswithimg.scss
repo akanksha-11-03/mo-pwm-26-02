@@ -1,4 +1,4 @@
-/* Cards with Image — Swiper Carousel */
+/* Cards with Image — Swiper Carousel + Accordion */
 
 .cards.cardswithimg {
   padding: 0;
@@ -7,11 +7,11 @@
   // Swiper container
   .cardswithimg-swiper {
     width: 100%;
-    padding-bottom: 48px; // room for pagination
+    padding-bottom: 48px;
     overflow: hidden;
   }
 
-  // Slide (card)
+  // ===== Slide (card) — position relative for overlay =====
   .swiper-slide {
     height: auto;
     box-sizing: border-box;
@@ -21,44 +21,129 @@
     box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
     display: flex;
     flex-direction: column;
+    position: relative;
   }
 
-  // Card image
+  // ===== Image — fills the card background =====
   .cardswithimg-card-image {
     line-height: 0;
+    order: 1; // image below body in DOM, but visually behind via position
 
     picture,
     img {
       display: block;
       width: 100%;
-      height: 200px;
+      height: 280px;
       object-fit: cover;
     }
   }
 
-  // Card body
+  // ===== Body — overlays from top =====
   .cardswithimg-card-body {
-    padding: 16px 20px;
-    flex: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px 8px 0 0;
+    // Default collapsed: only shows header
+    max-height: 72px;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+                background 0.3s ease;
+  }
+
+  // When accordion is open — text covers the full image
+  .swiper-slide.accordion-open .cardswithimg-card-body {
+    max-height: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.97);
+  }
+
+  // ===== Accordion Header (title + toggle) =====
+  .accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    gap: 12px;
+    flex-shrink: 0;
 
     h1, h2, h3, h4, h5, h6 {
       margin: 0;
       font-size: 18px;
       line-height: 1.3;
+      font-weight: 600;
+      color: #131313;
+      flex: 1;
     }
 
     p {
       margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+      color: #131313;
+      flex: 1;
+    }
+  }
+
+  // ===== Toggle +/- button =====
+  .accordion-toggle {
+    all: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #2e2a94;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background 0.3s ease;
+
+    &:hover {
+      background: #1d1a6e;
+    }
+  }
+
+  .swiper-slide.accordion-open .accordion-toggle {
+    transform: rotate(90deg);
+  }
+
+  // ===== Accordion Detail (expanded content) =====
+  .accordion-detail {
+    padding: 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.4s ease 0.1s,
+                transform 0.4s ease 0.1s;
+
+    p {
+      margin: 0;
       font-size: 14px;
-      line-height: 1.5;
+      line-height: 1.6;
       color: #505050;
     }
   }
 
-  // Navigation arrows
+  .swiper-slide.accordion-open .accordion-detail {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  // ===== Navigation arrows =====
   .swiper-button-prev,
   .swiper-button-next {
     color: #2e2a94;
@@ -68,15 +153,37 @@
     }
   }
 
-  // Pagination dots
+  // ===== Pagination dots =====
   .swiper-pagination-bullet-active {
     background: #2e2a94;
   }
 
-  // Responsive
+  // ===== Responsive =====
   @media (max-width: 639px) {
     .cardswithimg-card-image img {
-      height: 180px;
+      height: 220px;
+    }
+
+    .cardswithimg-card-body {
+      max-height: 64px;
+    }
+
+    .accordion-header {
+      padding: 12px 16px;
+
+      h1, h2, h3, h4, h5, h6, p {
+        font-size: 15px;
+      }
+    }
+
+    .accordion-toggle {
+      width: 28px;
+      height: 28px;
+      font-size: 18px;
+    }
+
+    .accordion-detail {
+      padding: 0 16px 16px;
     }
   }
 }

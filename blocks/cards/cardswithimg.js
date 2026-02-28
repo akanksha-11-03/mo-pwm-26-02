@@ -11,6 +11,15 @@ async function loadSwiper() {
   return Swiper;
 }
 
+/**
+ * Toggle accordion — expand text overlay to cover image, or collapse it.
+ */
+function toggleAccordion(slide) {
+  const isOpen = slide.classList.toggle('accordion-open');
+  const btn = slide.querySelector('.accordion-toggle');
+  if (btn) btn.textContent = isOpen ? '−' : '+';
+}
+
 export default async function decoratecardwithimgs(block) {
   loadCSS(`${window.hlx.codeBasePath}/blocks/cards/cardswithimg.css`);
 
@@ -30,15 +39,53 @@ export default async function decoratecardwithimgs(block) {
     moveInstrumentation(row, slide);
 
     // Separate image from body content
+    let imageCol = null;
+    let bodyCol = null;
+
     while (row.firstElementChild) {
       const col = row.firstElementChild;
       if (col.children.length === 1 && col.querySelector('picture')) {
         col.className = 'cardswithimg-card-image';
+        imageCol = col;
       } else {
         col.className = 'cardswithimg-card-body';
+        bodyCol = col;
       }
       slide.append(col);
     }
+
+    // Build accordion overlay structure:
+    // Image is the background, text overlays from the top
+    if (bodyCol) {
+      // Split body into: header (first heading or first p) + detail (rest)
+      const header = document.createElement('div');
+      header.className = 'accordion-header';
+
+      const detail = document.createElement('div');
+      detail.className = 'accordion-detail';
+
+      const children = [...bodyCol.children];
+      // First element is the header/title
+      if (children.length > 0) {
+        header.append(children[0]);
+      }
+      // Rest goes into collapsible detail
+      children.slice(1).forEach((child) => detail.append(child));
+
+      // +/- toggle button
+      const toggleBtn = document.createElement('button');
+      toggleBtn.className = 'accordion-toggle';
+      toggleBtn.textContent = '+';
+      toggleBtn.setAttribute('aria-label', 'Toggle card details');
+      toggleBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleAccordion(slide);
+      });
+
+      header.append(toggleBtn);
+      bodyCol.replaceChildren(header, detail);
+    }
+
     wrapperEl.append(slide);
   });
 
