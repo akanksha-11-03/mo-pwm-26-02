@@ -14,6 +14,7 @@
       "title",
       "hero",
       "cards",
+      "cardswithimg",
       "ourofferingcards",
       "columns",
       "fragment",
@@ -30,6 +31,12 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cardswithimg",
+    "components": [
+      "cardswithimg-item"
     ]
   },
   {

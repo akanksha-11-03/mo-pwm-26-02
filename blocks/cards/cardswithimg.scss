@@ -1,0 +1,82 @@
+/* Cards with Image — Swiper Carousel */
+
+.cards.cardswithimg {
+  padding: 0;
+  overflow: visible;
+
+  // Swiper container
+  .cardswithimg-swiper {
+    width: 100%;
+    padding-bottom: 48px; // room for pagination
+    overflow: hidden;
+  }
+
+  // Slide (card)
+  .swiper-slide {
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Card image
+  .cardswithimg-card-image {
+    line-height: 0;
+
+    picture,
+    img {
+      display: block;
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+  }
+
+  // Card body
+  .cardswithimg-card-body {
+    padding: 16px 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    h1, h2, h3, h4, h5, h6 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.5;
+      color: #505050;
+    }
+  }
+
+  // Navigation arrows
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: #2e2a94;
+
+    &::after {
+      font-size: 20px;
+    }
+  }
+
+  // Pagination dots
+  .swiper-pagination-bullet-active {
+    background: #2e2a94;
+  }
+
+  // Responsive
+  @media (max-width: 639px) {
+    .cardswithimg-card-image img {
+      height: 180px;
+    }
+  }
+}
