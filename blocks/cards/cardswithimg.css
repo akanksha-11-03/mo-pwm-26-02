@@ -1,0 +1,87 @@
+/* Cards with Image — Swiper Carousel */
+
+.cards.cardswithimg {
+  padding: 0;
+  overflow: visible;
+}
+
+.cards.cardswithimg .cardswithimg-swiper {
+  width: 100%;
+  padding-bottom: 48px; /* room for pagination */
+  overflow: hidden;
+}
+
+/* Slide (card) */
+.cards.cardswithimg .swiper-slide {
+  height: auto;
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 8%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card image */
+.cards.cardswithimg .cardswithimg-card-image {
+  line-height: 0;
+}
+
+.cards.cardswithimg .cardswithimg-card-image picture,
+.cards.cardswithimg .cardswithimg-card-image img {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Card body */
+.cards.cardswithimg .cardswithimg-card-body {
+  padding: 16px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cards.cardswithimg .cardswithimg-card-body h1,
+.cards.cardswithimg .cardswithimg-card-body h2,
+.cards.cardswithimg .cardswithimg-card-body h3,
+.cards.cardswithimg .cardswithimg-card-body h4,
+.cards.cardswithimg .cardswithimg-card-body h5,
+.cards.cardswithimg .cardswithimg-card-body h6 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.3;
+}
+
+.cards.cardswithimg .cardswithimg-card-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #505050;
+}
+
+/* Navigation arrows */
+.cards.cardswithimg .swiper-button-prev,
+.cards.cardswithimg .swiper-button-next {
+  color: #2e2a94;
+}
+
+.cards.cardswithimg .swiper-button-prev::after,
+.cards.cardswithimg .swiper-button-next::after {
+  font-size: 20px;
+}
+
+/* Pagination dots */
+.cards.cardswithimg .swiper-pagination-bullet-active {
+  background: #2e2a94;
+}
+
+/* Responsive */
+@media (max-width: 639px) {
+  .cards.cardswithimg .cardswithimg-card-image img {
+    height: 180px;
+  }
+}
