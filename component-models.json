@@ -193,7 +193,7 @@
     ]
   },
   {
-    "id": "custom-rte",
+    "id": "custom-rte-item",
     "fields": [
       {
         "component": "richtext",
