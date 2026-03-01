@@ -149,6 +149,10 @@
                 "value": "hero-video-banner"
               }
             ]
+          },
+          {
+            "name": "Alpha Strategist Section",
+            "value": "alpha-strategist-section"
           }
         ]
       }

@@ -95,7 +95,8 @@ main>.section .custom-rte-wrapper {
     }
 
     .custom-rte>div:first-child {
-        max-width: 27.486%;
+        /* max-width: 27.486%; */
+        max-width: 340px;
         width: 100%;
     }
 
@@ -105,7 +106,8 @@ main>.section .custom-rte-wrapper {
     }
 
     .custom-rte>div:last-child {
-        max-width: 43.978%;
+        /* max-width: 43.978%; */
+        max-width: 544px;
         width: 100%;
     }
 
