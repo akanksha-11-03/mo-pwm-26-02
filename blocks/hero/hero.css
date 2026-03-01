@@ -43,6 +43,7 @@
   height: auto;
   padding: 167px 37px 112px;
   box-sizing: border-box;
+  background: linear-gradient(180deg, #000000 -22.57%, rgba(0, 0, 0, 0) 38.92%);
 }
 
 .section.hero-image-banner .hero>div:nth-child(2) {
