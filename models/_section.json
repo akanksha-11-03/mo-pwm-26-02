@@ -50,6 +50,10 @@
             {
               "name": "Alpha Strategist Section",
               "value": "alpha-strategist-section"
+            },
+            {
+              "name": "Wealth Creation Section",
+              "value": "wealth-creation-section"
             }
           ]
         }
