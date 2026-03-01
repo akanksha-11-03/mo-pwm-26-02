@@ -217,6 +217,18 @@
     ]
   },
   {
+    "id": "custom-image-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      }
+    ]
+  },
+  {
     "id": "embed",
     "fields": [
       {

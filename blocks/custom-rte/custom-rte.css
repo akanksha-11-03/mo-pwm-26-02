@@ -111,19 +111,197 @@ main>.section.who-we-are .custom-rte-wrapper {
         width: 100%;
     }
 
-    .section.who-we-are .custom-rte>div:last-child div>ul{
+    .section.who-we-are .custom-rte>div:last-child div>ul {
         flex-direction: unset;
         flex-wrap: wrap;
         gap: 50px;
     }
 
-    .section.who-we-are .custom-rte>div:last-child div> ul>li{
+    .section.who-we-are .custom-rte>div:last-child div>ul>li {
         flex-basis: 45.406%;
         font-size: 40px;
         line-height: 48px;
     }
 
-    .section.who-we-are .custom-rte>div:last-child div>ul>li>ul>li{
+    .section.who-we-are .custom-rte>div:last-child div>ul>li>ul>li {
         margin: 14px 0 0;
     }
 }
+
+/* Wealth Creation Section Start */
+
+.section.wealth-creation {
+    background: var(--PWM-Gold-200, #F0E6DC);
+    padding: 43px 16px;
+}
+
+.section.wealth-creation>div {
+    padding: 0;
+}
+
+.section.wealth-creation .custom-rte-wrapper:first-of-type h3 {
+    color: var(--PWM-Gold-700, #866E44);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Header/PWM H4 */
+    font-family: var(--TItle, Inter);
+    font-size: var(--Heading-PWM-H5-Size, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Sub-Header-Large-Line-Height, 32px);
+    /* 114.286% */
+    margin: 0 0 10px;
+}
+
+.section.wealth-creation .custom-rte-wrapper:first-of-type p {
+    margin: 0;
+    color: var(--blue-1800-primary, #2E2A94);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Body/Medium-regular */
+    font-family: var(--Body, Inter);
+    font-size: var(--Body-Medium-regular-Size, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Body-Medium-regular-Line-Height, 20px);
+    /* 125% */
+}
+
+.section.wealth-creation .default-content-wrapper,
+.section.wealth-creation .default-content-wrapper p {
+    min-height: 160px;
+    margin: 0;
+}
+
+.section.wealth-creation .default-content-wrapper p {
+    border-radius: 4px;
+    background: linear-gradient(109deg, #D6BC7D 0%, #91774B 83.36%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 16px;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type p {
+    color: var(--PWM-Gold-700, #866E44);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Body/Small-semibold */
+    font-family: var(--Body, Inter);
+    font-size: var(--Body-Small-semibold-Size, 14px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--Body-Small-semibold-Line-Height, 16px);
+    /* 114.286% */
+    margin: 0 0 6px;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type ul {
+    list-style: none;
+    margin: 0;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type ul li ul {
+    margin: 0 0 14px 8px;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type ul li ul li {
+    color: var(--blue-1800-primary, #2E2A94);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Paragraph/Small-regular */
+    font-family: var(--Body, Inter);
+    font-size: var(--Paragraph-Small-regular-Size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Paragraph-Small-regular-Line-Height, 20px);
+    /* 142.857% */
+    display: flex;
+    gap: 10px;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type ul li ul li::before {
+    content: '';
+    background-color: #2E2A94;
+    min-width: 4px;
+    height: 4px;
+    display: block;
+    border-radius: 50%;
+    margin: 8px 0 0;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type p.button-container {
+    margin: 0 0 33px;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type p.button-container .button {
+    color: var(--Text-Text-Link, #2E2A94);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Desktop/Text Link/Small */
+    font-family: var(--Body, Inter);
+    font-size: var(--Text-Link-Small-Size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Text-Link-Small-Line-Height, 20px);
+    /* 142.857% */
+    text-decoration-line: underline;
+    text-underline-offset: 20%;
+    /* 2.8px */
+    margin: 0 0 33px;
+    padding: 0;
+    background-color: unset;
+    border: none;
+    border-radius: unset;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type p.button-container:last-of-type {
+    line-height: 0;
+    margin: 0;
+}
+
+.section.wealth-creation .custom-rte-wrapper:last-of-type p.button-container:last-of-type .button {
+    padding: 10px 12px;
+    border-radius: var(--Border-Radius-4, 4px);
+    background: var(--Button-Primary-Default, #2E2A94);
+    margin: 0;
+    color: var(--Text-White, #FFF);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Button/Medium */
+    font-family: var(--Body, Inter);
+    font-size: var(--Button-Medium-Size, 16px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Button-Medium-Line-Height, 20px);
+    /* 125% */
+    text-decoration: none;
+    width: 100%;
+}
+
+@media screen and (width>768px) {
+    .section.wealth-creation {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+    }
+
+    .section.wealth-creation .default-content-wrapper {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        /* spans 2 rows */
+    }
+
+    .section.wealth-creation .custom-rte-wrapper:first-of-type {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .section.wealth-creation .custom-rte-wrapper:last-of-type {
+        grid-column: 2;
+        grid-row: 2;
+    }
+}
+
+/* Wealth Creation Section End */

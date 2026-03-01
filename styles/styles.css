@@ -272,22 +272,3 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
-
-
-
-/* Wealth Creation Start */
-
-.section.wealth-creation-section {
-  background: var(--PWM-Gold-200, #F0E6DC);
-  padding: 30px 16px;
-}
-
-.section.wealth-creation-section .default-content-wrapper{
-  /* max-width: 1264px; */
-  /* padding: 0 16px; */
-  /* display: flex; */
-  /* align-items: center; */
-  /* justify-content: space-between; */
-}
-
-/* Wealth Creation End */

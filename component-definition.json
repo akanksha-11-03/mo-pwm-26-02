@@ -158,6 +158,21 @@
           }
         },
         {
+          "title": "Custom Image Item",
+          "id": "custom-image-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Custom RTE Item",
+                  "model": "custom-rte-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Embed",
           "id": "embed",
           "plugins": {
