@@ -146,49 +146,49 @@
 
 /* Alpha Strategist secion start */
 
-.section.alpha-strategist-section .hero {
+.section.alpha-strategist .hero {
   min-height: 660px;
   padding: 0;
 }
 
-.section.alpha-strategist-section .hero img {
+.section.alpha-strategist .hero img {
   object-fit: fill;
 }
 
-.section.alpha-strategist-section .hero>div:nth-child(2) {
+.section.alpha-strategist .hero>div:nth-child(2) {
   display: none;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type ul {
+.section.alpha-strategist .hero>div:last-of-type ul {
   list-style: none;
   margin: 0;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type {
+.section.alpha-strategist .hero>div:last-of-type {
   min-height: inherit;
   padding: 54px 17px 55px 15px;
   background: linear-gradient(180deg, rgba(237, 226, 204, 0.00) 3.26%, #EDE2CC 66.54%);
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul {
+.section.alpha-strategist .hero>div:last-of-type div>ul {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type p {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type p {
   max-width: 117px;
   width: 100%;
   height: 54px;
   margin: 0;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type p .icon {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type p .icon {
   width: 100%;
   height: 100%;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(1) {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(1) {
   color: #000;
   font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
   font-family: var(--Body, Inter);
@@ -200,7 +200,7 @@
   margin: 4px 0;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(2) {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(2) {
   color: #000;
   font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
   font-family: var(--Body, Inter);
@@ -212,7 +212,7 @@
   padding: 0 0 15px;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(3) {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(3) {
   color: var(--Neutrals-Black, #111);
   font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
 
@@ -226,7 +226,7 @@
   padding: 15px 0 0;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type h4 {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type h4 {
   margin: 0 0 16px;
   color: var(--Neutrals-Black, #111);
   font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
@@ -240,7 +240,7 @@
   /* 114.286% */
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(1) p {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(1) p {
   color: var(--Neutrals-Black, #111);
   font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
 
@@ -254,7 +254,7 @@
   margin: 0 0 6px;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(2) p {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(2) p {
   margin: 0 0 30px;
   color: var(--Neutrals-Black, #111);
   font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
@@ -268,13 +268,13 @@
   /* 142.857% */
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul li {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul li {
   text-align: center;
   font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
 
@@ -290,59 +290,59 @@
 
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul li:first-of-type {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul li:first-of-type {
   border: 1px solid var(--Button-Primary-Default, #2E2A94);
   color: var(--Text-Button-Default, #2E2A94);
 }
 
-.section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul li:last-of-type {
+.section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul li:last-of-type {
   color: var(--Text-White, #FFF);
   background-color: var(--Button-Primary-Default, #2E2A94);
 }
 
 @media screen and (width>768px) {
-  .section.alpha-strategist-section .hero {
+  .section.alpha-strategist .hero {
     /* padding: 42px 67px; */
     min-height: 600px;
   }
 
-  .section.alpha-strategist-section .hero>div:nth-child(1) {
+  .section.alpha-strategist .hero>div:nth-child(1) {
     display: none;
   }
 
-  .section.alpha-strategist-section .hero>div:nth-child(2) {
+  .section.alpha-strategist .hero>div:nth-child(2) {
     display: block;
   }
 
-  .section.alpha-strategist-section .hero>div:nth-child(3) {
+  .section.alpha-strategist .hero>div:nth-child(3) {
     width: 80.504%;
     background: linear-gradient(252deg, rgba(237, 226, 204, 0.00) 17.58%, #EDE2CC 87.18%);
     padding: 42px 67px;
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul {
+  .section.alpha-strategist .hero>div:last-of-type div>ul {
     gap: 100px;
     max-width: 494px;
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type p {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type p {
     max-width: 146px;
     height: 67px;
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(1) {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(1) {
     margin: 5px 0;
     font-size: var(--Body-Medium-semibold-Size, 16px);
     line-height: var(--Body-Medium-semibold-Line-Height, 20px);
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(2) {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(2) {
     padding: 0 0 18px;
     font-size: var(--Body-XSmall-regular-Size, 12px);
     line-height: var(--Body-XSmall-regular-Line-Height, 14px);
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(3) {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:first-of-type ul li:nth-child(3) {
     padding: 0;
     color: var(--PWM-Gold-900, #5D4F2E);
     ;
@@ -350,32 +350,32 @@
     line-height: var(--Body-Medium-regular-Line-Height, 20px);
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type h4 {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type h4 {
     margin: 0 0 8px;
     color: var(--PWM-Gold-900, #5D4F2E);
     font-size: var(--Heading-PWM-H4-Size, 32px);
     line-height: var(--Heading-PWM-H4-Line-Height, 40px);
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(1) p {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(1) p {
     color: var(--PWM-Gold-900, #5D4F2E);
     font-size: var(--Body-Medium-regular-Size, 16px);
     line-height: var(--Body-Medium-regular-Line-Height, 20px);
     margin: 0 0 24px;
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(2) p {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(2) p {
     color: var(--PWM-Gold-900, #5D4F2E);
     font-size: var(--Body-Small-regular-Size, 14px);
     line-height: var(--Label-Large-Line-Height, 20px);
     margin: 0 0 27px;
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul {
     flex-direction: row;
   }
 
-  .section.alpha-strategist-section .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul li {
+  .section.alpha-strategist .hero>div:last-of-type div>ul>li:last-of-type>ul>li:nth-child(3) ul li {
     padding: 14px 12px;
     font-size: 18px;
   }
