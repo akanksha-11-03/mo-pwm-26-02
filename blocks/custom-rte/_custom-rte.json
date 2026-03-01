@@ -38,8 +38,8 @@
                     "page": {
                         "resourceType": "core/franklin/components/block/v1/block/item",
                         "template": {
-                            "name": "Custom RTE Item",
-                            "model": "custom-rte-item"
+                            "name": "Custom Image Item",
+                            "model": "custom-image-item"
                         }
                     }
                 }
