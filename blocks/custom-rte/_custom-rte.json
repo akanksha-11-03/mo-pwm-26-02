@@ -76,7 +76,8 @@
         {
             "id": "custom-rte",
             "components": [
-                "custom-rte-item"
+                "custom-rte-item",
+                "custom-image-item"
             ]
         }
     ]
