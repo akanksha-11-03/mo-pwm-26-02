@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* Our Offering Cards — Figma node 4749:14920 */
+/* Stacking scroll animation — cards slide up to cover previous card */
 /* ===== Section Heading (default-content-wrapper) ===== */
-/* Figma node 4749:14954 — "Our offerings" label + main heading */
 .ourofferingcards-section .ourofferingcards-heading {
   margin-bottom: 40px;
 }
@@ -43,36 +43,51 @@
   }
 }
 
-/* ===== Cards ===== */
-/* Reset default cards grid */
+/* ===== Stack Section & Sticky Frame ===== */
 .cards.ourofferingcards > ul {
   display: block;
 }
 
-.cards.ourofferingcards .ourofferingcards-wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: 104px;
-  width: 100%;
+.cards.ourofferingcards {
+  padding: 0;
+  overflow: visible;
+}
+.cards.ourofferingcards .ourofferingcards-stack-section {
+  position: relative;
+}
+.cards.ourofferingcards .ourofferingcards-sticky-frame {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: visible;
+}
+.cards.ourofferingcards {
+  /* ===== Individual Card ===== */
 }
 .cards.ourofferingcards .ourofferingcard {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1200px, 92vw);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   align-items: center;
   gap: 40px;
   background-color: #f8f3ef;
-  border-radius: 4px;
+  border-radius: 12px;
   overflow: hidden;
-  width: 100%;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+.cards.ourofferingcards {
+  /* ===== Image ===== */
 }
 .cards.ourofferingcards .ourofferingcard-image {
-  flex: 0 0 608px;
-  width: 608px;
+  flex: 0 0 50%;
+  width: 50%;
   height: 342px;
   line-height: 0;
   background-color: #fff;
-  border-radius: 4px;
+  border-radius: 12px 0 0 12px;
   overflow: hidden;
 }
 .cards.ourofferingcards .ourofferingcard-image picture {
@@ -87,16 +102,16 @@
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
-  border-radius: 4px;
+}
+.cards.ourofferingcards {
+  /* ===== Content ===== */
 }
 .cards.ourofferingcards .ourofferingcard-content {
   flex: 1 1 0%;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 584px;
-  max-width: 584px;
-  padding: 0;
+  padding: 32px 40px 32px 0;
   box-sizing: border-box;
 }
 .cards.ourofferingcards .ourofferingcard-text {
@@ -142,27 +157,28 @@
   text-decoration: underline;
   color: #2e2a94;
 }
+.cards.ourofferingcards {
+  /* ===== Responsive ===== */
+}
 @media (max-width: 900px) {
-  .cards.ourofferingcards .ourofferingcards-wrapper {
-    gap: 48px;
-  }
   .cards.ourofferingcards .ourofferingcard {
+    width: min(100%, 92vw);
     flex-direction: column;
     gap: 0;
+    border-radius: 8px;
   }
   .cards.ourofferingcards .ourofferingcard-image {
     flex: none;
     width: 100%;
-    max-width: 100%;
     height: auto;
+    border-radius: 8px 8px 0 0;
   }
   .cards.ourofferingcards .ourofferingcard-image img {
     height: 220px;
-    border-radius: 4px 4px 0 0;
+    border-radius: 8px 8px 0 0;
   }
   .cards.ourofferingcards .ourofferingcard-content {
     width: 100%;
-    max-width: 100%;
     padding: 24px;
   }
 }/*# sourceMappingURL=ourofferingcards.css.map */
