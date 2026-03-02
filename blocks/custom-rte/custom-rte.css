@@ -302,9 +302,8 @@ main>.section.who-we-are .custom-rte-wrapper {
         /* grid-template-columns: 1fr 1fr; */
         /* grid-template-rows: auto auto; */
         /* grid-template-columns: 426px 476px; */
-        grid-template-columns: 
-        minmax(0, 426px) 
-        minmax(0, 476px);
+        grid-template-columns:
+            minmax(0, 426px) minmax(0, 476px);
         justify-content: space-between;
         align-items: center;
         gap: 30px;
@@ -340,3 +339,116 @@ main>.section.who-we-are .custom-rte-wrapper {
 }
 
 /* Wealth Creation Section End */
+
+/* Our Key Differences Section Start */
+.section.our-key-differences {
+    padding: 0 17px;
+}
+
+.section.our-key-differences .custom-rte-wrapper {
+    background: var(--PWM-Gold-200, #F0E6DC);
+    padding: 16px;
+    max-width: 100%;
+}
+
+.section.our-key-differences .custom-rte {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.section.our-key-differences .custom-rte>div:nth-child(1) {
+    min-height: 358px;
+    height: auto;
+    width: auto;
+}
+
+.section.our-key-differences .custom-rte>div:nth-child(1) * {
+    min-height: 358px;
+}
+
+.section.our-key-differences .custom-rte div:nth-child(1) picture {
+    line-height: 0;
+    height: 100%;
+    display: block;
+}
+
+.section.our-key-differences .custom-rte div:nth-child(1) img {
+    object-fit: fill;
+    width: 100%;
+}
+
+.section.our-key-differences .custom-rte div:nth-child(2) h2 {
+    font-family: TItle;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: Heading/PWM H4/Size;
+    leading-trim: NONE;
+    line-height: Heading/PWM H4/Line Height;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin: 0 0 50px;
+    color: var(--PWM-Gold-700, #866E44);
+}
+
+.section.our-key-differences .custom-rte div:nth-child(2) h4 {
+    font-family: Body;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: Body/Xlarge-regular/Size;
+    leading-trim: NONE;
+    line-height: Body/Xlarge-regular/Line Height;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin: 0 0 24px;
+    color: var(--blue-1800-primary, #2E2A94);
+}
+
+.section.our-key-differences .custom-rte div:nth-child(2) p {
+    font-family: Body;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: Body/Medium-regular/Size;
+    leading-trim: NONE;
+    line-height: Body/Medium-regular/Line Height;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin: 0 0 40px;
+    color: var(--blue-1800-primary, #2E2A94);
+}
+
+@media screen and (width>768px) {
+    .section.our-key-differences .custom-rte-wrapper {
+        max-width: 1237px;
+        padding: 20px;
+        border-radius: 4px;
+    }
+    
+    .section.our-key-differences .custom-rte {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 72px;
+    }
+
+    .section.our-key-differences .custom-rte div:nth-child(1) {
+        max-width: 548px;
+        max-height: 580px;
+    }
+
+    .section.our-key-differences .custom-rte div:nth-child(2) {
+        /* max-width: 38.43%; */
+        max-width: 460px;
+        width: 100%;
+    }
+    
+    .section.our-key-differences .custom-rte div:nth-child(2) h2 {
+        margin: 0 0 67px;
+    }
+
+    .section.our-key-differences .custom-rte div:nth-child(2) p {
+        margin: 0;
+    }
+}
+
+/* Our Key Differences Section End */
