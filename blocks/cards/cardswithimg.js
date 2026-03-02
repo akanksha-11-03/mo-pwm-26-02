@@ -64,11 +64,10 @@ export default async function decoratecardwithimgs(block) {
       slide.append(col);
     }
 
-    // Image goes first in DOM (fills card background)
-    // Body overlays on top of image
+    // Body (text) goes first, image below — flexbox column layout
     if (imageCol && bodyCol) {
-      slide.prepend(imageCol);
-      slide.append(bodyCol);
+      slide.prepend(bodyCol);
+      slide.append(imageCol);
     }
 
     // Build accordion: title + description visible, + button toggles expanded content
