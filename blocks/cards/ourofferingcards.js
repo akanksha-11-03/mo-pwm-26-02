@@ -83,17 +83,6 @@ export default function decorateOurOfferingCards(block) {
     cards.push(card);
   });
 
-  // ── Navigation dots ──
-  const dotsContainer = document.createElement('div');
-  dotsContainer.classList.add('ourofferingcards-dots');
-  cards.forEach((_, i) => {
-    const dot = document.createElement('div');
-    dot.classList.add('ourofferingcards-dot');
-    if (i === 0) dot.classList.add('active');
-    dotsContainer.append(dot);
-  });
-  stickyFrame.append(dotsContainer);
-
   // Optimize images
   stickyFrame.querySelectorAll('picture > img').forEach((img) => {
     const optimizedPic = createOptimizedPicture(img.src, img.alt, false, [
@@ -111,7 +100,6 @@ export default function decorateOurOfferingCards(block) {
   block.replaceChildren(stackSection);
 
   // ── Scroll-driven stacking animation ──
-  const dots = [...dotsContainer.children];
   let cardH = 0;
   let startTops = [];
   let travelDist = 0;
@@ -160,13 +148,6 @@ export default function decorateOurOfferingCards(block) {
       currentTops.push(top);
     }
 
-    // Active dot — whichever card is on top
-    let activeIdx = 0;
-    for (let i = 1; i < cards.length; i += 1) {
-      const rawP = Math.min(1, Math.max(0, (scrolled - scrollPerT * (i - 1)) / scrollPerT));
-      if (rawP > 0.5) activeIdx = i;
-    }
-    dots.forEach((d, i) => d.classList.toggle('active', i === activeIdx));
   }
 
   // Initialize after layout settles
