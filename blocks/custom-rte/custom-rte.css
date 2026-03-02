@@ -417,13 +417,49 @@ main>.section.who-we-are .custom-rte-wrapper {
     color: var(--blue-1800-primary, #2E2A94);
 }
 
+.section.our-key-differences .cards-wrapper {
+    background: var(--PWM-Gold-200, #F0E6DC);
+    padding: 16px;
+    max-width: 100%;
+    margin: 20px 0 0;
+}
+
+.section.our-key-differences .cards-wrapper ul{
+    display: flex;
+}
+
+.section.our-key-differences .cards-wrapper ul li{
+    border: none;
+    background-color: unset;
+}
+
+.section.our-key-differences .cards-wrapper .cards-card-image{
+    min-height: 358px;
+    height: auto;
+    width: auto;
+}
+
+.section.our-key-differences .cards-wrapper .cards-card-image picture{
+    line-height: 0;
+    height: 100%;
+    display: block;
+}
+
+.section.our-key-differences .cards-wrapper .cards-card-image *{
+    min-height: 358px;
+}
+
+.section.our-key-differences .cards-wrapper .cards-card-body{
+    
+}
+
 @media screen and (width>768px) {
     .section.our-key-differences .custom-rte-wrapper {
         max-width: 1237px;
         padding: 20px;
         border-radius: 4px;
     }
-    
+
     .section.our-key-differences .custom-rte {
         display: flex;
         flex-direction: row;
@@ -441,7 +477,7 @@ main>.section.who-we-are .custom-rte-wrapper {
         max-width: 460px;
         width: 100%;
     }
-    
+
     .section.our-key-differences .custom-rte div:nth-child(2) h2 {
         margin: 0 0 67px;
     }
