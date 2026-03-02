@@ -106,9 +106,13 @@
     }
   }
 
-  // When accordion is open — body expands over the image
+  // When accordion is open — body fills entire card, image hidden
   .swiper-slide.accordion-open .cardswithimg-card-body {
     flex: 1;
+  }
+
+  .swiper-slide.accordion-open .cardswithimg-card-image {
+    display: none;
   }
 
   // ===== Accordion Header (title + toggle button) =====
