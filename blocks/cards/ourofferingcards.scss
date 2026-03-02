@@ -1,13 +1,11 @@
 /* Our Offering Cards — Figma node 4749:14920 */
+/* Stacking scroll animation — cards slide up to cover previous card */
 
 /* ===== Section Heading (default-content-wrapper) ===== */
-/* Figma node 4749:14954 — "Our offerings" label + main heading */
 .ourofferingcards-section {
   .ourofferingcards-heading {
     margin-bottom: 40px;
 
-    // First <p> — "Our offerings" label
-    // Inter 500 16px/1.5 #866E44
     .ourofferingcards-label {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
@@ -17,8 +15,6 @@
       margin: 0 0 8px 0;
     }
 
-    // Heading — "A family comes across multiple needs..."
-    // Inter 500 40px/1.2 #2E2A94
     > h1,
     > h2,
     > h3 {
@@ -30,7 +26,6 @@
       margin: 0;
     }
 
-    // If heading is authored as a <p> instead of <h2>
     .ourofferingcards-main-heading {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
@@ -55,46 +50,52 @@
   }
 }
 
-/* ===== Cards ===== */
-
-/* Reset default cards grid */
+/* ===== Stack Section & Sticky Frame ===== */
 .cards.ourofferingcards > ul {
   display: block;
 }
 
 .cards.ourofferingcards {
+  padding: 0;
+  overflow: visible;
 
-  // Wrapper — vertical stack, 104px between cards
-  .ourofferingcards-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 104px;
-    width: 100%;
+  .ourofferingcards-stack-section {
+    position: relative;
+    // height is set dynamically by JS
   }
 
-  // Single card — row layout, space-between, center aligned, 40px gap
-  // Figma: layout_POVXKR, fill_0G3WIL=#F8F3EF, borderRadius=4px
+  .ourofferingcards-sticky-frame {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ===== Individual Card ===== */
   .ourofferingcard {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1200px, 92vw);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     gap: 40px;
     background-color: #f8f3ef;
-    border-radius: 4px;
+    border-radius: 12px;
     overflow: hidden;
-    width: 100%;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    // top is set dynamically by JS
   }
 
-  // Image — 608×342, white bg, 4px radius
-  // Figma: layout_AVMAZV, fill_13W723=#FFFFFF
+  /* ===== Image ===== */
   .ourofferingcard-image {
-    flex: 0 0 608px;
-    width: 608px;
+    flex: 0 0 50%;
+    width: 50%;
     height: 342px;
     line-height: 0;
     background-color: #fff;
-    border-radius: 4px;
+    border-radius: 12px 0 0 12px;
     overflow: hidden;
 
     picture {
@@ -109,32 +110,24 @@
       max-width: none;
       object-fit: cover;
       display: block;
-      border-radius: 4px;
     }
   }
 
-  // Content Container — column, gap 20px, width 584px
-  // Figma: layout_B66BVM
+  /* ===== Content ===== */
   .ourofferingcard-content {
     flex: 1 1 0%;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 584px;
-    max-width: 584px;
-    padding: 0;
+    padding: 32px 40px 32px 0;
     box-sizing: border-box;
   }
 
-  // Container (Title + Description) — column, gap 12px
-  // Figma: layout_ST7HEZ
   .ourofferingcard-text {
     display: flex;
     flex-direction: column;
     gap: 12px;
 
-    // Title — Desktop/Sub Header/Large
-    // Inter 500 24px/1.333 #866E44
     .ourofferingcard-title {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
@@ -144,8 +137,6 @@
       margin: 0;
     }
 
-    // Description — Desktop/Paragraph/Medium-regular
-    // Inter 400 16px/1.5 #2E2A94
     .ourofferingcard-desc {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
@@ -156,8 +147,6 @@
     }
   }
 
-  // Link — Desktop/Text Link/Medium
-  // Inter 400 16px/1.5 #2E2A94 — plain text link, NOT a button
   .ourofferingcard-link {
     margin: 0;
 
@@ -183,33 +172,59 @@
     }
   }
 
-  // Responsive
-  @media (max-width: 900px) {
-    .ourofferingcards-wrapper {
-      gap: 48px;
-    }
+  /* ===== Navigation Dots ===== */
+  .ourofferingcards-dots {
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    z-index: 999;
+  }
 
+  .ourofferingcards-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.18);
+    transition: background 0.3s ease, transform 0.3s ease;
+
+    &.active {
+      background: #2e2a94;
+      transform: scale(1.4);
+    }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
     .ourofferingcard {
+      width: min(100%, 92vw);
       flex-direction: column;
       gap: 0;
+      border-radius: 8px;
     }
 
     .ourofferingcard-image {
       flex: none;
       width: 100%;
-      max-width: 100%;
       height: auto;
+      border-radius: 8px 8px 0 0;
 
       img {
         height: 220px;
-        border-radius: 4px 4px 0 0;
+        border-radius: 8px 8px 0 0;
       }
     }
 
     .ourofferingcard-content {
       width: 100%;
-      max-width: 100%;
       padding: 24px;
+    }
+
+    .ourofferingcards-dots {
+      right: 12px;
     }
   }
 }
