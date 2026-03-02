@@ -8,7 +8,7 @@
 
     // First <p> — "Our offerings" label
     // Inter 500 16px/1.5 #866E44
-    > p:first-child {
+    .ourofferingcards-label {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 16px;
@@ -31,7 +31,7 @@
     }
 
     // If heading is authored as a <p> instead of <h2>
-    > p:nth-child(2) {
+    .ourofferingcards-main-heading {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 40px;
@@ -48,7 +48,7 @@
       > h1,
       > h2,
       > h3,
-      > p:nth-child(2) {
+      .ourofferingcards-main-heading {
         font-size: 28px;
       }
     }
@@ -135,7 +135,7 @@
 
     // Title — Desktop/Sub Header/Large
     // Inter 500 24px/1.333 #866E44
-    p:first-child {
+    .ourofferingcard-title {
       font-family: 'Inter', sans-serif;
       font-weight: 500;
       font-size: 24px;
@@ -146,7 +146,7 @@
 
     // Description — Desktop/Paragraph/Medium-regular
     // Inter 400 16px/1.5 #2E2A94
-    p:last-child {
+    .ourofferingcard-desc {
       font-family: 'Inter', sans-serif;
       font-weight: 400;
       font-size: 16px;

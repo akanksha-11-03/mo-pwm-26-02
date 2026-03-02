@@ -11,6 +11,10 @@ export default function decorateOurOfferingCards(block) {
     const dcw = section.querySelector('.default-content-wrapper');
     if (dcw) {
       dcw.classList.add('ourofferingcards-heading');
+      // Add explicit classes instead of relying on :first-child / :nth-child
+      const headingChildren = [...dcw.children];
+      if (headingChildren[0]) headingChildren[0].classList.add('ourofferingcards-label');
+      if (headingChildren[1]) headingChildren[1].classList.add('ourofferingcards-main-heading');
     }
   }
 
@@ -39,6 +43,7 @@ export default function decorateOurOfferingCards(block) {
     const textDiv = document.createElement('div');
     textDiv.className = 'ourofferingcard-text';
 
+    let textChildIndex = 0;
     cols.forEach((col) => {
       if (col === imageDiv) return;
 
@@ -51,7 +56,14 @@ export default function decorateOurOfferingCards(block) {
       } else {
         // Title or description — move children into text container
         while (col.firstChild) {
-          textDiv.append(col.firstChild);
+          const child = col.firstChild;
+          // Add explicit classes for title and description
+          if (child.nodeType === 1) {
+            if (textChildIndex === 0) child.classList.add('ourofferingcard-title');
+            else if (textChildIndex === 1) child.classList.add('ourofferingcard-desc');
+            textChildIndex += 1;
+          }
+          textDiv.append(child);
         }
       }
     });
