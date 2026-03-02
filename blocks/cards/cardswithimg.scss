@@ -82,7 +82,7 @@
     padding: 20px 20px 16px;
     background: #F0E6DC;
     flex-shrink: 0;
-    transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   // ===== Image — fills remaining bottom of card =====
@@ -93,8 +93,9 @@
     overflow: hidden;
     max-height: 100%;
     opacity: 1;
-    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.4s ease;
+    transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.6s ease,
+                flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 
     picture {
       display: block;
