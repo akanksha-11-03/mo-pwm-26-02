@@ -13,7 +13,7 @@
       gap: 60px;
 
       // Left content column
-      > div:first-child {
+      > .hwsy-content-col {
         flex: 1;
 
         h6 {
@@ -141,7 +141,7 @@
         flex-direction: column;
         gap: 32px;
 
-        > div:first-child {
+        > .hwsy-content-col {
           h5 {
             font-size: 28px;
           }
@@ -156,7 +156,7 @@
     padding: 32px 0;
 
     .columns-wrapper {
-      .columns.columns-2-cols > div > div:first-child {
+      .columns.columns-2-cols > div > .hwsy-content-col {
         h5 {
           font-size: 24px;
         }
