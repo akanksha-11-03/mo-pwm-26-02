@@ -51,14 +51,29 @@
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  height: 420px;
+  display: flex;
+  flex-direction: column;
+  height: 480px;
   background: #F0E6DC;
 }
+.cards.cardswithimg .cardswithimg-card-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 16px;
+  background: #F0E6DC;
+  flex-shrink: 0;
+  transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
 .cards.cardswithimg .cardswithimg-card-image {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  flex: 1;
+  min-height: 0;
   line-height: 0;
+  overflow: hidden;
+  max-height: 100%;
+  opacity: 1;
+  transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease, flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .cards.cardswithimg .cardswithimg-card-image picture {
   display: block;
@@ -73,21 +88,13 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cards.cardswithimg .cardswithimg-card-body {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 35%, rgba(0, 0, 0, 0.05) 60%, transparent 100%);
-  padding: 24px;
-  transition: background 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-}
 .cards.cardswithimg .swiper-slide.accordion-open .cardswithimg-card-body {
-  background: rgba(0, 0, 0, 0.75);
+  flex: 1;
+}
+.cards.cardswithimg .swiper-slide.accordion-open .cardswithimg-card-image {
+  max-height: 0;
+  opacity: 0;
+  flex: 0;
 }
 .cards.cardswithimg .accordion-header {
   display: flex;
@@ -105,7 +112,7 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 1.3;
-  color: #fff;
+  color: #2e2a94;
 }
 .cards.cardswithimg .accordion-title p {
   margin: 0;
@@ -113,37 +120,30 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 1.3;
-  color: #fff;
+  color: #2e2a94;
 }
 .cards.cardswithimg .accordion-toggle {
   all: unset;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
   flex-shrink: 0;
-  transition: background 0.3s ease, border-color 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 .cards.cardswithimg .accordion-toggle:hover {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.15);
+  opacity: 0.7;
 }
 .cards.cardswithimg .accordion-toggle-icon {
-  color: #fff;
-  font-size: 22px;
+  color: #2e2a94;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1;
 }
-.cards.cardswithimg .swiper-slide.accordion-open .accordion-toggle {
-  border-color: #fff;
-  background: rgba(255, 255, 255, 0.2);
-}
 .cards.cardswithimg .accordion-desc {
-  margin-top: 12px;
+  margin-top: 8px;
 }
 .cards.cardswithimg .accordion-desc p {
   margin: 0;
@@ -151,10 +151,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.85);
+  color: #2e2a94;
 }
 .cards.cardswithimg .accordion-detail {
-  margin-top: 16px;
+  margin-top: 12px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -169,10 +169,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  color: #2e2a94;
 }
 .cards.cardswithimg .accordion-detail a {
-  color: #fff;
+  color: #2e2a94;
   text-decoration: underline;
 }
 .cards.cardswithimg .swiper-slide.accordion-open .accordion-detail {
@@ -194,17 +194,17 @@
 }
 @media (max-width: 900px) {
   .cards.cardswithimg .swiper-slide {
-    height: 360px;
+    height: 400px;
   }
   .cards.cardswithimg .cardswithimg-card-body {
-    padding: 20px;
+    padding: 16px 16px 12px;
   }
   .cards.cardswithimg .accordion-title h1, .cards.cardswithimg .accordion-title h2, .cards.cardswithimg .accordion-title h3, .cards.cardswithimg .accordion-title h4, .cards.cardswithimg .accordion-title h5, .cards.cardswithimg .accordion-title h6, .cards.cardswithimg .accordion-title p {
     font-size: 18px;
   }
   .cards.cardswithimg .accordion-toggle {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
   .cards.cardswithimg .accordion-toggle-icon {
     font-size: 20px;
@@ -212,10 +212,10 @@
 }
 @media (max-width: 480px) {
   .cards.cardswithimg .swiper-slide {
-    height: 320px;
+    height: 360px;
   }
   .cards.cardswithimg .cardswithimg-card-body {
-    padding: 16px;
+    padding: 14px 14px 10px;
   }
   .cards.cardswithimg .accordion-title h1, .cards.cardswithimg .accordion-title h2, .cards.cardswithimg .accordion-title h3, .cards.cardswithimg .accordion-title h4, .cards.cardswithimg .accordion-title h5, .cards.cardswithimg .accordion-title h6, .cards.cardswithimg .accordion-title p {
     font-size: 16px;
