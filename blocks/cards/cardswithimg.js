@@ -27,7 +27,13 @@ export default async function decoratecardwithimgs(block) {
   if (section) {
     section.classList.add('cardswithimg-section');
     const dcw = section.querySelector('.default-content-wrapper');
-    if (dcw) dcw.classList.add('cardswithimg-heading');
+    if (dcw) {
+      dcw.classList.add('cardswithimg-heading');
+      // Add explicit classes instead of relying on :first-child / :nth-child
+      const headingChildren = [...dcw.children];
+      if (headingChildren[0]) headingChildren[0].classList.add('cardswithimg-label');
+      if (headingChildren[1]) headingChildren[1].classList.add('cardswithimg-main-heading');
+    }
   }
 
   const Swiper = await loadSwiper();
