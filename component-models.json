@@ -136,10 +136,6 @@
           {
             "name": "Highlight",
             "value": "highlight"
-          },
-          {
-            "name": "Curated Content",
-            "value": "curated-content"
           }
         ]
       }
