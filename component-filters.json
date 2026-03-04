@@ -38,5 +38,11 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "curated-content",
+    "components": [
+      "curated-content-item"
+    ]
   }
 ]
