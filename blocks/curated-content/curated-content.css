@@ -1,0 +1,49 @@
+.section.curated-content-container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+.section.curated-content-container .default-content-wrapper h4 {
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: #866E44;
+  line-height: 40px;
+  font-size: 32px;
+  margin: 0;
+}
+.section.curated-content-container .default-content-wrapper h4 strong {
+  color: #2E2A94;
+}
+.section.curated-content-container .default-content-wrapper p {
+  font-weight: 400;
+  letter-spacing: 0%;
+  color: #2E2A94;
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
+.section.curated-content-container .default-content-wrapper .button-container a {
+  background-color: #2E2A94;
+  border-radius: 4px;
+  padding: 12px;
+  margin: 0;
+}
+.section.curated-content-container .curated-content-wrapper .curated-content.block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.section.curated-content-container .curated-content-wrapper .curated-content.block div {
+  flex: 1;
+}
+.section.curated-content-container .curated-content-wrapper .curated-content.block div div {
+  width: 100%;
+  height: 220px;
+}
+.section.curated-content-container .curated-content-wrapper .curated-content.block div div picture img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}/*# sourceMappingURL=curated-content.css.map */
