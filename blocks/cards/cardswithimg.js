@@ -14,7 +14,7 @@ async function loadSwiper() {
 function toggleAccordion(slide) {
   const isOpen = slide.classList.toggle('accordion-open');
   const icon = slide.querySelector('.accordion-toggle-icon');
-  if (icon) icon.textContent = isOpen ? '−' : '+';
+  if (icon) icon.style.transform = isOpen ? 'rotate(45deg)' : 'rotate(0deg)';
 }
 
 export default async function decoratecardwithimgs(block) {
@@ -92,9 +92,10 @@ export default async function decoratecardwithimgs(block) {
         e.stopPropagation();
         toggleAccordion(slide);
       });
-      const icon = document.createElement('span');
+      const icon = document.createElement('img');
       icon.className = 'accordion-toggle-icon';
-      icon.textContent = '+';
+      icon.src = `${window.hlx.codeBasePath}/icons/Union+.svg`;
+      icon.alt = 'Toggle';
       toggleBtn.append(icon);
 
       headerRow.append(titleWrap, toggleBtn);

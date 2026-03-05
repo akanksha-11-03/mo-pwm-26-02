@@ -160,8 +160,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
     flex-shrink: 0;
     transition: opacity 0.3s ease;
@@ -172,10 +172,9 @@
   }
 
   .accordion-toggle-icon {
-    color: #2e2a94;
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 1;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
   }
 
   // ===== Visible Description (always shown below title) =====
@@ -263,7 +262,8 @@
     }
 
     .accordion-toggle-icon {
-      font-size: 20px;
+      width: 18px;
+      height: 18px;
     }
   }
 
