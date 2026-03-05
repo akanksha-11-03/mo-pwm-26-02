@@ -1,0 +1,86 @@
+import Swiper from "../swiper/swiper-bundle.js";
+
+let swiperInstance = null;
+
+function initSwiper(wrapper, block) {
+  // Prevent re-initialization
+  if (wrapper.classList.contains("swiper-initialized")) return;
+
+  // Get all slide elements
+  const slideElements = [...block.children];
+
+  // Check if we're on desktop and have more than 3 slides
+  const isDesktop = window.innerWidth >= 768;
+  if (isDesktop && slideElements.length <= 1) {
+    return; // Don't initialize swiper on desktop if 1 or fewer slides
+  }
+
+  // Add necessary classes to existing elements
+  wrapper.classList.add("swiper");
+  block.classList.add("swiper-wrapper");
+
+  // Add swiper-slide class to each child div
+  slideElements.forEach((slide) => {
+    slide.classList.add("swiper-slide");
+  });
+
+  // Initialize Swiper with the specified configuration
+  swiperInstance = new Swiper(wrapper, {
+    slidesPerView: 1.1,
+    spaceBetween: 16,
+    loop: true,
+    loopAdditionalSlides: 3,
+    grabCursor: true,
+    touchEventsTarget: 'container',
+    touchRatio: 1,
+    simulateTouch: true,
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
+    },
+  });
+
+  wrapper.classList.add("swiper-initialized");
+}
+
+export default function decorate(block) {
+  // Find the wrapper (parent of block)
+  const wrapper = block.parentElement;
+
+  if (wrapper && wrapper.classList.contains("curated-content-wrapper")) {
+    // Initialize swiper
+    initSwiper(wrapper, block);
+
+    // Reinitialize on window resize if needed
+    let resizeTimeout;
+    window.addEventListener("resize", () => {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(() => {
+        const slideElements = [...block.children];
+        const isDesktop = window.innerWidth >= 768;
+
+        // If swiper is initialized but shouldn't be (desktop with <= 3 slides)
+        if (
+          wrapper.classList.contains("swiper-initialized") &&
+          isDesktop &&
+          slideElements.length <= 3
+        ) {
+          if (swiperInstance) {
+            swiperInstance.destroy(true, true);
+            swiperInstance = null;
+          }
+          wrapper.classList.remove("swiper", "swiper-initialized");
+          block.classList.remove("swiper-wrapper");
+          slideElements.forEach((slide) => {
+            slide.classList.remove("swiper-slide");
+          });
+        }
+        // If swiper is not initialized but should be
+        else if (!wrapper.classList.contains("swiper-initialized")) {
+          initSwiper(wrapper, block);
+        }
+      }, 250);
+    });
+  }
+}

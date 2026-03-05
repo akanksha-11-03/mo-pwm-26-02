@@ -15,7 +15,9 @@
       "hero",
       "cards",
       "columns",
-      "fragment"
+      "fragment",
+      "embed",
+      "custom-rte"
     ]
   },
   {
@@ -37,6 +39,13 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "custom-rte",
+    "components": [
+      "custom-rte-item",
+      "custom-image-item"
     ]
   }
 ]

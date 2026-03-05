@@ -138,8 +138,37 @@
             "value": "highlight"
           },
           {
-            "name": "Curated Content",
-            "value": "curated-content"
+            "name": "Hero Banner Variation",
+            "children": [
+              {
+                "name": "Hero Image banner",
+                "value": "hero-image-banner"
+              },
+              {
+                "name": "Hero Video banner",
+                "value": "hero-video-banner"
+              }
+            ]
+          },
+          {
+            "name": "Who We Are Section",
+            "value": "who-we-are"
+          },
+          {
+            "name": "Alpha Strategist Section",
+            "value": "alpha-strategist"
+          },
+          {
+            "name": "Wealth Creation Section",
+            "value": "wealth-creation"
+          },
+          {
+            "name": "Our Key Differences Section",
+            "value": "our-key-differences"
+          },
+          {
+            "name": "Young Titans Section",
+            "value": "young-titans-forum"
           }
         ]
       }
@@ -184,6 +213,70 @@
     ]
   },
   {
+    "id": "custom-rte-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "RTE Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "custom-image-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      }
+    ]
+  },
+  {
+    "id": "embed",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "component": "reference",
+        "name": "video_image",
+        "label": "Video Image"
+      },
+      {
+        "component": "text",
+        "name": "video_imageAlt",
+        "label": "Video Image Alt"
+      },
+      {
+        "component": "reference",
+        "name": "video_imageMob",
+        "label": "Video Image Mobile"
+      },
+      {
+        "component": "text",
+        "name": "video_imageMobAlt",
+        "label": "Video Image Alt"
+      },
+      {
+        "component": "text",
+        "name": "video_imageTitle",
+        "label": "Video Image Title"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -199,15 +292,29 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
+        "name": "mobImage",
+        "label": "Mobile Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
+        "name": "mobImageAlt",
+        "label": "Mobile Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "deskImage",
+        "label": "Desktop Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "deskImageAlt",
+        "label": "Desktop Alt",
         "value": ""
       },
       {
