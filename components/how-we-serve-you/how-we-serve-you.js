@@ -1,5 +1,6 @@
 import { loadCSS } from "../../scripts/aem.js";
 export function linkToBtn(document) {
+    debugger
   {
     let elements = [...document.querySelectorAll('.how-we-serve-you li')];
 
@@ -47,7 +48,7 @@ export function linkToBtn(document) {
     });
 
     // After all li conversions, convert all ul elements to div
-    document.querySelectorAll("ul").forEach((ul) => {
+    document.querySelectorAll(".how-we-serve-you ul").forEach((ul) => {
       const div = document.createElement("div");
       div.className = "divwithlinks";
       div.innerHTML = ul.innerHTML;
