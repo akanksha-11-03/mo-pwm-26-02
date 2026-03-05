@@ -16,6 +16,7 @@
       "cards",
       "cardswithimg",
       "ourofferingcards",
+      "seeyourwealthinmotion",
       "columns",
       "fragment",
       "feature-card"
@@ -58,6 +59,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "seeyourwealthinmotion",
+    "components": [
+      "seeyourwealthinmotion-item"
     ]
   }
 ]

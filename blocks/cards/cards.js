@@ -2,6 +2,7 @@ import { createOptimizedPicture } from "../../scripts/aem.js";
 import { moveInstrumentation } from "../../scripts/scripts.js";
 import decoratecardwithimgs from "./cardswithimg.js";
 import decorateOurOfferingCards from "./ourofferingcards.js";
+import decorateSeeyourwealthinmotion from "./seeyourwealthinmotion.js";
 
 export default function decorate(block) {
   if (block.classList.contains("cardswithimg")) {
@@ -11,6 +12,11 @@ export default function decorate(block) {
 
   if (block.classList.contains("ourofferingcards")) {
     decorateOurOfferingCards(block);
+    return;
+  }
+
+  if (block.classList.contains("seeyourwealthinmotion")) {
+    decorateSeeyourwealthinmotion(block);
     return;
   }
   /* change to ul, li */
