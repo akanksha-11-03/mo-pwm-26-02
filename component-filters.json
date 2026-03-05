@@ -40,12 +40,6 @@
     ]
   },
   {
-    "id": "seeyourwealthinmotion",
-    "components": [
-      "seeyourwealthinmotion-item"
-    ]
-  },
-  {
     "id": "columns",
     "components": [
       "column"

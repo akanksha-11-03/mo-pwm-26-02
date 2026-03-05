@@ -127,8 +127,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   cursor: pointer;
   flex-shrink: 0;
   transition: opacity 0.3s ease;
@@ -137,10 +137,9 @@
   opacity: 0.7;
 }
 .cards.cardswithimg .accordion-toggle-icon {
-  color: #2e2a94;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1;
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
 }
 .cards.cardswithimg .accordion-desc {
   margin-top: 8px;
@@ -207,7 +206,8 @@
     height: 28px;
   }
   .cards.cardswithimg .accordion-toggle-icon {
-    font-size: 20px;
+    width: 18px;
+    height: 18px;
   }
 }
 @media (max-width: 480px) {

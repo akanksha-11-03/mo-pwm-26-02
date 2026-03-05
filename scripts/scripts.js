@@ -12,6 +12,7 @@ import {
   loadCSS,
 } from './aem.js';
 import {linkToBtn} from '../components/how-we-serve-you/how-we-serve-you.js';
+import decorateSeeyourWealthInmotion from '../components/Seeyour-wealth-inmotion/Seeyour-wealth-inmotion.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -84,6 +85,8 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  linkToBtn(document);
+  decorateSeeyourWealthInmotion(document);
   // main.parentElement.classList.add('colour')
 }
 
@@ -145,7 +148,6 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  linkToBtn(document);
 }
 
 loadPage();

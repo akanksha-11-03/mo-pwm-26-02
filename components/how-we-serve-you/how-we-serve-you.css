@@ -10,7 +10,7 @@
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 40px;
 }
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div > .hwsy-content-col {
   flex: 1;
@@ -52,18 +52,19 @@
 .how-we-serve-you .columns-wrapper .divwithlinks {
   display: flex;
   flex-direction: column;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
 .how-we-serve-you .columns-wrapper .divwithlinks a {
   all: unset;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 0;
+  padding: 24px 0;
   border-bottom: 1px solid #d1cbc3;
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
   color: #2e2a94;
   cursor: pointer;
