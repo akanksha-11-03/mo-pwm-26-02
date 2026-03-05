@@ -1,0 +1,210 @@
+.embed {
+    width: unset;
+    text-align: center;
+    max-width: 800px;
+    margin: 32px auto;
+}
+
+.embed>div {
+    display: flex;
+    justify-content: center;
+}
+
+.embed.embed-twitter .twitter-tweet-rendered {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.embed .embed-placeholder {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    position: relative;
+}
+
+.embed .embed-placeholder>* {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+}
+
+.embed .embed-placeholder picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.embed .embed-placeholder-play button {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(3);
+    width: 22px;
+    height: 22px;
+    border: 2px solid;
+    border-radius: 20px;
+    padding: 0;
+}
+
+.embed .embed-placeholder-play button::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 0;
+    height: 10px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid;
+    top: 4px;
+    left: 7px;
+}
+
+
+/* Embed Image Banner css start */
+.section.hero-banner {
+    position: relative;
+}
+
+.section.hero-banner .embed-wrapper {
+    padding: 0;
+    max-width: 100%;
+}
+
+.section.hero-banner .embed {
+    max-width: 100%;
+
+    /* min-height: 664px; */
+    height: 664px;
+    margin: 0;
+}
+
+.section.hero-banner .embed p {
+    margin: 0;
+}
+
+.section.hero-banner .embed p:first-of-type {
+    display: none;
+}
+
+.section.hero-banner .embed picture {
+    line-height: 0;
+    height: 100%;
+    display: block;
+}
+
+.section.hero-banner .embed * {
+    width: 100%;
+    height: 100%;
+}
+
+.section.hero-banner .default-content-wrapper {
+    position: absolute;
+    padding: 103px 37px 112px;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #000 -22.57%, rgba(0, 0, 0, 0.00) 38.92%);
+    box-sizing: border-box;
+}
+
+.section.hero-banner .default-content-wrapper>p:first-of-type {
+    width: 110px;
+    height: 149px;
+    margin: 0 0 43px;
+}
+
+.section.hero-banner .default-content-wrapper>p span.icon {
+    width: 100%;
+    height: 100%;
+}
+
+.section.hero-banner .default-content-wrapper h2 {
+    color: var(--Neutrals-White, #FFF);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Header/H4 */
+    font-family: var(--TItle, Inter);
+    font-size: var(--Heading-H5-Size, 28px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--Sub-Header-Large-Line-Height, 32px);
+    /* 114.286% */
+    max-width: 80%;
+    width: 100%;
+    margin: 0;
+}
+
+.section.hero-banner .default-content-wrapper p.button-container {
+    margin: 24px 0 0;
+    line-height: 0;
+}
+
+.section.hero-banner .default-content-wrapper p.button-container .button {
+    margin: 0;
+    padding: 10px 31px;
+    border-radius: var(--Border-Radius-4, 4px);
+    background: var(--blue-1800-primary, #2E2A94);
+    border: none;
+    min-width: 125px;
+    color: var(--Text-White, #FFF);
+    text-align: center;
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+    font-family: var(--Body, Inter);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 19.719px;
+    /* 140.852% */
+    /* 111.111% */
+}
+
+@media screen and (width>768px) {
+    .section.hero-banner .embed {
+        min-height: 623px;
+        height: auto;
+    }
+
+    .section.hero-banner .embed p:first-of-type {
+        display: block;
+    }
+
+    .section.hero-banner .embed p:last-of-type {
+        display: none;
+    }
+
+    .section.hero-banner .default-content-wrapper {
+        padding: 171px 78px 79px;
+    }
+
+    .section.hero-banner .default-content-wrapper>p:first-of-type {
+        margin: 0 0 39px;
+    }
+
+    .section.hero-banner .default-content-wrapper h2 {
+        max-width: 59.654%;
+        color: var(--blue-1800-primary, #2E2A94);
+        font-size: var(--Heading-H2-Size, 40px);
+        line-height: var(--Heading-H2-Line-Height, 48px);
+        /* 120% */
+    }
+
+    .section.hero-banner .default-content-wrapper p.button-container {
+        margin: 39px 0 0;
+    }
+
+    .section.hero-banner .default-content-wrapper p.button-container .button {
+        min-width: 158px;
+        padding: 14px 32px;
+        color: var(--Text-White, #FFF);
+        font-family: var(--Body, Inter);
+        font-size: 17.747px;
+        line-height: 19.719px;
+        /* 111.111% */
+    }
+}
+
+/* Embed Image Banner css end */

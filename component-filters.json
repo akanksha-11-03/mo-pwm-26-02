@@ -26,6 +26,8 @@
     "id": "feature-card",
     "components": [
       "feature-card-item"
+      "embed",
+      "custom-rte"
     ]
   },
   {
@@ -65,6 +67,10 @@
     "id": "seeyourwealthinmotion",
     "components": [
       "seeyourwealthinmotion-item"
+    "id": "custom-rte",
+    "components": [
+      "custom-rte-item",
+      "custom-image-item"
     ]
   }
 ]
