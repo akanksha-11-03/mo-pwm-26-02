@@ -1,6 +1,5 @@
 import { loadCSS } from "../../scripts/aem.js";
 export function linkToBtn(document) {
-    debugger
   {
     let elements = [...document.querySelectorAll('.how-we-serve-you li')];
 

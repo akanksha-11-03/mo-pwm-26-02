@@ -94,7 +94,7 @@ export default async function decoratecardwithimgs(block) {
       });
       const icon = document.createElement('img');
       icon.className = 'accordion-toggle-icon';
-      icon.src = `${window.hlx.codeBasePath}/icons/Union+.svg`;
+      icon.src = `${window.hlx.codeBasePath}/icons/Union-puls.svg`;
       icon.alt = 'Toggle';
       toggleBtn.append(icon);
 
