@@ -460,14 +460,14 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col2_logoImage",
+        "name": "col3_logoImage",
         "label": "Logo Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_logoImageAlt",
+        "name": "col3_logoImageAlt",
         "label": "Logo Alt",
         "value": ""
       }
