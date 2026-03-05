@@ -1,6 +1,8 @@
 .section.curated-content-container {
   max-width: 1232px;
   margin: 0 auto;
+  background-color: #f8f3ef;
+  padding: 64px 0;
   position: relative;
 }
 .section.curated-content-container .default-content-wrapper {
@@ -24,10 +26,16 @@
 @media screen and (max-width: 900px) {
   .section.curated-content-container .default-content-wrapper h4 {
     font-size: 28px;
+    margin-bottom: 16px;
   }
 }
 .section.curated-content-container .default-content-wrapper h4 strong {
   color: #2e2a94;
+}
+@media screen and (max-width: 426px) {
+  .section.curated-content-container .default-content-wrapper h4 strong {
+    display: block;
+  }
 }
 .section.curated-content-container .default-content-wrapper p {
   font-weight: 400;
@@ -52,6 +60,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
+  max-width: 100%;
 }
 @media screen and (max-width: 900px) {
   .section.curated-content-container .curated-content-wrapper {
@@ -87,6 +96,9 @@
   -o-object-position: center;
      object-position: center;
 }
+.section.curated-content-container .curated-content-wrapper .curated-content.block div div:nth-child(3) {
+  padding: 24px 0;
+}
 .section.curated-content-container .curated-content-wrapper .curated-content.block div div:nth-child(3) p:nth-child(1) {
   display: flex;
   align-items: center;
@@ -102,7 +114,7 @@
   border: 1px solid #866e44;
   border-radius: 1000px;
   padding: 0 8px 0 8px;
-  margin: 24px 0;
+  margin: 0 0 24px 0;
 }
 .section.curated-content-container .curated-content-wrapper .curated-content.block div div:nth-child(3) p:nth-child(1) span {
   width: 20px;
@@ -146,6 +158,9 @@
     line-height: 20px;
   }
 }
+.section.curated-content-container .curated-content-wrapper .curated-content.block div div:nth-child(3) p:nth-child(4) {
+  margin: 16px 0 0 0;
+}
 .section.curated-content-container .curated-content-wrapper .curated-content.block div div:nth-child(3) p:nth-child(4) a {
   font-size: 14px;
   line-height: 20px;
@@ -171,8 +186,8 @@
 }
 .section.curated-content-container .default-content-wrapper:nth-child(3) {
   position: absolute;
-  top: 10px;
-  right: calc(3% - 6px);
+  top: 62px;
+  right: 0;
   padding: 0;
   margin: 0;
 }

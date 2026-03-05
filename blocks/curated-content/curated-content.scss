@@ -1,6 +1,8 @@
 .section.curated-content-container {
   max-width: 1232px;
   margin: 0 auto;
+  background-color: #f8f3ef;
+  padding: 64px 0;
   position: relative;
 
   .default-content-wrapper {
@@ -21,10 +23,14 @@
       margin: 0;
       @media screen and (max-width: 900px) {
         font-size: 28px;
+        margin-bottom: 16px;
       }
 
       strong {
         color: #2e2a94;
+        @media screen and (max-width: 426px) {
+          display: block;
+        }
       }
     }
 
@@ -53,6 +59,7 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
+    max-width: 100%;
     @media screen and (max-width: 900px) {
       padding: 0 17px;
     }
@@ -85,6 +92,7 @@
           }
         }
         div:nth-child(3) {
+          padding: 24px 0;
           p:nth-child(1) {
             display: flex;
             align-items: center;
@@ -99,7 +107,7 @@
             border: 1px solid #866e44;
             border-radius: 1000px;
             padding: 0 8px 0 8px;
-            margin: 24px 0;
+            margin: 0 0 24px 0;
 
             span {
               width: 20px;
@@ -145,19 +153,22 @@
             }
           }
 
-          p:nth-child(4) a {
-            font-size: 14px;
-            line-height: 20px;
-            background-color: transparent;
-            color: #2e2a94;
-            text-decoration: underline;
-            text-underline-offset: 20%;
-            text-decoration-thickness: 0%;
-            text-decoration-style: solid;
-            text-decoration-skip-ink: auto;
-            padding: 0;
-            margin: 0;
-            border-radius: unset;
+          p:nth-child(4) {
+            margin: 16px 0 0 0;
+            a {
+              font-size: 14px;
+              line-height: 20px;
+              background-color: transparent;
+              color: #2e2a94;
+              text-decoration: underline;
+              text-underline-offset: 20%;
+              text-decoration-thickness: 0%;
+              text-decoration-style: solid;
+              text-decoration-skip-ink: auto;
+              padding: 0;
+              margin: 0;
+              border-radius: unset;
+            }
           }
         }
       }
@@ -177,8 +188,8 @@
 
   .default-content-wrapper:nth-child(3) {
     position: absolute;
-    top: 10px;
-    right: calc(3% - 6px);
+    top: 62px;
+    right: 0;
     padding: 0;
     margin: 0;
 
