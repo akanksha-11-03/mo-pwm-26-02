@@ -28,6 +28,24 @@
     ]
   },
   {
+    "id": "cardswithimg",
+    "components": [
+      "cardswithimg-item"
+    ]
+  },
+  {
+    "id": "ourofferingcards",
+    "components": [
+      "ourofferingcard"
+    ]
+  },
+  {
+    "id": "seeyourwealthinmotion",
+    "components": [
+      "seeyourwealthinmotion-item"
+    ]
+  },
+  {
     "id": "columns",
     "components": [
       "column"
@@ -47,6 +65,12 @@
     "components": [
       "custom-rte-item",
       "custom-image-item"
+    ]
+  },
+  {
+    "id": "feature-card",
+    "components": [
+      "feature-card-item"
     ]
   },
   {
