@@ -12,6 +12,7 @@ import {
   loadCSS,
 } from './aem.js';
 import {linkToBtn} from '../components/how-we-serve-you/how-we-serve-you.js';
+import decorateSeeyourWealthInmotion from '../components/Seeyour-wealth-inmotion/Seeyour-wealth-inmotion.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -146,6 +147,7 @@ async function loadPage() {
   await loadLazy(document);
   loadDelayed();
   linkToBtn(document);
+  decorateSeeyourWealthInmotion(document);
 }
 
 loadPage();
