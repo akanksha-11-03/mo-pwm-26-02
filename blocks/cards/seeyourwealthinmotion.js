@@ -18,14 +18,18 @@ export default async function decorateSeeyourwealthinmotion(block) {
   const rows = [...block.children];
   const totalSlides = rows.length;
 
-  // ── Static header: extract heading + subtitle from first row's first col ──
+  // ── Static header: extract heading + subtitle from first row ──
   const staticHeader = document.createElement('div');
   staticHeader.classList.add('sywim-static-header');
 
-  const firstCol = rows[0]?.querySelector('div');
-  if (firstCol) {
-    const heading = firstCol.querySelector('h1, h2, h3');
-    const subtitle = firstCol.querySelector('p');
+  // Find the first row that contains a heading
+  const headerRow = rows.find((row) => row.querySelector('h1, h2, h3'));
+  if (headerRow) {
+    const heading = headerRow.querySelector('h1, h2, h3');
+    // Subtitle is the <p> immediately after the heading
+    const subtitle = heading?.nextElementSibling?.tagName === 'P'
+      ? heading.nextElementSibling
+      : headerRow.querySelector('p');
     if (heading) staticHeader.append(heading.cloneNode(true));
     if (subtitle) staticHeader.append(subtitle.cloneNode(true));
   }
@@ -45,16 +49,38 @@ export default async function decorateSeeyourwealthinmotion(block) {
     const formArea = document.createElement('div');
     formArea.classList.add('sywim-form-area');
 
-    const cols = [...row.children];
-    const textCol = cols[0]; // has h2, subtitle p, "enter Pan" p
-    const btnCol = cols[1]; // has button
+    // Add explicit classes to columns instead of using index
+    [...row.children].forEach((col) => {
+      if (col.querySelector('.button-container') || col.querySelector('a.button')) {
+        col.classList.add('sywim-btn-col');
+      } else {
+        col.classList.add('sywim-text-col');
+      }
+    });
+
+    const textCol = row.querySelector('.sywim-text-col');
+    const btnCol = row.querySelector('.sywim-btn-col');
 
     if (textCol) {
-      // All <p> elements — first is subtitle (already in static header), rest become inputs
-      const paragraphs = [...textCol.querySelectorAll('p')];
-      const inputParagraphs = paragraphs.slice(1); // skip subtitle
+      // Add explicit classes to children instead of using index/slice
+      const heading = textCol.querySelector('h1, h2, h3');
+      if (heading) heading.classList.add('sywim-heading');
 
-      inputParagraphs.forEach((p) => {
+      [...textCol.querySelectorAll('p')].forEach((p) => {
+        // First <p> is subtitle (already in static header), rest are input placeholders
+        if (!p.classList.contains('sywim-subtitle')) {
+          // Check if this is the subtitle (matches the static header subtitle text)
+          const isSubtitle = heading && heading.nextElementSibling === p;
+          if (isSubtitle) {
+            p.classList.add('sywim-subtitle');
+          } else {
+            p.classList.add('sywim-input-source');
+          }
+        }
+      });
+
+      // Convert all sywim-input-source paragraphs into real input fields
+      textCol.querySelectorAll('.sywim-input-source').forEach((p) => {
         const placeholderText = p.textContent.trim();
         const input = document.createElement('input');
         input.type = 'text';
