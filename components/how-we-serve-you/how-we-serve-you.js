@@ -49,13 +49,6 @@ export function linkToBtn(document){ {
         div.innerHTML = ul.innerHTML;
         ul.replaceWith(div);
     });
-
-    // Add explicit classes to avoid index-based CSS selectors
-    document.querySelectorAll('.how-we-serve-you .columns.columns-2-cols > div > div').forEach((col) => {
-      if (!col.classList.contains('columns-img-col')) {
-        col.classList.add('hwsy-content-col');
-      }
-    });
     
   loadCSS(`${window.hlx.codeBasePath}/components/how-we-serve-you/how-we-serve-you.css`);
 }}
