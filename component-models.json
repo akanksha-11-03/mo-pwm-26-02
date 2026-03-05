@@ -169,10 +169,6 @@
           {
             "name": "Young Titans Section",
             "value": "young-titans-forum"
-          },
-          {
-            "name": "See Your Wealth In Motion",
-            "value": "seeyour-wealth-inmotion"
           }
         ]
       }
@@ -395,6 +391,60 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "titans-forum-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_mobImage",
+        "label": "Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_mobImageAlt",
+        "label": "Mobile Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_deskImage",
+        "label": "Desktop Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col1_deskImageAlt",
+        "label": "Desktop Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Banner Text Content",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_logoImage",
+        "label": "Logo Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_logoImageAlt",
+        "label": "Logo Alt",
+        "value": ""
       }
     ]
   }

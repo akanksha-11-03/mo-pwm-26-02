@@ -9,8 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-import {linkToBtn} from '../components/how-we-serve-you/how-we-serve-you.js';
-import decorateSeeyourWealthInmotion from '../components/Seeyour-wealth-inmotion/Seeyour-wealth-inmotion.js';
+
 /* eslint-env browser */
 function sampleRUM(checkpoint, data) {
   // eslint-disable-next-line max-len
@@ -708,8 +707,6 @@ async function loadSections(element) {
       sampleRUM.enhance();
     }
   }
-  linkToBtn(document);
-  decorateSeeyourWealthInmotion(document);
 }
 
 init();
