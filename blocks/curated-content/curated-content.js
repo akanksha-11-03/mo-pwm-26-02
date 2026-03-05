@@ -10,10 +10,11 @@ function initSwiper(wrapper, block) {
   const slideElements = [...block.children];
 
   // Check if we're on desktop and have more than 3 slides
-  const isDesktop = window.innerWidth >= 768;
-  if (isDesktop && slideElements.length <= 1) {
-    return; // Don't initialize swiper on desktop if 1 or fewer slides
-  }
+//   const isDesktop = window.innerWidth >= 768;
+//   if (isDesktop && slideElements.length <= 3) {
+//     wrapper.classList.
+//     return; // Don't initialize swiper on desktop if 3 or fewer slides
+//   }
 
   // Add necessary classes to existing elements
   wrapper.classList.add("swiper");
@@ -27,16 +28,23 @@ function initSwiper(wrapper, block) {
   // Initialize Swiper with the specified configuration
   swiperInstance = new Swiper(wrapper, {
     slidesPerView: 1.1,
-    spaceBetween: 16,
-    loop: true,
-    loopAdditionalSlides: 3,
     grabCursor: true,
-    touchEventsTarget: 'container',
+    touchEventsTarget: "container",
     touchRatio: 1,
     simulateTouch: true,
+    spaceBetween: 16,
     breakpoints: {
       768: {
-        slidesPerView: 1,
+        slidesPerView: 3, // desktop
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      1440: {
+        slidesPerView: 3,
+        spaceBetween: 16,
       },
     },
   });

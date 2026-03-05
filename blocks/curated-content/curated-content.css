@@ -75,7 +75,6 @@
 }
 @media screen and (max-width: 900px) {
   .section.curated-content-container .curated-content-wrapper .curated-content.block div div:nth-child(1) {
-    width: 294px;
     height: 180px;
   }
 }
