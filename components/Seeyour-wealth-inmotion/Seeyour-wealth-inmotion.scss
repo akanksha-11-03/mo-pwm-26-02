@@ -1,27 +1,34 @@
 /* ===== See Your Wealth In Motion — Component ===== */
 
-/* Figma node 1:3384 — exact specs */
+/* Figma node 1:3383 "desktop banner version 2" — exact specs */
 
-/* Override AEM's main>.section styles */
+/* ── Banner section (Figma 1:3383) ── */
+
+/* Full-width, bg-image cover, row layout, 480px height */
 main > .section.seeyour-wealth-inmotion {
   display: flex;
-  justify-content: center;
-  padding: 48px 16px;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 480px;
+  padding: 40px 67px;
   margin: 0;
-}
-
-/* Override AEM's main>.section>div { max-width:1200px } */
-main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
-  background: #f5f2ed;
-  border-radius: 12px;
-  padding: 40px;
-  max-width: 100%;
-  width: auto;
-  margin: 0;
+  background-color: #f5f2ed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   box-sizing: border-box;
 }
 
-/* ── Card layout — matches Figma frame 1:3384 (403px) ── */
+/* Override AEM's main>.section>div max-width/padding */
+main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
+  max-width: none;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* ── Card layout (Figma 1:3384 — 403px, column, gap 16px) ── */
 .sywim-card {
   display: flex;
   flex-direction: column;
@@ -30,7 +37,7 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   max-width: 100%;
 }
 
-/* ── Heading (static, outside swiper) ── */
+/* ── Heading (Figma 1:3385) ── */
 .sywim-heading {
   font-family: Inter, var(--body-font-family);
   font-weight: 400;
@@ -40,7 +47,7 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   margin: 0;
 }
 
-/* ── Swiper area ── */
+/* ── Swiper (Figma 1:3386 — column, gap 40px) ── */
 .sywim-swiper {
   overflow: hidden;
 }
@@ -51,13 +58,14 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   gap: 40px;
 }
 
-/* ── Subtitle + Input group ── */
+/* ── Subtitle + Input group (Figma 1:3387 — column, gap 8px) ── */
 .sywim-input-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+/* Subtitle (Figma 1:3388) */
 .sywim-subtitle {
   font-family: Inter, var(--body-font-family);
   font-weight: 400;
@@ -67,7 +75,7 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   margin: 0;
 }
 
-/* Input field */
+/* Input field (Figma 1:3389 — textfield component) */
 .section.seeyour-wealth-inmotion .sywim-input {
   width: 100%;
   height: 40px;
@@ -75,15 +83,15 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   font-family: Inter, var(--body-font-family);
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.25em;
   color: #333;
   background: #fff;
   border: 1px solid #9e9e9e;
   border-radius: 8px;
   box-sizing: border-box;
   outline: none;
-  transition: border-color 0.2s;
   margin: 0;
+  transition: border-color 0.2s;
 
   &::placeholder {
     color: #616161;
@@ -94,14 +102,14 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   }
 }
 
-/* ── Button + Pagination group ── */
+/* ── CTA group (Figma 1:3390 — column, gap 16px) ── */
 .sywim-cta-group {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Next button — high specificity to override AEM's global `button` rule */
+/* Button (Figma 1:3391 — fill #2E2A94, radius 4px, padding 12px) */
 .section.seeyour-wealth-inmotion button.sywim-btn {
   appearance: none;
   display: block;
@@ -113,7 +121,7 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   font-family: Inter, var(--body-font-family);
   font-weight: 500;
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.25em;
   text-align: center;
   color: #fff;
   background: #2e2a94;
@@ -130,7 +138,7 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   }
 }
 
-/* ── Pagination row: dots left, fraction right ── */
+/* ── Pagination row (Figma 1:3392 — row, space-between, gap 24px) ── */
 .sywim-pagination-row {
   display: flex;
   align-items: center;
@@ -138,37 +146,42 @@ main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
   gap: 24px;
 }
 
+/* Dots container (Figma 1:3393 — row, center, gap 4px) */
 .sywim-dots {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
 }
 
+/* Individual dot (Figma: 8×8 circle) */
 .sywim-dot {
   display: block;
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #9e9e9e;
+  background: #2e2a94;
   transition: background 0.3s;
 }
 
+/* Active dot (Figma: #725E38) */
 .sywim-dot-active {
   background: #725e38;
 }
 
+/* Fraction text (Figma 1:3397 — Inter 400, 18px, #424242) */
 .sywim-fraction {
   font-family: Inter, var(--body-font-family);
   font-weight: 400;
   font-size: 18px;
-  line-height: 1;
+  line-height: 1.333em;
   color: #424242;
 }
 
 /* ── Responsive ── */
-@media (width <= 600px) {
-  main > .section.seeyour-wealth-inmotion > .sywim-wrapper {
-    padding: 24px 20px;
+@media (width <= 768px) {
+  main > .section.seeyour-wealth-inmotion {
+    padding: 32px 24px;
+    min-height: auto;
   }
 
   .sywim-card {

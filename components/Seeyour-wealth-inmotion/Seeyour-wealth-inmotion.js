@@ -10,7 +10,7 @@ function buildSlide(li, subtitle, buttonLink) {
   const slide = document.createElement('div');
   slide.className = 'swiper-slide';
 
-  /* Subtitle + input group */
+  /* Subtitle + input group (Figma 1:3387 — column, gap 8px) */
   const inputGroup = document.createElement('div');
   inputGroup.className = 'sywim-input-group';
 
@@ -27,7 +27,7 @@ function buildSlide(li, subtitle, buttonLink) {
   inputGroup.appendChild(input);
   slide.appendChild(inputGroup);
 
-  /* Button + pagination group */
+  /* Button + pagination group (Figma 1:3390 — column, gap 16px) */
   const ctaGroup = document.createElement('div');
   ctaGroup.className = 'sywim-cta-group';
 
@@ -39,6 +39,7 @@ function buildSlide(li, subtitle, buttonLink) {
     ctaGroup.appendChild(btn);
   }
 
+  /* Pagination row (Figma 1:3392 — row, space-between, gap 24px) */
   const paginationRow = document.createElement('div');
   paginationRow.className = 'sywim-pagination-row';
 
@@ -64,13 +65,12 @@ function renderPagination(container, totalSlides, activeIndex) {
       dots.innerHTML = '';
       Array.from({ length: totalSlides }).forEach((_, i) => {
         const dot = document.createElement('span');
-        dot.className = 'sywim-dot';
-        if (i === activeIndex) dot.classList.add('sywim-dot-active');
+        dot.className = i === activeIndex ? 'sywim-dot sywim-dot-active' : 'sywim-dot';
         dots.appendChild(dot);
       });
     }
     if (frac) {
-      frac.innerHTML = `<span class="sywim-frac-current">${activeIndex + 1}</span>/<span class="sywim-frac-total">${totalSlides}</span>`;
+      frac.textContent = `${activeIndex + 1}/${totalSlides}`;
     }
   });
 }
@@ -82,28 +82,36 @@ async function decorateSection(section) {
   /* ── Extract authored content ── */
   const heading = wrapper.querySelector('h1, h2, h3, h4, h5, h6');
   const subtitle = wrapper.querySelector('p:not(.button-container)');
-  // linkToBtn converts <ul> → <div class="divwithlinks">, so query both
   const listItems = wrapper.querySelectorAll('.divwithlinks li, ul li');
   const buttonContainer = wrapper.querySelector('.button-container');
   const buttonLink = buttonContainer
     ? buttonContainer.querySelector('a')
     : null;
 
+  /* If there's a picture, use it as the section background */
+  const picture = wrapper.querySelector('picture');
+  if (picture) {
+    const img = picture.querySelector('img');
+    if (img) {
+      section.style.backgroundImage = `url('${img.src}')`;
+    }
+  }
+
   if (!listItems.length) return;
   const totalSlides = listItems.length;
 
-  /* ── Build card container ── */
+  /* ── Build card (Figma 1:3384 — 403px, column, gap 16px) ── */
   const card = document.createElement('div');
   card.className = 'sywim-card';
 
-  /* Heading (static, outside swiper) */
+  /* Heading — static, outside swiper (Figma 1:3385) */
   if (heading) {
     const h = heading.cloneNode(true);
     h.className = 'sywim-heading';
     card.appendChild(h);
   }
 
-  /* ── Swiper container ── */
+  /* ── Swiper for form slides (Figma 1:3386 — column, gap 40px) ── */
   const swiperContainer = document.createElement('div');
   swiperContainer.className = 'swiper sywim-swiper';
 
