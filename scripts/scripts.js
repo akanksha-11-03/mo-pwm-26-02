@@ -11,6 +11,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
+import {linkToBtn} from '../components/how-we-serve-you/how-we-serve-you.js';
 
 /**
  * Moves all the attributes from a given elmenet to another given element.
@@ -83,6 +84,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  // main.parentElement.classList.add('colour')
 }
 
 /**
@@ -143,6 +145,7 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
+  linkToBtn(document);
 }
 
 loadPage();

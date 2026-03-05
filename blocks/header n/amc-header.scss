@@ -1,0 +1,97 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins"as *;
+@use "../../styles/common-theme/css/fluid-typography"as *;
+
+header.header-wrapper.amc-wrp{
+    padding: 0;
+    
+    @include media (mobile-ed) {
+        height: auto;
+        padding: 0;
+    }
+
+    .header.block.amc-header {
+        width: 100%;
+
+        @include media (mobile-ed) {
+            height: auto;
+        }
+
+        .nav-wrapper {
+            padding: 16px 0;
+
+            @include media (mobile-ed) {
+                padding: 0;
+            }
+
+            nav {
+                .nav-sections {
+                    .nav-sec-cont1 {
+                        .nav-sec-sec1 {
+                            @include media (mobile-ed) {
+                                margin-top: 40px;
+                            }
+
+                            li.nav-sec-sub1 {
+                                display: none;
+
+                                @include media (mobile-ed) {
+                                    display: none;
+                                }
+                            }
+
+                            li {
+                                a {
+                                    color: var(--neutrals-white, #FFF);
+                                    font-feature-settings: 'ss01'on, 'ss04'on, 'cv01'on, 'cv02'on, 'cv03'on, 'cv04'on, 'cv06'on, 'cv09'on, 'cv10'on, 'cv11'on;
+                                    font-family: var(--body, Inter);
+                                    font-size: var(--body-small-regular-size, 14px);
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    line-height: var(--label-large-line-height, 20px);
+
+                                    @include media (mobile-ed) {
+                                        color: var(--blue-1800-primary, #2E2A94);
+                                        font-size: var(--body-medium-semibold-size, 16px);
+                                        font-weight: 600;
+                                        line-height: var(--body-medium-semibold-line-height, 20px);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &[aria-expanded='true'] {
+                    min-height: inherit;
+
+                    @include media (mobile-ed) {
+                        min-height: 100dvh;
+                    }
+                }
+
+                .nav-brand img {
+                    @include media (mobile-ed) {
+                        display: flex;
+                        width: 68.889px;
+                        height: 40px;
+                        padding-bottom: 0.511px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (width <=1025px) {
+    header {
+        .header.block.amc-header {
+            .nav-wrapper {
+                top: 0;
+                min-height: auto;
+            }
+        }
+    }
+}

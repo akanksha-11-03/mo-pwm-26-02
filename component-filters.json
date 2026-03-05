@@ -14,8 +14,18 @@
       "title",
       "hero",
       "cards",
+      "cardswithimg",
+      "ourofferingcards",
+      "seeyourwealthinmotion",
       "columns",
       "fragment",
+      "feature-card"
+    ]
+  },
+  {
+    "id": "feature-card",
+    "components": [
+      "feature-card-item"
       "embed",
       "custom-rte"
     ]
@@ -24,6 +34,18 @@
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cardswithimg",
+    "components": [
+      "cardswithimg-item"
+    ]
+  },
+  {
+    "id": "ourofferingcards",
+    "components": [
+      "ourofferingcard"
     ]
   },
   {
@@ -42,6 +64,9 @@
     ]
   },
   {
+    "id": "seeyourwealthinmotion",
+    "components": [
+      "seeyourwealthinmotion-item"
     "id": "custom-rte",
     "components": [
       "custom-rte-item",
