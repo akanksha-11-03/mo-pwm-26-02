@@ -85,6 +85,8 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  linkToBtn(document);
+  decorateSeeyourWealthInmotion(document);
   // main.parentElement.classList.add('colour')
 }
 
@@ -146,8 +148,6 @@ async function loadPage() {
   await loadEager(document);
   await loadLazy(document);
   loadDelayed();
-  linkToBtn(document);
-  decorateSeeyourWealthInmotion(document);
 }
 
 loadPage();

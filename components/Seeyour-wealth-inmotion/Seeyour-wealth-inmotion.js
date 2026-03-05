@@ -22,7 +22,8 @@ export default async function decorateSeeyourWealthInmotion(doc) {
     /* ── Extract authored content ── */
     const heading = wrapper.querySelector("h1, h2, h3, h4, h5, h6");
     const subtitle = wrapper.querySelector("p:not(.button-container)");
-    const listItems = wrapper.querySelectorAll("ul li");
+    // linkToBtn converts <ul> → <div class="divwithlinks">, so query both
+    const listItems = wrapper.querySelectorAll(".divwithlinks li, ul li");
     const buttonContainer = wrapper.querySelector(".button-container");
     const buttonLink = buttonContainer
       ? buttonContainer.querySelector("a")
@@ -97,7 +98,7 @@ export default async function decorateSeeyourWealthInmotion(doc) {
       allowTouchMove: false,
       pagination: {
         el: paginationDots,
-        clickable: true,
+        clickable: false,
       },
       on: {
         slideChange(s) {
