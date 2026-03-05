@@ -15,38 +15,78 @@ export default async function decorateSeeyourwealthinmotion(block) {
 
   const Swiper = await loadSwiper();
 
-  const totalSlides = block.children.length;
+  const rows = [...block.children];
+  const totalSlides = rows.length;
 
+  // ── Static header: extract heading + subtitle from the FIRST row's first col ──
+  const staticHeader = document.createElement('div');
+  staticHeader.classList.add('sywim-static-header');
+
+  const firstRow = rows[0];
+  if (firstRow) {
+    const firstCol = firstRow.querySelector('div');
+    if (firstCol) {
+      // Grab heading (h1-h3) and first <p> (subtitle) — leave the rest for the slide
+      const heading = firstCol.querySelector('h1, h2, h3');
+      const subtitle = firstCol.querySelector('p');
+      if (heading) staticHeader.append(heading.cloneNode(true));
+      if (subtitle) staticHeader.append(subtitle.cloneNode(true));
+    }
+  }
+
+  // ── Build Swiper with only the form part (input + button) per slide ──
   const swiperEl = document.createElement('div');
   swiperEl.classList.add('swiper', 'sywim-swiper');
 
   const wrapperEl = document.createElement('div');
   wrapperEl.classList.add('swiper-wrapper');
 
-  [...block.children].forEach((row) => {
+  rows.forEach((row) => {
     const slide = document.createElement('div');
     slide.classList.add('swiper-slide', 'sywim-slide');
     moveInstrumentation(row, slide);
 
-    // Each row has one column with rich text + button
-    while (row.firstElementChild) {
-      const col = row.firstElementChild;
-      col.className = 'sywim-card-body';
+    const formArea = document.createElement('div');
+    formArea.classList.add('sywim-form-area');
 
-      // Find all links/buttons and style them
-      col.querySelectorAll('a').forEach((a) => {
-        a.classList.add('sywim-btn');
+    // First column: rich text — last <p> is the input placeholder text
+    const cols = [...row.children];
+    const textCol = cols[0];
+    const btnCol = cols[1];
+
+    if (textCol) {
+      // All <p> after the heading and subtitle become input fields
+      const paragraphs = [...textCol.querySelectorAll('p')];
+      // Skip first <p> (subtitle already in static header)
+      const inputParagraphs = paragraphs.slice(1);
+
+      inputParagraphs.forEach((p) => {
+        const placeholderText = p.textContent.trim();
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'sywim-input';
+        input.placeholder = placeholderText;
+        input.setAttribute('aria-label', placeholderText);
+        formArea.append(input);
       });
-
-      slide.append(col);
     }
 
+    // Second column: button
+    if (btnCol) {
+      btnCol.querySelectorAll('a').forEach((a) => {
+        a.classList.add('sywim-btn');
+      });
+      const btnContainer = btnCol.querySelector('.button-container') || btnCol;
+      formArea.append(btnContainer);
+    }
+
+    slide.append(formArea);
     wrapperEl.append(slide);
   });
 
   swiperEl.append(wrapperEl);
 
-  // Bottom bar: pagination dots (left) + fraction counter (right)
+  // ── Bottom bar: pagination dots (left) + fraction counter (right) ──
   const bottomBar = document.createElement('div');
   bottomBar.classList.add('sywim-bottom-bar');
 
@@ -60,16 +100,18 @@ export default async function decorateSeeyourwealthinmotion(block) {
   bottomBar.append(paginationDots, fractionCounter);
   swiperEl.append(bottomBar);
 
-  block.replaceChildren(swiperEl);
+  // ── Assemble: static header at top, swiper below ──
+  block.replaceChildren(staticHeader, swiperEl);
 
-  // Initialize Swiper
+  // ── Initialize Swiper — no swiping by touch, only via Next button ──
   const swiper = new Swiper(swiperEl, {
     slidesPerView: 1,
     spaceBetween: 0,
     loop: false,
+    allowTouchMove: false,
     pagination: {
       el: paginationDots,
-      clickable: true,
+      clickable: false,
     },
     on: {
       slideChange(s) {
@@ -77,6 +119,14 @@ export default async function decorateSeeyourwealthinmotion(block) {
         if (currentEl) currentEl.textContent = s.activeIndex + 1;
       },
     },
+  });
+
+  // ── "Next" buttons advance the swiper ──
+  swiperEl.querySelectorAll('.sywim-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      swiper.slideNext();
+    });
   });
 
   return swiper;

@@ -1,10 +1,33 @@
 @charset "UTF-8";
 /* ============================================================
    See Your Wealth In Motion — Swiper card variant
+   Static header + swipeable input/button form
    ============================================================ */
 .cards.seeyourwealthinmotion {
   padding: 0;
   max-width: 100%;
+  background: #f5f2ed;
+  border-radius: 12px;
+  padding: 48px 32px 24px;
+}
+.cards.seeyourwealthinmotion .sywim-static-header {
+  margin-bottom: 24px;
+}
+.cards.seeyourwealthinmotion .sywim-static-header h1, .cards.seeyourwealthinmotion .sywim-static-header h2, .cards.seeyourwealthinmotion .sywim-static-header h3 {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #866e44;
+  margin: 0 0 12px;
+}
+.cards.seeyourwealthinmotion .sywim-static-header p {
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #2e2a94;
+  margin: 0;
 }
 .cards.seeyourwealthinmotion .sywim-swiper {
   width: 100%;
@@ -12,44 +35,13 @@
 }
 .cards.seeyourwealthinmotion .sywim-slide {
   box-sizing: border-box;
-  background: #f5f2ed;
-  border-radius: 12px;
-  padding: 40px 32px 32px;
-  min-height: 420px;
+}
+.cards.seeyourwealthinmotion .sywim-form-area {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
-.cards.seeyourwealthinmotion .sywim-card-body {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  gap: 8px;
-}
-.cards.seeyourwealthinmotion .sywim-card-body h1, .cards.seeyourwealthinmotion .sywim-card-body h2, .cards.seeyourwealthinmotion .sywim-card-body h3 {
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1.2;
-  color: #866e44;
-  margin: 0 0 8px;
-}
-.cards.seeyourwealthinmotion .sywim-card-body h4, .cards.seeyourwealthinmotion .sywim-card-body h5, .cards.seeyourwealthinmotion .sywim-card-body h6 {
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 1.4;
-  color: #2e2a94;
-  margin: 0 0 16px;
-}
-.cards.seeyourwealthinmotion .sywim-card-body p {
-  font-family: "Inter", "Segoe UI", Arial, sans-serif;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #444;
-  margin: 0 0 12px;
-}
-.cards.seeyourwealthinmotion .sywim-card-body input,
-.cards.seeyourwealthinmotion .sywim-card-body .sywim-input {
+.cards.seeyourwealthinmotion .sywim-form-area .sywim-input {
   width: 100%;
   box-sizing: border-box;
   padding: 16px 20px;
@@ -60,20 +52,17 @@
   background: #ffffff;
   color: #333;
   outline: none;
-  margin-bottom: 24px;
 }
-.cards.seeyourwealthinmotion .sywim-card-body input::-moz-placeholder, .cards.seeyourwealthinmotion .sywim-card-body .sywim-input::-moz-placeholder {
+.cards.seeyourwealthinmotion .sywim-form-area .sywim-input::-moz-placeholder {
   color: #999;
 }
-.cards.seeyourwealthinmotion .sywim-card-body input::placeholder,
-.cards.seeyourwealthinmotion .sywim-card-body .sywim-input::placeholder {
+.cards.seeyourwealthinmotion .sywim-form-area .sywim-input::placeholder {
   color: #999;
 }
-.cards.seeyourwealthinmotion .sywim-card-body input:focus,
-.cards.seeyourwealthinmotion .sywim-card-body .sywim-input:focus {
+.cards.seeyourwealthinmotion .sywim-form-area .sywim-input:focus {
   border-color: #2e2a94;
 }
-.cards.seeyourwealthinmotion .sywim-card-body .sywim-btn {
+.cards.seeyourwealthinmotion .sywim-form-area .sywim-btn {
   all: unset;
   display: block;
   width: 100%;
@@ -87,16 +76,15 @@
   font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
-  margin-top: auto;
   transition: background 0.3s ease;
 }
-.cards.seeyourwealthinmotion .sywim-card-body .sywim-btn:hover {
+.cards.seeyourwealthinmotion .sywim-form-area .sywim-btn:hover {
   background: rgb(36.1221052632, 32.9810526316, 116.2189473684);
 }
-.cards.seeyourwealthinmotion .sywim-card-body .button-container {
-  margin-top: auto;
+.cards.seeyourwealthinmotion .sywim-form-area .button-container {
+  margin: 0;
 }
-.cards.seeyourwealthinmotion .sywim-card-body .button-container a {
+.cards.seeyourwealthinmotion .sywim-form-area .button-container a {
   all: unset;
   display: block;
   width: 100%;
@@ -112,14 +100,14 @@
   cursor: pointer;
   transition: background 0.3s ease;
 }
-.cards.seeyourwealthinmotion .sywim-card-body .button-container a:hover {
+.cards.seeyourwealthinmotion .sywim-form-area .button-container a:hover {
   background: rgb(36.1221052632, 32.9810526316, 116.2189473684);
 }
 .cards.seeyourwealthinmotion .sywim-bottom-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 32px 24px;
+  padding: 24px 0 0;
 }
 .cards.seeyourwealthinmotion .sywim-pagination {
   position: static !important;
@@ -153,17 +141,16 @@
 }
 
 @media (max-width: 600px) {
-  .cards.seeyourwealthinmotion .sywim-slide {
-    padding: 32px 20px 24px;
-    min-height: 380px;
+  .cards.seeyourwealthinmotion {
+    padding: 32px 20px 20px;
   }
-  .cards.seeyourwealthinmotion .sywim-card-body h1, .cards.seeyourwealthinmotion .sywim-card-body h2, .cards.seeyourwealthinmotion .sywim-card-body h3 {
+  .cards.seeyourwealthinmotion .sywim-static-header h1, .cards.seeyourwealthinmotion .sywim-static-header h2, .cards.seeyourwealthinmotion .sywim-static-header h3 {
     font-size: 28px;
   }
-  .cards.seeyourwealthinmotion .sywim-card-body h4, .cards.seeyourwealthinmotion .sywim-card-body h5, .cards.seeyourwealthinmotion .sywim-card-body h6 {
+  .cards.seeyourwealthinmotion .sywim-static-header p {
     font-size: 16px;
   }
   .cards.seeyourwealthinmotion .sywim-bottom-bar {
-    padding: 12px 20px 20px;
+    padding: 16px 0 0;
   }
 }/*# sourceMappingURL=seeyourwealthinmotion.css.map */

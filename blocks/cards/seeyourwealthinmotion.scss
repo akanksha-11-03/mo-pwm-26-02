@@ -1,5 +1,6 @@
 /* ============================================================
    See Your Wealth In Motion — Swiper card variant
+   Static header + swipeable input/button form
    ============================================================ */
 
 // Variables
@@ -12,61 +13,51 @@ $font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 .cards.seeyourwealthinmotion {
   padding: 0;
   max-width: 100%;
+  background: $bg-cream;
+  border-radius: 12px;
+  padding: 48px 32px 24px;
 
-  // Swiper container
-  .sywim-swiper {
-    width: 100%;
-    overflow: hidden;
-  }
+  // ===== Static header (not swipeable) =====
+  .sywim-static-header {
+    margin-bottom: 24px;
 
-  // Each slide
-  .sywim-slide {
-    box-sizing: border-box;
-    background: $bg-cream;
-    border-radius: 12px;
-    padding: 40px 32px 32px;
-    min-height: 420px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  // Card body — rich text area
-  .sywim-card-body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 8px;
-
-    // Main heading — e.g. "See your wealth in motion"
     h1, h2, h3 {
       font-family: $font-family;
       font-weight: 400;
       font-size: 36px;
       line-height: 1.2;
       color: $color-gold;
-      margin: 0 0 8px;
+      margin: 0 0 12px;
     }
 
-    // Subtitle / description — e.g. "To unlock your detailed portfolio insights"
-    h4, h5, h6 {
+    p {
       font-family: $font-family;
       font-weight: 500;
       font-size: 18px;
       line-height: 1.4;
       color: $color-navy;
-      margin: 0 0 16px;
+      margin: 0;
     }
+  }
 
-    p {
-      font-family: $font-family;
-      font-size: 15px;
-      line-height: 1.5;
-      color: #444;
-      margin: 0 0 12px;
-    }
+  // ===== Swiper container =====
+  .sywim-swiper {
+    width: 100%;
+    overflow: hidden;
+  }
 
-    // Input fields (if authored via richtext <input> or styled p)
-    input,
+  // ===== Each slide — just the form area =====
+  .sywim-slide {
+    box-sizing: border-box;
+  }
+
+  // ===== Form area: input + button =====
+  .sywim-form-area {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    // Input field (converted from authored "enter Pan" text)
     .sywim-input {
       width: 100%;
       box-sizing: border-box;
@@ -78,7 +69,6 @@ $font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
       background: $color-white;
       color: #333;
       outline: none;
-      margin-bottom: 24px;
 
       &::placeholder {
         color: #999;
@@ -104,7 +94,6 @@ $font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
       font-size: 16px;
       border-radius: 8px;
       cursor: pointer;
-      margin-top: auto;
       transition: background 0.3s ease;
 
       &:hover {
@@ -112,9 +101,9 @@ $font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
       }
     }
 
-    // Also target default EDS button wrappers
+    // EDS button-container wrapper
     .button-container {
-      margin-top: auto;
+      margin: 0;
 
       a {
         all: unset;
@@ -144,7 +133,7 @@ $font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 16px 32px 24px;
+    padding: 24px 0 0;
   }
 
   // Pagination dots
@@ -189,23 +178,20 @@ $font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
 // ===== Responsive =====
 @media (max-width: 600px) {
   .cards.seeyourwealthinmotion {
-    .sywim-slide {
-      padding: 32px 20px 24px;
-      min-height: 380px;
-    }
+    padding: 32px 20px 20px;
 
-    .sywim-card-body {
+    .sywim-static-header {
       h1, h2, h3 {
         font-size: 28px;
       }
 
-      h4, h5, h6 {
+      p {
         font-size: 16px;
       }
     }
 
     .sywim-bottom-bar {
-      padding: 12px 20px 20px;
+      padding: 16px 0 0;
     }
   }
 }
