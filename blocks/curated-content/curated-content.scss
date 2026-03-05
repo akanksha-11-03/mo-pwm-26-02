@@ -1,14 +1,14 @@
 .section.curated-content-container {
-  max-width: 90%;
+  max-width: 1232px;
   margin: 0 auto;
   position: relative;
 
-  @media screen and (max-width: 1024px) {
-    margin: 0;
-  }
-
   .default-content-wrapper {
     margin-bottom: 32px;
+
+    @media screen and (max-width: 900px) {
+      padding: 0 17px;
+    }
 
     h4 {
       font-weight: 400;
@@ -17,6 +17,9 @@
       line-height: 40px;
       font-size: 32px;
       margin: 0;
+      @media screen and (max-width: 900px) {
+        font-size: 28px;
+      }
 
       strong {
         color: #2e2a94;
@@ -30,6 +33,10 @@
       font-size: 18px;
       line-height: 24px;
       margin: 0;
+
+      @media screen and (max-width: 900px) {
+        font-size: 16px;
+      }
     }
 
     .button-container a {
@@ -41,9 +48,11 @@
   }
 
   .curated-content-wrapper {
+    @media screen and (max-width: 900px) {
+      padding: 0 17px;
+    }
     .curated-content.block {
       display: flex;
-      align-items: center;
       gap: 16px;
 
       div {
@@ -52,6 +61,11 @@
         div:nth-child(1) {
           width: 100%;
           height: 220px;
+
+          @media screen and (max-width: 900px){
+            width: 100%;
+            height: 180px;
+          }
 
           picture img {
             width: 100%;
@@ -81,6 +95,12 @@
             span {
               width: 20px;
               height: 20px;
+
+              @media screen and (max-width: 900px){
+                width: 16px;
+                height: 16px;
+              }
+
               img {
                 width: 100%;
                 height: 100%;
@@ -95,6 +115,11 @@
             letter-spacing: 0%;
             color: #866e44;
             font-weight: 500;
+
+            @media screen and (max-width: 900px) {
+              font-size: 16px;
+              line-height: 20px;
+            }
           }
 
           p:nth-child(3) {
@@ -104,9 +129,16 @@
             letter-spacing: 0%;
             font-weight: 400;
             color: #2e2a94;
+
+            @media screen and (max-width: 900px) {
+              font-size: 14px;
+              line-height: 20px;
+            }
           }
 
           p:nth-child(4) a {
+            font-size: 14px;
+            line-height: 20px;
             background-color: transparent;
             color: #2e2a94;
             text-decoration: underline;
@@ -137,6 +169,13 @@
   .default-content-wrapper:nth-child(3) {
     position: absolute;
     top: 10px;
-    right: calc(9% - 9px);
+    right: calc(3% - 6px);
+    padding: 0;
+    margin: 0;
+
+    @media screen and (max-width: 900px) {
+      position: static;
+      margin: 32px 0 0 17px;
+    }
   }
 }
