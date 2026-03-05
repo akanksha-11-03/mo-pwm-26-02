@@ -1,0 +1,19 @@
+.section.young-titans-forum .titans-forum-wrapper{
+    max-width: 100%;
+    padding: 0;
+}
+
+.section.young-titans-forum .titans-forum {
+    position: relative;
+    min-height: 599px;
+}
+
+.section.young-titans-forum .titans-forum div div:first-of-type p:last-of-type{
+    display: none;
+}
+
+.section.young-titans-forum .titans-forum div div:last-of-type{
+    position: absolute;
+    top: 0;
+    padding: 34px 17px 0;
+}

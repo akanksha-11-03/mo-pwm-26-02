@@ -452,7 +452,7 @@
       },
       {
         "component": "richtext",
-        "name": "col2_text",
+        "name": "col2_col1_text",
         "value": "",
         "label": "Banner Text Content",
         "valueType": "string"
@@ -460,14 +460,14 @@
       {
         "component": "reference",
         "valueType": "string",
-        "name": "col2_logoImage",
+        "name": "col2_col2_logoImage",
         "label": "Logo Image",
         "multi": false
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "col2_logoImageAlt",
+        "name": "col2_col2_logoImageAlt",
         "label": "Logo Alt",
         "value": ""
       }
