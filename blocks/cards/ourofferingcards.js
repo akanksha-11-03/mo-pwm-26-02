@@ -149,6 +149,29 @@ export default function decorateOurOfferingCards(block) {
     }
   }
 
+  // Skip scroll animation on mobile — show static vertical cards
+  function isMobile() {
+    return window.innerWidth <= 900;
+  }
+
+  function clearAnimationStyles() {
+    stackSection.style.height = '';
+    cards.forEach((c) => {
+      c.style.top = '';
+    });
+  }
+
+  function setup() {
+    if (isMobile()) {
+      clearAnimationStyles();
+      window.removeEventListener('scroll', updatePositions);
+    } else {
+      initPositions();
+      updatePositions();
+      window.addEventListener('scroll', updatePositions, { passive: true });
+    }
+  }
+
   // Initialize after layout settles
   requestAnimationFrame(() => {
     setup();
