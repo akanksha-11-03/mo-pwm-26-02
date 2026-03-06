@@ -1,6 +1,3 @@
-@charset "UTF-8";
-/* Cards with Image — Swiper Carousel + Accordion */
-/* Figma node 4737-6581: image fills card, text overlays at top with gradient */
 .cardswithimg-section .cardswithimg-heading {
   margin-bottom: 40px;
 }
