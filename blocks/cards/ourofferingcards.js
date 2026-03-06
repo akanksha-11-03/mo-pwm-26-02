@@ -147,17 +147,40 @@ export default function decorateOurOfferingCards(block) {
       cards[i].style.top = `${top}px`;
       currentTops.push(top);
     }
+<<<<<<< HEAD
+  }
+
+  // Skip scroll animation on mobile — show static vertical cards
+  function isMobile() {
+    return window.innerWidth <= 900;
+  }
+
+  function clearAnimationStyles() {
+    stackSection.style.height = '';
+    cards.forEach((c) => {
+      c.style.top = '';
+    });
+  }
+
+  function setup() {
+    if (isMobile()) {
+      clearAnimationStyles();
+      window.removeEventListener('scroll', updatePositions);
+    } else {
+      initPositions();
+      updatePositions();
+      window.addEventListener('scroll', updatePositions, { passive: true });
+    }
+=======
+>>>>>>> c2ee69d0dae3203f9912eb8e9e3300f487090e0f
   }
 
   // Initialize after layout settles
   requestAnimationFrame(() => {
-    initPositions();
-    updatePositions();
+    setup();
 
-    window.addEventListener('scroll', updatePositions, { passive: true });
     window.addEventListener('resize', () => {
-      initPositions();
-      updatePositions();
+      setup();
     });
   });
 }
