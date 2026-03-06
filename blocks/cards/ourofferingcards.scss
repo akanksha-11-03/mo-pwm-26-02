@@ -168,13 +168,30 @@
     }
   }
 
-  /* ===== Responsive ===== */
+  /* ===== Responsive — no animation, vertical cards ===== */
   @media (max-width: 900px) {
+    .ourofferingcards-stack-section {
+      height: auto !important;
+    }
+
+    .ourofferingcards-sticky-frame {
+      position: relative;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .ourofferingcard {
-      width: min(100%, 92vw);
+      position: relative;
+      left: auto;
+      top: auto !important;
+      transform: none;
+      width: 100%;
       flex-direction: column;
       gap: 0;
       border-radius: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
 
     .ourofferingcard-image {
@@ -193,6 +210,5 @@
       width: 100%;
       padding: 24px;
     }
-
   }
 }
