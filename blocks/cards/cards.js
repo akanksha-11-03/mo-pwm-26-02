@@ -2,6 +2,7 @@ import { createOptimizedPicture } from "../../scripts/aem.js";
 import { moveInstrumentation } from "../../scripts/scripts.js";
 import decoratecardwithimgs from "./cardswithimg.js";
 import decorateOurOfferingCards from "./ourofferingcards.js";
+import Swiper from '../swiper/swiper-bundle.js';
 
 export default function decorate(block) {
   if (block.classList.contains("cardswithimg")) {
@@ -34,4 +35,30 @@ export default function decorate(block) {
     img.closest("picture").replaceWith(optimizedPic);
   });
   block.replaceChildren(ul);
+
+  if (block.closest('.our-key-differences')) {
+    block.classList.add('swiper');
+    block.querySelector('ul').classList.add('swiper-wrapper');
+    block.querySelectorAll('li').forEach(li => li.classList.add('swiper-slide'));
+    const paginationDiv = document.createElement('div');
+    paginationDiv.className = 'swiper-pagination';
+    const wrapper = block.closest('.cards-wrapper');
+    wrapper.append(paginationDiv);
+
+    const swiperInstance = Swiper(block, {
+      loop: true,
+      // autoplay: {
+      //   delay: 5000,
+      //   disableOnInteraction: false,
+      // },
+      pagination: {
+        el: wrapper.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+      navigation: {
+        nextEl: wrapper.querySelector('.swiper-button-next'),
+        prevEl: wrapper.querySelector('.swiper-button-prev'),
+      },
+    });
+  }
 }
