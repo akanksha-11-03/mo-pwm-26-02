@@ -38,7 +38,7 @@ export default function decorate(block) {
   if (block.closest('.our-key-differences')) {
     block.classList.add('swiper');
     block.querySelector('ul').classList.add('swiper-wrapper');
-    block.querySelectorAll('li').forEach(li => li.classList.add('swiper-slide'));
+    block.querySelectorAll('li').forEach((li) => li.classList.add('swiper-slide'));
     const pagination = div({ class: 'swiper-pagination' });
     const wrapper = block.closest('.cards-wrapper');
     wrapper.append(pagination);
