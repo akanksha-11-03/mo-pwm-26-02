@@ -9,13 +9,6 @@ function initSwiper(wrapper, block) {
   // Get all slide elements
   const slideElements = [...block.children];
 
-  // Check if we're on desktop and have more than 3 slides
-//   const isDesktop = window.innerWidth >= 768;
-//   if (isDesktop && slideElements.length <= 3) {
-//     wrapper.classList.
-//     return; // Don't initialize swiper on desktop if 3 or fewer slides
-//   }
-
   // Add necessary classes to existing elements
   wrapper.classList.add("swiper");
   block.classList.add("swiper-wrapper");
@@ -57,6 +50,22 @@ export default function decorate(block) {
   const wrapper = block.parentElement;
 
   if (wrapper && wrapper.classList.contains("curated-content-wrapper")) {
+    // Find the section container
+    const section = wrapper.parentElement;
+    if (section && section.classList.contains("curated-content-container")) {
+      // Create inner wrapper div
+      const innerWrapper = document.createElement("div");
+      innerWrapper.classList.add("curated-content-inner-wrapper");
+      
+      // Move all children of section into the inner wrapper
+      while (section.firstChild) {
+        innerWrapper.appendChild(section.firstChild);
+      }
+      
+      // Append the inner wrapper back to the section
+      section.appendChild(innerWrapper);
+    }
+    
     // Initialize swiper
     initSwiper(wrapper, block);
 
