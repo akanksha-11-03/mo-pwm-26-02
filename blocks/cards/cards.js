@@ -3,6 +3,7 @@ import { moveInstrumentation } from "../../scripts/scripts.js";
 import decoratecardwithimgs from "./cardswithimg.js";
 import decorateOurOfferingCards from "./ourofferingcards.js";
 import Swiper from '../swiper/swiper-bundle.js';
+import { div } from '../../scripts/dom-helpers.js';
 
 export default function decorate(block) {
   if (block.classList.contains("cardswithimg")) {
@@ -40,10 +41,9 @@ export default function decorate(block) {
     block.classList.add('swiper');
     block.querySelector('ul').classList.add('swiper-wrapper');
     block.querySelectorAll('li').forEach(li => li.classList.add('swiper-slide'));
-    const paginationDiv = document.createElement('div');
-    paginationDiv.className = 'swiper-pagination';
+    const pagination = div({ class: 'swiper-pagination' });
     const wrapper = block.closest('.cards-wrapper');
-    wrapper.append(paginationDiv);
+    wrapper.append(pagination);
 
     const swiperInstance = Swiper(block, {
       loop: true,
@@ -54,10 +54,6 @@ export default function decorate(block) {
       pagination: {
         el: wrapper.querySelector('.swiper-pagination'),
         clickable: true,
-      },
-      navigation: {
-        nextEl: wrapper.querySelector('.swiper-button-next'),
-        prevEl: wrapper.querySelector('.swiper-button-prev'),
       },
     });
   }
