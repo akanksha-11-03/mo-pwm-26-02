@@ -99,13 +99,28 @@ export default function decorateOurOfferingCards(block) {
 
   block.replaceChildren(stackSection);
 
+  // ── Measure heading height so sticky frame + cards sit below it ──
+  const headingEl = section ? section.querySelector('.ourofferingcards-heading') : null;
+
+  function getHeadingHeight() {
+    return headingEl ? headingEl.offsetHeight : 0;
+  }
+
   // ── Scroll-driven stacking animation ──
   let cardH = 0;
   let startTops = [];
   let travelDist = 0;
   let scrollPerT = 0;
+  let topOffset = TOP_OFFSET;
 
   function initPositions() {
+    const hh = getHeadingHeight();
+    topOffset = hh + 16; // cards start just below the sticky heading
+
+    // Set sticky frame top so it sits below the heading
+    stickyFrame.style.top = `${hh}px`;
+    stickyFrame.style.height = `calc(100vh - ${hh}px)`;
+
     cardH = cards[0].offsetHeight;
     travelDist = cardH + GAP;
     scrollPerT = travelDist * SCROLL_MULTIPLIER;
@@ -113,7 +128,7 @@ export default function decorateOurOfferingCards(block) {
 
     stackSection.style.height = `${totalNeeded + window.innerHeight * 0.5}px`;
 
-    // Compute starting top for each card
+    // Compute starting top for each card (relative to sticky frame)
     startTops = cards.map((_, i) => TOP_OFFSET + (cardH + GAP) * i);
 
     // Set initial positions
@@ -156,6 +171,8 @@ export default function decorateOurOfferingCards(block) {
 
   function clearAnimationStyles() {
     stackSection.style.height = '';
+    stickyFrame.style.top = '';
+    stickyFrame.style.height = '';
     cards.forEach((c) => {
       c.style.top = '';
     });
