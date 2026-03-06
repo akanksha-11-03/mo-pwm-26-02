@@ -1,0 +1,171 @@
+.how-we-serve-you {
+    background-color: #f5f2ed;
+    padding: 60px 0;
+
+    .columns-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 32px;
+
+        .columns.columns-2-cols>div {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+
+            // Left content column
+            >.hwsy-content-col {
+                flex: 1;
+
+                h6 {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.4;
+                    color: #866e44;
+                    margin: 0 0 12px 0;
+                    text-transform: none;
+                    letter-spacing: 0.02em;
+                }
+
+                h5 {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 500;
+                    font-size: 36px;
+                    line-height: 1.2;
+                    color: #2e2a94;
+                    margin: 0 0 32px 0;
+                }
+            }
+
+            // Right image column
+            >.columns-img-col {
+                flex: 1;
+
+                picture {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .divwithlinks {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 40px;
+            margin-top: 40px;
+            a {
+                all: unset;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 24px 0;
+                border-bottom: 1px solid #d1cbc3;
+                font-family: 'Inter', sans-serif;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 1.5;
+                color: #2e2a94;
+                cursor: pointer;
+                transition: color 0.2s ease;
+
+                &:first-child {
+                    border-top: 1px solid #d1cbc3;
+                }
+
+                &:hover {
+                    color: #1e1a6e;
+                    text-decoration: none;
+                }
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 20px;
+                    height: 20px;
+                    flex-shrink: 0;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                        filter: brightness(0) saturate(100%) invert(18%) sepia(60%) saturate(2000%) hue-rotate(230deg);
+                    }
+                }
+            }
+        }
+
+        .button-container {
+            margin: 0;
+
+            strong a.button {
+                all: unset;
+                display: inline-block;
+                font-family: 'Inter', sans-serif;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #ffffff;
+                background-color: #2e2a94;
+                padding: 12px 28px;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.2s ease;
+                letter-spacing: 0.02em;
+
+                &:hover {
+                    background-color: #1e1a6e;
+                }
+            }
+        }
+    }
+}
+
+// Responsive
+@media (max-width: 900px) {
+    .how-we-serve-you {
+        padding: 40px 0;
+
+        .columns-wrapper {
+            padding: 0 24px;
+
+            .columns.columns-2-cols>div {
+                flex-direction: column;
+                gap: 32px;
+
+                >.hwsy-content-col {
+                    h5 {
+                        font-size: 28px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .how-we-serve-you {
+        padding: 32px 0;
+
+        .columns-wrapper {
+            .columns.columns-2-cols>div>.hwsy-content-col {
+                h5 {
+                    font-size: 24px;
+                }
+            }
+
+            .divwithlinks a {
+                font-size: 14px;
+                padding: 14px 0;
+            }
+        }
+    }
+}

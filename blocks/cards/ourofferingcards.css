@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/* Our Offering Cards — Figma node 4749:14920 */
+/* Stacking scroll animation — cards slide up to cover previous card */
+/* ===== Section Heading (default-content-wrapper) ===== */
+.ourofferingcards-section .ourofferingcards-heading {
+  margin-bottom: 40px;
+}
+.ourofferingcards-section .ourofferingcards-heading .ourofferingcards-label {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #866e44;
+  margin: 0 0 8px 0;
+}
+.ourofferingcards-section .ourofferingcards-heading > h1,
+.ourofferingcards-section .ourofferingcards-heading > h2,
+.ourofferingcards-section .ourofferingcards-heading > h3 {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #2e2a94;
+  margin: 0;
+}
+.ourofferingcards-section .ourofferingcards-heading .ourofferingcards-main-heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #2e2a94;
+  margin: 0;
+}
+@media (max-width: 900px) {
+  .ourofferingcards-section .ourofferingcards-heading {
+    margin-bottom: 24px;
+  }
+  .ourofferingcards-section .ourofferingcards-heading > h1,
+  .ourofferingcards-section .ourofferingcards-heading > h2,
+  .ourofferingcards-section .ourofferingcards-heading > h3,
+  .ourofferingcards-section .ourofferingcards-heading .ourofferingcards-main-heading {
+    font-size: 28px;
+  }
+}
+
+/* ===== Stack Section & Sticky Frame ===== */
+.cards.ourofferingcards > ul {
+  display: block;
+}
+
+.cards.ourofferingcards {
+  padding: 0;
+  overflow: visible;
+}
+.cards.ourofferingcards .ourofferingcards-stack-section {
+  position: relative;
+}
+.cards.ourofferingcards .ourofferingcards-sticky-frame {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: visible;
+}
+.cards.ourofferingcards {
+  /* ===== Individual Card ===== */
+}
+.cards.ourofferingcards .ourofferingcard {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1200px, 92vw);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+  background-color: #f8f3ef;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+.cards.ourofferingcards {
+  /* ===== Image ===== */
+}
+.cards.ourofferingcards .ourofferingcard-image {
+  flex: 0 0 50%;
+  width: 50%;
+  height: 342px;
+  line-height: 0;
+  background-color: #fff;
+  border-radius: 12px 0 0 12px;
+  overflow: hidden;
+}
+.cards.ourofferingcards .ourofferingcard-image picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.cards.ourofferingcards .ourofferingcard-image img {
+  width: 100%;
+  height: 342px;
+  max-width: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+.cards.ourofferingcards {
+  /* ===== Content ===== */
+}
+.cards.ourofferingcards .ourofferingcard-content {
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px 40px 32px 0;
+  box-sizing: border-box;
+}
+.cards.ourofferingcards .ourofferingcard-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cards.ourofferingcards .ourofferingcard-text .ourofferingcard-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.333;
+  color: #866e44;
+  margin: 0;
+}
+.cards.ourofferingcards .ourofferingcard-text .ourofferingcard-desc {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2a94;
+  margin: 0;
+}
+.cards.ourofferingcards .ourofferingcard-link {
+  margin: 0;
+}
+.cards.ourofferingcards .ourofferingcard-link .button-container {
+  margin: 0;
+}
+.cards.ourofferingcards .ourofferingcard-link a.button,
+.cards.ourofferingcards .ourofferingcard-link a {
+  all: unset;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #2e2a94;
+  text-decoration: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.cards.ourofferingcards .ourofferingcard-link a.button:hover,
+.cards.ourofferingcards .ourofferingcard-link a:hover {
+  color: #2e2a94;
+}
+.cards.ourofferingcards {
+  /* ===== Responsive ===== */
+}
+@media (max-width: 900px) {
+  .cards.ourofferingcards .ourofferingcard {
+    width: min(100%, 92vw);
+    flex-direction: column;
+    gap: 0;
+    border-radius: 8px;
+  }
+  .cards.ourofferingcards .ourofferingcard-image {
+    flex: none;
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+  .cards.ourofferingcards .ourofferingcard-image img {
+    height: 220px;
+    border-radius: 8px 8px 0 0;
+  }
+  .cards.ourofferingcards .ourofferingcard-content {
+    width: 100%;
+    padding: 24px;
+  }
+}/*# sourceMappingURL=ourofferingcards.css.map */

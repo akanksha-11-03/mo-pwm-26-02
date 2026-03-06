@@ -1,0 +1,606 @@
+@import "../../../styles/fonts.css";
+header .header.pms-header {
+  margin: 0;
+}
+header .header.pms-header a.button:-moz-any-link {
+  box-sizing: inherit;
+  max-width: inherit;
+  margin: 0;
+  border: unset;
+  border-radius: unset;
+  padding: 0;
+  font-family: var(--body, Inter);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--neutrals-white, #FFF);
+  cursor: pointer;
+  overflow: unset;
+  text-overflow: inherit;
+  white-space: inherit;
+}
+header .header.pms-header a.button:any-link,
+header .header.pms-header button {
+  box-sizing: inherit;
+  max-width: inherit;
+  margin: 0;
+  border: unset;
+  border-radius: unset;
+  padding: 0;
+  font-family: var(--body, Inter);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0;
+  text-align: center;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--neutrals-white, #FFF);
+  cursor: pointer;
+  overflow: unset;
+  text-overflow: inherit;
+  white-space: inherit;
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .nav-sec-sec1 span {
+  position: unset;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: unset;
+  gap: 0;
+  cursor: pointer;
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .nav-sec-sec1 span[aria-expanded=false] {
+  color: var(--neutrals-white);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body);
+  font-size: var(--body-small-regular-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--label-large-line-height);
+  padding: 0;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .nav-sec-sec1 span:first-child {
+    display: block;
+  }
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .nav-sec-sec1 span button {
+  line-height: 0;
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .nav-sec-sec1 span button a {
+  background-color: transparent;
+  color: var(--neutrals-white, #FFF);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body, Inter);
+  font-size: var(--body-small-regular-size, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--label-large-line-height, 20px);
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-sections .nav-drop {
+    font-size: var(--body-medium-semibold-size, 16px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--paragraph-small-line-height, 20px);
+  }
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-sections .nav-drop::after {
+  display: none;
+  content: unset;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-sections .nav-drop::after {
+    display: block;
+    content: "";
+  }
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-tools .nav-tools-cont1 > ul > span .icon {
+  width: 20px;
+  height: 20px;
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-tools .nav-tools-cont1 .nav-tools-sub2, header .header.pms-header .nav-wrapper nav[aria-expanded=true] .nav-tools .nav-tools-cont1 .nav-tools-sub3 {
+  display: none;
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top {
+  width: 50%;
+  display: flex;
+  grid-area: header-top;
+  align-items: center;
+  justify-self: flex-end;
+  list-style: none;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1215686275);
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top {
+    display: block;
+    width: 100%;
+    grid-column: 1/-1;
+    padding: 0;
+    border: unset;
+  }
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 {
+  line-height: inherit;
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 .nav-drop[data-aria-expanded=true] {
+  color: var(--blue-1800-primary, #2E2A94);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body, Inter);
+  font-size: var(--body-medium-semibold-size, 16px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--body-medium-semibold-line-height, 20px);
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 .nav-drop[data-aria-expanded=true]::after {
+  display: none;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 .nav-drop[data-aria-expanded=true]::after {
+    display: block;
+    content: "";
+  }
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 li,
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 span {
+  line-height: 0;
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 li button,
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 span button {
+  background-color: transparent;
+  color: var(--neutrals-200);
+}
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 li button a,
+header .header.pms-header .nav-wrapper nav[aria-expanded=true] .header-top .header-top-cont1 .header-top-sec1 span button a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--neutrals-200);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body);
+  font-size: var(--paragraph-small-size);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--paragraph-small-line-height);
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: unset;
+  overflow: unset;
+  text-overflow: unset;
+  white-space: nowrap;
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 {
+  list-style: none;
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  scroll-behavior: unset;
+  top: 100%;
+  white-space: initial;
+  overflow: hidden;
+  backdrop-filter: blur(0.1px);
+  background: rgba(17, 17, 17, 0.3019607843);
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 {
+    display: block;
+    position: unset;
+    left: unset;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: unset;
+    top: unset;
+    white-space: initial;
+    overflow: unset;
+    background: transparent;
+    backdrop-filter: unset;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 {
+  background: transparent;
+  padding: 0;
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 {
+    position: unset;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  overflow: unset;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section {
+    width: 100%;
+    height: auto;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    align-self: stretch;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper {
+  height: 100%;
+  display: flex;
+  width: 597px;
+  min-height: 224px;
+  padding-left: 20px;
+  border-radius: 0 0 0 8px;
+  background: var(--neutrals-white, #FFF);
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper {
+    flex-direction: column;
+    width: 100%;
+    min-height: inherit;
+    border-radius: unset;
+    padding-left: 0;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 {
+  width: 359px;
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 {
+    width: 100%;
+    padding: 0;
+    border-left: 1px solid var(--neutrals-300, #E0E0E0);
+    padding-left: 16px;
+  }
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span {
+    padding: 8px 0;
+  }
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span:first-child {
+    padding-top: 0;
+  }
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li:last-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span:last-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li:last-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span:last-child {
+    padding-bottom: 0;
+    text-align: left;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span a {
+  display: flex;
+  padding: 0 var(--spacing-none, 0);
+  align-items: center;
+  gap: 4px;
+  color: var(--neutrals-800, #424242);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body, Inter);
+  font-size: var(--body-small-regular-size, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--label-large-line-height, 20px);
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span a {
+    font-feature-settings: var(--font-features-default);
+    font-family: var(--body, Inter);
+    font-size: var(--paragraph-small-size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--paragraph-small-line-height, 20px);
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li a span,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span a span,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 li a span,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec1 span a span {
+  display: flex;
+  align-items: flex-start;
+  width: 24px;
+  height: 24px;
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 {
+  width: 217px;
+  display: flex;
+  padding: var(--spacing-16, 16px) var(--spacing-16, 16px) var(--spacing-16, 16px);
+  flex-direction: column;
+  gap: 8px;
+  align-self: stretch;
+  align-items: flex-start;
+  background: var(--neutrals-100, #F5F5F5);
+  position: relative;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 {
+    display: flex;
+    width: 100%;
+    border-radius: 4px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--spacing-8, 8px);
+    align-self: stretch;
+    background-color: transparent;
+    margin-top: 28px;
+    padding: 0;
+    border-left: 1px solid var(--neutrals-300, #E0E0E0);
+    padding-left: 16px;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span {
+  color: var(--neutrals-800, #424242);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body, Inter);
+  font-size: var(--body-small-regular-size, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--label-large-line-height, 20px);
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span {
+    padding: 8px 0;
+    color: var(--neutrals-black, #111);
+    text-align: left;
+  }
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:first-child {
+    padding-top: 0;
+  }
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:last-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:last-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:last-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:last-child {
+    padding-bottom: 0;
+    text-align: left;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:first-child,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:first-child,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:first-child,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:first-child {
+  color: var(--blue-1800-primary, #2E2A94);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body, Inter);
+  font-size: var(--body-xsmall-semibold-size, 12px);
+  font-style: normal;
+  font-weight: 600;
+  line-height: var(--body-xsmall-semibold-line-height, 14px);
+  margin-bottom: 4px;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:first-child {
+    margin-left: -18px;
+    padding-left: 2px;
+    padding-bottom: 16px;
+    margin-bottom: 0;
+    background: #FFF;
+    font-size: var(--body-small-medium-size, 14px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--body-small-medium-line-height, 16px);
+    text-align: left;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span a {
+  color: var(--neutrals-800, #424242);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body, Inter);
+  font-size: var(--body-small-regular-size, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--label-large-line-height, 20px);
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span a {
+    color: var(--neutrals-black, #111);
+  }
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:nth-child(2),
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:nth-child(2),
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 li:nth-child(2),
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2 span:nth-child(2) {
+    padding-top: 0;
+    text-align: left;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2::before,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: 90%;
+  right: 50%;
+  margin-right: -50vw;
+  background-color: var(--neutrals-100, #F5F5F5);
+  z-index: 1;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2::before,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section .default-content-wrapper .sub-popup-sec2::before {
+    content: unset;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper {
+  display: flex;
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 {
+    width: 100%;
+    padding: 0;
+    border-left: 1px solid var(--neutrals-300, #E0E0E0);
+    padding-left: 16px;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 li a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 span a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 li a,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 span a {
+  display: flex;
+  padding: 0 var(--spacing-none, 0);
+  align-items: center;
+  gap: 4px;
+  color: var(--blue-1-800-primary, #2E2A94);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body, Inter);
+  font-size: var(--body-small-regular-size, 14px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--label-medium-line-height, 16px);
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 li a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 span a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 li a,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 span a {
+    color: var(--blue-1800-primary, #2E2A94);
+    font-feature-settings: var(--font-features-default);
+    font-family: var(--body, Inter);
+    font-size: var(--label-small-size, 12px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--label-small-line-height, 16px);
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 li a span,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 span a span,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 li a span,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 span a span {
+  display: flex;
+  align-items: flex-start;
+  width: 24px;
+  height: 24px;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 li a span,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 span a span,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 li a span,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.investor-services .default-content-wrapper .sub-popup-sec1 span a span {
+    width: 16px;
+    height: 16px;
+  }
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2 {
+  align-items: center;
+  justify-content: center;
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2 .comlist.sub-popup-sub1,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2 .comlist.sub-popup-sub1 {
+  position: relative;
+  display: flex;
+  width: 123.865px;
+  height: 71.609px;
+  align-items: center;
+  gap: -52.931px;
+  color: var(--blue-1800-primary, #2E2A94);
+  font-feature-settings: var(--font-features-default);
+  font-family: var(--body, Inter);
+  font-size: 10.889px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 13.612px;
+}
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2 .comlist.sub-popup-sub1::before,
+header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2 .comlist.sub-popup-sub1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -12px;
+  display: block;
+  background: url("/icons/equity-pms.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 67.068px;
+  height: 71.277px;
+  flex-shrink: 0;
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2 {
+    display: none !important;
+  }
+}
+@media (max-width: 899px) {
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > li[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2 .sub-popup-sub1:first-child,
+  header .header.pms-header .nav-wrapper nav .nav-sections .default-content-wrapper .nav-sec-sec1 > span[data-aria-expanded=true] .nav-sec-inner-text1 .nav-sec-list1 .section.our-strategie .default-content-wrapper .sub-popup-sec2 .sub-popup-sub1:first-child {
+    padding: 4px 0;
+    text-align: left;
+  }
+}/*# sourceMappingURL=pms-header.css.map */

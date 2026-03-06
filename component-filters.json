@@ -18,13 +18,26 @@
       "fragment",
       "curated-content",
       "embed",
-      "custom-rte"
+      "custom-rte",
+      "titans-forum"
     ]
   },
   {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "cardswithimg",
+    "components": [
+      "cardswithimg-item"
+    ]
+  },
+  {
+    "id": "ourofferingcards",
+    "components": [
+      "ourofferingcard"
     ]
   },
   {
@@ -53,6 +66,18 @@
     "components": [
       "custom-rte-item",
       "custom-image-item"
+    ]
+  },
+  {
+    "id": "feature-card",
+    "components": [
+      "feature-card-item"
+    ]
+  },
+  {
+    "id": "titans-forum",
+    "components": [
+      "titans-forum-item"
     ]
   }
 ]
