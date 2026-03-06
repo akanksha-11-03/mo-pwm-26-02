@@ -147,7 +147,6 @@ export default function decorateOurOfferingCards(block) {
       cards[i].style.top = `${top}px`;
       currentTops.push(top);
     }
-
   }
 
   // Initialize after layout settles
