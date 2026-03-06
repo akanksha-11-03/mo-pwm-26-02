@@ -1,7 +1,6 @@
 import { createOptimizedPicture, loadCSS } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
-
 async function loadSwiper() {
   loadCSS(`${window.hlx.codeBasePath}/scripts/swiper/swiper-bundle.min.css`);
   const { default: Swiper } = await import('../../scripts/swiper/swiper-bundle.min.js');

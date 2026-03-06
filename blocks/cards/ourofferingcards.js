@@ -147,6 +147,7 @@ export default function decorateOurOfferingCards(block) {
       cards[i].style.top = `${top}px`;
       currentTops.push(top);
     }
+<<<<<<< HEAD
   }
 
   // Skip scroll animation on mobile — show static vertical cards
@@ -170,6 +171,8 @@ export default function decorateOurOfferingCards(block) {
       updatePositions();
       window.addEventListener('scroll', updatePositions, { passive: true });
     }
+=======
+>>>>>>> c2ee69d0dae3203f9912eb8e9e3300f487090e0f
   }
 
   // Initialize after layout settles

@@ -16,11 +16,10 @@
       "cards",
       "columns",
       "fragment",
+      "curated-content",
       "embed",
       "custom-rte",
-      "titans-forum",
-      "ourofferingcards",
-      "cardswithimg"
+      "titans-forum"
     ]
   },
   {
@@ -54,6 +53,12 @@
       "image",
       "button",
       "title"
+    ]
+  },
+  {
+    "id": "curated-content",
+    "components": [
+      "curated-content-item"
     ]
   },
   {

@@ -11,7 +11,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
-import {linkToBtn} from '../components/how-we-serve-you/how-we-serve-you.js';
+import { linkToBtn } from '../components/how-we-serve-you/how-we-serve-you.js';
 import decorateSeeyourWealthInmotion from '../components/Seeyour-wealth-inmotion/Seeyour-wealth-inmotion.js';
 
 /**
