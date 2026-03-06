@@ -1,0 +1,71 @@
+{
+  "definitions": [
+    {
+      "title": "Curated Content",
+      "id": "curated-content",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Curated Content",
+              "filter": "curated-content"
+            }
+          }
+        }
+      }
+    },
+    {
+      "title": "Curated Content Item",
+      "id": "curated-content-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Curated Content Item",
+              "model": "curated-content-item"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+    "id": "curated-content-item",
+    "fields": [
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Alt Text"
+      },
+      {
+        "component": "text",
+        "name": "col_link",
+        "label": "Image Link"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Curated Content Item Description",
+        "value": ""
+      }
+    ]
+  }
+  ],
+  "filters": [
+    {
+    "id": "curated-content",
+    "components": [
+      "curated-content-item"
+    ]
+  }
+  ]
+}
