@@ -19,7 +19,8 @@
       "curated-content",
       "embed",
       "custom-rte",
-      "titans-forum"
+      "titans-forum",
+      "tabs"
     ]
   },
   {
@@ -72,6 +73,12 @@
     "id": "feature-card",
     "components": [
       "feature-card-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
     ]
   },
   {

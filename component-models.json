@@ -422,6 +422,21 @@
     ]
   },
   {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Tab Content Fragment URL"
+      }
+    ]
+  },
+  {
     "id": "titans-forum-item",
     "fields": [
       {
