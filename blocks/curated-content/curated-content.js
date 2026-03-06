@@ -1,28 +1,28 @@
-import Swiper from "../swiper/swiper-bundle.js";
+import Swiper from '../swiper/swiper-bundle.js';
 
 let swiperInstance = null;
 
 function initSwiper(wrapper, block) {
   // Prevent re-initialization
-  if (wrapper.classList.contains("swiper-initialized")) return;
+  if (wrapper.classList.contains('swiper-initialized')) return;
 
   // Get all slide elements
   const slideElements = [...block.children];
 
   // Add necessary classes to existing elements
-  wrapper.classList.add("swiper");
-  block.classList.add("swiper-wrapper");
+  wrapper.classList.add('swiper');
+  block.classList.add('swiper-wrapper');
 
   // Add swiper-slide class to each child div
   slideElements.forEach((slide) => {
-    slide.classList.add("swiper-slide");
+    slide.classList.add('swiper-slide');
   });
 
   // Initialize Swiper with the specified configuration
   swiperInstance = new Swiper(wrapper, {
     slidesPerView: 1.1,
     grabCursor: true,
-    touchEventsTarget: "container",
+    touchEventsTarget: 'container',
     touchRatio: 1,
     simulateTouch: true,
     spaceBetween: 16,
@@ -42,36 +42,36 @@ function initSwiper(wrapper, block) {
     },
   });
 
-  wrapper.classList.add("swiper-initialized");
+  wrapper.classList.add('swiper-initialized');
 }
 
 export default function decorate(block) {
   // Find the wrapper (parent of block)
   const wrapper = block.parentElement;
 
-  if (wrapper && wrapper.classList.contains("curated-content-wrapper")) {
+  if (wrapper && wrapper.classList.contains('curated-content-wrapper')) {
     // Find the section container
     const section = wrapper.parentElement;
-    if (section && section.classList.contains("curated-content-container")) {
+    if (section && section.classList.contains('curated-content-container')) {
       // Create inner wrapper div
-      const innerWrapper = document.createElement("div");
-      innerWrapper.classList.add("curated-content-inner-wrapper");
-      
+      const innerWrapper = document.createElement('div');
+      innerWrapper.classList.add('curated-content-inner-wrapper');
+
       // Move all children of section into the inner wrapper
       while (section.firstChild) {
         innerWrapper.appendChild(section.firstChild);
       }
-      
+
       // Append the inner wrapper back to the section
       section.appendChild(innerWrapper);
     }
-    
+
     // Initialize swiper
     initSwiper(wrapper, block);
 
     // Reinitialize on window resize if needed
     let resizeTimeout;
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(() => {
         const slideElements = [...block.children];
@@ -79,30 +79,26 @@ export default function decorate(block) {
 
         // If swiper is initialized but shouldn't be (desktop with <= 3 slides)
         if (
-          wrapper.classList.contains("swiper-initialized") &&
-          isDesktop &&
-          slideElements.length <= 3
+          wrapper.classList.contains('swiper-initialized')
+          && isDesktop
+          && slideElements.length <= 3
         ) {
           if (swiperInstance) {
             swiperInstance.destroy(true, true);
             swiperInstance = null;
           }
-          wrapper.classList.remove("swiper", "swiper-initialized");
-          block.classList.remove("swiper-wrapper");
+          wrapper.classList.remove('swiper', 'swiper-initialized');
+          block.classList.remove('swiper-wrapper');
           slideElements.forEach((slide) => {
-            slide.classList.remove("swiper-slide");
+            slide.classList.remove('swiper-slide');
           });
+        // eslint-disable-next-line brace-style
         }
         // If swiper is not initialized but should be
-        else if (!wrapper.classList.contains("swiper-initialized")) {
+        else if (!wrapper.classList.contains('swiper-initialized')) {
           initSwiper(wrapper, block);
         }
       }, 250);
     });
   }
 }
-
-
-
-
-
