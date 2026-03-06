@@ -3,12 +3,51 @@
     padding: 0;
 }
 
+.section.young-titans-forum .titans-forum-wrapper .titans-forum {
+    min-height: 600px;
+    height: auto;
+}
+
 .section.young-titans-forum .titans-forum-wrapper * {
     margin: 0;
 }
 
-.section.young-titans-forum .titans-forum-wrapper>div {
+.section.young-titans-forum .titans-forum-wrapper .block-item {
     position: relative;
+    min-height: inherit;
+}
+
+.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 {
+    min-height: inherit;
+}
+
+.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 .grand-child-1 {
+    min-height: inherit;
+    position: relative;
+}
+
+.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 .grand-child-1::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    background: linear-gradient(180deg, #8D5D33 12.14%, rgba(0, 0, 0, 0.00) 58.8%);
+    pointer-events: none;
+}
+
+.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 .grand-child-1 picture {
+    object-position: bottom;
+    min-height: inherit;
+}
+
+.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 .grand-child-1 picture img {
+    object-position: bottom;
+    min-height: inherit;
+    object-fit: fill;
+    padding-top: 64px;
+    width: 100%;
+    aspect-ratio: 4/3;
 }
 
 .section.young-titans-forum .titans-forum>div div picture {
@@ -17,77 +56,111 @@
     display: block;
 }
 
-.section.young-titans-forum .titans-forum>div div:first-of-type p:first-of-type {
+.section.young-titans-forum .titans-forum .block-child-1 .grand-child-2 {
     display: none;
 }
 
-.section.young-titans-forum .titans-forum>div div:not(:first-of-type) {
+.section.young-titans-forum .titans-forum .block-item .content-wrap {
     position: absolute;
-}
-
-.section.young-titans-forum .titans-forum>div div:nth-child(2) {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 141px;
-    max-width: 29.275%;
+    top: 0;
+    padding: 34px 17px 0;
+    max-width: 100%;
     width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    pointer-events: none;
 }
 
-.section.young-titans-forum .titans-forum>div div:nth-child(2) h2 {
+.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 h2 {
     color: var(--Neutrals-White, #FFF);
     font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
 
-    /* Desktop/Header/PWM H4 */
+    /* Mobile/Header/PWM H4 */
     font-family: var(--TItle, Inter);
-    font-size: var(--Heading-PWM-H4-Size, 32px);
+    font-size: var(--Heading-PWM-H5-Size, 28px);
     font-style: normal;
     font-weight: 400;
-    line-height: var(--Heading-PWM-H4-Line-Height, 40px);
-    /* 125% */
-    margin: 0 0 10px;
+    line-height: var(--Sub-Header-Large-Line-Height, 32px);
+    /* 114.286% */
 }
 
-.section.young-titans-forum .titans-forum>div div:nth-child(2) p {
+.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 p {
     color: var(--Neutrals-White, #FFF);
     font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
 
-    /* Desktop/Paragraph/Large-regular */
+    /* Mobile/Paragraph/Large-regular */
     font-family: var(--Body, Inter);
-    font-size: var(--Body-Large-regular-Size, 18px);
+    font-size: var(--Paragraph-Large-regular-Size, 18px);
     font-style: normal;
     font-weight: 400;
-    line-height: var(--Body-Large-regular-Line-Height, 28px);
+    line-height: var(--Paragraph-Large-regular-Line-Height, 28px);
     /* 155.556% */
-    margin: 0 0 40px;
+    margin: 12px 0 44px;
 }
 
-.section.young-titans-forum .titans-forum>div div:nth-child(2) p.button-container {
+.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 p.button-container {
     margin: 0;
     line-height: 0;
 }
 
-.section.young-titans-forum .titans-forum>div div:nth-child(2) p.button-container .button {
+.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 p.button-container .button {
     border: none;
-    padding: 10px 12px;
-    min-width: 308px;
     border-radius: var(--Border-Radius-4, 4px);
     background: var(--Neutrals-White, #FFF);
+    padding: 10px 12px;
+    width: 100%;
     color: var(--Text-Button-Default, #2E2A94);
     text-align: center;
     font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
 
-    /* Desktop/Button/Large */
+    /* Mobile/Button/Medium */
     font-family: var(--Body, Inter);
-    font-size: var(--Button-Large-Size, 18px);
+    font-size: var(--Button-Medium-Size, 16px);
     font-style: normal;
     font-weight: 500;
-    line-height: var(--Button-Large-Line-Height, 20px);
-    /* 111.111% */
+    line-height: var(--Button-Medium-Line-Height, 20px);
+    /* 125% */
 }
 
-.section.young-titans-forum .titans-forum>div div:nth-child(3) {
-    position: absolute;
-    bottom: 0;
-    left: 95px;
+@media screen and (width>768px) {
+    .section.young-titans-forum .titans-forum-wrapper .titans-forum{
+        min-height: 320px;
+    }
+
+    .section.young-titans-forum .titans-forum .block-child-1 .grand-child-1{
+        display: none;
+    }
+
+    .section.young-titans-forum .titans-forum .block-child-1 .grand-child-2{
+        display: block;
+    }
+
+    .section.young-titans-forum .titans-forum .block-child-1 .grand-child-2::before{
+        content: '';
+        max-width: 82.334%;
+        width: 100%;
+        min-height: 320px;
+        height: auto;
+        display: block;
+        position: absolute;
+        right: 0;
+        background: linear-gradient(96deg, rgba(134, 110, 68, 0.00) 32.78%, #8D5D33 61.63%);
+    }
+
+    .section.young-titans-forum .titans-forum .block-item .content-wrap{
+        top: 50%;
+        transform: translateY(-50%);
+        left: 95px;
+        right: 141px;
+        max-width: 1131px;
+        width: 100%;
+        min-height: 320px;
+        margin: 0 auto;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
 }

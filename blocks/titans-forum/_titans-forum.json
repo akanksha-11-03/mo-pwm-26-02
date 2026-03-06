@@ -64,25 +64,25 @@
                     "value": ""
                 },
                 {
-                    "component": "richtext",
-                    "name": "col2_text",
-                    "value": "",
-                    "label": "Banner Text Content",
-                    "valueType": "string"
-                },
-                {
                     "component": "reference",
                     "valueType": "string",
-                    "name": "col3_logoImage",
+                    "name": "col2_logoImage",
                     "label": "Logo Image",
                     "multi": false
                 },
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "col3_logoImageAlt",
+                    "name": "col2_logoImageAlt",
                     "label": "Logo Alt",
                     "value": ""
+                },
+                {
+                    "component": "richtext",
+                    "name": "col3_text",
+                    "value": "",
+                    "label": "Banner Text Content",
+                    "valueType": "string"
                 }
             ]
         }
