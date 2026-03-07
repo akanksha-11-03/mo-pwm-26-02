@@ -311,6 +311,30 @@
     ]
   },
   {
+    "id": "rte-image-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "RTE Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "embed",
     "fields": [
       {

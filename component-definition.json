@@ -269,6 +269,21 @@
           }
         },
         {
+          "title": "RTE Image Item",
+          "id": "rte-image-item",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "RTE Image Item",
+                  "model": "rte-image-item"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Embed",
           "id": "embed",
           "plugins": {
