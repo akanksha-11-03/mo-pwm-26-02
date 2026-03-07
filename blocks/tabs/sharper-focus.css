@@ -137,7 +137,7 @@
     filter: grayscale();
 }
 
-.section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type):hover > div img{
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type):hover>div img {
     filter: unset;
 }
 
@@ -166,22 +166,22 @@
     position: absolute;
 }
 
-.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(1) >div:last-of-type {
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(1)>div:last-of-type {
     top: -62px;
     left: -11px;
 }
 
-.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(2) >div:last-of-type {
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(2)>div:last-of-type {
     top: -62px;
     right: -11px;
 }
 
-.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(3) >div:last-of-type {
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(3)>div:last-of-type {
     bottom: -51px;
     left: -11px;
 }
 
-.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(4) >div:last-of-type {
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(4)>div:last-of-type {
     bottom: -51px;
     right: -11px;
 }
@@ -197,7 +197,7 @@
 } */
 
 .section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type)>div:last-of-type p,
-.section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type)>div:last-of-type p strong{
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type)>div:last-of-type p strong {
     color: var(--Neutrals-800, #424242);
     font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
 
@@ -211,7 +211,7 @@
     margin: 0;
 }
 
-.section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type):hover >div p strong{
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type):hover>div p strong {
     color: var(--blue-1800-primary, #2E2A94);
     font-weight: 600;
 }
@@ -239,4 +239,95 @@
     font-weight: 600;
     line-height: var(--Body-Medium-semibold-Line-Height, 20px);
     /* 125% */
+}
+
+@media screen and (width>768px) {
+    .section.sharper-focus {
+        max-width: 66.745%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .section.sharper-focus .default-content-wrapper {
+        padding: 0 23px;
+    }
+
+    .section.sharper-focus .default-content-wrapper h2 {
+        text-align: center;
+        margin: 0 0 20px;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .section.sharper-focus .default-content-wrapper p {
+        max-width: 59.473%;
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .section.sharper-focus .tabs .tabs-list {
+        margin: 0 auto 26px;
+        max-width: 66.667%;
+        width: 100%;
+    }
+
+    .section.sharper-focus .tabs .tabs-list .tabs-tab p {
+        font-size: 20px;
+        line-height: 24px;
+        color: var(--Neutrals-700, #616161);
+    }
+
+    .section.sharper-focus .tabs .tabs-panel {
+        padding: 50px 0;
+    }
+
+    .section.sharper-focus .tabs .tabs-panel .custom-rte {
+        max-width: 500px;
+        max-height: 500px;
+        /* max-width: 54.825%; */
+        /* max-height: 54.825%; */
+        justify-content: center;
+        align-items: center;
+        padding: 40.87px;
+        gap: 16px;
+    }
+
+    /* .section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type){ */
+    /* width: 41.982%;
+        height: 41.982%; */
+    /* width: 200px; */
+    /* height: 200px; */
+    /* } */
+
+    .section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type)>div:last-of-type{
+        min-width: 154px;
+        max-width: max-content;
+    }
+
+    .section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(1)>div:last-of-type {
+        top: 0;
+        left: -110px;
+    }
+
+    .section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(2)>div:last-of-type{
+        top: 0;
+        right: -154px;
+    }
+
+    .section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(3)>div:last-of-type{
+        bottom: 0;
+        left: -110px;
+    }
+
+    .section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-of-type(4)>div:last-of-type{
+        bottom: 0;
+        right: -154px;
+    }
+
+    .section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type)>div:last-of-type p,
+    .section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type)>div:last-of-type p strong {
+        font-size: 16px;
+        line-height: 20px;
+    }
 }
