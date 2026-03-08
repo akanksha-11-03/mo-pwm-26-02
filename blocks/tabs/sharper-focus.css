@@ -241,6 +241,65 @@
     /* 125% */
 }
 
+/* --- THE ANIMATIONS --- */
+
+/* Animates the image from grayscale to color */
+@keyframes highlightimage {
+  0%, 24.99% { 
+    filter: grayscale(0%);
+    /* opacity: 1; */
+  }
+
+  25%, 100% { 
+    filter: grayscale(100%);
+    /* opacity: 0.6; */
+  }
+}
+
+@keyframes highlighttext {
+  0%, 24.99% { 
+    color: #2E2A94;
+    font-weight: 600;
+    /* transform: scale(1.5); */
+}
+
+25%, 100% { 
+    color: #424242;
+    font-weight: 400;
+    /* transform: scale(1); */
+  }
+}
+
+/* Base animation */
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type) img {
+  animation: highlightimage 8s infinite;
+}
+
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type) p strong {
+  animation: highlighttext 8s infinite;
+}
+
+/* Item delays (highlight one by one) */
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(1) img,
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(1) p strong {
+  animation-delay: 0s;
+}
+
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(2) img,
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(2) p strong {
+  animation-delay: 2s;
+}
+
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(3) img,
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(3) p strong {
+    animation-delay: 6s;
+}
+
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(4) img,
+.section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(4) p strong {
+    animation-delay: 4s;
+}
+
 @media screen and (width>768px) {
     .section.sharper-focus {
         max-width: 66.745%;
