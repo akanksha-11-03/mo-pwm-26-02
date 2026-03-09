@@ -335,7 +335,7 @@
     ]
   },
   {
-    "id": "embed",
+    "id": "embed-item",
     "fields": [
       {
         "component": "aem-content",
