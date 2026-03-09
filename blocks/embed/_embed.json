@@ -44,12 +44,12 @@
         {
           "component": "reference",
           "name": "video_image",
-          "label": "Video Image"
+          "label": "Video Thumbnail Image"
         },
         {
           "component": "text",
           "name": "video_imageAlt",
-          "label": "Video Image Alt"
+          "label": "Video Thumbnail Image Alt"
         },
         {
           "component": "text",
