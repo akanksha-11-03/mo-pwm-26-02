@@ -67,7 +67,7 @@
           "label": "Video Image Alt"
         },
         {
-          "component": "text",
+          "component": "richtext",
           "name": "text-content",
           "label": "Text Content"
         }
