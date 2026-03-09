@@ -73,8 +73,7 @@
   {
     "id": "embed",
     "components": [
-      "embed-item",
-      "embed-text-content"
+      "embed-item"
     ]
   },
   {
