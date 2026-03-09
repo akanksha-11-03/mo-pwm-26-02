@@ -61,21 +61,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 24px 0;
-  border-bottom: 1px solid #d1cbc3;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
   color: #2e2a94;
   cursor: pointer;
-  transition: color 0.2s ease;
-}
-.how-we-serve-you .columns-wrapper .divwithlinks a:first-child {
-  border-top: 1px solid #d1cbc3;
+  border-bottom: 1px solid #DADADA;
+  transition: border-color 0.4s ease, background-color 0.4s ease;
+  cursor: pointer;
 }
 .how-we-serve-you .columns-wrapper .divwithlinks a:hover {
-  color: #1e1a6e;
-  text-decoration: none;
+  border-color: #2e2a94;
+  box-shadow: -1px 6px 3px -1px rgba(0, 0, 0, 0.52);
 }
 .how-we-serve-you .columns-wrapper .divwithlinks a .icon {
   display: flex;
