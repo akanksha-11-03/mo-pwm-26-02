@@ -173,6 +173,10 @@
           {
             "name": "Sharper Focus Section",
             "value": "sharper-focus"
+          },
+          {
+            "name": "Banner Carousel Section",
+            "value": "banner-carousel"
           }
         ]
       }
