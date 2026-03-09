@@ -162,8 +162,35 @@ export default function decorateOurOfferingCards(block) {
       cards[i].style.top = `${top}px`;
       currentTops.push(top);
     }
+<<<<<<< HEAD
   }
 
+  // Skip scroll animation on mobile — show static vertical cards
+  function isMobile() {
+    return window.innerWidth <= 900;
+  }
+
+  function clearAnimationStyles() {
+    stackSection.style.height = '';
+    cards.forEach((c) => {
+      c.style.top = '';
+    });
+  }
+
+  function setup() {
+    if (isMobile()) {
+      clearAnimationStyles();
+      window.removeEventListener('scroll', updatePositions);
+    } else {
+      initPositions();
+      updatePositions();
+      window.addEventListener('scroll', updatePositions, { passive: true });
+    }
+=======
+>>>>>>> c2ee69d0dae3203f9912eb8e9e3300f487090e0f
+  }
+
+<<<<<<< HEAD
   // Skip scroll animation on mobile — show static vertical cards
   function isMobile() {
     return window.innerWidth <= 900;
@@ -193,6 +220,12 @@ export default function decorateOurOfferingCards(block) {
   requestAnimationFrame(() => {
     setup();
 
+=======
+  // Initialize after layout settles
+  requestAnimationFrame(() => {
+    setup();
+
+>>>>>>> 9296bb363bd2fd99311daa9f5d4d1e52092117be
     window.addEventListener('resize', () => {
       setup();
     });
