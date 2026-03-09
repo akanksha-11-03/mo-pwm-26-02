@@ -315,6 +315,21 @@
           }
         },
         {
+          "title": "Embed Text Content",
+          "id": "embed-text-content",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Embed Text Content",
+                  "model": "embed-text-content"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Feature Card",
           "id": "feature-card",
           "plugins": {

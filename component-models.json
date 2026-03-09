@@ -366,7 +366,12 @@
         "component": "text",
         "name": "video_imageMobAlt",
         "label": "Video Image Alt"
-      },
+      }
+    ]
+  },
+  {
+    "id": "embed-text-content",
+    "fields": [
       {
         "component": "richtext",
         "name": "text",
