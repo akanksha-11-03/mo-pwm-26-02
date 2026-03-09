@@ -308,8 +308,7 @@
                 "resourceType": "core/franklin/components/block/v1/block/item",
                 "template": {
                   "name": "Embed Item",
-                  "model": "embed-item",
-                  "filter": "embed-item"
+                  "model": "embed-item"
                 }
               }
             }
