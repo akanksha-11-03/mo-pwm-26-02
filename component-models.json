@@ -369,8 +369,10 @@
       },
       {
         "component": "richtext",
-        "name": "text-content",
-        "label": "Text Content"
+        "name": "text",
+        "value": "",
+        "label": "RTE Text",
+        "valueType": "string"
       }
     ]
   },
