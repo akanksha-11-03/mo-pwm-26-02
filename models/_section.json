@@ -74,6 +74,10 @@
             {
               "name": "Banner Carousel Section",
               "value": "banner-carousel"
+            },
+            {
+              "name": "PWM Group Section",
+              "value": "pwm-group"
             }
           ]
         }
@@ -97,8 +101,7 @@
         "custom-rte",
         "titans-forum",
         "tabs",
-        "banner-carousel",
-        "pwm-group"
+        "banner-carousel"
       ]
     }
   ]

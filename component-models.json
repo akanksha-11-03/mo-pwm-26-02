@@ -177,6 +177,10 @@
           {
             "name": "Banner Carousel Section",
             "value": "banner-carousel"
+          },
+          {
+            "name": "PWM Group Section",
+            "value": "pwm-group"
           }
         ]
       }
