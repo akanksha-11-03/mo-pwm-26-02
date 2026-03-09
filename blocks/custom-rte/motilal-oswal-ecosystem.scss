@@ -1,0 +1,230 @@
+/* ===== Motilal Oswal Ecosystem Section ===== */
+
+.motilal-oswal-ecosystem {
+
+    > div {
+        padding: 0;
+        margin: 0;
+    }
+
+    // ===== Section Heading =====
+    .default-content-wrapper {
+        margin-bottom: 32px;
+
+        h2 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.25em;
+            color: #C3A560;
+            margin: 0;
+        }
+        strong{
+            color: #2E2A94;
+             font-weight: 400;
+            font-size: 24px;
+        }
+    }
+
+    // ===== Block Grid =====
+    .custom-rte {
+        background: url('../../icons/ecosystem-background-Image.png') lightgray -73.496px -0.092px / 105.945% 100.028% no-repeat;
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        position: relative;
+
+        > div {
+            padding: 0;
+
+            > div {
+                padding: 0;
+                height: 100%;
+            }
+        }
+    }
+
+    // ===== List Reset =====
+    .custom-rte ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    // ===== First column — Private Wealth (single card, full height) =====
+    .custom-rte > div:first-child {
+        border-bottom: 0.5px solid #fff;
+
+        > div > ul > li {
+            padding: 26px 20px;
+
+            // Title
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 1.25em;
+            color: #F8F3EF;
+
+            // Description (nested ul > li)
+            > ul {
+                margin-top: 18px;
+
+                > li {
+                    font-family: 'Inter', sans-serif;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 1.25em;
+                    color: #F8F3EF;
+                }
+            }
+        }
+    }
+
+    // ===== Remaining items in grid =====
+    .custom-rte > div:last-child {
+        > div > ul {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            > li {
+                padding: 20px;
+                border-bottom: 0.5px solid #fff;
+
+                // Title
+                font-family: 'Inter', sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 1.2em;
+                color: #F8F3EF;
+
+                // Description (nested ul > li)
+                > ul {
+                    margin-top: 8px;
+
+                    > li {
+                        font-family: 'Inter', sans-serif;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 1.25em;
+                        color: #F8F3EF;
+                    }
+                }
+            }
+
+            // Remove border on last item in mobile
+            > li:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+
+    // ===== Desktop =====
+    @media (min-width: 900px) {
+        padding: 40px 67px;
+
+        .default-content-wrapper {
+            margin-bottom: 48px;
+
+            h2 {
+                font-size: 32px;
+                line-height: 1.25em;
+            }
+        }
+
+        .custom-rte {
+            // Col 1 = 422px, Col 2+3 = 814px (at 1236px)
+            grid-template-columns: 34.14% 1fr;
+            min-height: 656px;
+        }
+
+        // Private Wealth — full left column
+        .custom-rte > div:first-child {
+            border-bottom: none;
+            border-right: 0.5px solid #fff;
+
+            > div {
+                display: flex;
+                width: 100%;
+            }
+
+            > div > ul {
+                display: flex;
+                width: 100%;
+            }
+
+            > div > ul > li {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 26px 40px 26px 52px;
+                font-weight: 400;
+                font-size: 32px;
+                line-height: 1.25em;
+                width: 100%;
+
+                > ul {
+                    margin-top: 18px;
+
+                    > li {
+                        font-size: 16px;
+                        line-height: 1.25em;
+                    }
+                }
+            }
+        }
+
+        // 6 items — 2-column × 3-row grid
+        .custom-rte > div:last-child {
+            > div > ul {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                height: 100%;
+            }
+
+            > div > ul > li {
+                padding: 26px 22px;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1.2em;
+                border-bottom: 0.5px solid #fff;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                // Left column items get right border
+                &:nth-child(odd) {
+                    border-right: 0.5px solid #fff;
+                }
+
+                // Last row — no bottom border
+                &:nth-last-child(-n+2) {
+                    border-bottom: none;
+                }
+
+                > ul {
+                    margin-top: 0; // gap handles spacing
+
+                    > li {
+                        font-size: 16px;
+                        line-height: 1.25em;
+                    }
+                }
+            }
+        }
+    }
+
+    // ===== Large desktop =====
+    @media (min-width: 1200px) {
+        .custom-rte {
+            max-width: 1236px;
+            margin: 0 auto;
+        }
+
+        .default-content-wrapper {
+            max-width: 1236px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
