@@ -353,6 +353,11 @@
         "label": "Video Image Alt"
       },
       {
+        "component": "text",
+        "name": "video_imageTitle",
+        "label": "Video Image Title"
+      },
+      {
         "component": "reference",
         "name": "video_imageMob",
         "label": "Video Image Mobile"
@@ -361,11 +366,6 @@
         "component": "text",
         "name": "video_imageMobAlt",
         "label": "Video Image Alt"
-      },
-      {
-        "component": "text",
-        "name": "video_imageTitle",
-        "label": "Video Image Title"
       }
     ]
   },
