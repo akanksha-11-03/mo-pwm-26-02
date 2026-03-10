@@ -71,7 +71,7 @@ function toggleAllNavSections(sections, expanded = false) {
 function toggleMenu(nav, navSections, forceExpanded = null) {
   const expanded = forceExpanded !== null ? !forceExpanded : nav.getAttribute('aria-expanded') === 'true';
   const button = nav.querySelector('.nav-hamburger button');
-  document.body.style.overflowY = (expanded || isDesktop.matches) ? '' : 'hidden';
+  document.body.style.overflow = (expanded || isDesktop.matches) ? '' : 'hidden';
   nav.setAttribute('aria-expanded', expanded ? 'false' : 'true');
   toggleAllNavSections(navSections, expanded || isDesktop.matches ? 'false' : 'true');
   button.setAttribute('aria-label', expanded ? 'Open navigation' : 'Close navigation');
@@ -163,4 +163,41 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  // class start for header element
+  const headerSec = block.querySelector('.nav-sections ul');
+  headerSec.classList.add('header-menu');
+  Array.from(headerSec.children).forEach((li) => {
+    li.classList.add('header-menulist');
+    Array.from(li.children).forEach((item, i) => {
+      item.classList.add(`menulist-item-${i + 1}`);
+    });
+  });
+
+  headerSec.querySelectorAll('.menulist-item-2').forEach((elem) => {
+    Array.from(elem.children).forEach((itemLi, i) => {
+      itemLi.classList.add('item-li', `itemli-${i + 1}`);
+      Array.from(itemLi.children).forEach((el, ind) => {
+        el.classList.add(`subitem-${ind + 1}`);
+        Array.from(el.children).forEach((elitem, index) => {
+          elitem.classList.add('sub-list', `sublist-${index + 1}`);
+        });
+      });
+      if (itemLi.querySelector('ul')) {
+        itemLi.classList.add('item-drop');
+      }
+    });
+  });
+
+  const headerTools = block.querySelector('.nav-tools ul');
+  headerTools.classList.add('header-tool');
+  Array.from(headerTools.children).forEach((li) => {
+    li.classList.add('header-toollist');
+    Array.from(li.children).forEach((item, i) => {
+      item.classList.add(`toollist-item-${i + 1}`);
+      Array.from(item.children).forEach((el) => {
+        el.classList.add('toolsubitem');
+      });
+    });
+  });
 }
