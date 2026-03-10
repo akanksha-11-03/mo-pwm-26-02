@@ -103,20 +103,6 @@ header .nav-wrapper nav .nav-sections {
     white-space: nowrap;
   }
 }
-header .nav-wrapper nav .nav-sections ul {
-  list-style: none;
-  padding-left: 0;
-  font-size: var(--body-font-size-s);
-}
-header .nav-wrapper nav .nav-sections ul > li {
-  font-weight: 500;
-}
-header .nav-wrapper nav .nav-sections ul > li > ul {
-  margin-top: 0;
-}
-header .nav-wrapper nav .nav-sections ul > li > ul > li {
-  font-weight: 400;
-}
 header .nav-wrapper nav .nav-tools {
   grid-area: tools;
 }
@@ -219,6 +205,13 @@ header .nav-wrapper nav[aria-expanded=true] .nav-sections {
   overflow: auto;
   height: 100dvh;
 }
+header .nav-wrapper nav[aria-expanded=true] .nav-sections .header-menu {
+  list-style: none;
+  margin: 0;
+}
+header .nav-wrapper nav[aria-expanded=true] .nav-sections .header-menu .nav-drop .menulist-item-2 {
+  display: none;
+}
 @media (width >= 900px) {
   header .nav-wrapper nav[aria-expanded=true] .nav-sections {
     align-self: unset;
@@ -283,6 +276,9 @@ header .nav-wrapper nav[aria-expanded=true] .nav-sections {
     background-color: var(--light-color);
     white-space: initial;
   }
+}
+header .nav-wrapper nav[aria-expanded=true] .nav-tools {
+  display: none;
 }
 header .nav-wrapper nav[aria-expanded=false] .nav-hamburger {
   height: 24px;
