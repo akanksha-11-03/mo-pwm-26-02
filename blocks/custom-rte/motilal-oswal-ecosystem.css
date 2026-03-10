@@ -20,7 +20,7 @@
   font-size: 24px;
 }
 .motilal-oswal-ecosystem .custom-rte {
-  background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/105.945% 100.028% no-repeat;
+  background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/106.945% 100.028% no-repeat;
   border-radius: 4px;
   display: grid;
   grid-template-columns: 1fr;
@@ -165,7 +165,6 @@
     margin: 0 auto;
   }
   .motilal-oswal-ecosystem .default-content-wrapper {
-    max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
   }
