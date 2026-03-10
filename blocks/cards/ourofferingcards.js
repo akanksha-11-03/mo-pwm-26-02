@@ -99,6 +99,18 @@ export default function decorateOurOfferingCards(block) {
 
   block.replaceChildren(stackSection);
 
+  // ── Move heading inside the sticky frame so it sticks with cards ──
+  const headingEl = section ? section.querySelector('.ourofferingcards-heading') : null;
+  let headingH = 0;
+  if (headingEl) {
+    stickyFrame.prepend(headingEl);
+  }
+
+  function getHeadingHeight() {
+    headingH = headingEl ? headingEl.offsetHeight : 0;
+    return headingH;
+  }
+
   // ── Scroll-driven stacking animation ──
   let cardH = 0;
   let startTops = [];
@@ -106,15 +118,24 @@ export default function decorateOurOfferingCards(block) {
   let scrollPerT = 0;
 
   function initPositions() {
+    const hh = getHeadingHeight();
+
     cardH = cards[0].offsetHeight;
     travelDist = cardH + GAP;
     scrollPerT = travelDist * SCROLL_MULTIPLIER;
     const totalNeeded = scrollPerT * (cards.length - 1);
 
-    stackSection.style.height = `${totalNeeded + window.innerHeight * 0.5}px`;
+    // Sticky frame only needs to fit heading + one card (the stacked state)
+    const frameH = hh + 16 + cardH + 24; // heading + gap + card + bottom padding
+    stickyFrame.style.top = '0px';
+    stickyFrame.style.height = `${frameH}px`;
 
-    // Compute starting top for each card
-    startTops = cards.map((_, i) => TOP_OFFSET + (cardH + GAP) * i);
+    // Stack section provides enough scroll for all animation phases
+    stackSection.style.height = `${totalNeeded + frameH}px`;
+
+    // Cards start below the heading
+    const cardTopBase = hh + 16;
+    startTops = cards.map((_, i) => cardTopBase + (cardH + GAP) * i);
 
     // Set initial positions
     cards.forEach((c, i) => {
@@ -128,7 +149,7 @@ export default function decorateOurOfferingCards(block) {
     // For each card after the first, compute its current top
     // Phase i-1: card[i] travels from startTops[i] to TOP_OFFSET
     // During earlier phases, it also follows previous cards moving up
-    const currentTops = [TOP_OFFSET]; // card 0 never moves
+    const currentTops = [startTops[0]]; // card 0 stays at its initial position below heading
 
     for (let i = 1; i < cards.length; i += 1) {
       // How much total offset from all previous phases pulling this card up
@@ -141,7 +162,7 @@ export default function decorateOurOfferingCards(block) {
       // This card's own phase
       const myPhaseStart = scrollPerT * (i - 1);
       const rawOwn = Math.min(1, Math.max(0, (scrolled - myPhaseStart) / scrollPerT));
-      const ownTravel = ease(rawOwn) * (startTops[i] - followOffset - TOP_OFFSET);
+      const ownTravel = ease(rawOwn) * (startTops[i] - followOffset - startTops[0]);
 
       const top = startTops[i] - followOffset - ownTravel;
       cards[i].style.top = `${top}px`;
@@ -156,6 +177,8 @@ export default function decorateOurOfferingCards(block) {
 
   function clearAnimationStyles() {
     stackSection.style.height = '';
+    stickyFrame.style.top = '';
+    stickyFrame.style.height = '';
     cards.forEach((c) => {
       c.style.top = '';
     });

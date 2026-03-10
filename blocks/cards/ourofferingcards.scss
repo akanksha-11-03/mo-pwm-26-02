@@ -1,6 +1,7 @@
 .ourofferingcards-section {
   .ourofferingcards-heading {
-    margin-bottom: 40px;
+    margin-bottom: 0;
+    padding-bottom: 24px;
 
     .ourofferingcards-label {
       font-family: 'Inter', sans-serif;
@@ -35,6 +36,7 @@
   @media (max-width: 900px) {
     .ourofferingcards-heading {
       margin-bottom: 24px;
+      padding-bottom: 0;
 
       > h1,
       > h2,
@@ -62,7 +64,6 @@
   .ourofferingcards-sticky-frame {
     position: sticky;
     top: 0;
-    height: 100vh;
     overflow: visible;
   }
 

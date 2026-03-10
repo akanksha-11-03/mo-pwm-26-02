@@ -1,0 +1,172 @@
+/* ===== Motilal Oswal Ecosystem Section ===== */
+.motilal-oswal-ecosystem > div {
+  padding: 0;
+  margin: 0;
+}
+.motilal-oswal-ecosystem .default-content-wrapper {
+  margin-bottom: 32px;
+}
+.motilal-oswal-ecosystem .default-content-wrapper h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25em;
+  color: #C3A560;
+  margin: 0;
+}
+.motilal-oswal-ecosystem .default-content-wrapper strong {
+  color: #2E2A94;
+  font-weight: 400;
+  font-size: 24px;
+}
+.motilal-oswal-ecosystem .custom-rte {
+  background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/105.945% 100.028% no-repeat;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow: hidden;
+  position: relative;
+}
+.motilal-oswal-ecosystem .custom-rte > div {
+  padding: 0;
+}
+.motilal-oswal-ecosystem .custom-rte > div > div {
+  padding: 0;
+  height: 100%;
+}
+.motilal-oswal-ecosystem .custom-rte ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.motilal-oswal-ecosystem .custom-rte > div:first-child {
+  border-bottom: 0.5px solid #fff;
+}
+.motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li {
+  padding: 26px 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1.25em;
+  color: #F8F3EF;
+}
+.motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul {
+  margin-top: 18px;
+}
+.motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul > li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25em;
+  color: #F8F3EF;
+}
+.motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li {
+  padding: 20px;
+  border-bottom: 0.5px solid #fff;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2em;
+  color: #F8F3EF;
+}
+.motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul {
+  margin-top: 8px;
+}
+.motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul > li {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.25em;
+  color: #F8F3EF;
+}
+.motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:last-child {
+  border-bottom: none;
+}
+@media (min-width: 900px) {
+  .motilal-oswal-ecosystem {
+    padding: 40px 67px;
+  }
+  .motilal-oswal-ecosystem .default-content-wrapper {
+    margin-bottom: 48px;
+  }
+  .motilal-oswal-ecosystem .default-content-wrapper h2 {
+    font-size: 32px;
+    line-height: 1.25em;
+  }
+  .motilal-oswal-ecosystem .custom-rte {
+    grid-template-columns: 34.14% 1fr;
+    min-height: 656px;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:first-child {
+    border-bottom: none;
+    border-right: 0.5px solid #fff;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:first-child > div {
+    display: flex;
+    width: 100%;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul {
+    display: flex;
+    width: 100%;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 26px 40px 26px 52px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.25em;
+    width: 100%;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul {
+    margin-top: 18px;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul > li {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    height: 100%;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li {
+    padding: 26px 22px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2em;
+    border-bottom: 0.5px solid #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:nth-child(odd) {
+    border-right: 0.5px solid #fff;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul {
+    margin-top: 0;
+  }
+  .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul > li {
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+}
+@media (min-width: 1200px) {
+  .motilal-oswal-ecosystem .custom-rte {
+    max-width: 1236px;
+    margin: 0 auto;
+  }
+  .motilal-oswal-ecosystem .default-content-wrapper {
+    max-width: 1236px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}/*# sourceMappingURL=motilal-oswal-ecosystem.css.map */
