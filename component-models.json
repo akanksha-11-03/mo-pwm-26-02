@@ -185,6 +185,14 @@
           {
             "name": "Social Section",
             "value": "social-section"
+          },
+          {
+            "name": "Contact us Section",
+            "value": "contact-us-section"
+          },
+          {
+            "name": "Note Section",
+            "value": "note-section"
           }
         ]
       }
