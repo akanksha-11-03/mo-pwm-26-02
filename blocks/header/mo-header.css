@@ -201,13 +201,49 @@ header .nav-wrapper nav[aria-expanded=true] .nav-sections {
   width: calc(100% + 32px);
   margin-left: -16px;
   margin-right: -16px;
-  background-color: red;
+  background-color: lemonchiffon;
   overflow: auto;
   height: 100dvh;
 }
 header .nav-wrapper nav[aria-expanded=true] .nav-sections .header-menu {
   list-style: none;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 32px 16px 0;
+}
+header .nav-wrapper nav[aria-expanded=true] .nav-sections .header-menu .header-menulist .menulist-item-1 .button {
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-radius: unset;
+  padding: 0;
+  background-color: unset;
+  text-align: left;
+  color: var(--PWM-Gold-700, #866e44);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  /* Mobile/Body/Medium-medium */
+  font-family: var(--Body, Inter);
+  font-size: var(--Body-Medium-medium-Size, 16px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--Body-Medium-medium-Line-Height, 20px); /* 125% */
+}
+header .nav-wrapper nav[aria-expanded=true] .nav-sections .header-menu .header-menulist.nav-drop .menulist-item-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+header .nav-wrapper nav[aria-expanded=true] .nav-sections .header-menu .header-menulist.nav-drop .menulist-item-1::after {
+  content: "";
+  background-image: url("../../icons/plus-icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
 }
 header .nav-wrapper nav[aria-expanded=true] .nav-sections .header-menu .nav-drop .menulist-item-2 {
   display: none;
