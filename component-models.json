@@ -171,10 +171,6 @@
             "value": "young-titans-forum"
           },
           {
-            "name": "Motilal Oswal Ecosystem",
-            "value": "motilal-oswal-ecosystem"
-          },
-          {
             "name": "Sharper Focus Section",
             "value": "sharper-focus"
           },
@@ -185,6 +181,52 @@
           {
             "name": "PWM Group Section",
             "value": "pwm-group"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Mobile Accordion Only",
+            "value": "mob-accordion"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "type": "accordion/text",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "question",
+        "label": "Question"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "answer",
+        "label": "Answer",
+        "raw": true
+      },
+      {
+        "component": "multiselect",
+        "name": "style",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Accordion Table",
+            "value": "accordion-table"
           }
         ]
       }
