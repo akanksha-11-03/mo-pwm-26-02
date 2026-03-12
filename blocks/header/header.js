@@ -181,9 +181,15 @@ export default async function decorate(block) {
       navSection.addEventListener('click', (e) => {
         if (isDesktop.matches) {
           e.stopPropagation();
-          const expanded = navSection.getAttribute('aria-expanded') === 'true';
+          // Cancel any pending close timeout from mouseleave
+          if (closeTimeouts.has(navSection)) {
+            clearTimeout(closeTimeouts.get(navSection));
+            closeTimeouts.delete(navSection);
+          }
+          // Always open on click (close others, expand this one)
+          // Avoids double-click issue caused by mouseenter already setting aria-expanded
           toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+          navSection.setAttribute('aria-expanded', 'true');
         } else if (navSection.classList.contains('nav-drop')) {
           e.stopPropagation();
           const wasExpanded = navSection.getAttribute('aria-expanded') === 'true';
