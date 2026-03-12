@@ -188,7 +188,6 @@
   },
   {
     "id": "accordion-item",
-    "type": "accordion/text",
     "fields": [
       {
         "component": "richtext",
