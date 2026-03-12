@@ -164,6 +164,9 @@ export default async function decorate(block) {
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', 'true');
           nav.classList.add('menu-open');
+          // Remove active state from header-tool
+          const activeTool = nav.querySelector('.header-toollist-2.active');
+          if (activeTool) activeTool.classList.remove('active');
         }
       });
       // Collapse nav-drop on mouse leave with a small delay to allow moving to dropdown
@@ -199,6 +202,9 @@ export default async function decorate(block) {
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', 'true');
           nav.classList.add('menu-open');
+          // Remove active state from header-tool
+          const activeTool = nav.querySelector('.header-toollist-2.active');
+          if (activeTool) activeTool.classList.remove('active');
         } else if (navSection.classList.contains('nav-drop')) {
           e.stopPropagation();
           const wasExpanded = navSection.getAttribute('aria-expanded') === 'true';
@@ -310,11 +316,28 @@ export default async function decorate(block) {
   if (loginTool) {
     loginTool.addEventListener('click', (e) => {
       e.stopPropagation();
+      // Cancel any pending mouseleave close timeouts from nav-drops
+      closeTimeouts.forEach((timeout) => clearTimeout(timeout));
+      closeTimeouts.clear();
+      // Collapse all nav-drop sections
+      if (navSections) {
+        toggleAllNavSections(navSections, false);
+      }
       loginTool.classList.toggle('active');
+      if (loginTool.classList.contains('active')) {
+        nav.classList.add('menu-open');
+      } else {
+        nav.classList.remove('menu-open');
+      }
     });
     document.addEventListener('click', (e) => {
       if (!loginTool.contains(e.target)) {
         loginTool.classList.remove('active');
+        // Only remove menu-open if no nav-drop is expanded either
+        const anyExpanded = navSections && navSections.querySelector(':scope .default-content-wrapper > ul > li[aria-expanded="true"]');
+        if (!anyExpanded) {
+          nav.classList.remove('menu-open');
+        }
       }
     });
   }
