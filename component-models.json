@@ -181,6 +181,10 @@
           {
             "name": "PWM Group Section",
             "value": "pwm-group"
+          },
+          {
+            "name": "Accordion Section",
+            "value": "accordion-section"
           }
         ]
       }
