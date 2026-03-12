@@ -15,11 +15,6 @@ header .nav-wrapper {
   z-index: 200;
   position: fixed;
 }
-@media (width >= 900px) {
-  header .nav-wrapper {
-    position: relative;
-  }
-}
 header .nav-wrapper:has(nav[aria-expanded=true]) {
   height: 100dvh;
 }
@@ -47,6 +42,16 @@ header .nav-wrapper nav {
     gap: 0 32px;
     max-width: 1264px;
     padding: 0 32px;
+  }
+  header .nav-wrapper nav.menu-open::before {
+    content: "";
+    background: linear-gradient(180deg, #000 -14.55%, rgba(0, 0, 0, 0) 137.8%);
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 100%;
   }
 }
 header .nav-wrapper nav p {

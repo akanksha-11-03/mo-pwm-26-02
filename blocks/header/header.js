@@ -14,6 +14,7 @@ function closeOnEscape(e) {
     if (navSectionExpanded && isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
       toggleAllNavSections(navSections);
+      nav.classList.remove('menu-open');
       navSectionExpanded.focus();
     } else if (!isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
@@ -33,6 +34,7 @@ function closeOnFocusLost(e) {
     if (navSectionExpanded && isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
       toggleAllNavSections(navSections, false);
+      nav.classList.remove('menu-open');
     } else if (!isDesktop.matches && e.relatedTarget) {
       // eslint-disable-next-line no-use-before-define
       toggleMenu(nav, navSections, false);
@@ -48,6 +50,8 @@ function openOnKeydown(e) {
     // eslint-disable-next-line no-use-before-define
     toggleAllNavSections(focused.closest('.nav-sections'));
     focused.setAttribute('aria-expanded', dropExpanded ? 'false' : 'true');
+    const navEl = focused.closest('nav');
+    if (navEl) navEl.classList.toggle('menu-open', !dropExpanded);
   }
 }
 
@@ -154,13 +158,12 @@ export default async function decorate(block) {
       // Expand nav-drop on hover (desktop only)
       navSection.addEventListener('mouseenter', () => {
         if (isDesktop.matches && navSection.classList.contains('nav-drop')) {
-          // Cancel any pending close for this nav-drop
-          if (closeTimeouts.has(navSection)) {
-            clearTimeout(closeTimeouts.get(navSection));
-            closeTimeouts.delete(navSection);
-          }
+          // Cancel ALL pending close timeouts to prevent stale removals
+          closeTimeouts.forEach((timeout) => clearTimeout(timeout));
+          closeTimeouts.clear();
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', 'true');
+          nav.classList.add('menu-open');
         }
       });
       // Collapse nav-drop on mouse leave with a small delay to allow moving to dropdown
@@ -174,6 +177,11 @@ export default async function decorate(block) {
               li.setAttribute('aria-expanded', 'false');
             });
             closeTimeouts.delete(navSection);
+            // Only remove menu-open if no other nav-drop is still expanded
+            const anyExpanded = navSections.querySelector(':scope .default-content-wrapper > ul > li[aria-expanded="true"]');
+            if (!anyExpanded) {
+              nav.classList.remove('menu-open');
+            }
           }, 1000);
           closeTimeouts.set(navSection, timeout);
         }
@@ -190,6 +198,7 @@ export default async function decorate(block) {
           // Avoids double-click issue caused by mouseenter already setting aria-expanded
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', 'true');
+          nav.classList.add('menu-open');
         } else if (navSection.classList.contains('nav-drop')) {
           e.stopPropagation();
           const wasExpanded = navSection.getAttribute('aria-expanded') === 'true';
@@ -203,6 +212,7 @@ export default async function decorate(block) {
           });
           // toggle clicked nav-drop
           navSection.setAttribute('aria-expanded', wasExpanded ? 'false' : 'true');
+          nav.classList.toggle('menu-open', !wasExpanded);
         }
       });
     });
@@ -224,6 +234,7 @@ export default async function decorate(block) {
       navSections.querySelectorAll('.menulist-item-2 li.item-drop').forEach((item) => {
         item.classList.remove('active');
       });
+      nav.classList.remove('menu-open');
     }
   });
   nav.prepend(hamburger);
