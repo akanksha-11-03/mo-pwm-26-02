@@ -28,7 +28,8 @@
   {
     "id": "accordion",
     "components": [
-      "accordion-item"
+      "accordion-item",
+      "banner-carousel-item"
     ]
   },
   {
