@@ -7,7 +7,9 @@ const isDesktop = window.matchMedia('(min-width: 900px)');
 function closeOnEscape(e) {
   if (e.code === 'Escape') {
     const nav = document.getElementById('nav');
+    if (!nav) return;
     const navSections = nav.querySelector('.nav-sections');
+    if (!navSections) return;
     const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
     if (navSectionExpanded && isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
@@ -16,7 +18,8 @@ function closeOnEscape(e) {
     } else if (!isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
       toggleMenu(nav, navSections);
-      nav.querySelector('button').focus();
+      const btn = nav.querySelector('button');
+      if (btn) btn.focus();
     }
   }
 }
@@ -25,6 +28,7 @@ function closeOnFocusLost(e) {
   const nav = e.currentTarget;
   if (!nav.contains(e.relatedTarget)) {
     const navSections = nav.querySelector('.nav-sections');
+    if (!navSections) return;
     const navSectionExpanded = navSections.querySelector('[aria-expanded="true"]');
     if (navSectionExpanded && isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
@@ -38,7 +42,7 @@ function closeOnFocusLost(e) {
 
 function openOnKeydown(e) {
   const focused = document.activeElement;
-  const isNavDrop = focused.className === 'nav-drop';
+  const isNavDrop = focused.classList.contains('nav-drop');
   if (isNavDrop && (e.code === 'Enter' || e.code === 'Space')) {
     const dropExpanded = focused.getAttribute('aria-expanded') === 'true';
     // eslint-disable-next-line no-use-before-define
@@ -48,6 +52,8 @@ function openOnKeydown(e) {
 }
 
 function focusNavSection() {
+  // Remove first to prevent duplicate listeners from stacking
+  document.activeElement.removeEventListener('keydown', openOnKeydown);
   document.activeElement.addEventListener('keydown', openOnKeydown);
 }
 
@@ -57,7 +63,7 @@ function focusNavSection() {
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
 function toggleAllNavSections(sections, expanded = false) {
-  sections.querySelectorAll('.nav-sections .default-content-wrapper > ul > li').forEach((section) => {
+  sections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
 }
@@ -92,14 +98,12 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 
   // enable menu collapse on escape keypress
+  // Always remove first to prevent duplicate listeners from stacking
+  window.removeEventListener('keydown', closeOnEscape);
+  nav.removeEventListener('focusout', closeOnFocusLost);
   if (!expanded || isDesktop.matches) {
-    // collapse menu on escape press
     window.addEventListener('keydown', closeOnEscape);
-    // collapse menu on focus lost
     nav.addEventListener('focusout', closeOnFocusLost);
-  } else {
-    window.removeEventListener('keydown', closeOnEscape);
-    nav.removeEventListener('focusout', closeOnFocusLost);
   }
 }
 
@@ -126,10 +130,13 @@ export default async function decorate(block) {
   });
 
   const navBrand = nav.querySelector('.nav-brand');
-  const brandLink = navBrand.querySelector('.button');
-  if (brandLink) {
-    brandLink.className = '';
-    brandLink.closest('.button-container').className = '';
+  if (navBrand) {
+    const brandLink = navBrand.querySelector('.button');
+    if (brandLink) {
+      brandLink.className = '';
+      const btnContainer = brandLink.closest('.button-container');
+      if (btnContainer) btnContainer.className = '';
+    }
   }
 
   const navSections = nav.querySelector('.nav-sections');
@@ -226,6 +233,7 @@ export default async function decorate(block) {
 
   // class start for header element
   const headerSec = block.querySelector('.nav-sections ul');
+  if (!headerSec) return;
   headerSec.classList.add('header-menu');
   Array.from(headerSec.children).forEach((li) => {
     li.classList.add('header-menulist');
@@ -268,6 +276,7 @@ export default async function decorate(block) {
   });
 
   const headerTools = block.querySelector('.nav-tools ul');
+  if (!headerTools) return;
   headerTools.classList.add('header-tool');
   Array.from(headerTools.children).forEach((li, ind) => {
     li.classList.add('header-toollist', `header-toollist-${ind + 1}`);
