@@ -181,34 +181,6 @@
           {
             "name": "PWM Group Section",
             "value": "pwm-group"
-          },
-          {
-            "name": "Social Section",
-            "value": "social-section"
-          },
-          {
-            "name": "Contact us Section",
-            "value": "contact-us-section"
-          },
-          {
-            "name": "Note Section",
-            "value": "note-section"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "accordion",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Mobile Accordion Only",
-            "value": "mob-accordion"
           }
         ]
       }
@@ -230,17 +202,6 @@
         "name": "answer",
         "label": "Answer",
         "raw": true
-      },
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Accordion Table",
-            "value": "accordion-table"
-          }
-        ]
       }
     ]
   },
