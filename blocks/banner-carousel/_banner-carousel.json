@@ -77,7 +77,8 @@
         {
             "id": "banner-carousel",
             "components": [
-                "banner-carousel-item"
+                "banner-carousel-item",
+                "accordion-item"
             ]
         }
     ]
