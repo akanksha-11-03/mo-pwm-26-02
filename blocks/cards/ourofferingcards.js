@@ -4,6 +4,7 @@ import { moveInstrumentation } from '../../scripts/scripts.js';
 const GAP = 60; // gap between cards in initial stacked state (px)
 const TOP_OFFSET = 40; // card-1 top offset inside sticky frame (px)
 const SCROLL_MULTIPLIER = 2.5; // scroll comfort factor
+const CARD_HEIGHT = 342; // fixed card height matching CSS min-height / image height
 
 /** Cubic ease in-out */
 function ease(t) {
@@ -120,7 +121,10 @@ export default function decorateOurOfferingCards(block) {
   function initPositions() {
     const hh = getHeadingHeight();
 
-    cardH = cards[0].offsetHeight;
+    // Use the larger of measured height or the known fixed height
+    const measured = cards[0].offsetHeight;
+    cardH = Math.max(measured, CARD_HEIGHT);
+
     travelDist = cardH + GAP;
     scrollPerT = travelDist * SCROLL_MULTIPLIER;
     const totalNeeded = scrollPerT * (cards.length - 1);
@@ -195,11 +199,11 @@ export default function decorateOurOfferingCards(block) {
     }
   }
 
-  // Initialize after layout settles
-  requestAnimationFrame(() => {
+  // Initialize after layout settles — use multiple strategies to ensure reliability
+  function initOnce() {
     setup();
 
-    // Recalculate after images load (cardH may change)
+    // Re-run after images load for accurate height if content is taller than CARD_HEIGHT
     const images = stickyFrame.querySelectorAll('img');
     let loaded = 0;
     const total = images.length;
@@ -218,8 +222,35 @@ export default function decorateOurOfferingCards(block) {
       });
     }
 
-    window.addEventListener('resize', () => {
-      setup();
+    // Final safety net — recalculate after a short delay
+    setTimeout(() => setup(), 500);
+  }
+
+  // Use IntersectionObserver to init when section enters viewport (ensures layout is ready)
+  if (typeof IntersectionObserver !== 'undefined') {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            observer.disconnect();
+            initOnce();
+          }
+        });
+      },
+      { rootMargin: '200px' },
+    );
+    observer.observe(stackSection);
+
+    // Fallback: if section is already in view or observer doesn't fire quickly
+    requestAnimationFrame(() => {
+      if (stackSection.getBoundingClientRect().top < window.innerHeight + 200) {
+        observer.disconnect();
+        initOnce();
+      }
     });
-  });
+  } else {
+    requestAnimationFrame(() => initOnce());
+  }
+
+  window.addEventListener('resize', () => setup());
 }
