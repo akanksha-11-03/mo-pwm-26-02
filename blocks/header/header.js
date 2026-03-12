@@ -29,7 +29,7 @@ function closeOnFocusLost(e) {
     if (navSectionExpanded && isDesktop.matches) {
       // eslint-disable-next-line no-use-before-define
       toggleAllNavSections(navSections, false);
-    } else if (!isDesktop.matches) {
+    } else if (!isDesktop.matches && e.relatedTarget) {
       // eslint-disable-next-line no-use-before-define
       toggleMenu(nav, navSections, false);
     }
@@ -135,6 +135,13 @@ export default async function decorate(block) {
   const navSections = nav.querySelector('.nav-sections');
   const closeTimeouts = new Map();
   if (navSections) {
+    // Prevent clicks inside nav-sections from closing hamburger menu on mobile
+    navSections.addEventListener('click', (e) => {
+      if (!isDesktop.matches) {
+        e.stopPropagation();
+      }
+    });
+
     navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((navSection) => {
       if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
       // Expand nav-drop on hover (desktop only)
@@ -165,11 +172,24 @@ export default async function decorate(block) {
         }
       });
       navSection.addEventListener('click', (e) => {
-        e.stopPropagation();
         if (isDesktop.matches) {
+          e.stopPropagation();
           const expanded = navSection.getAttribute('aria-expanded') === 'true';
           toggleAllNavSections(navSections);
           navSection.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        } else if (navSection.classList.contains('nav-drop')) {
+          e.stopPropagation();
+          const wasExpanded = navSection.getAttribute('aria-expanded') === 'true';
+          // close all other nav-drops
+          navSections.querySelectorAll(':scope .default-content-wrapper > ul > li.nav-drop').forEach((otherSection) => {
+            otherSection.setAttribute('aria-expanded', 'false');
+          });
+          // close all item-drops
+          navSections.querySelectorAll('.menulist-item-2 li.item-drop').forEach((item) => {
+            item.classList.remove('active');
+          });
+          // toggle clicked nav-drop
+          navSection.setAttribute('aria-expanded', wasExpanded ? 'false' : 'true');
         }
       });
     });
@@ -187,6 +207,9 @@ export default async function decorate(block) {
     if (!isDesktop.matches) {
       navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((li) => {
         li.setAttribute('aria-expanded', 'false');
+      });
+      navSections.querySelectorAll('.menulist-item-2 li.item-drop').forEach((item) => {
+        item.classList.remove('active');
       });
     }
   });
@@ -226,10 +249,28 @@ export default async function decorate(block) {
     });
   });
 
+  // Mobile click handler for item-drop inside menulist-item-2
+  headerSec.querySelectorAll('.menulist-item-2 li.item-drop').forEach((itemDrop) => {
+    itemDrop.addEventListener('click', (e) => {
+      if (!isDesktop.matches) {
+        e.stopPropagation();
+        const wasActive = itemDrop.classList.contains('active');
+        // close all other item-drops within the same menulist-item-2
+        itemDrop.closest('.menulist-item-2').querySelectorAll('li.item-drop').forEach((other) => {
+          other.classList.remove('active');
+        });
+        // toggle clicked item-drop
+        if (!wasActive) {
+          itemDrop.classList.add('active');
+        }
+      }
+    });
+  });
+
   const headerTools = block.querySelector('.nav-tools ul');
   headerTools.classList.add('header-tool');
-  Array.from(headerTools.children).forEach((li) => {
-    li.classList.add('header-toollist');
+  Array.from(headerTools.children).forEach((li, ind) => {
+    li.classList.add('header-toollist', `header-toollist-${ind + 1}`);
     Array.from(li.children).forEach((item, i) => {
       item.classList.add(`toollist-item-${i + 1}`);
       Array.from(item.children).forEach((el) => {
@@ -237,4 +278,18 @@ export default async function decorate(block) {
       });
     });
   });
+
+  // Login toggle on .header-toollist-2
+  const loginTool = headerTools.querySelector('.header-toollist-2');
+  if (loginTool) {
+    loginTool.addEventListener('click', (e) => {
+      e.stopPropagation();
+      loginTool.classList.toggle('active');
+    });
+    document.addEventListener('click', (e) => {
+      if (!loginTool.contains(e.target)) {
+        loginTool.classList.remove('active');
+      }
+    });
+  }
 }

@@ -6,6 +6,9 @@ header {
     height: 88px;
   }
 }
+header * {
+  -webkit-tap-highlight-color: transparent;
+}
 header .nav-wrapper {
   background-color: var(--PWM-Gold-900, #5d4f2e);
   width: 100%;
@@ -134,6 +137,7 @@ header .nav-wrapper nav .nav-tools .header-tool .header-toollist:first-of-type {
     display: block;
     width: 20px;
     height: 20px;
+    cursor: pointer;
   }
   header .nav-wrapper nav .nav-tools .header-tool .header-toollist:first-of-type .toollist-item-1, header .nav-wrapper nav .nav-tools .header-tool .header-toollist:first-of-type .toollist-item-1 .toolsubitem {
     width: inherit;
@@ -154,6 +158,7 @@ header .nav-wrapper nav .nav-tools .header-tool .header-toollist:last-of-type .t
   align-items: center;
   gap: 6px;
   padding: 6px 8px;
+  cursor: pointer;
   color: var(--PWM-Gold-900, #5d4f2e);
   text-align: center;
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
@@ -191,6 +196,7 @@ header .nav-wrapper nav .nav-tools .header-tool .header-toollist:last-of-type .t
   margin: 27px 0 0;
   list-style: none;
   display: none;
+  width: 114px;
 }
 @media (width >= 900px) {
   header .nav-wrapper nav .nav-tools .header-tool .header-toollist:last-of-type .toollist-item-2 {

@@ -5,6 +5,10 @@ header {
     height: 88px;
   }
 
+  *{
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .nav-wrapper {
     background-color: var(--PWM-Gold-900, #5d4f2e);
     width: 100%;
@@ -136,6 +140,7 @@ header {
                 display: block;
                 width: 20px;
                 height: 20px;
+                cursor: pointer;
 
                 .toollist-item-1 {
                   &,
@@ -162,6 +167,7 @@ header {
                   align-items: center;
                   gap: 6px;
                   padding: 6px 8px;
+                  cursor: pointer;
                   color: var(--PWM-Gold-900, #5d4f2e);
                   text-align: center;
                   font-feature-settings:
@@ -214,6 +220,7 @@ header {
                   margin: 27px 0 0;
                   list-style: none;
                   display: none;
+                  width: 114px;
 
                   @media (width >= 900px) {
                     width: 129px;
