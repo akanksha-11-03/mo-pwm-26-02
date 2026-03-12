@@ -156,10 +156,10 @@ export default async function decorate(block) {
   // hamburger.addEventListener('click', () => toggleMenu(nav, navSections));
   hamburger.addEventListener('click', () => {
     toggleMenu(nav, navSections);
-    if (!isDesktop.matches){
-      navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((li, index) => {
+    if (!isDesktop.matches) {
+      navSections.querySelectorAll(':scope .default-content-wrapper > ul > li').forEach((li) => {
         li.setAttribute('aria-expanded', 'false');
-      })
+      });
     }
   });
   nav.prepend(hamburger);
