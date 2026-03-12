@@ -190,17 +190,39 @@
     "id": "accordion-item",
     "fields": [
       {
-        "component": "richtext",
+        "component": "reference",
         "valueType": "string",
-        "name": "question",
-        "label": "Question"
+        "name": "mobImage",
+        "label": "Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "mobImageAlt",
+        "label": "Mobile Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "deskImage",
+        "label": "Desktop Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "deskImageAlt",
+        "label": "Desktop Alt",
+        "value": ""
       },
       {
         "component": "richtext",
-        "valueType": "string",
-        "name": "answer",
-        "label": "Answer",
-        "raw": true
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
