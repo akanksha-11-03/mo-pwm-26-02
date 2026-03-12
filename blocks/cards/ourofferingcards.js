@@ -199,6 +199,25 @@ export default function decorateOurOfferingCards(block) {
   requestAnimationFrame(() => {
     setup();
 
+    // Recalculate after images load (cardH may change)
+    const images = stickyFrame.querySelectorAll('img');
+    let loaded = 0;
+    const total = images.length;
+    if (total) {
+      images.forEach((img) => {
+        const recalc = () => {
+          loaded += 1;
+          if (loaded >= total) setup();
+        };
+        if (img.complete) {
+          recalc();
+        } else {
+          img.addEventListener('load', recalc, { once: true });
+          img.addEventListener('error', recalc, { once: true });
+        }
+      });
+    }
+
     window.addEventListener('resize', () => {
       setup();
     });
