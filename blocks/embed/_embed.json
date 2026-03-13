@@ -43,18 +43,28 @@
         },
         {
           "component": "reference",
-          "name": "video_image",
-          "label": "Video Thumbnail Image"
+          "name": "video_mobimage",
+          "label": "Mobile Image"
         },
         {
           "component": "text",
-          "name": "video_imageAlt",
-          "label": "Video Thumbnail Image Alt"
+          "name": "video_mobimageAlt",
+          "label": "Mobile Image Alt"
         },
         {
           "component": "text",
           "name": "video_imageTitle",
           "label": "Video Image Title"
+        },
+        {
+          "component": "reference",
+          "name": "video_deskimage",
+          "label": "Desk Image"
+        },
+        {
+          "component": "text",
+          "name": "video_deskimageAlt",
+          "label": "Desk Image Alt"
         }
       ]
     }
