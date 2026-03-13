@@ -36,6 +36,25 @@ export default function decorate(block) {
   block.replaceChildren(ul);
 
   if (block.closest('.our-key-differences')) {
+    const ulWrap = block.querySelector('ul');
+    ulWrap.classList.add('key-differences-cards');
+    Array.from(ulWrap.children).forEach((child) => {
+      child.classList.add('key-list');
+    });
+
+    const keyCardsImg = block.querySelectorAll('.key-list .cards-card-image');
+    keyCardsImg.forEach((item) => {
+      item.querySelector('picture').classList.add('key-picture');
+      item.querySelector('img').classList.add('key-image');
+    });
+    const keyCardsBody = block.querySelectorAll('.key-list .cards-card-body');
+    keyCardsBody.forEach((item) => {
+      Array.from(item.children).forEach((child, ind) => {
+        child.classList.add(`key-text-${ind + 1}`);
+      });
+    });
+
+    // Swiper start
     block.classList.add('swiper');
     block.querySelector('ul').classList.add('swiper-wrapper');
     block.querySelectorAll('li').forEach((li) => li.classList.add('swiper-slide'));

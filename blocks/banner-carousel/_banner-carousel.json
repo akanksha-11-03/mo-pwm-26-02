@@ -37,40 +37,40 @@
             "fields": [
                 {
                     "component": "aem-content",
-                    "name": "video_url",
+                    "name": "col1_videourl",
                     "label": "Video URL"
                 },
                 {
                     "component": "reference",
                     "valueType": "string",
-                    "name": "mobImage",
+                    "name": "col2_mobImage",
                     "label": "Mobile Image",
                     "multi": false
                 },
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "mobImageAlt",
+                    "name": "col2_mobImageAlt",
                     "label": "Mobile Alt",
                     "value": ""
                 },
                 {
                     "component": "reference",
                     "valueType": "string",
-                    "name": "deskImage",
+                    "name": "col2_deskImage",
                     "label": "Desktop Image",
                     "multi": false
                 },
                 {
                     "component": "text",
                     "valueType": "string",
-                    "name": "deskImageAlt",
+                    "name": "col2_deskImageAlt",
                     "label": "Desktop Alt",
                     "value": ""
                 },
                 {
                     "component": "richtext",
-                    "name": "text",
+                    "name": "col3_text",
                     "value": "",
                     "label": "Text",
                     "valueType": "string"
