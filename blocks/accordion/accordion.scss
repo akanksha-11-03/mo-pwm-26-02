@@ -1,0 +1,141 @@
+// Base Accordion Styles (converted from accordion.css)
+
+.accordion {
+  details {
+    /* stylelint-disable-next-line no-descending-specificity */
+    & + details {
+      margin-top: 24px;
+    }
+
+    p {
+      margin-bottom: 0.8em;
+    }
+
+    summary {
+      position: relative;
+      padding: 0 16px;
+      padding-right: 46px;
+      cursor: pointer;
+      list-style: none;
+      overflow: auto;
+      transition: background-color 0.2s;
+
+      &:focus,
+      &:hover {
+        background-color: #ede2cc;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 18px;
+        transform: translateY(-50%) rotate(135deg);
+        width: 6px;
+        height: 6px;
+        border: 2px solid;
+        border-width: 2px 2px 0 0;
+        transition: transform 0.2s;
+      }
+    }
+
+    .accordion-item-body {
+      padding: 0 16px;
+    }
+
+    &[open] {
+      summary {
+        background-color: #ede2cc;
+
+        &::after {
+          transform: translateY(-50%) rotate(-45deg);
+        }
+      }
+
+      .accordion-item-body {
+        background-color: #ede2cc;
+      }
+    }
+  }
+}
+
+// Footer specific overrides for Accordion component
+.footer {
+  .accordion {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .accordion-item {
+      margin-top: 0;
+
+      .accordion-item-label {
+        margin: 0;
+        padding: 0;
+
+        &::after {
+          display: none;
+
+          @media screen and (max-width: 900px) {
+            display: block;
+          }
+        }
+
+        p {
+          margin: 0;
+
+          strong {
+            a {
+              margin: 0;
+              padding: 0;
+              background-color: transparent;
+              border: none;
+              border-radius: 0%;
+              font-size: 12px;
+              line-height: 14px;
+              letter-spacing: 0%;
+              font-weight: 600;
+              color: #866e44;
+            }
+          }
+        }
+      }
+
+      .accordion-item-body {
+        padding: 0;
+
+        ul {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          line-height: 16px;
+
+          @media screen and (max-width: 900px) {
+            gap: 0;
+          }
+
+          li {
+            a {
+              color: #866e44;
+              text-decoration: none;
+              font-size: 12px;
+              font-weight: 400;
+              letter-spacing: 0%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
