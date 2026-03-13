@@ -24,10 +24,23 @@ function initScrollToTop() {
 
   // Show/hide button
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 200) {
+    const scrollThreshold = window.innerWidth < 900 ? 1328 : 1046;
+    const footer = document.querySelector('footer');
+    const footerTop = footer ? footer.getBoundingClientRect().top + window.scrollY : Infinity;
+    const scrollPosition = window.scrollY + window.innerHeight;
+    
+    if (window.scrollY > scrollThreshold) {
       scrollBtn.classList.add('visible');
+      
+      // Check if scroll has reached the footer
+      if (scrollPosition >= footerTop) {
+        scrollBtn.classList.add('stop');
+      } else {
+        scrollBtn.classList.remove('stop');
+      }
     } else {
       scrollBtn.classList.remove('visible');
+      scrollBtn.classList.remove('stop');
     }
   });
 

@@ -297,10 +297,9 @@
   margin-top: 40px;
 }
 .footer-wrapper .scroll-to-top {
-  position: absolute;
+  position: fixed;
   right: 67px;
-  top: -30px;
-  bottom: 140px;
+  bottom: 5%;
   width: 56px;
   height: 56px;
   border-radius: 28px;
@@ -323,11 +322,17 @@
 @media screen and (max-width: 900px) {
   .footer-wrapper .scroll-to-top {
     right: 16px;
-    top: -28px;
   }
 }
 .footer-wrapper .scroll-to-top.visible {
   opacity: 1;
+  pointer-events: auto;
+}
+.footer-wrapper .scroll-to-top.stop {
+  position: absolute;
+  opacity: 1;
+  z-index: 3;
+  top: -25px;
   pointer-events: auto;
 }
 .footer-wrapper .scroll-to-top:hover {
