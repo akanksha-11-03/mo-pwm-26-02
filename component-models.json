@@ -190,6 +190,11 @@
     "id": "banner-carousel-item",
     "fields": [
       {
+        "component": "aem-content",
+        "name": "video_url",
+        "label": "Video URL"
+      },
+      {
         "component": "reference",
         "valueType": "string",
         "name": "mobImage",
