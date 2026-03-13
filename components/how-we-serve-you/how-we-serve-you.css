@@ -72,8 +72,7 @@
   cursor: pointer;
 }
 .how-we-serve-you .columns-wrapper .divwithlinks a:hover {
-  border-color: #2e2a94;
-  box-shadow: -1px 6px 3px -1px rgba(0, 0, 0, 0.52);
+  box-shadow: 0px 2px 0px -1px rgba(66, 66, 66, 0.5019607843);
 }
 .how-we-serve-you .columns-wrapper .divwithlinks a .icon {
   display: flex;
@@ -136,4 +135,4 @@
     font-size: 14px;
     padding: 14px 0;
   }
-}/*# sourceMappingURL=How-we-serve-you.css.map */
+}/*# sourceMappingURL=how-we-serve-you.css.map */

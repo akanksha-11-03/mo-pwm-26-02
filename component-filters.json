@@ -21,7 +21,14 @@
       "custom-rte",
       "titans-forum",
       "tabs",
-      "banner-carousel"
+      "banner-carousel",
+      "accordion"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
