@@ -1,55 +1,59 @@
 .ourofferingcards-section {
-  .ourofferingcards-heading {
-    margin-bottom: 0;
-    padding-bottom: 24px;
+  .cards-wrapper {
+    padding: 0;
 
-    .ourofferingcards-label {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.5;
-      color: #866e44;
-      margin: 0 0 8px 0;
-    }
-
-    > h1,
-    > h2,
-    > h3 {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 1.2;
-      color: #2e2a94;
-      margin: 0;
-    }
-
-    .ourofferingcards-main-heading {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 40px;
-      line-height: 1.2;
-      color: #2e2a94;
-      margin: 0;
-    }
-  }
-
-  @media (max-width: 900px) {
     .ourofferingcards-heading {
-      margin-bottom: 24px;
-      padding-bottom: 0;
+      margin-bottom: 0;
+      padding-bottom: 24px;
 
-      > h1,
-      > h2,
-      > h3,
+      .ourofferingcards-label {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        color: #866e44;
+        margin: 0 0 8px 0;
+      }
+
+      >h1,
+      >h2,
+      >h3 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.2;
+        color: #2e2a94;
+        margin: 0;
+      }
+
       .ourofferingcards-main-heading {
-        font-size: 28px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
+        font-size: 40px;
+        line-height: 1.2;
+        color: #2e2a94;
+        margin: 0;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .ourofferingcards-heading {
+        margin-bottom: 24px;
+        padding-bottom: 0;
+
+        >h1,
+        >h2,
+        >h3,
+        .ourofferingcards-main-heading {
+          font-size: 28px;
+        }
       }
     }
   }
 }
 
 /* ===== Stack Section & Sticky Frame ===== */
-.cards.ourofferingcards > ul {
+.cards.ourofferingcards>ul {
   display: block;
 }
 
@@ -73,6 +77,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: min(1200px, 92vw);
+    min-height: 342px;
     display: flex;
     flex-direction: row;
     align-items: center;

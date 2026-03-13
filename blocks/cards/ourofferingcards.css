@@ -1,9 +1,12 @@
 @charset "UTF-8";
-.ourofferingcards-section .ourofferingcards-heading {
+.ourofferingcards-section .cards-wrapper {
+  padding: 0;
+}
+.ourofferingcards-section .cards-wrapper .ourofferingcards-heading {
   margin-bottom: 0;
   padding-bottom: 24px;
 }
-.ourofferingcards-section .ourofferingcards-heading .ourofferingcards-label {
+.ourofferingcards-section .cards-wrapper .ourofferingcards-heading .ourofferingcards-label {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 16px;
@@ -11,9 +14,9 @@
   color: #866e44;
   margin: 0 0 8px 0;
 }
-.ourofferingcards-section .ourofferingcards-heading > h1,
-.ourofferingcards-section .ourofferingcards-heading > h2,
-.ourofferingcards-section .ourofferingcards-heading > h3 {
+.ourofferingcards-section .cards-wrapper .ourofferingcards-heading > h1,
+.ourofferingcards-section .cards-wrapper .ourofferingcards-heading > h2,
+.ourofferingcards-section .cards-wrapper .ourofferingcards-heading > h3 {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 40px;
@@ -21,7 +24,7 @@
   color: #2e2a94;
   margin: 0;
 }
-.ourofferingcards-section .ourofferingcards-heading .ourofferingcards-main-heading {
+.ourofferingcards-section .cards-wrapper .ourofferingcards-heading .ourofferingcards-main-heading {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 40px;
@@ -30,14 +33,14 @@
   margin: 0;
 }
 @media (max-width: 900px) {
-  .ourofferingcards-section .ourofferingcards-heading {
+  .ourofferingcards-section .cards-wrapper .ourofferingcards-heading {
     margin-bottom: 24px;
     padding-bottom: 0;
   }
-  .ourofferingcards-section .ourofferingcards-heading > h1,
-  .ourofferingcards-section .ourofferingcards-heading > h2,
-  .ourofferingcards-section .ourofferingcards-heading > h3,
-  .ourofferingcards-section .ourofferingcards-heading .ourofferingcards-main-heading {
+  .ourofferingcards-section .cards-wrapper .ourofferingcards-heading > h1,
+  .ourofferingcards-section .cards-wrapper .ourofferingcards-heading > h2,
+  .ourofferingcards-section .cards-wrapper .ourofferingcards-heading > h3,
+  .ourofferingcards-section .cards-wrapper .ourofferingcards-heading .ourofferingcards-main-heading {
     font-size: 28px;
   }
 }
@@ -67,6 +70,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: min(1200px, 92vw);
+  min-height: 342px;
   display: flex;
   flex-direction: row;
   align-items: center;
