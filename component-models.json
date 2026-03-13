@@ -383,7 +383,7 @@
     ]
   },
   {
-    "id": "embed-item",
+    "id": "embed",
     "fields": [
       {
         "component": "aem-content",
@@ -392,35 +392,18 @@
       },
       {
         "component": "reference",
-        "name": "video_mobimage",
-        "label": "Mobile Image"
+        "name": "video_image",
+        "label": "Video Image"
       },
       {
         "component": "text",
-        "name": "video_mobimageAlt",
-        "label": "Mobile Image Alt"
+        "name": "video_imageAlt",
+        "label": "Video Image Alt"
       },
       {
         "component": "text",
         "name": "video_imageTitle",
         "label": "Video Image Title"
-      },
-      {
-        "component": "reference",
-        "name": "video_deskimage",
-        "label": "Desk Image"
-      },
-      {
-        "component": "text",
-        "name": "video_deskimageAlt",
-        "label": "Desk Image Alt"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },

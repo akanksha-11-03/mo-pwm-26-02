@@ -78,12 +78,6 @@
     ]
   },
   {
-    "id": "embed",
-    "components": [
-      "embed-item"
-    ]
-  },
-  {
     "id": "feature-card",
     "components": [
       "feature-card-item"
