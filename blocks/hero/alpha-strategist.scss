@@ -15,6 +15,10 @@
     .strategist {
       &-1 {
         display: none;
+
+        @media screen and (width >= 768px) {
+          display: block;
+        }
       }
       &-2 {
         display: none;

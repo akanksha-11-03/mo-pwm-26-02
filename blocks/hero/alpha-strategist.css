@@ -15,6 +15,11 @@
 .section.alpha-strategist .hero .strategist-1 {
   display: none;
 }
+@media screen and (width >= 768px) {
+  .section.alpha-strategist .hero .strategist-1 {
+    display: block;
+  }
+}
 .section.alpha-strategist .hero .strategist-2 {
   display: none;
 }
