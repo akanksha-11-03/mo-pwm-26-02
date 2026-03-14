@@ -12,12 +12,9 @@
   -o-object-fit: fill;
      object-fit: fill;
 }
-.section.alpha-strategist .hero .strategist-1 {
-  display: none;
-}
 @media screen and (width >= 768px) {
   .section.alpha-strategist .hero .strategist-1 {
-    display: block;
+    display: none;
   }
 }
 .section.alpha-strategist .hero .strategist-2 {
