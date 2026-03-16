@@ -1,8 +1,9 @@
+@import "../../../styles/common-theme/css/fonts.css";
 .section.alpha-strategist .hero {
   min-height: 660px;
   padding: 0;
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero {
     /* padding: 42px 67px; */
     min-height: 600px;
@@ -12,7 +13,7 @@
   -o-object-fit: fill;
      object-fit: fill;
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-1 {
     display: none;
   }
@@ -20,7 +21,7 @@
 .section.alpha-strategist .hero .strategist-2 {
   display: none;
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-2 {
     display: block;
   }
@@ -30,19 +31,19 @@
   padding: 54px 17px 55px 15px;
   background: linear-gradient(180deg, rgba(237, 226, 204, 0) 3.26%, #ede2cc 66.54%);
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 {
     width: 80.504%;
     background: linear-gradient(252deg, rgba(237, 226, 204, 0) 17.58%, #ede2cc 87.18%);
     padding: 42px 67px;
   }
 }
-@media screen and (width > 1367px) {
+@media (min-width: 1367px) {
   .section.alpha-strategist .hero .strategist-3 {
     width: 100%;
   }
 }
-@media screen and (width > 1366px) {
+@media (min-width: 1367px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 {
     max-width: 1232px;
     width: 100%;
@@ -56,7 +57,7 @@
   flex-direction: column;
   gap: 60px;
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 {
     gap: 100px;
     max-width: 494px;
@@ -68,7 +69,7 @@
   height: 54px;
   margin: 0;
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-1 .innerlist-1 {
     max-width: 146px;
     height: 67px;
@@ -83,79 +84,67 @@
   margin: 0;
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-1 .innerlist-2 .inneritem-1 {
-  color: #000;
-  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  font-family: var(--Body, Inter);
-  font-size: 12.8px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 16px;
-  /* 125% */
-  margin: 4px 0;
+  display: none;
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-1 .innerlist-2 .inneritem-1 {
+    display: block;
     margin: 5px 0;
-    font-size: var(--Body-Medium-semibold-Size, 16px);
-    line-height: var(--Body-Medium-semibold-Line-Height, 20px);
+    font-size: var(--body-medium-semibold-size);
+    line-height: var(--body-medium-semibold-line-height);
+    color: var(--neutrals-black);
+    font-family: var(--body);
+    font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+    font-weight: var(--semibold);
   }
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-1 .innerlist-2 .inneritem-2 {
-  color: #000;
-  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  font-family: var(--Body, Inter);
-  font-size: 9.6px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 11.2px;
-  /* 116.667% */
-  padding: 0 0 15px;
+  display: none;
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-1 .innerlist-2 .inneritem-2 {
+    display: block;
     padding: 0 0 18px;
-    font-size: var(--Body-XSmall-regular-Size, 12px);
-    line-height: var(--Body-XSmall-regular-Line-Height, 14px);
+    font-size: var(--body-xsmall-regular-size);
+    line-height: var(--body-xsmall-regular-line-height);
+    color: var(--neutrals-black);
+    font-family: var(--body);
+    font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+    font-weight: var(--regular);
   }
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-1 .innerlist-2 .inneritem-3 {
-  color: var(--Neutrals-Black, #111);
+  padding: 10px 0 0;
+  font-size: var(--body-medium-regular-size);
+  line-height: var(--body-medium-regular-line-height);
+  color: var(--neutrals-black);
+  font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  /* Mobile/Body/Medium-regular */
-  font-family: var(--Body, Inter);
-  font-size: var(--Body-Medium-regular-Size, 16px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: var(--Body-Medium-regular-Line-Height, 20px);
-  /* 125% */
-  padding: 15px 0 0;
+  font-weight: var(--regular);
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-1 .innerlist-2 .inneritem-3 {
     padding: 0;
-    color: var(--PWM-Gold-900, #5d4f2e);
-    font-size: var(--Body-Medium-regular-Size, 16px);
-    line-height: var(--Body-Medium-regular-Line-Height, 20px);
+    color: var(--pwm-gold-900);
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
   }
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-1 {
   margin: 0 0 16px;
-  color: var(--Neutrals-Black, #111);
+  font-size: 28px;
+  line-height: var(--sub-header-large-line-height);
+  color: var(--neutrals-black);
+  font-family: var(--title);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  /* Mobile/Header/PWM H4 */
-  font-family: var(--TItle, Inter);
-  font-size: var(--Heading-PWM-H5-Size, 28px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: var(--Sub-Header-Large-Line-Height, 32px);
-  /* 114.286% */
+  font-weight: var(--regular);
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-1 {
     margin: 0 0 8px;
-    color: var(--PWM-Gold-900, #5d4f2e);
-    font-size: var(--Heading-PWM-H4-Size, 32px);
-    line-height: var(--Heading-PWM-H4-Line-Height, 40px);
+    color: var(--pwm-gold-900);
+    font-size: var(--heading-pwm-h4-size);
+    line-height: var(--heading-pwm-h4-line-height);
   }
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 {
@@ -163,42 +152,36 @@
   margin: 0;
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-1, .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-1 p {
-  color: var(--Neutrals-Black, #111);
-  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  /* Mobile/Body/Small-semibold */
-  font-family: var(--Body, Inter);
-  font-size: var(--Body-Small-semibold-Size, 14px);
-  font-style: normal;
-  font-weight: 600;
-  line-height: var(--Body-Small-semibold-Line-Height, 16px);
-  /* 114.286% */
   margin: 0 0 6px;
+  font-size: var(--body-small-semibold-size);
+  line-height: var(--body-small-semibold-line-height);
+  color: var(--neutrals-black);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--semibold);
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-1, .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-1 p {
-    color: var(--PWM-Gold-900, #5d4f2e);
-    font-size: var(--Body-Medium-regular-Size, 16px);
-    line-height: var(--Body-Medium-regular-Line-Height, 20px);
+    color: var(--pwm-gold-900);
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
     margin: 0 0 24px;
   }
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-2, .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-2 p {
   margin: 0 0 30px;
-  color: var(--Neutrals-Black, #111);
+  font-size: var(--paragraph-small-regular-size);
+  line-height: var(--paragraph-small-regular-line-height);
+  color: var(--neutrals-black);
+  font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  /* Mobile/Paragraph/Small-regular */
-  font-family: var(--Body, Inter);
-  font-size: var(--Paragraph-Small-regular-Size, 14px);
-  font-style: normal;
-  font-weight: 400;
-  line-height: var(--Paragraph-Small-regular-Line-Height, 20px);
-  /* 142.857% */
+  font-weight: var(--regular);
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-2, .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-2 p {
-    color: var(--PWM-Gold-900, #5d4f2e);
-    font-size: var(--Body-Small-regular-Size, 14px);
-    line-height: var(--Label-Large-Line-Height, 20px);
+    color: var(--pwm-gold-900);
+    font-size: var(--body-small-regular-size);
+    line-height: var(--label-large-line-height);
   }
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-3 ul {
@@ -215,28 +198,26 @@
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-3 ul li {
   text-align: center;
-  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  /* Mobile/Button/Medium */
-  font-family: var(--Body, Inter);
-  font-size: var(--Button-Medium-Size, 16px);
-  font-style: normal;
-  font-weight: 500;
-  line-height: var(--Button-Medium-Line-Height, 20px);
-  /* 125% */
   padding: 10px 12px;
-  border-radius: var(--Border-Radius-4, 4px);
+  border-radius: var(--border-radius-4);
+  font-size: var(--button-medium-size);
+  line-height: var(--button-medium-line-height);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
 }
-@media screen and (width >= 768px) {
+@media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-3 ul li {
     padding: 14px 12px;
-    font-size: 18px;
+    font-size: var(--button-large-size);
+    line-height: var(--button-large-line-height);
   }
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-3 ul li:first-of-type {
-  border: 1px solid var(--Button-Primary-Default, #2e2a94);
-  color: var(--Text-Button-Default, #2e2a94);
+  border: 1px solid var(--button-primary-default);
+  color: var(--text-button-default);
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-3 ul li:last-of-type {
-  color: var(--Text-White, #fff);
-  background-color: var(--Button-Primary-Default, #2e2a94);
+  color: var(--text-white);
+  background-color: var(--button-primary-default);
 }/*# sourceMappingURL=alpha-strategist.css.map */

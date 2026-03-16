@@ -1,9 +1,13 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins"as *;
+@use "../../styles/common-theme/css/fluid-typography"as *;
+
 .section.alpha-strategist {
   .hero {
     min-height: 660px;
     padding: 0;
 
-    @media screen and (width >= 768px) {
+    @include media(tablet-up) {
       /* padding: 42px 67px; */
       min-height: 600px;
     }
@@ -14,13 +18,13 @@
 
     .strategist {
       &-1 {
-        @media screen and (width >= 768px) {
+        @include media(tablet-up) {
           display: none;
         }
       }
       &-2 {
         display: none;
-        @media screen and (width >= 768px) {
+        @include media(tablet-up){
           display: block;
         }
       }
@@ -34,7 +38,7 @@
           #ede2cc 66.54%
         );
 
-        @media screen and (width >= 768px) {
+        @include media(tablet-up) {
           width: 80.504%;
           background: linear-gradient(
             252deg,
@@ -44,12 +48,12 @@
           padding: 42px 67px;
         }
 
-        @media screen and (width>1367px) {
+        @include media(desktop-lg-up) {
           width: 100%;
         }
 
         .innercontent-1 {
-          @media screen and (width>1366px) {
+          @include media(desktop-lg-up) {
             max-width: 1232px;
             width: 100%;
             margin: 0 auto;
@@ -61,7 +65,7 @@
             flex-direction: column;
             gap: 60px;
 
-            @media screen and (width >= 768px) {
+            @include media(tablet-up) {
               gap: 100px;
               max-width: 494px;
             }
@@ -75,7 +79,7 @@
                     height: 54px;
                     margin: 0;
 
-                    @media screen and (width >= 768px) {
+                    @include media(tablet-up) {
                       max-width: 146px;
                       height: 67px;
                     }
@@ -92,101 +96,53 @@
 
                     .inneritem {
                       &-1 {
-                        color: #000;
-                        font-feature-settings:
-                          "ss01" on,
-                          "ss04" on,
-                          "cv01" on,
-                          "cv02" on,
-                          "cv03" on,
-                          "cv04" on,
-                          "cv06" on,
-                          "cv09" on,
-                          "cv10" on,
-                          "cv11" on;
-                        font-family: var(--Body, Inter);
-                        font-size: 12.8px;
-                        font-style: normal;
-                        font-weight: 600;
-                        line-height: 16px;
-                        /* 125% */
-                        margin: 4px 0;
+                        display: none;
 
-                        @media screen and (width >= 768px) {
+                        @include media(tablet-up) {
+                          display: block;
                           margin: 5px 0;
-                          font-size: var(--Body-Medium-semibold-Size, 16px);
-                          line-height: var(
-                            --Body-Medium-semibold-Line-Height,
-                            20px
+                          @include font-style(
+                            var(--body-medium-semibold-size),
+                            var(--body-medium-semibold-line-height),
+                            var(--neutrals-black),
+                            var(--semibold),
+                            var(--body)
                           );
                         }
                       }
 
                       &-2 {
-                        color: #000;
-                        font-feature-settings:
-                          "ss01" on,
-                          "ss04" on,
-                          "cv01" on,
-                          "cv02" on,
-                          "cv03" on,
-                          "cv04" on,
-                          "cv06" on,
-                          "cv09" on,
-                          "cv10" on,
-                          "cv11" on;
-                        font-family: var(--Body, Inter);
-                        font-size: 9.6px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 11.2px;
-                        /* 116.667% */
-                        padding: 0 0 15px;
+                        display: none;
 
-                        @media screen and (width >= 768px) {
+                        @include media(tablet-up) {
+                          display: block;
                           padding: 0 0 18px;
-                          font-size: var(--Body-XSmall-regular-Size, 12px);
-                          line-height: var(
-                            --Body-XSmall-regular-Line-Height,
-                            14px
+                          @include font-style(
+                            var(--body-xsmall-regular-size),
+                            var(--body-xsmall-regular-line-height),
+                            var(--neutrals-black),
+                            var(--regular),
+                            var(--body)
                           );
                         }
                       }
 
                       &-3 {
-                        color: var(--Neutrals-Black, #111);
-                        font-feature-settings:
-                          "ss01" on,
-                          "ss04" on,
-                          "cv01" on,
-                          "cv02" on,
-                          "cv03" on,
-                          "cv04" on,
-                          "cv06" on,
-                          "cv09" on,
-                          "cv10" on,
-                          "cv11" on;
+                        padding: 10px 0 0;
 
-                        /* Mobile/Body/Medium-regular */
-                        font-family: var(--Body, Inter);
-                        font-size: var(--Body-Medium-regular-Size, 16px);
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: var(
-                          --Body-Medium-regular-Line-Height,
-                          20px
+                        @include font-style(
+                          var(--body-medium-regular-size),
+                          var(--body-medium-regular-line-height),
+                          var(--neutrals-black),
+                          var(--regular),
+                          var(--body)
                         );
-                        /* 125% */
-                        padding: 15px 0 0;
 
-                        @media screen and (width >= 768px) {
+                        @include media(tablet-up) {
                           padding: 0;
-                          color: var(--PWM-Gold-900, #5d4f2e);
-                          font-size: var(--Body-Medium-regular-Size, 16px);
-                          line-height: var(
-                            --Body-Medium-regular-Line-Height,
-                            20px
-                          );
+                          color: var(--pwm-gold-900);
+                          font-size: var(--body-medium-regular-size);
+                          line-height: var(--body-medium-regular-line-height);
                         }
                       }
                     }
@@ -198,32 +154,20 @@
                 .innerlist {
                   &-1 {
                     margin: 0 0 16px;
-                    color: var(--Neutrals-Black, #111);
-                    font-feature-settings:
-                      "ss01" on,
-                      "ss04" on,
-                      "cv01" on,
-                      "cv02" on,
-                      "cv03" on,
-                      "cv04" on,
-                      "cv06" on,
-                      "cv09" on,
-                      "cv10" on,
-                      "cv11" on;
 
-                    /* Mobile/Header/PWM H4 */
-                    font-family: var(--TItle, Inter);
-                    font-size: var(--Heading-PWM-H5-Size, 28px);
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: var(--Sub-Header-Large-Line-Height, 32px);
-                    /* 114.286% */
+                    @include font-style(
+                      28px,
+                      var(--sub-header-large-line-height),
+                      var(--neutrals-black),
+                      var(--regular),
+                      var(--title)
+                    );
 
-                    @media screen and (width >= 768px) {
+                    @include media(tablet-up) {
                       margin: 0 0 8px;
-                      color: var(--PWM-Gold-900, #5d4f2e);
-                      font-size: var(--Heading-PWM-H4-Size, 32px);
-                      line-height: var(--Heading-PWM-H4-Line-Height, 40px);
+                      color: var(--pwm-gold-900);
+                      font-size: var(--heading-pwm-h4-size);
+                      line-height: var(--heading-pwm-h4-line-height);
                     }
                   }
 
@@ -234,38 +178,20 @@
                       &-1 {
                         &,
                         & p {
-                          color: var(--Neutrals-Black, #111);
-                          font-feature-settings:
-                            "ss01" on,
-                            "ss04" on,
-                            "cv01" on,
-                            "cv02" on,
-                            "cv03" on,
-                            "cv04" on,
-                            "cv06" on,
-                            "cv09" on,
-                            "cv10" on,
-                            "cv11" on;
-
-                          /* Mobile/Body/Small-semibold */
-                          font-family: var(--Body, Inter);
-                          font-size: var(--Body-Small-semibold-Size, 14px);
-                          font-style: normal;
-                          font-weight: 600;
-                          line-height: var(
-                            --Body-Small-semibold-Line-Height,
-                            16px
-                          );
-                          /* 114.286% */
                           margin: 0 0 6px;
 
-                          @media screen and (width >= 768px) {
-                            color: var(--PWM-Gold-900, #5d4f2e);
-                            font-size: var(--Body-Medium-regular-Size, 16px);
-                            line-height: var(
-                              --Body-Medium-regular-Line-Height,
-                              20px
-                            );
+                          @include font-style(
+                            var(--body-small-semibold-size),
+                            var(--body-small-semibold-line-height),
+                            var(--neutrals-black),
+                            var(--semibold),
+                            var(--body)
+                          );
+
+                          @include media(tablet-up){
+                            color: var(--pwm-gold-900);
+                            font-size: var(--body-medium-regular-size);
+                            line-height: var(--body-medium-regular-line-height);
                             margin: 0 0 24px;
                           }
                         }
@@ -274,34 +200,19 @@
                         &,
                         & p {
                           margin: 0 0 30px;
-                          color: var(--Neutrals-Black, #111);
-                          font-feature-settings:
-                            "ss01" on,
-                            "ss04" on,
-                            "cv01" on,
-                            "cv02" on,
-                            "cv03" on,
-                            "cv04" on,
-                            "cv06" on,
-                            "cv09" on,
-                            "cv10" on,
-                            "cv11" on;
 
-                          /* Mobile/Paragraph/Small-regular */
-                          font-family: var(--Body, Inter);
-                          font-size: var(--Paragraph-Small-regular-Size, 14px);
-                          font-style: normal;
-                          font-weight: 400;
-                          line-height: var(
-                            --Paragraph-Small-regular-Line-Height,
-                            20px
+                          @include font-style(
+                            var(--paragraph-small-regular-size),
+                            var(--paragraph-small-regular-line-height),
+                            var(--neutrals-black),
+                            var(--regular),
+                            var(--body)
                           );
-                          /* 142.857% */
 
-                          @media screen and (width >= 768px) {
-                            color: var(--PWM-Gold-900, #5d4f2e);
-                            font-size: var(--Body-Small-regular-Size, 14px);
-                            line-height: var(--Label-Large-Line-Height, 20px);
+                          @include media(tablet-up) {
+                            color: var(--pwm-gold-900);
+                            font-size: var(--body-small-regular-size);
+                            line-height: var(--label-large-line-height);
                           }
                         }
                       }
@@ -319,45 +230,32 @@
 
                           li {
                             text-align: center;
-                            font-feature-settings:
-                              "ss01" on,
-                              "ss04" on,
-                              "cv01" on,
-                              "cv02" on,
-                              "cv03" on,
-                              "cv04" on,
-                              "cv06" on,
-                              "cv09" on,
-                              "cv10" on,
-                              "cv11" on;
-
-                            /* Mobile/Button/Medium */
-                            font-family: var(--Body, Inter);
-                            font-size: var(--Button-Medium-Size, 16px);
-                            font-style: normal;
-                            font-weight: 500;
-                            line-height: var(--Button-Medium-Line-Height, 20px);
-                            /* 125% */
                             padding: 10px 12px;
-                            border-radius: var(--Border-Radius-4, 4px);
+                            border-radius: var(--border-radius-4);
 
-                            @media screen and (width >= 768px) {
+                            @include font-style(
+                              var(--button-medium-size),
+                              var(--button-medium-line-height),
+                              null,
+                              var(--medium),
+                              var(--body)
+                            );
+
+                            @include media(tablet-up) {
                               padding: 14px 12px;
-                              font-size: 18px;
+                              font-size: var(--button-large-size);
+                              line-height: var(--button-large-line-height);
                             }
 
                             &:first-of-type {
                               border: 1px solid
-                                var(--Button-Primary-Default, #2e2a94);
-                              color: var(--Text-Button-Default, #2e2a94);
+                                var(--button-primary-default);
+                              color: var(--text-button-default);
                             }
 
                             &:last-of-type {
-                              color: var(--Text-White, #fff);
-                              background-color: var(
-                                --Button-Primary-Default,
-                                #2e2a94
-                              );
+                              color: var(--text-white);
+                              background-color: var(--button-primary-default);
                             }
                           }
                         }
