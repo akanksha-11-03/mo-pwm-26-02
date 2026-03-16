@@ -59,7 +59,7 @@
 }
 .cards.ourofferingcards .ourofferingcards-sticky-frame {
   position: sticky;
-  top: 0;
+  top: var(--nav-height, 64px);
   overflow: visible;
 }
 .cards.ourofferingcards {
