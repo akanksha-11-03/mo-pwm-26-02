@@ -313,6 +313,7 @@
   --paragraph-medium-regular-line-height: var(--spacing-24);
   --paragraph-small-regular-font: var(--body);
   --paragraph-small-regular-weight: var(--weight-regular);
+  --paragraph-small-regular-size: var(--spacing-14);
   --paragraph-small-regular-line-height: var(--spacing-20);
   --paragraph-xsmall-regular-font: var(--body);
   --paragraph-xsmall-regular-weight: var(--weight-regular);
