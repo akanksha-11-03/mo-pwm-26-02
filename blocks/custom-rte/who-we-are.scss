@@ -31,9 +31,13 @@
       .who-we-are {
         &-1 {
           @include media(tablet-up) {
-            /* max-width: 27.486%; */
-            max-width: 340px;
+            max-width: 46.096%;
+            // max-width: 340px;
             width: 100%;
+          }
+          
+          @include media(desktop-up){
+            max-width: 340px;
           }
 
           .innercontent-1 {
@@ -74,7 +78,12 @@
         }
 
         &-2 {
-          @include media(tablet-up) {
+          @include media(tablet-up){
+            // max-width: 372px;
+            max-width: 50.434%;
+          }
+
+          @include media(desktop-up) {
             /* max-width: 43.978%; */
             max-width: 544px;
             width: 100%;
@@ -105,9 +114,13 @@
                 );
 
                 @include media (tablet-up) {
-                  flex-basis: 45.406%;
+                  flex-basis: 42.406%;
                   font-size: var(--heading-h2-size);
                   line-height: var(--heading-h2-line-height);
+                }
+                
+                @include media(desktop-up){
+                  flex-basis: 45.406%;
                 }
 
                 .innerlist-1 {

@@ -26,9 +26,13 @@
 }
 @media (min-width: 768px) {
   .section.who-we-are .custom-rte .who-we-are-1 {
-    /* max-width: 27.486%; */
-    max-width: 340px;
+    max-width: 46.096%;
     width: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  .section.who-we-are .custom-rte .who-we-are-1 {
+    max-width: 340px;
   }
 }
 .section.who-we-are .custom-rte .who-we-are-1 .innercontent-1 .item-1 {
@@ -63,6 +67,11 @@
 }
 @media (min-width: 768px) {
   .section.who-we-are .custom-rte .who-we-are-2 {
+    max-width: 50.434%;
+  }
+}
+@media (min-width: 1025px) {
+  .section.who-we-are .custom-rte .who-we-are-2 {
     /* max-width: 43.978%; */
     max-width: 544px;
     width: 100%;
@@ -93,9 +102,14 @@
 }
 @media (min-width: 768px) {
   .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem {
-    flex-basis: 45.406%;
+    flex-basis: 42.406%;
     font-size: var(--heading-h2-size);
     line-height: var(--heading-h2-line-height);
+  }
+}
+@media (min-width: 1025px) {
+  .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem {
+    flex-basis: 45.406%;
   }
 }
 .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem .innerlist-1 {
