@@ -2,20 +2,6 @@
 @use "sass:map";
 @import "../../../styles/common-theme/css/fonts.css";
 
-// ----------------------------------------
-// FONTS
-// ----------------------------------------
-$inter: "Inter", sans-serif;
-$font-weights: (
-  light: 300,
-  regular: 400,
-  medium: 500,
-  semibold: 600,
-  bold: 700,
-  extrabold: 800,
-  heavy: 900
-);
-
 // Font mixin
 @mixin font-style($size, $line-height, $color, $weight: null, $family: $body) {
   font-size: $size;
@@ -28,42 +14,6 @@ $font-weights: (
     font-weight: $weight;
   }
 }
-
-// ----------------------------------------
-// BORDER RADIUS
-// ----------------------------------------
-
-$radius: (
-  r4: 4px,
-  r8: 8px,
-  r12: 12px,
-  r14: 14px,
-  r16: 16px,
-  r24: 24px,
-  r26: 26px,
-  r32: 32px,
-  r37: 37px,
-  r40: 40px,
-  r41: 41px,
-  r52: 52px,
-  r83: 83px,
-  r100: 100px,
-  r50: 50%
-);
-
-// ----------------------------------------
-// SPACING
-// ----------------------------------------
-
-$spacing: (
-  xxs: 4px,
-  xs: 8px,
-  sm: 12px,
-  md: 16px,
-  lg: 24px,
-  xl: 32px,
-  xxl: 40px,
-);
 
 // ----------------------------------------
 // BREAKPOINTS
