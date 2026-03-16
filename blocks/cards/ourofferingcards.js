@@ -1,7 +1,7 @@
 import { createOptimizedPicture, loadCSS } from '../../scripts/aem.js';
 import { moveInstrumentation } from '../../scripts/scripts.js';
 
-const GAP = 60; // gap between cards in initial stacked state (px)
+const GAP = 70; // gap between cards in initial stacked state (px)
 const TOP_OFFSET = 40; // card-1 top offset inside sticky frame (px)
 const SCROLL_MULTIPLIER = 2.5; // scroll comfort factor
 const CARD_HEIGHT = 342; // fixed card height matching CSS min-height / image height
