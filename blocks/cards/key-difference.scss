@@ -1,5 +1,9 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins"as *;
+@use "../../styles/common-theme/css/fluid-typography"as *;
+
 .section.our-key-differences {
-  @media screen and (width >= 768px) {
+  @include media(tablet-up) {
     padding: 0 16px;
   }
 
@@ -8,9 +12,9 @@
     max-width: 100%;
     margin: 20px 0 0;
     position: relative;
-    background-color: var(--PWM-Gold-200, #f0e6dc);
+    background-color: var(--pwm-gold-200);
 
-    @media screen and (width >= 768px) {
+    @include media(tablet-up) {
       max-width: 1232px;
       margin: 0 auto;
     }
@@ -25,11 +29,11 @@
         display: flex;
         flex-direction: column;
         gap: 50px;
-        background: var(--PWM-Gold-200, #f0e6dc);
+        background: var(--pwm-gold-200);
         padding: 56px 32px;
         width: 100%;
 
-        @media screen and (width >= 768px) {
+        @include media(tablet-up) {
           flex-direction: row;
           align-items: center;
           gap: 72px;
@@ -41,7 +45,7 @@
           height: auto;
           width: auto;
 
-          @media screen and (width >= 768px) {
+          @include media(tablet-up) {
             max-width: 548px;
             max-height: 580px;
             width: 100%;
@@ -60,7 +64,7 @@
               object-fit: fill;
               width: 100%;
 
-              @media screen and (width >= 768px) {
+              @include media(tablet-up) {
                 aspect-ratio: unset;
               }
             }
@@ -73,95 +77,63 @@
           flex-direction: column;
           gap: 24px;
 
-          @media screen and (width >= 768px) {
+          @include media(tablet-up) {
             max-width: 460px;
             padding: 139px 0;
           }
 
           .key-text {
             &-1 {
-              color: var(--PWM-Gold-700, #866e44);
-              font-feature-settings:
-                "ss01" on,
-                "ss04" on,
-                "cv01" on,
-                "cv02" on,
-                "cv03" on,
-                "cv04" on,
-                "cv06" on,
-                "cv09" on,
-                "cv10" on,
-                "cv11" on;
-
-              /* Mobile/Header/PWM H4 */
-              font-family: var(--TItle, Inter);
-              font-size: var(--Heading-PWM-H5-Size, 28px);
-              font-style: normal;
-              font-weight: 400;
-              line-height: var(--Sub-Header-Large-Line-Height, 32px);
-
-              /* 114.286% */
               margin: 0 0 26px;
 
-              @media screen and (width >= 768px) {
+              @include font-style(
+                28px,
+                var(--sub-header-large-line-height),
+                var(--pwm-gold-700),
+                var(--regular),
+                var(--title)
+              );
+
+              @include media(tablet-up) {
                 margin: 0 0 43px;
-                font-size: var(--Heading-PWM-H4-Size, 32px);
-                line-height: var(--Heading-PWM-H4-Line-Height, 40px);
+                font-size: var(--heading-pwm-h4-size);
+                line-height: var(--heading-pwm-h4-line-height);
               }
             }
 
             &-2 {
-              color: var(--blue-1800-primary, #2e2a94);
-              font-feature-settings:
-                "ss01" on,
-                "ss04" on,
-                "cv01" on,
-                "cv02" on,
-                "cv03" on,
-                "cv04" on,
-                "cv06" on,
-                "cv09" on,
-                "cv10" on,
-                "cv11" on;
-
-              /* Mobile/Body/Xlarge-regular */
-              font-family: var(--Body, Inter);
-              font-size: var(--Body-Xlarge-regular-Size, 20px);
-              font-style: normal;
-              font-weight: 400;
-              line-height: var(--Body-Xlarge-regular-Line-Height, 24px);
-
-              /* 120% */
               margin: 0;
+
+              @include font-style(
+                var(--body-xlarge-regular-size),
+                var(--body-xlarge-regular-line-height),
+                var(--blue-1-800-primary),
+                var(--regular),
+                var(--body)
+              );
+
+              @include media(tablet-up){
+                font-size: var(--body-xlarge-regular-size);
+                line-height: var(--body-xlarge-regular-line-height);
+              }
             }
 
             &-3 {
               margin: 0;
-              color: var(--blue-1800-primary, #2e2a94);
-              font-feature-settings:
-                "ss01" on,
-                "ss04" on,
-                "cv01" on,
-                "cv02" on,
-                "cv03" on,
-                "cv04" on,
-                "cv06" on,
-                "cv09" on,
-                "cv10" on,
-                "cv11" on;
-
-              /* Mobile/Paragraph/Medium-regular */
-              font-family: var(--Body, Inter);
-              font-size: var(--Paragraph-Medium-regular-Size, 16px);
-              font-style: normal;
-              font-weight: 400;
-              line-height: var(--Paragraph-Medium-regular-Line-Height, 24px);
-
-              /* 150% */
               padding: 0 0 40px;
 
-              @media screen and (width >= 768px) {
+              @include font-style(
+                var(--paragraph-medium-regular-size),
+                var(--paragraph-medium-regular-line-height),
+                var(--blue-1-800-primary),
+                var(--regular),
+                var(--body)
+              );
+
+              @include media(tablet-up) {
                 padding: 0 0 67px;
+                font-size: var(--body-medium-regular-size);
+                line-height: 24px;
               }
             }
           }
@@ -180,7 +152,7 @@
       max-width: max-content;
       transform: translateX(-50%);
 
-      @media screen and (width >= 768px) {
+      @include media(tablet-up) {
         bottom: 155px;
         left: calc(50% + 24px);
         transform: unset;
@@ -189,12 +161,12 @@
       &-bullet {
         width: 8px;
         height: 8px;
-        background-color: var(--Neutrals-400, #bdbdbd);
+        background-color: var(--neutrals-400);
         opacity: 1;
         margin: 0;
 
         &.swiper-pagination-bullet-active {
-          background-color: var(--blue-1800-primary, #2e2a94);
+          background-color: var(--blue-1-800-primary);
         }
       }
     }
