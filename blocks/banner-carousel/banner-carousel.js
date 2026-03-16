@@ -93,7 +93,8 @@ export default function decorate(block) {
   }
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
-  block.textContent = '';
+  // block.textContent = '';
+  block.querySelector('div').firstElementChild.textContent = '';
 
   if (placeholder) {
     const wrapper = document.createElement('div');
