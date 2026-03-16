@@ -70,15 +70,15 @@ $spacing: (
 // ----------------------------------------
 
 $breakpoints: (
-  mobile-sm: 361px,
-  mobile-md: 391px,
-  mobile: 768px,
-  mobile-ed: 899px,
-  tab: 1025px,
-  desktop-sm: 1299px,
-  desktop-md: 1367px,
-  desktop-lg: 1681px,
-  desktop-xl: 1921px
+  mobile-sm-up: 361px,
+  mobile-md-up: 391px,
+  tablet-up: 768px,
+  tablet-lg-up: 899px,
+  desktop-up: 1025px,
+  desktop-md-up: 1299px,
+  desktop-lg-up: 1367px,
+  desktop-xl-up: 1681px,
+  desktop-xxl-up: 1921px
 );
 
 
@@ -87,7 +87,7 @@ $breakpoints: (
 @mixin media($breakpoint) {
   $bp: map.get($breakpoints, $breakpoint);
 
-  @media (max-width: #{$bp}) {
+  @media (min-width: #{$bp}) {
     @content;
   }
 }
