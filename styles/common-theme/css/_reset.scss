@@ -1,0 +1,189 @@
+@use "./variables_mixins" as *;
+@use "./fluid-typography";
+
+// ----------------------------------------
+// BASE RESET
+// ----------------------------------------
+
+html {
+  box-sizing: border-box;
+  font-size: rem(16px);
+  font-family: $inter;
+  font-weight: map.get($font-weights, regular);
+
+  // scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  outline: none;
+  text-size-adjust: 100%;
+  appearance: none;
+}
+
+// ----------------------------------------
+// TYPOGRAPHY & STRUCTURE
+// ----------------------------------------
+
+body {
+  line-height: normal;
+  font-size: rem(16px);
+  background-color: $primary-white;
+  color: $primary-black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+blockquote,
+pre,
+figure,
+hr {
+  margin: 0;
+  padding: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: $primary-black;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus,
+  &:visited,
+  &:active,
+  &:target,
+  &:focus-visible,
+  &:focus-within {
+    color: inherit;
+    background-color: transparent;
+  }
+
+  &:not([href]) {
+    cursor: default;
+  }
+}
+
+button {
+  cursor: pointer;
+
+  // font-family:$butlerpro;
+  background: none;
+  border: none;
+}
+
+// ----------------------------------------
+// FORMS
+// ----------------------------------------
+
+input,
+textarea,
+select {
+  border: 0;
+  outline: 0;
+  resize: none;
+  border-radius: 0;
+
+  // font-family:$butlerpro;
+  font-size: inherit;
+  box-sizing: border-box;
+}
+
+input[type="submit"],
+.transition {
+  transition: all 0.5s;
+}
+
+// ----------------------------------------
+// MEDIA
+// ----------------------------------------
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+// ----------------------------------------
+// TABLES
+// ----------------------------------------
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+tr,
+td,
+th {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+// ----------------------------------------
+// SCROLLBAR STYLES
+// ----------------------------------------
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: $primary-white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $neutrals-n50;
+  border-radius: 40px;
+}
+
+// ----------------------------------------
+// HTML5 DISPLAY FIXES
+// ----------------------------------------
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+  display: block;
+}
+
+// ----------------------------------------
+// CONTAINERS
+// ----------------------------------------
+
+main.container {
+  padding: 0 !important;
+}
