@@ -1,0 +1,55 @@
+@use "sass:math";
+
+$default-min-bp: 390px;
+$default-max-bp: 1440px;
+
+// Round function using math module
+@function round($number, $decimals: 0) {
+  $n: 1;
+
+  @if $decimals > 0 {
+    @for $i from 1 through $decimals {
+      $n: $n * 10;
+    }
+  }
+
+  @return math.div(math.round($number * $n), $n);
+}
+
+
+@function rem($px) {
+  $rems: math.div($px, 16px) * 1rem;
+
+  @return $rems;
+}
+
+// Convert px to rem
+
+@function px-to-rem($px) {
+  @if math.unit($px) != "px" {
+    @error "Expected px unit but got #{unit($px)}";
+  }
+
+  @return math.div($px, 16px) * 1rem;
+}
+
+// Alias for convenience
+@function rem($px) {
+  @return px-to-rem($px);
+}
+
+@function fluid($min-size,
+  $max-size,
+  $min-breakpoint: $default-min-bp,
+  $max-breakpoint: $default-max-bp,
+  $unit: vw) {
+  $slope: math.div($max-size - $min-size, $max-breakpoint - $min-breakpoint);
+  $slope-to-unit: round($slope * 100, 2);
+  $intercept-rem: round(px-to-rem($min-size - $slope * $min-breakpoint), 2);
+  $min-size-rem: round(px-to-rem($min-size), 2);
+  $max-size-rem: round(px-to-rem($max-size), 2);
+
+  @return clamp(#{$min-size-rem},
+    #{$slope-to-unit}#{$unit} + #{$intercept-rem},
+    #{$max-size-rem});
+}
