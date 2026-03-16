@@ -1,27 +1,37 @@
+@import "../../../styles/common-theme/css/fonts.css";
 /* ===== Motilal Oswal Ecosystem Section ===== */
 .motilal-oswal-ecosystem > div {
   padding: 0;
   margin: 0;
 }
 .motilal-oswal-ecosystem .default-content-wrapper {
-  margin-bottom: 32px;
+  margin-bottom: var(--spacing-32);
 }
 .motilal-oswal-ecosystem .default-content-wrapper h2 {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
+  font-size: var(--heading-pwm-h5-size);
   line-height: 1.25em;
   color: #C3A560;
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
   margin: 0;
 }
 .motilal-oswal-ecosystem .default-content-wrapper strong {
-  color: #2E2A94;
-  font-weight: 400;
-  font-size: 24px;
+  color: var(--blue-1-800-primary);
+  font-weight: var(--regular);
+  font-size: var(--heading-pwm-h5-size);
+  font-family: var(--title);
 }
 .motilal-oswal-ecosystem .custom-rte {
   background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/106.945% 100.028% no-repeat;
-  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .motilal-oswal-ecosystem .custom-rte {
+    background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/119.945% 100.028% no-repeat;
+  }
+}
+.motilal-oswal-ecosystem .custom-rte {
+  border-radius: var(--border-radius-4);
   display: grid;
   grid-template-columns: 1fr;
   overflow: hidden;
@@ -40,61 +50,65 @@
   padding: 0;
 }
 .motilal-oswal-ecosystem .custom-rte > div:first-child {
-  border-bottom: 0.5px solid #fff;
+  border-bottom: 0.5px solid var(--neutrals-white);
 }
 .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li {
-  padding: 26px 20px;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 24px;
+  padding: 26px var(--spacing-20);
+  font-size: var(--heading-pwm-h5-size);
   line-height: 1.25em;
-  color: #F8F3EF;
+  color: var(--pwm-gold-100);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }
 .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul {
-  margin-top: 18px;
+  margin-top: var(--spacing-18);
 }
 .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul > li {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: var(--body-small-regular-size);
   line-height: 1.25em;
-  color: #F8F3EF;
+  color: var(--pwm-gold-100);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul {
   display: grid;
   grid-template-columns: 1fr;
 }
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li {
-  padding: 20px;
-  border-bottom: 0.5px solid #fff;
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
+  padding: var(--spacing-20);
+  border-bottom: 0.5px solid var(--neutrals-white);
+  font-size: var(--body-medium-medium-size);
   line-height: 1.2em;
-  color: #F8F3EF;
+  color: var(--pwm-gold-100);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
 }
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul {
-  margin-top: 8px;
+  margin-top: var(--spacing-8);
 }
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul > li {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: var(--body-small-regular-size);
   line-height: 1.25em;
-  color: #F8F3EF;
+  color: var(--pwm-gold-100);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:last-child {
   border-bottom: none;
 }
 @media (min-width: 900px) {
   .motilal-oswal-ecosystem {
-    padding: 40px 67px;
+    padding: var(--spacing-40) 67px;
   }
   .motilal-oswal-ecosystem .default-content-wrapper {
-    margin-bottom: 48px;
+    margin-bottom: var(--spacing-48);
   }
   .motilal-oswal-ecosystem .default-content-wrapper h2 {
-    font-size: 32px;
+    font-size: var(--spacing-32);
     line-height: 1.25em;
   }
   .motilal-oswal-ecosystem .custom-rte {
@@ -103,7 +117,7 @@
   }
   .motilal-oswal-ecosystem .custom-rte > div:first-child {
     border-bottom: none;
-    border-right: 0.5px solid #fff;
+    border-right: 0.5px solid var(--neutrals-white);
   }
   .motilal-oswal-ecosystem .custom-rte > div:first-child > div {
     display: flex;
@@ -117,17 +131,17 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 26px 40px 26px 52px;
-    font-weight: 400;
-    font-size: 32px;
+    padding: 26px var(--spacing-40) 26px 52px;
+    font-weight: var(--regular);
+    font-size: var(--spacing-32);
     line-height: 1.25em;
     width: 100%;
   }
   .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul {
-    margin-top: 18px;
+    margin-top: var(--spacing-18);
   }
   .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul > li {
-    font-size: 16px;
+    font-size: var(--body-medium-regular-size);
     line-height: 1.25em;
   }
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul {
@@ -137,16 +151,16 @@
   }
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li {
     padding: 26px 22px;
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: var(--medium);
+    font-size: var(--body-xlarge-regular-size);
     line-height: 1.2em;
-    border-bottom: 0.5px solid #fff;
+    border-bottom: 0.5px solid var(--neutrals-white);
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--spacing-20);
   }
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:nth-child(odd) {
-    border-right: 0.5px solid #fff;
+    border-right: 0.5px solid var(--neutrals-white);
   }
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:nth-last-child(-n+2) {
     border-bottom: none;
@@ -155,7 +169,7 @@
     margin-top: 0;
   }
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul > li {
-    font-size: 16px;
+    font-size: var(--body-medium-regular-size);
     line-height: 1.25em;
   }
 }

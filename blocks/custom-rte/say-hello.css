@@ -1,0 +1,129 @@
+@import "../../../styles/common-theme/css/fonts.css";
+/* ===== Say Hello CTA Banner ===== */
+.section.say-hello {
+  background: var(--pwm-gold-700);
+}
+.section.say-hello > div {
+  padding: 0;
+}
+.section.say-hello .custom-rte-wrapper {
+  max-width: 1264px;
+  width: 100%;
+  padding: 0 var(--spacing-16);
+}
+.section.say-hello .custom-rte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-24);
+  padding: var(--spacing-24) 0;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .section.say-hello .custom-rte {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-16);
+    padding: var(--spacing-24) 0;
+  }
+}
+.section.say-hello .custom-rte .say-hello-image {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  line-height: 0;
+}
+.section.say-hello .custom-rte .say-hello-image .say-hello-image-inner {
+  line-height: 0;
+}
+.section.say-hello .custom-rte .say-hello-image .say-hello-image-inner picture,
+.section.say-hello .custom-rte .say-hello-image .say-hello-image-inner img {
+  display: block;
+  height: 80px;
+  width: auto;
+  opacity: 0.4;
+}
+@media (max-width: 768px) {
+  .section.say-hello .custom-rte .say-hello-image {
+    position: absolute;
+    top: 0;
+    transform: none;
+  }
+  .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner picture,
+  .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner img {
+    height: 60px;
+  }
+}
+.section.say-hello .custom-rte .say-hello-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--spacing-24);
+}
+@media (max-width: 768px) {
+  .section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-16);
+  }
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-text {
+  font-size: var(--heading-pwm-h6-size);
+  line-height: var(--heading-pwm-h6-line-height);
+  color: var(--pwm-gold-100);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+  margin: 0;
+}
+@media (min-width: 769px) {
+  .section.say-hello .custom-rte .say-hello-content .say-hello-text {
+    font-size: var(--heading-pwm-h5-size);
+    line-height: var(--heading-pwm-h5-line-height);
+    color: var(--pwm-gold-100);
+    font-family: var(--title);
+    font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+    font-weight: var(--regular);
+  }
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-btn {
+  margin: 0;
+  flex-shrink: 0;
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-link,
+.section.say-hello .custom-rte .say-hello-content a.button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-10) var(--spacing-24);
+  border: var(--border-width-01) solid var(--blue-1-800-primary);
+  border-radius: var(--border-radius-4);
+  background: var(--blue-1-800-primary);
+  cursor: pointer;
+  font-size: var(--button-large-size);
+  line-height: var(--button-large-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-link:hover,
+.section.say-hello .custom-rte .say-hello-content a.button:hover {
+  background: var(--button-primary-hover);
+  border-color: var(--button-primary-hover);
+}
+
+/*# sourceMappingURL=say-hello.css.map */
