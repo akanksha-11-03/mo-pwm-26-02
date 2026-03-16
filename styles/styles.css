@@ -10,8 +10,32 @@
  * governing permissions and limitations under the License.
  */
 
- @import url('../styles/common-theme/css/tokens-variable.css');
- @import url('../styles/common-theme/css/_variables_mixins.scss');
+@import url('../styles/common-theme/css/tokens-variable.css');
+@import url('../styles/common-theme/css/_variables_mixins.scss');
+
+html,
+body,
+* {
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-touch-callout: none !important;
+
+  /* disable iOS callout on long-press */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-size-adjust: none;
+
+  /* appearance: none; */
+}
+
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
 :root {
   /* colors */
