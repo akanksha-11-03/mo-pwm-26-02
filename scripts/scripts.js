@@ -14,6 +14,7 @@ import {
 import { linkToBtn } from '../components/how-we-serve-you/how-we-serve-you.js';
 import decorateSeeyourWealthInmotion from '../components/Seeyour-wealth-inmotion/Seeyour-wealth-inmotion.js';
 
+
 /**
  * Moves all the attributes from a given elmenet to another given element.
  * @param {Element} from the element to copy attributes from
@@ -87,7 +88,61 @@ export function decorateMain(main) {
   decorateBlocks(main);
   linkToBtn(document);
   decorateSeeyourWealthInmotion(document);
-  // main.parentElement.classList.add('colour')
+}
+
+export async function loadFragment(path) {
+  if (path && path.startsWith('/')) {
+    const cleanPath = path.replace(/(\.plain)?\.html/, '');
+    const resp = await fetch(`${cleanPath}.plain.html`);
+    if (resp.ok) {
+      const main = document.createElement('main');
+      main.innerHTML = await resp.text();
+
+      const resetAttributeBase = (tag, attr) => {
+        main.querySelectorAll(`${tag}[${attr}^="./media_"]`).forEach((elem) => {
+          elem[attr] = new URL(
+            elem.getAttribute(attr),
+            new URL(cleanPath, window.location),
+          ).href;
+        });
+      };
+      resetAttributeBase('img', 'src');
+      resetAttributeBase('source', 'srcset');
+
+      decorateMain(main);
+      await loadSections(main);
+      return main;
+    }
+  }
+  return null;
+}
+
+export default async function decorateFragment(block) {
+  const link = block.querySelector('a');
+  const path = link ? link.getAttribute('href') : block.textContent.trim();
+  const fragment = await loadFragment(path);
+  if (fragment) {
+    const fragmentSection = fragment.querySelector(':scope .section');
+    if (fragmentSection) {
+      block.classList.add(...fragmentSection.classList);
+      block.classList.remove('section');
+      block.replaceChildren(...fragmentSection.childNodes);
+    }
+  }
+}
+
+async function decorateAutoBlock(element) {
+  const anchors = element.querySelectorAll('a');
+  const promises = Array.from(anchors).map(async (origin) => {
+    if (origin && origin.href && origin.href.includes('/fragment/')) {
+      const parent = origin.parentElement;
+      const divblock = document.createElement('div');
+      divblock.append(origin);
+      parent.append(divblock);
+      decorateFragment(divblock);
+    }
+  });
+  await Promise.all(promises);
 }
 
 /**
@@ -100,6 +155,7 @@ async function loadEager(doc) {
   const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
+    decorateAutoBlock(doc);
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
@@ -119,8 +175,6 @@ async function loadEager(doc) {
  * @param {Element} doc The container element
  */
 async function loadLazy(doc) {
-  loadHeader(doc.querySelector('header'));
-
   const main = doc.querySelector('main');
   await loadSections(main);
 
@@ -128,6 +182,7 @@ async function loadLazy(doc) {
   const element = hash ? doc.getElementById(hash.substring(1)) : false;
   if (hash && element) element.scrollIntoView();
 
+  loadHeader(doc.querySelector('header'));
   loadFooter(doc.querySelector('footer'));
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);

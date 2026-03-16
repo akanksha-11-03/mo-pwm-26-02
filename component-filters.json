@@ -19,7 +19,22 @@
       "curated-content",
       "embed",
       "custom-rte",
-      "titans-forum"
+      "titans-forum",
+      "tabs",
+      "banner-carousel",
+      "accordion"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
+    "id": "banner-carousel",
+    "components": [
+      "banner-carousel-item"
     ]
   },
   {
@@ -65,13 +80,20 @@
     "id": "custom-rte",
     "components": [
       "custom-rte-item",
-      "custom-image-item"
+      "custom-image-item",
+      "rte-image-item"
     ]
   },
   {
     "id": "feature-card",
     "components": [
       "feature-card-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tabs-item"
     ]
   },
   {

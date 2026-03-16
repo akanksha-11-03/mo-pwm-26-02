@@ -1,0 +1,129 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section.who-we-are .custom-rte-wrapper {
+  padding: 64px 16px 57px;
+  max-width: 1264px;
+  width: 100%;
+}
+@media screen and (width >= 768px) {
+  .section.who-we-are .custom-rte-wrapper {
+    max-width: 1269px;
+    padding: 0 16px;
+  }
+}
+.section.who-we-are .custom-rte {
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+}
+@media screen and (width >= 768px) {
+  .section.who-we-are .custom-rte {
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (width >= 768px) {
+  .section.who-we-are .custom-rte .who-we-are-1 {
+    /* max-width: 27.486%; */
+    max-width: 340px;
+    width: 100%;
+  }
+}
+.section.who-we-are .custom-rte .who-we-are-1 .innercontent-1 .item-1 {
+  color: var(--PWM-Gold-700, #866e44);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  /* Mobile/Body/Medium-medium */
+  font-family: var(--Body, Inter);
+  font-size: var(--Body-Medium-medium-Size, 16px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: var(--Body-Medium-medium-Line-Height, 20px);
+  /* 125% */
+  margin: 0 0 8px;
+}
+.section.who-we-are .custom-rte .who-we-are-1 .innercontent-1 .item-2 {
+  color: var(--blue-1800-primary, #2e2a94);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  /* Mobile/Header/PWM H6 */
+  font-family: var(--TItle, Inter);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 120% */
+  margin: 0;
+}
+@media screen and (width >= 768px) {
+  .section.who-we-are .custom-rte .who-we-are-1 .innercontent-1 .item-2 {
+    font-size: var(--Heading-PWM-H6-Size, 24px);
+    line-height: var(--Heading-PWM-H6-Line-Height, 28px);
+  }
+}
+@media screen and (width >= 768px) {
+  .section.who-we-are .custom-rte .who-we-are-2 {
+    /* max-width: 43.978%; */
+    max-width: 544px;
+    width: 100%;
+  }
+}
+.section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 37px;
+  list-style: none;
+}
+@media screen and (width >= 768px) {
+  .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 {
+    flex-direction: unset;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+}
+.section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem {
+  color: var(--PWM-Gold-700, #866e44);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  /* Mobile/Header/H2 */
+  font-family: var(--TItle, Inter);
+  font-size: 34px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  /* 117.647% */
+}
+@media screen and (width >= 768px) {
+  .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem {
+    flex-basis: 45.406%;
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+.section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem .innerlist-1 {
+  margin: 0;
+  list-style: none;
+}
+.section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem .innerlist-1 .inneritem-1 {
+  color: var(--blue-1800-primary, #2e2a94);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  /* Mobile/Body/Medium-regular */
+  font-family: var(--Body, Inter);
+  font-size: var(--Body-Medium-regular-Size, 16px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Body-Medium-regular-Line-Height, 20px);
+  /* 125% */
+  margin: 8px 0 0;
+}
+@media screen and (width >= 768px) {
+  .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem .innerlist-1 .inneritem-1 {
+    margin: 14px 0 0;
+  }
+}/*# sourceMappingURL=who-we-are.css.map */

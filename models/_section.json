@@ -66,6 +66,18 @@
             {
               "name": "Young Titans Section",
               "value": "young-titans-forum"
+            },
+            {
+              "name": "Sharper Focus Section",
+              "value": "sharper-focus"
+            },
+            {
+              "name": "Banner Carousel Section",
+              "value": "banner-carousel"
+            },
+            {
+              "name": "PWM Group Section",
+              "value": "pwm-group"
             }
           ]
         }
@@ -87,7 +99,10 @@
         "curated-content",
         "embed",
         "custom-rte",
-        "titans-forum"
+        "titans-forum",
+        "tabs",
+        "banner-carousel",
+        "accordion"
       ]
     }
   ]

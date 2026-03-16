@@ -171,10 +171,81 @@
             "value": "young-titans-forum"
           },
           {
-            "name": "Motilal Oswal Ecosystem",
-            "value": "motilal-oswal-ecosystem"
+            "name": "Sharper Focus Section",
+            "value": "sharper-focus"
+          },
+          {
+            "name": "Banner Carousel Section",
+            "value": "banner-carousel"
+          },
+          {
+            "name": "PWM Group Section",
+            "value": "pwm-group"
           }
         ]
+      }
+    ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "question",
+        "label": "Question"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "answer",
+        "label": "Answer",
+        "raw": true
+      }
+    ]
+  },
+  {
+    "id": "banner-carousel-item",
+    "fields": [
+      {
+        "component": "aem-content",
+        "name": "col1_videourl",
+        "label": "Video URL"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_mobImage",
+        "label": "Mobile Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_mobImageAlt",
+        "label": "Mobile Alt",
+        "value": ""
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col2_deskImage",
+        "label": "Desktop Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "col2_deskImageAlt",
+        "label": "Desktop Alt",
+        "value": ""
+      },
+      {
+        "component": "richtext",
+        "name": "col3_text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
       }
     ]
   },
@@ -311,6 +382,30 @@
     ]
   },
   {
+    "id": "rte-image-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "RTE Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "embed",
     "fields": [
       {
@@ -326,16 +421,6 @@
       {
         "component": "text",
         "name": "video_imageAlt",
-        "label": "Video Image Alt"
-      },
-      {
-        "component": "reference",
-        "name": "video_imageMob",
-        "label": "Video Image Mobile"
-      },
-      {
-        "component": "text",
-        "name": "video_imageMobAlt",
         "label": "Video Image Alt"
       },
       {
@@ -422,6 +507,21 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "tabs-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Tab Content Fragment URL"
       }
     ]
   },

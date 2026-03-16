@@ -44,6 +44,21 @@
                     }
                 }
             }
+        },
+        {
+            "title": "RTE Image Item",
+            "id": "rte-image-item",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "RTE Image Item",
+                            "model": "rte-image-item"
+                        }
+                    }
+                }
+            }
         }
     ],
     "models": [
@@ -75,6 +90,30 @@
                     "label": "Image Alt"
                 }
             ]
+        },
+        {
+            "id": "rte-image-item",
+            "fields": [
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "image",
+                    "label": "Image",
+                    "multi": false
+                },
+                {
+                    "component": "text",
+                    "name": "imageAlt",
+                    "label": "Image Alt"
+                },
+                {
+                    "component": "richtext",
+                    "name": "text",
+                    "value": "",
+                    "label": "RTE Text",
+                    "valueType": "string"
+                }
+            ]
         }
     ],
     "filters": [
@@ -82,7 +121,8 @@
             "id": "custom-rte",
             "components": [
                 "custom-rte-item",
-                "custom-image-item"
+                "custom-image-item",
+                "rte-image-item"
             ]
         }
     ]
