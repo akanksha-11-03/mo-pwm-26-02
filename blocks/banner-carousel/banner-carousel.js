@@ -92,19 +92,28 @@ export default function decorate(block) {
     return false;
   }
   const placeholder = block.querySelector('picture');
+  const placeholderv2 = block.querySelector('picture');
   const link = block.querySelector('a').href;
   // block.textContent = '';
   block.querySelector('div').firstElementChild.textContent = '';
 
-  if (placeholder) {
+  if (placeholder || placeholderv2) {
     const wrapper = document.createElement('div');
+    const wrapperv2 = document.createElement('div');
     wrapper.className = 'embed-placeholder';
+    wrapperv2.className = 'embed-placeholder';
     wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
+    wrapperv2.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';
     wrapper.prepend(placeholder);
+    wrapperv2.prepend(placeholderv2);
     wrapper.addEventListener('click', () => {
       loadEmbed(block, link, true);
     });
+    wrapperv2.addEventListener('click', () => {
+      loadEmbed(block, link, true);
+    });
     block.append(wrapper);
+    block.append(wrapperv2);
   } else {
     const observer = new IntersectionObserver((entries) => {
       if (entries.some((e) => e.isIntersecting)) {
