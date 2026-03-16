@@ -1,0 +1,158 @@
+.section.careers-rte {
+  .custom-rte {
+    &-wrapper {
+      padding: 64px 16px;
+      max-width: 1264px;
+      width: 100%;
+
+      @media screen and (width >= 768px) {
+        padding: 80px 16px;
+        max-width: 1269px;
+      }
+    }
+
+    & {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      @media screen and (width >= 768px) {
+        gap: 48px;
+      }
+
+      /* ===== Intro paragraph (first row) ===== */
+      .careers-intro {
+        .careers-col {
+          .careers-para {
+            color: var(--blue-1800-primary, #2e2a94);
+            font-feature-settings:
+              "ss01" on,
+              "ss04" on,
+              "cv01" on,
+              "cv02" on,
+              "cv03" on,
+              "cv04" on,
+              "cv06" on,
+              "cv09" on,
+              "cv10" on,
+              "cv11" on;
+
+            /* Desktop/Body/Medium-regular */
+            font-family: var(--Body, Inter);
+            font-size: var(--Body-Medium-regular-Size, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: var(--Body-Medium-regular-Line-Height, 20px);
+            /* 125% */
+            margin: 0;
+          }
+        }
+      }
+
+      /* ===== Content blocks (rows 2, 3, 4 …) ===== */
+      .careers-block {
+        .careers-col {
+          display: flex;
+          flex-direction: column;
+          gap: 12px;
+
+          .careers-heading {
+            color: var(--PWM-Gold-700, #866e44);
+            font-feature-settings:
+              "ss01" on,
+              "ss04" on,
+              "cv01" on,
+              "cv02" on,
+              "cv03" on,
+              "cv04" on,
+              "cv06" on,
+              "cv09" on,
+              "cv10" on,
+              "cv11" on,
+              "liga" off;
+
+            /* Desktop/Sub Header/Large */
+            font-family: var(--Body, Inter);
+            font-size: var(--Sub-Header-Large-Size, 24px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: var(--Sub-Header-Large-Line-Height, 32px);
+            /* 133.333% */
+            margin: 0;
+
+            @media screen and (max-width: 767px) {
+              font-size: 20px;
+              line-height: 28px;
+            }
+          }
+
+          .careers-para {
+            color: var(--blue-1800-primary, #2e2a94);
+            font-feature-settings:
+              "ss01" on,
+              "ss04" on,
+              "cv01" on,
+              "cv02" on,
+              "cv03" on,
+              "cv04" on,
+              "cv06" on,
+              "cv09" on,
+              "cv10" on,
+              "cv11" on;
+
+            /* Desktop/Body/Medium-regular */
+            font-family: var(--Body, Inter);
+            font-size: var(--Body-Medium-regular-Size, 16px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: var(--Body-Medium-regular-Line-Height, 20px);
+            /* 125% */
+            margin: 0;
+          }
+
+          .careers-list {
+            margin: 4px 0 0;
+            padding: 0 0 0 8px;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .careers-list-item {
+              color: var(--blue-1800-primary, #2e2a94);
+              font-feature-settings:
+                "ss01" on,
+                "ss04" on,
+                "cv01" on,
+                "cv02" on,
+                "cv03" on,
+                "cv04" on,
+                "cv06" on,
+                "cv09" on,
+                "cv10" on,
+                "cv11" on;
+
+              font-family: var(--Body, Inter);
+              font-size: var(--Body-Medium-regular-Size, 16px);
+              font-style: normal;
+              font-weight: 400;
+              line-height: var(--Body-Medium-regular-Line-Height, 20px);
+              display: flex;
+              align-items: baseline;
+              gap: 10px;
+
+              &::before {
+                content: "";
+                background-color: #2e2a94;
+                min-width: 4px;
+                height: 4px;
+                display: block;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

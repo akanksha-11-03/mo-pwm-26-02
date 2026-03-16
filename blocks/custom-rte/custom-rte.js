@@ -29,4 +29,30 @@ export default function decorate(block) {
       });
     });
   }
+
+  if (block.closest('.careers-rte')) {
+    Array.from(block.children).forEach((row, i) => {
+      row.classList.add(`careers-row-${i + 1}`);
+      if (i === 0) row.classList.add('careers-intro');
+      else row.classList.add('careers-block');
+
+      Array.from(row.children).forEach((col) => {
+        col.classList.add('careers-col');
+
+        // Add class to h2
+        const h2 = col.querySelector('h2');
+        if (h2) h2.classList.add('careers-heading');
+
+        // Add class to paragraphs
+        col.querySelectorAll('p').forEach((p) => p.classList.add('careers-para'));
+
+        // Add class to ul and li
+        const ul = col.querySelector('ul');
+        if (ul) {
+          ul.classList.add('careers-list');
+          ul.querySelectorAll('li').forEach((li) => li.classList.add('careers-list-item'));
+        }
+      });
+    });
+  }
 }
