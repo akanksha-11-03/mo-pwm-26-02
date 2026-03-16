@@ -1,3 +1,4 @@
+@import "../../../styles/common-theme/css/fonts.css";
 :root {
   /* Font weight start */
   --light: 300;
@@ -394,8 +395,9 @@
   --sub-header-pwm-large-line-height: var(--spacing-32);
   /* typescale mobile end */
 }
-@media (width > 768px) {
-  :root :root {
+
+@media (min-width: 768px) {
+  :root {
     /* typescale desktop start */
     --body-xlarge-bold-font: var(--body);
     --body-xlarge-bold-weight: var(--weight-semibold);
