@@ -5,143 +5,134 @@
 /* ===== Say Hello CTA Banner ===== */
 
 .section.say-hello {
-  background: var(--pwm-gold-700);
-
-  > div {
-    padding: 0;
-  }
-
-  .custom-rte-wrapper {
-    max-width: 1264px;
-    width: 100%;
-    padding: 0 var(--spacing-16);
-  }
-
-  .custom-rte {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--spacing-24);
-    padding: var(--spacing-24) 0;
+    background: var(--pwm-gold-700);
+    margin: 0;
+    padding: 40px 0;
     position: relative;
 
-    @include media(mobile) {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: var(--spacing-16);
-      padding: var(--spacing-24) 0;
+    >div {
+        padding: 0;
     }
 
-    // ===== Decorative Image =====
-    .say-hello-image {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      pointer-events: none;
-      line-height: 0;
-
-      .say-hello-image-inner {
-        line-height: 0;
-
-        picture,
-        img {
-          display: block;
-          height: 80px;
-          width: auto;
-          opacity: 0.4;
-        }
-      }
-
-      @include media(mobile) {
-        position: absolute;
-        top: 0;
-        transform: none;
-
-        .say-hello-image-inner {
-          picture,
-          img {
-            height: 60px;
-          }
-        }
-      }
+    .custom-rte-wrapper {
+        max-width: 1264px;
+        width: 100%;
+        padding: 0 var(--spacing-16);
     }
 
-    // ===== Content: Text + Button =====
-    .say-hello-content {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 100%;
-      z-index: 1;
-
-      .say-hello-content-inner {
+    .custom-rte {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
         gap: var(--spacing-24);
+        padding: var(--spacing-24) 0;
 
         @include media(mobile) {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: var(--spacing-16);
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--spacing-16);
+            padding: var(--spacing-24) 0;
         }
-      }
 
-      .say-hello-text {
-        @include font-style(
-          var(--heading-pwm-h6-size),
-          var(--heading-pwm-h6-line-height),
-          var(--pwm-gold-100),
-          var(--regular),
-          var(--title)
-        );
-        margin: 0;
+        // ===== Decorative Image =====
+        .say-hello-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            line-height: 0;
+            opacity: 1;
+            z-index: 99;
 
-        @media (min-width: 769px) {
-          @include font-style(
-            var(--heading-pwm-h5-size),
-            var(--heading-pwm-h5-line-height),
-            var(--pwm-gold-100),
-            var(--regular),
-            var(--title)
-          );
+            .say-hello-image-inner {
+                line-height: 0;
+
+                // picture,
+                // img {
+                //     display: block;
+                //     width: 145.578px;
+                //     height: 198.425px;
+                //     aspect-ratio: 145.58 / 198.42;
+                // }
+            }
+
+            @include media(mobile) {
+                width: 49px;
+                height: 64px;
+                aspect-ratio: 78.83 / 107.44;
+
+                .say-hello-image-inner {
+
+                    picture,
+                    img {
+                        width: 100px;
+                        height: auto;
+                    }
+                }
+            }
         }
-      }
 
-      .say-hello-btn {
-        margin: 0;
-        flex-shrink: 0;
-      }
+        // ===== Content: Text + Button =====
+        .say-hello-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 1;
 
-      .say-hello-link,
-      a.button {
-        all: unset;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: var(--spacing-10) var(--spacing-24);
-        border: var(--border-width-01) solid var(--blue-1-800-primary);
-        border-radius: var(--border-radius-4);
-        background: var(--blue-1-800-primary);
-        cursor: pointer;
+            .say-hello-content-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                gap: var(--spacing-24);
 
-        @include font-style(
-          var(--button-large-size),
-          var(--button-large-line-height),
-          var(--neutrals-white),
-          var(--medium),
-          var(--body)
-        );
-        text-decoration: none;
-        white-space: nowrap;
+                @include media(mobile) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: var(--spacing-16);
+                }
+            }
 
-        &:hover {
-          background: var(--button-primary-hover);
-          border-color: var(--button-primary-hover);
+            .say-hello-text {
+                @include font-style(var(--heading-pwm-h4-size),
+                    var(--heading-pwm-h4-line-height),
+                    var(--neutrals-white),
+                    var(--regular),
+                    var(--title));
+                font-style: normal;
+                margin: 0;
+            }
+
+            .say-hello-btn {
+                margin: 0;
+                flex-shrink: 0;
+            }
+
+            .say-hello-link,
+            a.button {
+                all: unset;
+                display: flex;
+                width: 200px;
+                height: 48px;
+                padding: var(--spacing-20) var(--spacing-12);
+                justify-content: center;
+                align-items: center;
+                gap: var(--spacing-8);
+                border-radius: var(--border-radius-4);
+                background: var(--neutrals-white);
+                cursor: pointer;
+                box-sizing: border-box;
+
+                @include font-style(var(--button-large-size),
+                    var(--button-large-line-height),
+                    var(--blue-1-800-primary),
+                    var(--medium),
+                    var(--body));
+                text-decoration: none;
+                white-space: nowrap;
+
+            }
         }
-      }
     }
-  }
 }

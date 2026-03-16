@@ -2,6 +2,9 @@
 /* ===== Say Hello CTA Banner ===== */
 .section.say-hello {
   background: var(--pwm-gold-700);
+  margin: 0;
+  padding: 40px 0;
+  position: relative;
 }
 .section.say-hello > div {
   padding: 0;
@@ -17,7 +20,6 @@
   justify-content: space-between;
   gap: var(--spacing-24);
   padding: var(--spacing-24) 0;
-  position: relative;
 }
 @media (max-width: 768px) {
   .section.say-hello .custom-rte {
@@ -30,30 +32,25 @@
 .section.say-hello .custom-rte .say-hello-image {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   pointer-events: none;
   line-height: 0;
+  opacity: 1;
+  z-index: 99;
 }
 .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner {
   line-height: 0;
 }
-.section.say-hello .custom-rte .say-hello-image .say-hello-image-inner picture,
-.section.say-hello .custom-rte .say-hello-image .say-hello-image-inner img {
-  display: block;
-  height: 80px;
-  width: auto;
-  opacity: 0.4;
-}
 @media (max-width: 768px) {
   .section.say-hello .custom-rte .say-hello-image {
-    position: absolute;
-    top: 0;
-    transform: none;
+    width: 49px;
+    height: 64px;
+    aspect-ratio: 78.83/107.44;
   }
   .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner picture,
   .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner img {
-    height: 60px;
+    width: 100px;
+    height: auto;
   }
 }
 .section.say-hello .custom-rte .say-hello-content {
@@ -78,23 +75,14 @@
   }
 }
 .section.say-hello .custom-rte .say-hello-content .say-hello-text {
-  font-size: var(--heading-pwm-h6-size);
-  line-height: var(--heading-pwm-h6-line-height);
-  color: var(--pwm-gold-100);
+  font-size: var(--heading-pwm-h4-size);
+  line-height: var(--heading-pwm-h4-line-height);
+  color: var(--neutrals-white);
   font-family: var(--title);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
+  font-style: normal;
   margin: 0;
-}
-@media (min-width: 769px) {
-  .section.say-hello .custom-rte .say-hello-content .say-hello-text {
-    font-size: var(--heading-pwm-h5-size);
-    line-height: var(--heading-pwm-h5-line-height);
-    color: var(--pwm-gold-100);
-    font-family: var(--title);
-    font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-    font-weight: var(--regular);
-  }
 }
 .section.say-hello .custom-rte .say-hello-content .say-hello-btn {
   margin: 0;
@@ -103,27 +91,23 @@
 .section.say-hello .custom-rte .say-hello-content .say-hello-link,
 .section.say-hello .custom-rte .say-hello-content a.button {
   all: unset;
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  width: 200px;
+  height: 48px;
+  padding: var(--spacing-20) var(--spacing-12);
   justify-content: center;
-  padding: var(--spacing-10) var(--spacing-24);
-  border: var(--border-width-01) solid var(--blue-1-800-primary);
+  align-items: center;
+  gap: var(--spacing-8);
   border-radius: var(--border-radius-4);
-  background: var(--blue-1-800-primary);
+  background: var(--neutrals-white);
   cursor: pointer;
+  box-sizing: border-box;
   font-size: var(--button-large-size);
   line-height: var(--button-large-line-height);
-  color: var(--neutrals-white);
+  color: var(--blue-1-800-primary);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--medium);
   text-decoration: none;
   white-space: nowrap;
-}
-.section.say-hello .custom-rte .say-hello-content .say-hello-link:hover,
-.section.say-hello .custom-rte .say-hello-content a.button:hover {
-  background: var(--button-primary-hover);
-  border-color: var(--button-primary-hover);
-}
-
-/*# sourceMappingURL=say-hello.css.map */
+}/*# sourceMappingURL=say-hello.css.map */
