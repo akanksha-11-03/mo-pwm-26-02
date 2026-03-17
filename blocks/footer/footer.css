@@ -262,6 +262,10 @@
   height: 100%;
   display: block;
 }
+.footer-wrapper .footer .section.contact-us-section .default-content-wrapper ul .contact-phone {
+  display: flex;
+  white-space: nowrap;
+}
 .footer-wrapper .footer .section.contact-us-section .default-content-wrapper ul .contact-us-card-body {
   margin-left: 16px;
 }

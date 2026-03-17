@@ -82,6 +82,17 @@ export default async function decorate(block) {
 
   block.append(footer);
 
+  // Add class names to contact-us-section li elements
+  const contactSection = footer.querySelector('.contact-us-section');
+  if (contactSection) {
+    const contactLinks = contactSection.querySelectorAll('ul > li');
+    if (contactLinks.length >= 3) {
+      contactLinks[0].classList.add('contact-email');
+      contactLinks[1].classList.add('contact-phone');
+      contactLinks[2].classList.add('contact-address');
+    }
+  }
+
   // Initialize scroll-to-top button
   initScrollToTop();
 }

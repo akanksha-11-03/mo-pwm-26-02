@@ -312,6 +312,11 @@
             }
           }
 
+          .contact-phone{
+            display: flex;
+            white-space: nowrap;
+          }
+
           .contact-us-card-body {
             margin-left: 16px;
             p {
