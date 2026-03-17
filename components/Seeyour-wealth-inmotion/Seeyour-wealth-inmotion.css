@@ -1,15 +1,16 @@
 @charset "UTF-8";
+@import "../../../styles/common-theme/css/fonts.css";
 /* ===== See Your Wealth In Motion — Component ===== */
 .section.seeyour-wealth-inmotion {
   display: flex;
   justify-content: center;
-  padding: 48px 16px;
+  padding: var(--spacing-48) var(--spacing-16);
 }
 
 .sywim-wrapper {
-  background: #f5f2ed;
-  border-radius: 12px;
-  padding: 48px 40px;
+  background: var(--pwm-gold-100);
+  border-radius: var(--border-radius-12);
+  padding: var(--spacing-48) var(--spacing-40);
   max-width: 720px;
   width: 100%;
   box-sizing: border-box;
@@ -17,22 +18,24 @@
 
 /* ── Static Header ── */
 .sywim-static-header {
-  margin-bottom: 24px;
+  margin-bottom: var(--spacing-24);
 }
 .sywim-static-header h1, .sywim-static-header h2, .sywim-static-header h3, .sywim-static-header h4, .sywim-static-header h5, .sywim-static-header h6 {
-  font-family: "Inter", var(--body-font-family);
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 1.2;
-  color: #866e44;
-  margin: 0 0 12px;
+  font-size: var(--heading-pwm-h4-size);
+  line-height: var(--heading-pwm-h4-line-height);
+  color: var(--pwm-gold-700);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+  margin: 0 0 var(--spacing-12);
 }
 .sywim-static-header p {
-  font-family: "Inter", var(--body-font-family);
-  font-weight: 500;
   font-size: 18px;
   line-height: 1.5;
-  color: #2e2a94;
+  color: var(--blue-1-800-primary);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
   margin: 0;
 }
 
@@ -44,32 +47,31 @@
 .sywim-swiper .swiper-slide {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--spacing-24);
 }
 
 /* Input field */
 .sywim-input {
   width: 100%;
-  padding: 16px;
-  font-family: "Inter", var(--body-font-family);
-  font-size: 16px;
+  padding: var(--spacing-16);
+  font-size: var(--body-medium-regular-size);
   line-height: 1.5;
-  color: #333;
-  background: #fff;
+  color: var(--neutrals-800);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+  background: var(--neutrals-white);
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: var(--border-radius-8);
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
 }
-.sywim-input::-moz-placeholder {
-  color: #999;
-}
 .sywim-input::placeholder {
-  color: #999;
+  color: var(--neutrals-500);
 }
 .sywim-input:focus {
-  border-color: #866e44;
+  border-color: var(--pwm-gold-700);
 }
 
 /* Next button */
@@ -78,20 +80,21 @@
   display: block;
   width: 100%;
   padding: 14px 0;
-  font-family: "Inter", var(--body-font-family);
-  font-weight: 600;
-  font-size: 16px;
+  font-size: var(--body-medium-regular-size);
   line-height: 1.5;
+  color: var(--neutrals-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--semibold);
   text-align: center;
-  color: #fff;
-  background: #2e2a94;
-  border-radius: 8px;
+  background: var(--button-primary-default);
+  border-radius: var(--border-radius-8);
   cursor: pointer;
   box-sizing: border-box;
   transition: background 0.2s;
 }
 .sywim-btn:hover {
-  background: #1f1a6e;
+  background: var(--button-primary-hover);
 }
 
 /* ── Pagination row: dots left, fraction right ── */
@@ -99,17 +102,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: var(--spacing-24);
 }
 
 .sywim-pagination {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-8);
 }
 .sywim-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background: #866e44;
+  width: var(--spacing-12);
+  height: var(--spacing-12);
+  background: var(--pwm-gold-700);
   opacity: 0.4;
   border-radius: 50%;
   transition: opacity 0.3s;
@@ -120,28 +123,30 @@
 }
 
 .sywim-fraction {
-  font-family: "Inter", var(--body-font-family);
-  font-size: 16px;
-  color: #999;
+  font-size: var(--body-medium-regular-size);
+  line-height: 1.5;
+  color: var(--neutrals-500);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }
 .sywim-fraction .sywim-fraction-current {
-  font-weight: 700;
-  color: #2e2a94;
+  font-weight: var(--semibold);
+  color: var(--blue-1-800-primary);
 }
 .sywim-fraction .sywim-fraction-total {
-  font-weight: 700;
-  color: #2e2a94;
+  font-weight: var(--semibold);
+  color: var(--blue-1-800-primary);
 }
 
 /* ── Responsive ── */
-@media (width <= 600px) {
+@media (min-width: ) {
   .sywim-wrapper {
-    padding: 32px 20px;
-  }
-  .sywim-static-header h1, .sywim-static-header h2, .sywim-static-header h3, .sywim-static-header h4, .sywim-static-header h5, .sywim-static-header h6 {
-    font-size: 26px;
+    padding: var(--spacing-32) var(--spacing-20);
   }
   .sywim-static-header p {
     font-size: 15px;
   }
-}/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
+}
+
+/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */

@@ -1,15 +1,19 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
+
 /* ===== See Your Wealth In Motion — Component ===== */
 
 .section.seeyour-wealth-inmotion {
   display: flex;
   justify-content: center;
-  padding: 48px 16px;
+  padding: var(--spacing-48) var(--spacing-16);
 }
 
 .sywim-wrapper {
-  background: #f5f2ed;
-  border-radius: 12px;
-  padding: 48px 40px;
+  background: var(--pwm-gold-100);
+  border-radius: var(--border-radius-12);
+  padding: var(--spacing-48) var(--spacing-40);
   max-width: 720px;
   width: 100%;
   box-sizing: border-box;
@@ -17,23 +21,15 @@
 
 /* ── Static Header ── */
 .sywim-static-header {
-  margin-bottom: 24px;
+  margin-bottom: var(--spacing-24);
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Inter", var(--body-font-family);
-    font-weight: 400;
-    font-size: 36px;
-    line-height: 1.2;
-    color: #866e44;
-    margin: 0 0 12px;
+    @include font-style(var(--heading-pwm-h4-size), var(--heading-pwm-h4-line-height), var(--pwm-gold-700), var(--regular), var(--title));
+    margin: 0 0 var(--spacing-12);
   }
 
   p {
-    font-family: "Inter", var(--body-font-family);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 1.5;
-    color: #2e2a94;
+    @include font-style(18px, 1.5, var(--blue-1-800-primary), var(--medium), var(--body));
     margin: 0;
   }
 }
@@ -46,30 +42,27 @@
 .sywim-swiper .swiper-slide {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: var(--spacing-24);
 }
 
 /* Input field */
 .sywim-input {
   width: 100%;
-  padding: 16px;
-  font-family: "Inter", var(--body-font-family);
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
-  background: #fff;
+  padding: var(--spacing-16);
+  @include font-style(var(--body-medium-regular-size), 1.5, var(--neutrals-800), var(--regular), var(--body));
+  background: var(--neutrals-white);
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: var(--border-radius-8);
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
 
   &::placeholder {
-    color: #999;
+    color: var(--neutrals-500);
   }
 
   &:focus {
-    border-color: #866e44;
+    border-color: var(--pwm-gold-700);
   }
 }
 
@@ -79,20 +72,16 @@
   display: block;
   width: 100%;
   padding: 14px 0;
-  font-family: "Inter", var(--body-font-family);
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 1.5;
+  @include font-style(var(--body-medium-regular-size), 1.5, var(--neutrals-white), var(--semibold), var(--body));
   text-align: center;
-  color: #fff;
-  background: #2e2a94;
-  border-radius: 8px;
+  background: var(--button-primary-default);
+  border-radius: var(--border-radius-8);
   cursor: pointer;
   box-sizing: border-box;
   transition: background 0.2s;
 
   &:hover {
-    background: #1f1a6e;
+    background: var(--button-primary-hover);
   }
 }
 
@@ -101,17 +90,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 24px;
+  margin-top: var(--spacing-24);
 }
 
 .sywim-pagination {
   display: flex;
-  gap: 8px;
+  gap: var(--spacing-8);
 
   .swiper-pagination-bullet {
-    width: 12px;
-    height: 12px;
-    background: #866e44;
+    width: var(--spacing-12);
+    height: var(--spacing-12);
+    background: var(--pwm-gold-700);
     opacity: 0.4;
     border-radius: 50%;
     transition: opacity 0.3s;
@@ -124,32 +113,26 @@
 }
 
 .sywim-fraction {
-  font-family: "Inter", var(--body-font-family);
-  font-size: 16px;
-  color: #999;
+  @include font-style(var(--body-medium-regular-size), 1.5, var(--neutrals-500), var(--regular), var(--body));
 
   .sywim-fraction-current {
-    font-weight: 700;
-    color: #2e2a94;
+    font-weight: var(--semibold);
+    color: var(--blue-1-800-primary);
   }
 
   .sywim-fraction-total {
-    font-weight: 700;
-    color: #2e2a94;
+    font-weight: var(--semibold);
+    color: var(--blue-1-800-primary);
   }
 }
 
 /* ── Responsive ── */
-@media (width <= 600px) {
+@include media(mobile) {
   .sywim-wrapper {
-    padding: 32px 20px;
+    padding: var(--spacing-32) var(--spacing-20);
   }
 
   .sywim-static-header {
-    h1, h2, h3, h4, h5, h6 {
-      font-size: 26px;
-    }
-
     p {
       font-size: 15px;
     }
