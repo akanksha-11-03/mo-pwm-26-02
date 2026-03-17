@@ -334,6 +334,7 @@
   --text-link-medium-line-height: var(--spacing-24);
   --text-link-small-font: var(--body);
   --text-link-small-weight: var(--weight-regular);
+  --text-link-small-size: var(--spacing-14);
   --text-link-small-line-height: var(--spacing-20);
   --text-link-xsmall-font: var(--body);
   --text-link-xsmall-weight: var(--weight-regular);
