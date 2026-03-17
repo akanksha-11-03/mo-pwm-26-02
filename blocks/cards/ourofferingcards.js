@@ -131,7 +131,8 @@ export default function decorateOurOfferingCards(block) {
 
     // Sticky frame only needs to fit heading + one card (the stacked state)
     const frameH = hh + 16 + cardH + 24; // heading + gap + card + bottom padding
-    stickyFrame.style.top = '0px';
+    const headerHeight = document.querySelector('header')?.offsetHeight || 64;
+    stickyFrame.style.top = `${headerHeight}px`;
     stickyFrame.style.height = `${frameH}px`;
 
     // Stack section provides enough scroll for all animation phases

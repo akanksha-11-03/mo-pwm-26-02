@@ -1,3 +1,7 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
+
 /* ===== Motilal Oswal Ecosystem Section ===== */
 
 .motilal-oswal-ecosystem {
@@ -9,27 +13,33 @@
 
     // ===== Section Heading =====
     .default-content-wrapper {
-        margin-bottom: 32px;
+        margin-bottom: var(--spacing-32);
 
         h2 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 1.25em;
-            color: #C3A560;
+            @include font-style(
+                var(--heading-pwm-h5-size),
+                1.25em,
+                #C3A560,
+                var(--regular),
+                var(--title)
+            );
             margin: 0;
         }
-        strong{
-            color: #2E2A94;
-             font-weight: 400;
-            font-size: 24px;
+        strong {
+            color: var(--blue-1-800-primary);
+            font-weight: var(--regular);
+            font-size: var(--heading-pwm-h5-size);
+            font-family: var(--title);
         }
     }
 
     // ===== Block Grid =====
     .custom-rte {
         background: url('../../icons/ecosystem-background-Image.png') lightgray -73.496px -0.092px / 106.945% 100.028% no-repeat;
-        border-radius: 4px;
+        @include media(mobile) {
+        background: url('../../icons/ecosystem-background-Image.png') lightgray -73.496px -0.092px / 119.945% 100.028% no-repeat;
+        }
+        border-radius: var(--border-radius-4);
         display: grid;
         grid-template-columns: 1fr;
         overflow: hidden;
@@ -54,28 +64,32 @@
 
     // ===== First column — Private Wealth (single card, full height) =====
     .custom-rte > div:first-child {
-        border-bottom: 0.5px solid #fff;
+        border-bottom: 0.5px solid var(--neutrals-white);
 
         > div > ul > li {
-            padding: 26px 20px;
+            padding: 26px var(--spacing-20);
 
             // Title
-            font-family: 'Inter', sans-serif;
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 1.25em;
-            color: #F8F3EF;
+            @include font-style(
+                var(--heading-pwm-h5-size),
+                1.25em,
+                var(--pwm-gold-100),
+                var(--regular),
+                var(--title)
+            );
 
             // Description (nested ul > li)
             > ul {
-                margin-top: 18px;
+                margin-top: var(--spacing-18);
 
                 > li {
-                    font-family: 'Inter', sans-serif;
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 1.25em;
-                    color: #F8F3EF;
+                    @include font-style(
+                        var(--body-small-regular-size),
+                        1.25em,
+                        var(--pwm-gold-100),
+                        var(--regular),
+                        var(--body)
+                    );
                 }
             }
         }
@@ -88,26 +102,31 @@
             grid-template-columns: 1fr;
 
             > li {
-                padding: 20px;
-                border-bottom: 0.5px solid #fff;
+                padding: var(--spacing-20);
+                border-bottom: 0.5px solid var(--neutrals-white);
 
                 // Title
-                font-family: 'Inter', sans-serif;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 1.2em;
-                color: #F8F3EF;
+                @include font-style(
+                    var(--body-medium-medium-size),
+                    1.2em,
+                    var(--pwm-gold-100),
+                    var(--medium),
+                    var(--body)
+                );
 
                 // Description (nested ul > li)
                 > ul {
-                    margin-top: 8px;
+                    margin-top: var(--spacing-8);
 
                     > li {
-                        font-family: 'Inter', sans-serif;
-                        font-weight: 400;
-                        font-size: 14px;
-                        line-height: 1.25em;
-                        color: #F8F3EF;
+                        @include font-style(
+                            var(--body-small-regular-size),
+                            1.25em,
+                            var(--pwm-gold-100),
+                            var(--regular),
+                            var(--body),
+                            var(--title)
+                        );
                     }
                 }
             }
@@ -121,13 +140,13 @@
 
     // ===== Desktop =====
     @media (min-width: 900px) {
-        padding: 40px 67px;
+        padding: var(--spacing-40) 67px;
 
         .default-content-wrapper {
-            margin-bottom: 48px;
+            margin-bottom: var(--spacing-48);
 
             h2 {
-                font-size: 32px;
+                font-size: var(--spacing-32);
                 line-height: 1.25em;
             }
         }
@@ -141,7 +160,7 @@
         // Private Wealth — full left column
         .custom-rte > div:first-child {
             border-bottom: none;
-            border-right: 0.5px solid #fff;
+            border-right: 0.5px solid var(--neutrals-white);
 
             > div {
                 display: flex;
@@ -157,17 +176,17 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
-                padding: 26px 40px 26px 52px;
-                font-weight: 400;
-                font-size: 32px;
+                padding: 26px var(--spacing-40) 26px 52px;
+                font-weight: var(--regular);
+                font-size: var(--spacing-32);
                 line-height: 1.25em;
                 width: 100%;
 
                 > ul {
-                    margin-top: 18px;
+                    margin-top: var(--spacing-18);
 
                     > li {
-                        font-size: 16px;
+                        font-size: var(--body-medium-regular-size);
                         line-height: 1.25em;
                     }
                 }
@@ -184,17 +203,17 @@
 
             > div > ul > li {
                 padding: 26px 22px;
-                font-weight: 500;
-                font-size: 20px;
+                font-weight: var(--medium);
+                font-size: var(--body-xlarge-regular-size);
                 line-height: 1.2em;
-                border-bottom: 0.5px solid #fff;
+                border-bottom: 0.5px solid var(--neutrals-white);
                 display: flex;
                 flex-direction: column;
-                gap: 20px;
+                gap: var(--spacing-20);
 
                 // Left column items get right border
                 &:nth-child(odd) {
-                    border-right: 0.5px solid #fff;
+                    border-right: 0.5px solid var(--neutrals-white);
                 }
 
                 // Last row — no bottom border
@@ -206,7 +225,7 @@
                     margin-top: 0; // gap handles spacing
 
                     > li {
-                        font-size: 16px;
+                        font-size: var(--body-medium-regular-size);
                         line-height: 1.25em;
                     }
                 }

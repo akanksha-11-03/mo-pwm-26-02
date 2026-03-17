@@ -1,0 +1,113 @@
+@import "../../../styles/common-theme/css/fonts.css";
+/* ===== Say Hello CTA Banner ===== */
+.section.say-hello {
+  background: var(--pwm-gold-700);
+  padding: 40px 0;
+  position: relative;
+  margin: auto;
+}
+.section.say-hello > div {
+  padding: 0;
+}
+.section.say-hello .custom-rte-wrapper {
+  max-width: 1264px;
+  width: 100%;
+  padding: 0 var(--spacing-16);
+}
+.section.say-hello .custom-rte {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-24);
+  padding: var(--spacing-24) 0;
+}
+@media (max-width: 768px) {
+  .section.say-hello .custom-rte {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-16);
+    padding: var(--spacing-24) 0;
+  }
+}
+.section.say-hello .custom-rte .say-hello-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  line-height: 0;
+  opacity: 1;
+  z-index: 99;
+}
+.section.say-hello .custom-rte .say-hello-image .say-hello-image-inner {
+  line-height: 0;
+}
+@media (max-width: 768px) {
+  .section.say-hello .custom-rte .say-hello-image {
+    width: 49px;
+    height: 64px;
+    aspect-ratio: 78.83/107.44;
+  }
+  .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner picture,
+  .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner img {
+    width: 100px;
+    height: auto;
+  }
+}
+.section.say-hello .custom-rte .say-hello-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 1;
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--spacing-24);
+}
+@media (max-width: 768px) {
+  .section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-16);
+  }
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-text {
+  font-size: var(--heading-pwm-h4-size);
+  line-height: var(--heading-pwm-h4-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+  font-style: normal;
+  margin: 0;
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-btn {
+  margin: 0;
+  flex-shrink: 0;
+}
+.section.say-hello .custom-rte .say-hello-content .say-hello-link,
+.section.say-hello .custom-rte .say-hello-content a.button {
+  all: unset;
+  display: flex;
+  width: 200px;
+  height: 48px;
+  padding: var(--spacing-20) var(--spacing-12);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-8);
+  border-radius: var(--border-radius-4);
+  background: var(--neutrals-white);
+  cursor: pointer;
+  box-sizing: border-box;
+  font-size: var(--button-large-size);
+  line-height: var(--button-large-line-height);
+  color: var(--blue-1-800-primary);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
+  text-decoration: none;
+  white-space: nowrap;
+}/*# sourceMappingURL=say-hello.css.map */

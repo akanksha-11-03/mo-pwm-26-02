@@ -1,0 +1,132 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
+
+/* ===== Say Hello CTA Banner ===== */
+
+.section.say-hello {
+    background: var(--pwm-gold-700);
+    padding: 40px 0;
+     position: relative;
+    // max-width: 1366px;
+    margin: auto;
+
+    >div {
+        padding: 0;
+    }
+
+    .custom-rte-wrapper {
+        max-width: 1264px;
+        width: 100%;
+        padding: 0 var(--spacing-16);
+    }
+
+    .custom-rte {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing-24);
+        padding: var(--spacing-24) 0;
+        
+
+        @include media(mobile) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: var(--spacing-16);
+            padding: var(--spacing-24) 0;
+        }
+
+        // ===== Decorative Image =====
+        .say-hello-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            pointer-events: none;
+            line-height: 0;
+            opacity: 1;
+            z-index: 99;
+
+            .say-hello-image-inner {
+                line-height: 0;
+            }
+
+            @include media(mobile) {
+                width: 49px;
+                height: 64px;
+                aspect-ratio: 78.83 / 107.44;
+
+                .say-hello-image-inner {
+
+                    picture,
+                    img {
+                        width: 100px;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        // ===== Content: Text + Button =====
+        .say-hello-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            z-index: 1;
+
+            .say-hello-content-inner {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                gap: var(--spacing-24);
+
+                @include media(mobile) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: var(--spacing-16);
+                }
+            }
+
+            .say-hello-text {
+                @include font-style(var(--heading-pwm-h4-size),
+                    var(--heading-pwm-h4-line-height),
+                    var(--neutrals-white),
+                    var(--regular),
+                    var(--title));
+                font-style: normal;
+                margin: 0;
+            }
+
+            .say-hello-btn {
+                margin: 0;
+                flex-shrink: 0;
+            }
+
+            .say-hello-link,
+            a.button {
+                all: unset;
+                display: flex;
+                width: 200px;
+                height: 48px;
+                padding: var(--spacing-20) var(--spacing-12);
+                justify-content: center;
+                align-items: center;
+                gap: var(--spacing-8);
+                border-radius: var(--border-radius-4);
+                background: var(--neutrals-white);
+                cursor: pointer;
+                box-sizing: border-box;
+
+                @include font-style(var(--button-large-size),
+                    var(--button-large-line-height),
+                    var(--blue-1-800-primary),
+                    var(--medium),
+                    var(--body));
+                text-decoration: none;
+                white-space: nowrap;
+
+            }
+        }
+    }
+}
