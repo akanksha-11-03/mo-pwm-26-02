@@ -6,9 +6,10 @@
 
 .section.say-hello {
     background: var(--pwm-gold-700);
-    margin: 0;
     padding: 40px 0;
-    position: relative;
+     position: relative;
+    // max-width: 1366px;
+    margin: auto;
 
     >div {
         padding: 0;
@@ -26,6 +27,7 @@
         justify-content: space-between;
         gap: var(--spacing-24);
         padding: var(--spacing-24) 0;
+        
 
         @include media(mobile) {
             flex-direction: column;
@@ -46,14 +48,6 @@
 
             .say-hello-image-inner {
                 line-height: 0;
-
-                // picture,
-                // img {
-                //     display: block;
-                //     width: 145.578px;
-                //     height: 198.425px;
-                //     aspect-ratio: 145.58 / 198.42;
-                // }
             }
 
             @include media(mobile) {
