@@ -7,9 +7,13 @@
   padding: 43px 16px;
 
   @include media(tablet-up) {
-    padding: 53px 70px 53px 64px;
     /* min-height: 600px; */
     min-height: 494px;
+    padding: 53px 16px;
+  }
+  
+  @include media(desktop-up){
+    padding: 53px 70px 53px 64px;
   }
 
   .custom-rte {

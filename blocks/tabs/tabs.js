@@ -44,4 +44,28 @@ export default async function decorate(block) {
   });
 
   block.prepend(tablist);
+
+  if (block.closest('.sharper-focus')) {
+    const customBlock = block.querySelector('.custom-rte');
+    const animeItem = Array.from(customBlock.children).slice(0, 4);
+    const centerText = Array.from(customBlock.children).slice(-1)[0];
+    animeItem.forEach((el) => {
+      el.classList.add('circle-item');
+      Array.from(el.children).forEach((ele, i) => {
+        ele.classList.add(`inner-content-${i + 1}`);
+        Array.from(ele.children).forEach((item) => {
+          item.classList.add('child-item');
+        });
+      });
+    });
+
+    centerText.classList.add('circle-text');
+    centerText.querySelector('div').classList.add('text-main');
+    centerText.querySelector('p').classList.add('center-text');
+
+    // Array.from(customBlock.children).forEach((el) => {
+    //   el.classList.add('item')
+    // })
+    
+  }
 }

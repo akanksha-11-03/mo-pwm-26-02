@@ -1,312 +1,283 @@
+@import "../../../styles/common-theme/css/fonts.css";
 .section.young-titans-forum .titans-forum-wrapper {
-    max-width: 100%;
-    padding: 0;
-    position: relative;
+  max-width: 100%;
+  padding: 0;
+  position: relative;
 }
-
 .section.young-titans-forum .titans-forum-wrapper .swiper-wrapper {
-    min-height: inherit;
+  min-height: inherit;
 }
-
-.section.young-titans-forum .titans-forum-wrapper .titans-forum {
-    min-height: 600px;
-    height: auto;
-}
-
 .section.young-titans-forum .titans-forum-wrapper * {
-    margin: 0;
+  margin: 0;
 }
-
-.section.young-titans-forum .titans-forum-wrapper .block-item {
-    position: relative;
-    min-height: inherit;
+.section.young-titans-forum .titans-forum-wrapper .swiper-pagination {
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
+  /* max-width: max-content; */
 }
-
-.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 {
-    min-height: inherit;
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum-wrapper .swiper-pagination {
+    bottom: 14px;
+  }
 }
-
-.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 .grand-child-1 {
-    min-height: inherit;
-    position: relative;
+.section.young-titans-forum .titans-forum-wrapper .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+  outline: 1px solid var(--neutrals-600);
+  border-radius: 50%;
+  opacity: 1;
+  background: unset;
 }
-
-.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 .grand-child-1::before {
-    content: '';
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum-wrapper .swiper-pagination-bullet {
+    outline: 1px solid var(--surface-background);
+  }
+}
+.section.young-titans-forum .titans-forum-wrapper .swiper-pagination-bullet-active {
+  border: none;
+  background-color: var(--neutrals-600);
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum-wrapper .swiper-pagination-bullet-active {
+    background-color: var(--surface-background);
+  }
+}
+.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 322px;
+  padding: 0 16px;
+  z-index: 1;
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap {
+    max-width: 1268px;
     width: 100%;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-prev, .section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  border-radius: 30px;
+  background: var(--neutrals-white);
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: unset;
+  position: unset;
+}
+.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-prev::after, .section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-next::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url("../../icons/right-arrow.svg");
+}
+.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-prev {
+  transform: rotate(180deg);
+}
+.section.young-titans-forum .titans-forum {
+  min-height: 600px;
+  height: auto;
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum {
+    min-height: 320px;
+  }
+}
+.section.young-titans-forum .titans-forum .block-item {
+  position: relative;
+  min-height: inherit;
+}
+.section.young-titans-forum .titans-forum .block-item .block-child-1 {
+  min-height: inherit;
+}
+.section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-1 {
+  min-height: inherit;
+  position: relative;
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-1 {
+    display: none;
+  }
+}
+.section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-1::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: linear-gradient(180deg, #8d5d33 12.14%, rgba(0, 0, 0, 0) 58.8%);
+  pointer-events: none;
+}
+.section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-1 picture {
+  -o-object-position: bottom;
+     object-position: bottom;
+  min-height: inherit;
+}
+.section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-1 picture img {
+  -o-object-position: bottom;
+     object-position: bottom;
+  min-height: inherit;
+  -o-object-fit: fill;
+     object-fit: fill;
+  padding-top: 64px;
+  width: 100%;
+  aspect-ratio: 4/3;
+}
+.section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-2 {
+  display: none;
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-2 {
+    display: block;
+    min-height: inherit;
+  }
+  .section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-2::before {
+    content: "";
+    max-width: 82.334%;
+    width: 100%;
+    min-height: 320px;
     height: 100%;
     display: block;
     position: absolute;
-    background: linear-gradient(180deg, #8D5D33 12.14%, rgba(0, 0, 0, 0.00) 58.8%);
+    right: 0;
+    background: linear-gradient(96deg, rgba(134, 110, 68, 0) 32.78%, #8d5d33 61.63%);
     pointer-events: none;
-}
-
-.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 .grand-child-1 picture {
-    object-position: bottom;
-    min-height: inherit;
-}
-
-.section.young-titans-forum .titans-forum-wrapper .block-item .block-child-1 .grand-child-1 picture img {
-    object-position: bottom;
-    min-height: inherit;
-    object-fit: fill;
-    padding-top: 64px;
-    width: 100%;
-    aspect-ratio: 4/3;
-}
-
-.section.young-titans-forum .titans-forum>div div picture {
+  }
+  .section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-2 picture {
     line-height: 0;
     height: 100%;
+    min-height: inherit;
     display: block;
+  }
+  .section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-2 picture img {
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+  }
 }
-
-.section.young-titans-forum .titans-forum .block-child-1 .grand-child-2 {
-    display: none;
-}
-
 .section.young-titans-forum .titans-forum .block-item .content-wrap {
-    position: absolute;
-    top: 0;
-    padding: 34px 17px 0;
+  position: absolute;
+  top: 0;
+  padding: 34px 17px 0;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .content-wrap {
+    top: 50%;
+    transform: translateY(-50%);
+    left: 95px;
+    right: 141px;
+    /* max-width: 1131px; */
+    max-width: 82.797%;
+    width: 100%;
+    min-height: 320px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+}
+@media (min-width: 1367px) {
+  .section.young-titans-forum .titans-forum .block-item .content-wrap {
+    max-width: 1131px;
+  }
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 {
+    align-self: flex-end;
+  }
+  .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 picture {
+    line-height: 100%;
+    height: 100%;
+    display: block;
+  }
+  .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 picture img {
+    width: 100%;
+    height: 100%;
+  }
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 {
+    max-width: 35.368%;
+    width: 100%;
+  }
+}
+.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .grand-child-1 {
+  font-size: 28px;
+  line-height: var(--sub-header-large-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .grand-child-1 {
+    font-size: var(--heading-pwm-h4-size);
+    line-height: var(--heading-pwm-h4-line-height);
+  }
+}
+.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .grand-child-2 {
+  margin: 12px 0 44px;
+  font-size: var(--paragraph-large-regular-size);
+  line-height: var(--paragraph-large-regular-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .grand-child-2 {
+    margin: 4px 0 40px;
+    font-size: var(--body-large-regular-size);
+    line-height: var(--body-large-regular-line-height);
+  }
+}
+.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .button-container {
+  margin: 0;
+  line-height: 0;
+}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .button-container {
     max-width: 100%;
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    pointer-events: none;
+  }
 }
-
-.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 h2 {
-    color: var(--Neutrals-White, #FFF);
-    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
-
-    /* Mobile/Header/PWM H4 */
-    font-family: var(--TItle, Inter);
-    font-size: var(--Heading-PWM-H5-Size, 28px);
-    font-style: normal;
-    font-weight: 400;
-    line-height: var(--Sub-Header-Large-Line-Height, 32px);
-    /* 114.286% */
+.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .button-container .button {
+  border: none;
+  border-radius: var(--border-radius-4);
+  background: var(--neutrals-white);
+  padding: 10px var(--spacing-12);
+  width: 100%;
+  font-size: var(--button-medium-size);
+  line-height: var(--button-medium-line-height);
+  color: var(--text-button-default);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
 }
-
-.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 p {
-    color: var(--Neutrals-White, #FFF);
-    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
-
-    /* Mobile/Paragraph/Large-regular */
-    font-family: var(--Body, Inter);
-    font-size: var(--Paragraph-Large-regular-Size, 18px);
-    font-style: normal;
-    font-weight: 400;
-    line-height: var(--Paragraph-Large-regular-Line-Height, 28px);
-    /* 155.556% */
-    margin: 12px 0 44px;
-}
-
-.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 p.button-container {
-    margin: 0;
-    line-height: 0;
-}
-
-.section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 p.button-container .button {
-    border: none;
-    border-radius: var(--Border-Radius-4, 4px);
-    background: var(--Neutrals-White, #FFF);
-    padding: 10px 12px;
-    width: 100%;
-    color: var(--Text-Button-Default, #2E2A94);
-    text-align: center;
-    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
-
-    /* Mobile/Button/Medium */
-    font-family: var(--Body, Inter);
-    font-size: var(--Button-Medium-Size, 16px);
-    font-style: normal;
-    font-weight: 500;
-    line-height: var(--Button-Medium-Line-Height, 20px);
-    /* 125% */
-}
-
-/* pagination and buttons */
-.section.young-titans-forum .titans-forum-wrapper .swiper-pagination {
-    bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    justify-content: center;
-    /* max-width: max-content; */
-}
-
-.section.young-titans-forum .titans-forum-wrapper .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-    outline: 1px solid var(--Neutrals-600, #757575);
-    border-radius: 50%;
-    opacity: 1;
-    background: unset;
-}
-
-.section.young-titans-forum .titans-forum-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
-    border: none;
-    background-color: var(--Neutrals-600, #757575);
-}
-
-.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap {
-    position: absolute;
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    top: 322px;
-    padding: 0 16px;
-    z-index: 1;
-}
-
-.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-prev,
-.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-next {
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-    background: var(--Neutrals-White, #FFF);
-    top: unset;
-    bottom: unset;
-    left: unset;
-    right: unset;
-    position: unset;
-}
-
-.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-prev::after,
-.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-next::after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    display: block;
-    background-image: url('../../icons/right-arrow.svg');
-}
-
-.section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap .swiper-button-prev {
-    transform: rotate(180deg);
-}
-
-@media screen and (width>768px) {
-    .section.young-titans-forum .titans-forum-wrapper .titans-forum {
-        min-height: 320px;
-    }
-
-    .section.young-titans-forum .titans-forum .block-child-1 .grand-child-1 {
-        display: none;
-    }
-
-    .section.young-titans-forum .titans-forum .block-child-1 .grand-child-2 {
-        display: block;
-    }
-
-    .section.young-titans-forum .titans-forum .block-child-1 .grand-child-2::before {
-        content: '';
-        max-width: 82.334%;
-        width: 100%;
-        min-height: 320px;
-        height: auto;
-        display: block;
-        position: absolute;
-        right: 0;
-        background: linear-gradient(96deg, rgba(134, 110, 68, 0.00) 32.78%, #8D5D33 61.63%);
-        pointer-events: none;
-    }
-
-    .section.young-titans-forum .titans-forum .block-item .content-wrap {
-        top: 50%;
-        transform: translateY(-50%);
-        left: 95px;
-        right: 141px;
-        /* max-width: 1131px; */
-        max-width: 82.7%;
-        width: 100%;
-        min-height: 320px;
-        margin: 0 auto;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        padding: 0;
-    }
-
-    .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 {
-        align-self: flex-end;
-    }
-
-    .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 {
-        max-width: 35.368%;
-        width: 100%;
-    }
-
-    .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 h2 {
-        color: var(--Neutrals-White, #FFF);
-        font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
-
-        /* Desktop/Header/PWM H4 */
-        font-family: var(--TItle, Inter);
-        font-size: var(--Heading-PWM-H4-Size, 32px);
-        font-style: normal;
-        font-weight: 400;
-        line-height: var(--Heading-PWM-H4-Line-Height, 40px);
-        /* 125% */
-    }
-
-    .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 p {
-        margin: 4px 0 40px;
-        color: var(--Neutrals-White, #FFF);
-        font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
-
-        /* Desktop/Paragraph/Large-regular */
-        font-family: var(--Body, Inter);
-        font-size: var(--Body-Large-regular-Size, 18px);
-        font-style: normal;
-        font-weight: 400;
-        line-height: var(--Body-Large-regular-Line-Height, 28px);
-        /* 155.556% */
-    }
-
-    .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 p.button-container {
-        max-width: 308px;
-        width: 100%;
-    }
-
-    .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 p.button-container .button {
-        color: var(--Text-Button-Default, #2E2A94);
-        text-align: center;
-        font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
-
-        /* Desktop/Button/Large */
-        font-family: var(--Body, Inter);
-        font-size: var(--Button-Large-Size, 18px);
-        font-style: normal;
-        font-weight: 500;
-        line-height: var(--Button-Large-Line-Height, 20px);
-        /* 111.111% */
-    }
-
-    /* pagination and buttons */
-    .section.young-titans-forum .titans-forum-wrapper .swiper-pagination {
-        bottom: 14px;
-    }
-
-    .section.young-titans-forum .titans-forum-wrapper .swiper-pagination-bullet {
-        outline: 1px solid var(--Surface-Background, #FFF);
-    }
-
-    .section.young-titans-forum .titans-forum-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
-        background-color: var(--Surface-Background, #FFF);
-    }
-
-    .section.young-titans-forum .titans-forum-wrapper .swiper-button-wrap{
-        max-width: 1268px;
-        width: 100%;
-        top: 140px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-}
+@media (min-width: 899px) {
+  .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .button-container .button {
+    font-size: var(--button-large-size);
+    line-height: var(--button-large-line-height);
+  }
+}/*# sourceMappingURL=titans-forum.css.map */

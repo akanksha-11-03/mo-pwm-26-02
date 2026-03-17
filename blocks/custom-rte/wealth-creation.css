@@ -5,9 +5,14 @@
 }
 @media (min-width: 768px) {
   .section.wealth-creation {
-    padding: 53px 70px 53px 64px;
     /* min-height: 600px; */
     min-height: 494px;
+    padding: 53px 16px;
+  }
+}
+@media (min-width: 1025px) {
+  .section.wealth-creation {
+    padding: 53px 70px 53px 64px;
   }
 }
 .section.wealth-creation .custom-rte-wrapper {
