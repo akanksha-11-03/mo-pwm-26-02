@@ -15,17 +15,41 @@
           }
         }
       }
+    },
+    {
+      "title": "Tab Item",
+      "id": "customtab-item",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block/item",
+            "template": {
+              "name": "Tab Item",
+              "model": "customtab-item"
+            }
+          }
+        }
+      }
     }
   ],
   "models": [
     {
       "id": "customtab",
+      "fields": []
+    },
+    {
+      "id": "customtab-item",
       "fields": [
         {
           "component": "text",
-          "name": "tabGroup",
-          "label": "Tab Group ID",
-          "description": "Unique identifier that links tab sections. Sections with matching `tab-group` metadata will be pulled into this tab container.",
+          "name": "tabTitle",
+          "label": "Tab Title",
+          "valueType": "string"
+        },
+        {
+          "component": "richtext",
+          "name": "tabContent",
+          "label": "Tab Content",
           "valueType": "string"
         }
       ]
@@ -34,7 +58,9 @@
   "filters": [
     {
       "id": "customtab",
-      "components": ["customtab"]
+      "components": [
+        "customtab-item"
+      ]
     }
   ]
 }
