@@ -181,6 +181,18 @@
           {
             "name": "PWM Group Section",
             "value": "pwm-group"
+          },
+          {
+            "name": "Common Explore Button",
+            "value": "cmmn-explr-btn"
+          },
+          {
+            "name": "Blog Detail",
+            "value": "blog-detail"
+          },
+          {
+            "name": "Video Detail",
+            "value": "video-detail"
           }
         ]
       }
