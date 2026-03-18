@@ -410,9 +410,9 @@ header {
                     }
                   }
 
-                  & {
-                    line-height: 0;
-                  }
+                  // & {
+                  //   line-height: 0;
+                  // }
                 }
 
                 &.nav-drop {
@@ -468,6 +468,10 @@ header {
                       padding: 24px;
                       flex-direction: row;
                       gap: 0;
+                    }
+
+                    @media screen and (width <= 950px) {
+                      width: 880px;
                     }
 
                     .item-li {
@@ -535,6 +539,11 @@ header {
                             padding: 0;
                           }
 
+                          .icon {
+                            min-width: 24px;
+                            height: 24px;
+                          }
+
                           a {
                             padding: 8px 0;
                             width: 100%;
@@ -596,6 +605,31 @@ header {
                       display: flex;
                     }
 
+                    @media screen and (width <= 900px) {
+                      &:nth-of-type(4) {
+                        .menulist-item-2 {
+                          .item-li {
+                            &:first-of-type {
+                              .subitem-2 {
+                                gap: 16px;
+
+                                .sub-list {
+                                  padding: 0 26px;
+
+                                  a {
+                                    padding: 0;
+                                    line-height: var(
+                                      --paragraph-medium-regular-line-height
+                                    );
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+
                     @include media(tablet-lg-up) {
                       &:nth-of-type(2) {
                         .menulist-item-2 {
@@ -608,7 +642,7 @@ header {
                           }
                         }
                       }
-                      
+
                       &:nth-of-type(3) {
                         .menulist-item-2 {
                           gap: 50px;
@@ -629,20 +663,20 @@ header {
                             max-width: 289px;
                             width: 100%;
 
-                            .subitem-2{
-                              .sub-list{
-                                .icon{
+                            .subitem-2 {
+                              .sub-list {
+                                .icon {
                                   min-width: 24px;
                                 }
 
-                                a{
+                                a {
                                   white-space: normal;
                                 }
                               }
                             }
 
-                            &.itemli-1{
-                              .subitem-2{
+                            &.itemli-1 {
+                              .subitem-2 {
                                 display: flex;
                                 flex-direction: column;
                                 gap: 10px;
@@ -652,17 +686,22 @@ header {
                         }
                       }
 
-                      &:nth-of-type(5){
-                        .menulist-item-2{
+                      &:nth-of-type(5) {
+                        .menulist-item-2 {
                           width: 115px;
                           padding: 0;
                           display: flex;
                           flex-direction: column;
-                          margin: 42px 0 0;
+                          left: unset;
+                          transform: unset;
+                          right: 24.957%;
 
-                          .item-li{
-                            .subitem-1{
+                          .item-li {
+                            .subitem-1 {
                               padding: 12px;
+                              font-weight: var(--regular);
+                              font-size: var(--body-small-regular-size);
+                              line-height: var(--label-large-line-height);
                             }
                           }
                         }

@@ -145,6 +145,7 @@ export default async function decorate(block) {
 
   const navSections = nav.querySelector('.nav-sections');
   const closeTimeouts = new Map();
+  const clickPinned = new Set();
   if (navSections) {
     // Prevent clicks inside nav-sections from closing hamburger menu on mobile
     navSections.addEventListener('click', (e) => {
@@ -172,6 +173,8 @@ export default async function decorate(block) {
       // Collapse nav-drop on mouse leave with a small delay to allow moving to dropdown
       navSection.addEventListener('mouseleave', () => {
         if (isDesktop.matches && navSection.classList.contains('nav-drop')) {
+          // Don't auto-close if pinned open by click
+          if (clickPinned.has(navSection)) return;
           const timeout = setTimeout(() => {
             navSection.setAttribute('aria-expanded', 'false');
             // Also reset active states on sub-items
@@ -197,11 +200,19 @@ export default async function decorate(block) {
             clearTimeout(closeTimeouts.get(navSection));
             closeTimeouts.delete(navSection);
           }
-          // Always open on click (close others, expand this one)
-          // Avoids double-click issue caused by mouseenter already setting aria-expanded
+          const wasPinned = clickPinned.has(navSection);
+          // Clear all pinned states
+          clickPinned.clear();
           toggleAllNavSections(navSections);
-          navSection.setAttribute('aria-expanded', 'true');
-          nav.classList.add('menu-open');
+          if (!wasPinned) {
+            // Pin open (even if already expanded by hover)
+            navSection.setAttribute('aria-expanded', 'true');
+            nav.classList.add('menu-open');
+            clickPinned.add(navSection);
+          } else {
+            // Was pinned by a previous click — close it
+            nav.classList.remove('menu-open');
+          }
           // Remove active state from header-tool
           const activeTool = nav.querySelector('.header-toollist-2.active');
           if (activeTool) activeTool.classList.remove('active');
@@ -319,6 +330,8 @@ export default async function decorate(block) {
       // Cancel any pending mouseleave close timeouts from nav-drops
       closeTimeouts.forEach((timeout) => clearTimeout(timeout));
       closeTimeouts.clear();
+      // Clear pinned state so nav-drops can reopen on next click
+      clickPinned.clear();
       // Collapse all nav-drop sections
       if (navSections) {
         toggleAllNavSections(navSections, false);
