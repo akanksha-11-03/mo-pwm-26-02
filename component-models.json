@@ -181,14 +181,6 @@
           {
             "name": "PWM Group Section",
             "value": "pwm-group"
-          },
-          {
-            "name":"careers-rte",
-            "value":"careers-rte"
-          },
-          {
-            "name":"say-hello",
-            "value":"say-hello"
           }
         ]
       }
@@ -409,6 +401,18 @@
         "name": "text",
         "value": "",
         "label": "RTE Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "customtab",
+    "fields": [
+      {
+        "component": "text",
+        "name": "tabGroup",
+        "label": "Tab Group ID",
+        "description": "Unique identifier that links tab sections. Sections with matching `tab-group` metadata will be pulled into this tab container.",
         "valueType": "string"
       }
     ]

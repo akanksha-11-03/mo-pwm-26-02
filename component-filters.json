@@ -85,6 +85,12 @@
     ]
   },
   {
+    "id": "customtab",
+    "components": [
+      "customtab"
+    ]
+  },
+  {
     "id": "feature-card",
     "components": [
       "feature-card-item"

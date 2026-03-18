@@ -1,0 +1,39 @@
+{
+  "definitions": [
+    {
+      "title": "Custom Tab",
+      "id": "customtab",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Custom Tab",
+              "filter": "customtab"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "customtab",
+      "fields": [
+        {
+          "component": "text",
+          "name": "tabGroup",
+          "label": "Tab Group ID",
+          "description": "Unique identifier that links tab sections. Sections with matching `tab-group` metadata will be pulled into this tab container.",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "customtab",
+      "components": ["customtab"]
+    }
+  ]
+}
