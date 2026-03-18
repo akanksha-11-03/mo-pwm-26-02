@@ -1,0 +1,73 @@
+{
+    "definitions": [
+        {
+            "title": "Detail Card",
+            "id": "detail-card",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block",
+                        "template": {
+                            "name": "Detail Card",
+                            "filter": "detail-card"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "title": "Detail Card Item",
+            "id": "detail-card-item",
+            "plugins": {
+                "xwalk": {
+                    "page": {
+                        "resourceType": "core/franklin/components/block/v1/block/item",
+                        "template": {
+                            "name": "Detail Card Item",
+                            "model": "detail-card-item"
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "models": [
+        {
+            "id": "detail-card-item",
+            "fields": [
+                {
+                    "component": "reference",
+                    "valueType": "string",
+                    "name": "col1_image",
+                    "label": "Image",
+                    "multi": false
+                },
+                {
+                    "component": "text",
+                    "name": "col1_imageAlt",
+                    "label": "Image Alt"
+                },
+                {
+                    "component": "aem-content",
+                    "name": "col1_url",
+                    "label": "Redirected Page URL"
+                },
+                {
+                    "component": "richtext",
+                    "name": "col2_text",
+                    "value": "",
+                    "label": "Detail Content",
+                    "valueType": "string"
+                }
+            ]
+        }
+    ],
+    "filters": [
+        {
+            "id": "detail-card",
+            "components": [
+                "detail-card-item"
+            ]
+        }
+    ]
+}

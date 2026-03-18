@@ -181,14 +181,6 @@
           {
             "name": "PWM Group Section",
             "value": "pwm-group"
-          },
-          {
-            "name":"careers-rte",
-            "value":"careers-rte"
-          },
-          {
-            "name":"say-hello",
-            "value":"say-hello"
           }
         ]
       }
@@ -409,6 +401,35 @@
         "name": "text",
         "value": "",
         "label": "RTE Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "detail-card-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "aem-content",
+        "name": "col1_url",
+        "label": "Redirected Page URL"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Detail Content",
         "valueType": "string"
       }
     ]
