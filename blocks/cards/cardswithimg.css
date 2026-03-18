@@ -1,36 +1,37 @@
+@import "../../../styles/common-theme/css/fonts.css";
 .cardswithimg-section .cardswithimg-heading {
-  margin-bottom: 40px;
+  margin-bottom: var(--spacing-40);
 }
 .cardswithimg-section .cardswithimg-heading .cardswithimg-label {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
+  font-size: var(--body-medium-regular-size);
   line-height: 1.5;
-  color: #866e44;
-  margin: 0 0 8px 0;
+  color: var(--pwm-gold-700);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
+  margin: 0 0 var(--spacing-8) 0;
 }
 .cardswithimg-section .cardswithimg-heading > h1, .cardswithimg-section .cardswithimg-heading > h2, .cardswithimg-section .cardswithimg-heading > h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.2;
-  color: #2e2a94;
+  font-size: var(--heading-pwm-h4-size);
+  line-height: var(--heading-pwm-h4-line-height);
+  color: var(--blue-1-800-primary);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
   margin: 0;
 }
 .cardswithimg-section .cardswithimg-heading .cardswithimg-main-heading {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.2;
-  color: #2e2a94;
+  font-size: var(--heading-pwm-h4-size);
+  line-height: var(--heading-pwm-h4-line-height);
+  color: var(--blue-1-800-primary);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
   margin: 0;
 }
-@media (max-width: 900px) {
+@media (min-width: ) {
   .cardswithimg-section .cardswithimg-heading {
-    margin-bottom: 24px;
-  }
-  .cardswithimg-section .cardswithimg-heading > h1, .cardswithimg-section .cardswithimg-heading > h2, .cardswithimg-section .cardswithimg-heading > h3, .cardswithimg-section .cardswithimg-heading .cardswithimg-main-heading {
-    font-size: 28px;
+    margin-bottom: var(--spacing-24);
   }
 }
 
@@ -45,21 +46,21 @@
 }
 .cards.cardswithimg .swiper-slide {
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: var(--border-radius-8);
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
   height: 480px;
-  background: #F0E6DC;
+  background: var(--pwm-gold-200);
 }
 .cards.cardswithimg .cardswithimg-card-body {
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: 20px 20px 16px;
-  background: #F0E6DC;
+  padding: var(--spacing-20) var(--spacing-20) var(--spacing-16);
+  background: var(--pwm-gold-200);
   flex-shrink: 0;
   transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -97,7 +98,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  gap: 16px;
+  gap: var(--spacing-16);
   flex-shrink: 0;
 }
 .cards.cardswithimg .accordion-title {
@@ -105,27 +106,29 @@
 }
 .cards.cardswithimg .accordion-title h1, .cards.cardswithimg .accordion-title h2, .cards.cardswithimg .accordion-title h3, .cards.cardswithimg .accordion-title h4, .cards.cardswithimg .accordion-title h5, .cards.cardswithimg .accordion-title h6 {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
   font-size: 22px;
   line-height: 1.3;
-  color: #725E38;
+  color: var(--pwm-gold-800);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--semibold);
 }
 .cards.cardswithimg .accordion-title p {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  font-weight: 600;
   font-size: 22px;
   line-height: 1.3;
-  color: #2e2a94;
+  color: var(--blue-1-800-primary);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--semibold);
 }
 .cards.cardswithimg .accordion-toggle {
   all: unset;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: var(--spacing-24);
+  height: var(--spacing-24);
   cursor: pointer;
   flex-shrink: 0;
   transition: opacity 0.3s ease;
@@ -134,23 +137,24 @@
   opacity: 0.7;
 }
 .cards.cardswithimg .accordion-toggle-icon {
-  width: 20px;
-  height: 20px;
+  width: var(--spacing-20);
+  height: var(--spacing-20);
   transition: transform 0.3s ease;
 }
 .cards.cardswithimg .accordion-desc {
-  margin-top: 8px;
+  margin-top: var(--spacing-8);
 }
 .cards.cardswithimg .accordion-desc p {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: var(--body-small-regular-size);
   line-height: 1.5;
-  color: #2e2a94;
+  color: var(--blue-1-800-primary);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }
 .cards.cardswithimg .accordion-detail {
-  margin-top: 12px;
+  margin-top: var(--spacing-12);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -161,14 +165,15 @@
 }
 .cards.cardswithimg .accordion-detail p {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
+  font-size: var(--body-small-regular-size);
   line-height: 1.6;
-  color: #2e2a94;
+  color: var(--blue-1-800-primary);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }
 .cards.cardswithimg .accordion-detail a {
-  color: #2e2a94;
+  color: var(--blue-1-800-primary);
   text-decoration: underline;
 }
 .cards.cardswithimg .swiper-slide.accordion-open .accordion-detail {
@@ -176,38 +181,38 @@
   opacity: 1;
 }
 .cards.cardswithimg .swiper-pagination {
-  bottom: 8px !important;
+  bottom: var(--spacing-8) !important;
 }
 .cards.cardswithimg .swiper-pagination-bullet {
-  width: 40px;
+  width: var(--spacing-40);
   height: 4px;
   border-radius: 2px;
-  background: #c4c4c4;
+  background: var(--neutrals-400);
   opacity: 1;
 }
 .cards.cardswithimg .swiper-pagination-bullet-active {
-  background: #2e2a94;
+  background: var(--blue-1-800-primary);
 }
-@media (max-width: 900px) {
+@media (min-width: ) {
   .cards.cardswithimg .swiper-slide {
     height: 400px;
   }
   .cards.cardswithimg .cardswithimg-card-body {
-    padding: 16px 16px 12px;
+    padding: var(--spacing-16) var(--spacing-16) var(--spacing-12);
   }
   .cards.cardswithimg .accordion-title h1, .cards.cardswithimg .accordion-title h2, .cards.cardswithimg .accordion-title h3, .cards.cardswithimg .accordion-title h4, .cards.cardswithimg .accordion-title h5, .cards.cardswithimg .accordion-title h6, .cards.cardswithimg .accordion-title p {
     font-size: 18px;
   }
   .cards.cardswithimg .accordion-toggle {
-    width: 28px;
-    height: 28px;
+    width: var(--spacing-28);
+    height: var(--spacing-28);
   }
   .cards.cardswithimg .accordion-toggle-icon {
     width: 18px;
     height: 18px;
   }
 }
-@media (max-width: 480px) {
+@media (min-width: ) {
   .cards.cardswithimg .swiper-slide {
     height: 360px;
   }
@@ -215,7 +220,7 @@
     padding: 14px 14px 10px;
   }
   .cards.cardswithimg .accordion-title h1, .cards.cardswithimg .accordion-title h2, .cards.cardswithimg .accordion-title h3, .cards.cardswithimg .accordion-title h4, .cards.cardswithimg .accordion-title h5, .cards.cardswithimg .accordion-title h6, .cards.cardswithimg .accordion-title p {
-    font-size: 16px;
+    font-size: var(--body-medium-regular-size);
   }
   .cards.cardswithimg .accordion-desc p {
     font-size: 13px;

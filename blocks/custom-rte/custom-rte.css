@@ -1,3 +1,217 @@
 @import url('motilal-oswal-ecosystem.css');
 @import url('who-we-are.css');
 @import url('wealth-creation.css');
+@import url('careers-rte.css');
+@import url('say-hello.css');
+
+/* Wealth Creation Section Start */
+
+.section.wealth-creation {
+    background: var(--PWM-Gold-200, #F0E6DC);
+    padding: 43px 16px;
+}
+
+.section.wealth-creation>div {
+    padding: 0;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(1) h3 {
+    color: var(--PWM-Gold-700, #866E44);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Header/PWM H4 */
+    font-family: var(--TItle, Inter);
+    font-size: var(--Heading-PWM-H5-Size, 28px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Sub-Header-Large-Line-Height, 32px);
+    /* 114.286% */
+    margin: 0 0 10px;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(1) p {
+    margin: 0;
+    color: var(--blue-1800-primary, #2E2A94);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Body/Medium-regular */
+    font-family: var(--Body, Inter);
+    font-size: var(--Body-Medium-regular-Size, 16px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Body-Medium-regular-Line-Height, 20px);
+    /* 125% */
+}
+
+.section.wealth-creation div:nth-child(2),
+.section.wealth-creation div:nth-child(2) div {
+    min-height: 160px;
+    margin: 0;
+}
+
+.section.wealth-creation div:nth-child(2) div {
+    background: linear-gradient(109deg, #D6BC7D 0%, #91774B 83.36%);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 0 16px;
+}
+
+.section.wealth-creation div:nth-child(2) picture {
+    line-height: 0;
+    height: 100%;
+    display: block;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) p {
+    color: var(--PWM-Gold-700, #866E44);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Body/Small-semibold */
+    font-family: var(--Body, Inter);
+    font-size: var(--Body-Small-semibold-Size, 14px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: var(--Body-Small-semibold-Line-Height, 16px);
+    /* 114.286% */
+    margin: 0 0 6px;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) ul {
+    list-style: none;
+    margin: 0;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) ul li ul {
+    margin: 0 0 14px 8px;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) ul li ul li {
+    color: var(--blue-1800-primary, #2E2A94);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Paragraph/Small-regular */
+    font-family: var(--Body, Inter);
+    font-size: var(--Paragraph-Small-regular-Size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Paragraph-Small-regular-Line-Height, 20px);
+    /* 142.857% */
+    display: flex;
+    gap: 10px;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) ul li ul li::before {
+    content: '';
+    background-color: #2E2A94;
+    min-width: 4px;
+    height: 4px;
+    display: block;
+    border-radius: 50%;
+    margin: 8px 0 0;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) p.button-container {
+    margin: 0 0 33px;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) p.button-container .button {
+    color: var(--Text-Text-Link, #2E2A94);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Desktop/Text Link/Small */
+    font-family: var(--Body, Inter);
+    font-size: var(--Text-Link-Small-Size, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: var(--Text-Link-Small-Line-Height, 20px);
+    /* 142.857% */
+    text-decoration-line: underline;
+    text-underline-offset: 20%;
+    /* 2.8px */
+    margin: 0 0 33px;
+    padding: 0;
+    background-color: unset;
+    border: none;
+    border-radius: unset;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) p.button-container:last-of-type {
+    line-height: 0;
+    margin: 0;
+}
+
+.section.wealth-creation .custom-rte div:nth-child(3) p.button-container:last-of-type .button {
+    padding: 10px 12px;
+    border-radius: var(--Border-Radius-4, 4px);
+    background: var(--Button-Primary-Default, #2E2A94);
+    margin: 0;
+    color: var(--Text-White, #FFF);
+    font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
+
+    /* Mobile/Button/Medium */
+    font-family: var(--Body, Inter);
+    font-size: var(--Button-Medium-Size, 16px);
+    font-style: normal;
+    font-weight: 500;
+    line-height: var(--Button-Medium-Line-Height, 20px);
+    /* 125% */
+    text-decoration: none;
+    width: 100%;
+}
+
+@media screen and (width>768px) {
+    .section.wealth-creation {
+        padding: 53px 70px 53px 64px;
+        /* min-height: 600px; */
+        min-height: 494px;
+    }
+
+    .section.wealth-creation .custom-rte-wrapper {
+        max-width: 1232px;
+        min-height: inherit;
+    }
+
+    .section.wealth-creation .custom-rte {
+        display: grid;
+        /* grid-template-columns: 1fr 1fr; */
+        /* grid-template-rows: auto auto; */
+        /* grid-template-columns: 426px 476px; */
+        grid-template-columns:
+            minmax(0, 426px) minmax(0, 476px);
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        min-height: inherit;
+    }
+
+    .section.wealth-creation .custom-rte>div:nth-of-type(2) {
+        grid-column: 1;
+        grid-row: 1 / 3;
+        /* max-width: 69.722%; */
+        width: 100%;
+        min-height: 306px;
+    }
+
+    .section.wealth-creation div:nth-child(2) div {
+        margin: 0;
+        min-height: inherit;
+        background: linear-gradient(108.99deg, #C2AA74 0%, #866E44 83.36%);
+    }
+
+    .section.wealth-creation .custom-rte>div:nth-of-type(1) {
+        grid-column: 2;
+        grid-row: 1;
+        /* max-width: 77.906%; */
+    }
+
+    .section.wealth-creation .custom-rte>div:nth-of-type(3) {
+        grid-column: 2;
+        grid-row: 2;
+        /* max-width: 77.906%; */
+        margin-top: auto;
+    }
+}
+
+/* Wealth Creation Section End */

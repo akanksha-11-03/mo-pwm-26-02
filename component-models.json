@@ -181,6 +181,14 @@
           {
             "name": "PWM Group Section",
             "value": "pwm-group"
+          },
+          {
+            "name":"careers-rte",
+            "value":"careers-rte"
+          },
+          {
+            "name":"say-hello",
+            "value":"say-hello"
           }
         ]
       }

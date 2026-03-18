@@ -41,4 +41,50 @@ export default function decorate(block) {
       });
     });
   }
+
+  if (block.closest('.careers-rte')) {
+    Array.from(block.children).forEach((row, i) => {
+      row.classList.add(`careers-row-${i + 1}`);
+      if (i === 0) row.classList.add('careers-intro');
+      else row.classList.add('careers-block');
+
+      Array.from(row.children).forEach((col) => {
+        col.classList.add('careers-col');
+
+        const h2 = col.querySelector('h2');
+        if (h2) h2.classList.add('careers-heading');
+
+        col.querySelectorAll('p').forEach((p) => p.classList.add('careers-para'));
+
+        const ul = col.querySelector('ul');
+        if (ul) {
+          ul.classList.add('careers-list');
+          ul.querySelectorAll('li').forEach((li) => li.classList.add('careers-list-item'));
+        }
+      });
+    });
+  }
+
+  if (block.closest('.say-hello')) {
+    const rows = Array.from(block.children);
+    rows.forEach((row, i) => {
+      if (i === 0) {
+        row.classList.add('say-hello-image');
+        const innerDiv = row.querySelector('div');
+        if (innerDiv) innerDiv.classList.add('say-hello-image-inner');
+      } else {
+        row.classList.add('say-hello-content');
+        const innerDiv = row.querySelector('div');
+        if (innerDiv) {
+          innerDiv.classList.add('say-hello-content-inner');
+          const heading = innerDiv.querySelector('h1, h2, h3, h4, h5, h6, p:first-child');
+          if (heading) heading.classList.add('say-hello-text');
+          const btnContainer = innerDiv.querySelector('.button-container');
+          if (btnContainer) btnContainer.classList.add('say-hello-btn');
+          const link = innerDiv.querySelector('a');
+          if (link) link.classList.add('say-hello-link');
+        }
+      }
+    });
+  }
 }

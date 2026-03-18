@@ -22,7 +22,7 @@
 
       &:focus,
       &:hover {
-        background-color: #ede2cc;
+        background-color: var(--pwm-gold-300);
       }
 
       &::-webkit-details-marker {
@@ -49,7 +49,7 @@
 
     &[open] {
       summary {
-        background-color: #ede2cc;
+        background-color: var(--pwm-gold-300);
 
         &::after {
           transform: translateY(-50%) rotate(-45deg);
@@ -57,7 +57,7 @@
       }
 
       .accordion-item-body {
-        background-color: #ede2cc;
+        background-color: var(--pwm-gold-300);
       }
     }
   }
@@ -99,11 +99,11 @@
               background-color: transparent;
               border: none;
               border-radius: 0%;
-              font-size: 12px;
-              line-height: 14px;
+              font-size: var(--spacing-12);
+              line-height: var(--spacing-14);
               letter-spacing: 0%;
-              font-weight: 600;
-              color: #866e44;
+              font-weight: var(--semibold);
+              color: var(--pwm-gold-700);
             }
           }
         }
@@ -119,7 +119,7 @@
           display: flex;
           flex-direction: column;
           gap: 8px;
-          line-height: 16px;
+          line-height: var(--spacing-16);
 
           @media screen and (max-width: 900px) {
             gap: 0;
@@ -127,10 +127,10 @@
 
           li {
             a {
-              color: #866e44;
+              color: var(--pwm-gold-700);
               text-decoration: none;
-              font-size: 12px;
-              font-weight: 400;
+              font-size: var(--spacing-12);
+              font-weight: var(--regular);
               letter-spacing: 0%;
             }
           }

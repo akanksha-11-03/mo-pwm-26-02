@@ -1,51 +1,43 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
+
 .ourofferingcards-section {
   .cards-wrapper {
     padding: 0;
 
     .ourofferingcards-heading {
       margin-bottom: 0;
-      padding-bottom: 24px;
+      padding-bottom: var(--spacing-48);
 
       .ourofferingcards-label {
-        font-family: 'Inter', sans-serif;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.5;
-        color: #866e44;
-        margin: 0 0 8px 0;
+        @include font-style(var(--body-medium-regular-size), 1.5, var(--pwm-gold-700), var(--medium), var(--body));
+        margin: 0 0 var(--spacing-8) 0;
       }
 
       >h1,
       >h2,
       >h3 {
-        font-family: 'Inter', sans-serif;
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.2;
-        color: #2e2a94;
+        @include font-style(var(--heading-pwm-h4-size), var(--heading-pwm-h4-line-height), var(--blue-1-800-primary), var(--regular), var(--title));
         margin: 0;
       }
 
       .ourofferingcards-main-heading {
-        font-family: 'Inter', sans-serif;
-        font-weight: 500;
-        font-size: 40px;
-        line-height: 1.2;
-        color: #2e2a94;
+        @include font-style(var(--heading-pwm-h4-size), var(--heading-pwm-h4-line-height), var(--blue-1-800-primary), var(--regular), var(--title));
         margin: 0;
       }
     }
 
-    @media (max-width: 900px) {
+    @include media(mobile-ed) {
       .ourofferingcards-heading {
-        margin-bottom: 24px;
+        margin-bottom: var(--spacing-24);
         padding-bottom: 0;
 
         >h1,
         >h2,
         >h3,
         .ourofferingcards-main-heading {
-          font-size: 28px;
+          font-size: var(--heading-pwm-h3-size);
         }
       }
     }
@@ -67,7 +59,7 @@
 
   .ourofferingcards-sticky-frame {
     position: sticky;
-    top: 0;
+    top: var(--nav-height, 64px);
     overflow: visible;
   }
 
@@ -81,9 +73,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 40px;
-    background-color: #f8f3ef;
-    border-radius: 12px;
+    gap: var(--spacing-40);
+    background-color: var(--pwm-gold-100);
+    border-radius: var(--border-radius-12);
     overflow: hidden;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   }
@@ -94,8 +86,8 @@
     width: 50%;
     height: 342px;
     line-height: 0;
-    background-color: #fff;
-    border-radius: 12px 0 0 12px;
+    background-color: var(--neutrals-white);
+    border-radius: var(--border-radius-12) 0 0 var(--border-radius-12);
     overflow: hidden;
 
     picture {
@@ -118,31 +110,23 @@
     flex: 1 1 0%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 32px 40px 32px 0;
+    gap: var(--spacing-20);
+    padding: var(--spacing-32) var(--spacing-40) var(--spacing-32) 0;
     box-sizing: border-box;
   }
 
   .ourofferingcard-text {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: var(--spacing-12);
 
     .ourofferingcard-title {
-      font-family: 'Inter', sans-serif;
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 1.333;
-      color: #866e44;
+      @include font-style(var(--heading-pwm-h4-size), 1.333, var(--pwm-gold-700), var(--medium), var(--body));
       margin: 0;
     }
 
     .ourofferingcard-desc {
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.5;
-      color: #2e2a94;
+      @include font-style(var(--body-medium-regular-size), 1.5, var(--blue-1-800-primary), var(--regular), var(--body));
       margin: 0;
     }
   }
@@ -157,23 +141,18 @@
     a.button,
     a {
       all: unset;
-      font-family: 'Inter', sans-serif;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 1.5;
-      color: #2e2a94;
-      text-decoration: none;
-      cursor: pointer;
+      @include font-style(var(--body-medium-regular-size), 1.5, var(--blue-1-800-primary), var(--regular), var(--body));
       text-decoration: underline;
+      cursor: pointer;
 
       &:hover {
-        color: #2e2a94;
+        color: var(--blue-1-800-primary);
       }
     }
   }
 
   /* ===== Responsive — no animation, vertical cards ===== */
-  @media (max-width: 900px) {
+  @include media(mobile-ed) {
     .ourofferingcards-stack-section {
       height: auto !important;
     }
@@ -183,7 +162,7 @@
       height: auto;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: var(--spacing-20);
     }
 
     .ourofferingcard {
@@ -194,7 +173,7 @@
       width: 100%;
       flex-direction: column;
       gap: 0;
-      border-radius: 8px;
+      border-radius: var(--border-radius-8);
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
     }
 
@@ -202,17 +181,17 @@
       flex: none;
       width: 100%;
       height: auto;
-      border-radius: 8px 8px 0 0;
+      border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
 
       img {
         height: 220px;
-        border-radius: 8px 8px 0 0;
+        border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
       }
     }
 
     .ourofferingcard-content {
       width: 100%;
-      padding: 24px;
+      padding: var(--spacing-24);
     }
   }
 }
