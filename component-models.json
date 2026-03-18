@@ -183,6 +183,18 @@
             "value": "pwm-group"
           }
         ]
+      },
+      {
+        "component": "text",
+        "name": "tabGroup",
+        "label": "Tab Group",
+        "description": "Links this section to a Custom Tab block with the same group ID"
+      },
+      {
+        "component": "text",
+        "name": "tabTitle",
+        "label": "Tab Title",
+        "description": "The label displayed on the tab button for this section"
       }
     ]
   },
