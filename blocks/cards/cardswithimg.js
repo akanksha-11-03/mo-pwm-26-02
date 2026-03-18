@@ -120,10 +120,10 @@ export default async function decoratecardwithimgs(block) {
 
   swiperEl.append(wrapperEl);
 
-  // Pagination dots (no arrows per Figma — just dots)
-  const pagination = document.createElement('div');
-  pagination.classList.add('swiper-pagination');
-  swiperEl.append(pagination);
+  // Scrollbar
+  const scrollbar = document.createElement('div');
+  scrollbar.classList.add('cardswithimg-scrollbar');
+  swiperEl.append(scrollbar);
 
   block.replaceChildren(swiperEl);
 
@@ -140,9 +140,9 @@ export default async function decoratecardwithimgs(block) {
     slidesPerView: 1.15,
     spaceBetween: 16,
     loop: true,
-    pagination: {
-      el: pagination,
-      clickable: true,
+    scrollbar: {
+      el: scrollbar,
+      draggable: true,
     },
     breakpoints: {
       640: { slidesPerView: 2.15, spaceBetween: 20 },
