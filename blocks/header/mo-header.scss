@@ -474,6 +474,10 @@ header {
                       width: 880px;
                     }
 
+                    @media screen and (width <= 900px) {
+                      width: 100%;
+                    }
+
                     .item-li {
                       .subitem-1 {
                         padding: 14px 8px;

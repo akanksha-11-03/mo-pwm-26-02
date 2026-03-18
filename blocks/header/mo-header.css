@@ -418,6 +418,11 @@ header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapp
     width: 880px;
   }
 }
+@media screen and (width <= 900px) {
+  header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .header-menu .header-menulist.nav-drop .menulist-item-2 {
+    width: 100%;
+  }
+}
 header .nav-wrapper nav[aria-expanded=true] .nav-sections .default-content-wrapper .header-menu .header-menulist.nav-drop .menulist-item-2 .item-li .subitem-1 {
   padding: 14px 8px;
   display: flex;
