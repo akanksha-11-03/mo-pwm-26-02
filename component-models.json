@@ -187,6 +187,10 @@
             "value": "cmmn-explr-btn"
           },
           {
+            "name": "Detail Card",
+            "value": "detail-card"
+          },
+          {
             "name": "Blog Detail",
             "value": "blog-detail"
           },

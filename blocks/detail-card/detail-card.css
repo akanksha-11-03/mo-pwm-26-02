@@ -1,0 +1,37 @@
+@import "../../../styles/common-theme/css/fonts.css";
+.section.cmmn-explr-btn .default-content-wrapper .button-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0;
+  list-style: none;
+}
+.section.cmmn-explr-btn .default-content-wrapper .button-list .list-item-1 .button {
+  margin: 0;
+  list-style: none;
+}
+.section.cmmn-explr-btn .default-content-wrapper .button-list .list-item-1 .button-text {
+  font-size: 28px;
+  line-height: var(--sub-header-large-line-height);
+  color: var(--pwm-gold-700);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+.section.cmmn-explr-btn .default-content-wrapper .button-list .list-item-2 {
+  line-height: 0;
+}
+.section.cmmn-explr-btn .default-content-wrapper .button-list .list-item-2 .button {
+  border-radius: var(--border-radius-4);
+  background: var(--button-primary-default);
+  padding: 12px;
+  min-width: 160px;
+  margin: 0;
+  border: none;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--text-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
+}/*# sourceMappingURL=detail-card.css.map */

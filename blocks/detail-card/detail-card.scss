@@ -1,0 +1,55 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
+
+.section {
+  &.cmmn-explr-btn {
+    .default-content-wrapper {
+      .button-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+        list-style: none;
+
+        .list-item-1 {
+          .button {
+            margin: 0;
+            list-style: none;
+            &-text {
+              @include font-style(
+                28px,
+                var(--sub-header-large-line-height),
+                var(--pwm-gold-700),
+                var(--regular),
+                var(--title)
+              );
+            }
+          }
+        }
+
+        .list-item-2 {
+          line-height: 0;
+
+          .button {
+            border-radius: var(--border-radius-4);
+            background: var(--button-primary-default);
+            padding: 12px;
+            min-width: 160px;
+            margin: 0;
+            border: none;
+
+            @include font-style(
+              14px,
+              16px,
+              var(--text-white),
+              var(--medium),
+              var(--body)
+            );
+          }
+        }
+      }
+    }
+  }
+
+}
