@@ -34,4 +34,167 @@
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--medium);
+}
+.section.detail-card-main .detail-card-wrapper {
+  max-width: 100%;
+  padding: 0;
+}
+.section.detail-card-main .detail-card .detail-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-1 {
+  position: relative;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-1 .content-1 {
+  margin: 0;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-1 .content-1::before {
+  content: "";
+  background: url("../../icons/play.svg") center center no-repeat, linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+  background-size: 24px 24px;
+  width: 100%;
+  height: 100%;
+  border: none;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  border-radius: var(--border-radius-8);
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-1 .content-1 .inner-content-1 {
+  line-height: 100%;
+  display: block;
+  height: 100%;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-1 .content-1 .inner-content-1 .inner-item {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 49/32;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-1 .content-2 {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-1 .content-2 .inner-content-1 {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: unset;
+  background-color: unset;
+  color: transparent;
+  border: none;
+  line-height: 0;
+  pointer-events: none;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-1 {
+  margin: 0;
+  border-radius: var(--border-radius-4);
+  background: var(--pwm-gold-400);
+  padding: 8px;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: var(--body-small-semibold-size);
+  line-height: var(--body-small-semibold-line-height);
+  color: var(--pwm-gold-900);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--semibold);
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 {
+  margin: 0;
+  list-style: none;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-1, .section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-1 .inner-item {
+  font-size: var(--paragraph-large-regular-size);
+  line-height: var(--paragraph-medium-regular-line-height);
+  color: var(--pwm-gold-700);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-2 .inner-item {
+  margin: 8px 0 0;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-2 .inner-item .button {
+  border: none;
+  border-radius: unset;
+  background-color: unset;
+  margin: 0;
+  padding: 0;
+  overflow: unset;
+  text-overflow: unset;
+  white-space: normal;
+  text-align: left;
+  font-size: var(--paragraph-small-regular-size);
+  line-height: var(--paragraph-small-regular-line-height);
+  color: var(--blue-1-800-primary);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-3 .inner-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-3 .inner-item li {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--label-medium-size);
+  line-height: var(--label-medium-line-height);
+  color: var(--neutrals-700);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-3 .inner-item li .icon {
+  width: 12px;
+  height: 12px;
+  display: flex;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-3 .inner-item li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  display: block;
+  background-color: var(--pwm-gold-600);
+  border-radius: var(--border-radius-circle);
+  margin-right: 4px;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-3 .inner-item li:first-of-type::before {
+  content: unset;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-4 .inner-item {
+  margin: 0;
+  line-height: 0;
+}
+.section.detail-card-main .detail-card .detail-content .detail-card-item-2 .content-2 .inner-content-4 .inner-item .button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: unset;
+  background-color: unset;
+  text-decoration: underline;
+  text-underline-offset: 2.8px;
+  font-size: var(--text-link-small-size);
+  line-height: var(--text-link-small-line-height);
+  color: var(--text-text-link);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }/*# sourceMappingURL=detail-card.css.map */

@@ -14,13 +14,13 @@ export default function decorate(block) {
   });
 
   Array.from(block.children).forEach((child) => {
-    child.classList.add('detail-card');
+    child.classList.add('detail-content');
     Array.from(child.children).forEach((item, i) => {
       item.classList.add(`detail-card-item-${i + 1}`);
       Array.from(item.children).forEach((el, ind) => {
         el.classList.add(`content-${ind + 1}`);
-        Array.from(el.children).forEach((elem) => {
-          elem.classList.add('inner-content');
+        Array.from(el.children).forEach((elem, indd) => {
+          elem.classList.add(`inner-content-${indd + 1}`);
           Array.from(elem.children).forEach((elee) => {
             elee.classList.add('inner-item');
           });
