@@ -36,11 +36,6 @@
       "id": "customtab-item",
       "fields": [
         {
-          "component": "text",
-          "name": "title",
-          "label": "Tab Title"
-        },
-        {
           "component": "richtext",
           "name": "content",
           "label": "Tab Content"
