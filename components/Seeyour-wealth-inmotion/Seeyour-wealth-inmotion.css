@@ -2,49 +2,33 @@
 @import "../../../styles/common-theme/css/fonts.css";
 /* ===== See Your Wealth In Motion — Component ===== */
 .section.seeyour-wealth-inmotion {
+  background: var(--pwm-gold-100);
   display: flex;
   justify-content: center;
-  padding: var(--spacing-48) var(--spacing-16);
+  padding: var(--spacing-40) var(--spacing-16);
+  box-sizing: border-box;
+  margin: var(--spacing-none);
 }
 
 .sywim-wrapper {
-  background: var(--pwm-gold-100);
-  border-radius: var(--border-radius-12);
-  padding: var(--spacing-48) var(--spacing-40);
-  max-width: 1200px;
+  max-width: 1366px;
   width: 100%;
-  box-sizing: border-box;
+  padding: var(--spacing-40) var(--spacing-32);
+  margin: var(--spacing-74) var(--spacing-none);
 }
 
-/* ── Content container: two-column layout ── */
+/* ── Content container: flexible layout ── */
 .sywim-content {
-  display: flex;
-  gap: var(--spacing-48);
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  grid-template-areas: "heading image" "subtitle image" "form image";
 }
 
-.sywim-form-container {
-  flex: 1;
-  max-width: 520px;
+.sywim-heading {
+  grid-area: heading;
 }
-
-.sywim-image-container {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sywim-image-container picture, .sywim-image-container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ── Static Header ── */
-.sywim-static-header {
-  margin-bottom: var(--spacing-24);
-}
-.sywim-static-header h1, .sywim-static-header h2, .sywim-static-header h3, .sywim-static-header h4, .sywim-static-header h5, .sywim-static-header h6 {
+.sywim-heading h1, .sywim-heading h2, .sywim-heading h3, .sywim-heading h4, .sywim-heading h5, .sywim-heading h6 {
   font-size: var(--heading-pwm-h4-size);
   line-height: var(--heading-pwm-h4-line-height);
   color: var(--pwm-gold-700);
@@ -53,7 +37,12 @@
   font-weight: var(--regular);
   margin: 0 0 var(--spacing-12);
 }
-.sywim-static-header p {
+
+.sywim-subtitle {
+  grid-area: subtitle;
+  margin-bottom: var(--spacing-24);
+}
+.sywim-subtitle p {
   font-size: 18px;
   line-height: 1.5;
   color: var(--blue-1-800-primary);
@@ -61,6 +50,23 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--medium);
   margin: 0;
+}
+
+.sywim-form-controls {
+  grid-area: form;
+  max-width: 520px;
+}
+
+.sywim-image-container {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sywim-image-container picture, .sywim-image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ── Swiper area ── */
@@ -168,29 +174,40 @@
 
 /* ── Responsive ── */
 @media screen and (max-width: 1024px) {
-  .sywim-content {
-    gap: var(--spacing-32);
-  }
   .sywim-wrapper {
     padding: var(--spacing-40) var(--spacing-32);
   }
-}
-@media screen and (max-width: 900px) {
-  .sywim-wrapper {
-    padding: var(--spacing-32) var(--spacing-20);
-  }
   .sywim-content {
-    flex-direction: column;
-    gap: var(--spacing-32);
+    -moz-column-gap: 20px;
+         column-gap: 20px;
   }
-  .sywim-form-container {
-    max-width: 100%;
+}
+@media screen and (max-width: 1000px) {
+  .sywim-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+  }
+  .sywim-heading {
+    order: 1;
   }
   .sywim-image-container {
+    order: 2;
     width: 100%;
     max-width: 400px;
+    margin: 0 auto;
   }
-  .sywim-static-header p {
+  .sywim-subtitle {
+    order: 3;
+    margin-bottom: 0;
+  }
+  .sywim-form-controls {
+    order: 4;
+    max-width: 100%;
+  }
+}
+@media (min-width: ) {
+  .sywim-subtitle p {
     font-size: 15px;
   }
 }/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
