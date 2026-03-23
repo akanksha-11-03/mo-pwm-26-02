@@ -8,6 +8,7 @@
   padding: var(--spacing-40) var(--spacing-16);
   box-sizing: border-box;
   margin: var(--spacing-none);
+  position: relative;
 }
 
 .sywim-wrapper {
@@ -23,12 +24,23 @@
   grid-template-columns: 1fr 1fr;
   align-items: start;
   grid-template-areas: "heading image" "subtitle image" "form image";
+  margin: var(--spacing-72) var(--spacing-none);
+}
+@media screen and (max-width: 1025px) {
+  .sywim-content {
+    margin: var(--spacing-none);
+  }
 }
 
 .sywim-heading {
   grid-area: heading;
 }
-.sywim-heading h1, .sywim-heading h2, .sywim-heading h3, .sywim-heading h4, .sywim-heading h5, .sywim-heading h6 {
+.sywim-heading h1,
+.sywim-heading h2,
+.sywim-heading h3,
+.sywim-heading h4,
+.sywim-heading h5,
+.sywim-heading h6 {
   font-size: var(--heading-pwm-h4-size);
   line-height: var(--heading-pwm-h4-line-height);
   color: var(--pwm-gold-700);
@@ -62,8 +74,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 17%;
+  right: 0;
+  width: 51%;
 }
-.sywim-image-container picture, .sywim-image-container img {
+@media screen and (max-width: 1025px) {
+  .sywim-image-container {
+    top: 22%;
+  }
+}
+@media screen and (min-width: 1707px) {
+  .sywim-image-container {
+    width: 24%;
+    right: 27%;
+    top: unset;
+  }
+}
+.sywim-image-container picture,
+.sywim-image-container img {
   max-width: 100%;
   height: auto;
   display: block;
@@ -173,7 +202,7 @@
 }
 
 /* ── Responsive ── */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .sywim-wrapper {
     padding: var(--spacing-40) var(--spacing-32);
   }
@@ -181,12 +210,19 @@
     -moz-column-gap: 20px;
          column-gap: 20px;
   }
+  .sywim-form-controls {
+    max-width: 471px;
+  }
 }
 @media screen and (max-width: 1000px) {
+  main > .section > div {
+    padding: var(--spacing-none);
+  }
   .sywim-content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-24);
+    margin: var(--spacing-none);
   }
   .sywim-heading {
     order: 1;
@@ -196,6 +232,7 @@
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+    position: unset;
   }
   .sywim-subtitle {
     order: 3;

@@ -11,6 +11,7 @@
   padding: var(--spacing-40) var(--spacing-16);
   box-sizing: border-box;
   margin: var(--spacing-none);
+  position: relative;
 }
 
 .sywim-wrapper {
@@ -30,13 +31,29 @@
     "heading image"
     "subtitle image"
     "form image";
+  margin: var(--spacing-72) var(--spacing-none);
+
+  @media screen and (max-width: 1025px) {
+    margin: var(--spacing-none);
+  }
 }
 
 .sywim-heading {
   grid-area: heading;
-  
-  h1, h2, h3, h4, h5, h6 {
-    @include font-style(var(--heading-pwm-h4-size), var(--heading-pwm-h4-line-height), var(--pwm-gold-700), var(--regular), var(--title));
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include font-style(
+      var(--heading-pwm-h4-size),
+      var(--heading-pwm-h4-line-height),
+      var(--pwm-gold-700),
+      var(--regular),
+      var(--title)
+    );
     margin: 0 0 var(--spacing-12);
   }
 }
@@ -44,9 +61,15 @@
 .sywim-subtitle {
   grid-area: subtitle;
   margin-bottom: var(--spacing-24);
-  
+
   p {
-    @include font-style(18px, 1.5, var(--blue-1-800-primary), var(--medium), var(--body));
+    @include font-style(
+      18px,
+      1.5,
+      var(--blue-1-800-primary),
+      var(--medium),
+      var(--body)
+    );
     margin: 0;
   }
 }
@@ -61,8 +84,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 17%;
+  right: 0;
+  width: 51%;
 
-  picture, img {
+  @media screen and (max-width: 1025px) {
+    top: 22%;
+  }
+
+  @media screen and (min-width: 1707px) {
+    width: 24%;
+    right: 27%;
+    top: unset;
+  }
+
+  picture,
+  img {
     max-width: 100%;
     height: auto;
     display: block;
@@ -84,7 +122,13 @@
 .sywim-input {
   width: 100%;
   padding: var(--spacing-16);
-  @include font-style(var(--body-medium-regular-size), 1.5, var(--neutrals-800), var(--regular), var(--body));
+  @include font-style(
+    var(--body-medium-regular-size),
+    1.5,
+    var(--neutrals-800),
+    var(--regular),
+    var(--body)
+  );
   background: var(--neutrals-white);
   border: 1px solid #ccc;
   border-radius: var(--border-radius-8);
@@ -107,7 +151,13 @@
   display: block;
   width: 100%;
   padding: 14px 0;
-  @include font-style(var(--body-medium-regular-size), 1.5, var(--neutrals-white), var(--semibold), var(--body));
+  @include font-style(
+    var(--body-medium-regular-size),
+    1.5,
+    var(--neutrals-white),
+    var(--semibold),
+    var(--body)
+  );
   text-align: center;
   background: var(--button-primary-default);
   border-radius: var(--border-radius-8);
@@ -148,7 +198,13 @@
 }
 
 .sywim-fraction {
-  @include font-style(var(--body-medium-regular-size), 1.5, var(--neutrals-500), var(--regular), var(--body));
+  @include font-style(
+    var(--body-medium-regular-size),
+    1.5,
+    var(--neutrals-500),
+    var(--regular),
+    var(--body)
+  );
 
   .sywim-fraction-current {
     font-weight: var(--semibold);
@@ -164,22 +220,30 @@
 /* ── Responsive ── */
 
 // Tablet and Mobile view - stacked layout
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
   .sywim-wrapper {
     padding: var(--spacing-40) var(--spacing-32);
   }
 
-  .sywim-content{
+  .sywim-content {
     column-gap: 20px;
   }
 
+  .sywim-form-controls {
+    max-width: 471px;
+  }
 }
 
 @media screen and (max-width: 1000px) {
+  main > .section > div {
+    padding: var(--spacing-none);
+  }
+
   .sywim-content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-24);
+    margin: var(--spacing-none);
   }
 
   .sywim-heading {
@@ -191,6 +255,7 @@
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+    position: unset;
   }
 
   .sywim-subtitle {
