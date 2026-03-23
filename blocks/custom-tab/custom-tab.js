@@ -1,55 +1,55 @@
 // eslint-disable-next-line import/no-unresolved
 import { toClassName } from '../../scripts/aem.js';
 
+/**
+ * Show the section matching the active tab, hide all others.
+ * li#tab-overview  →  shows .section.tab-content.tab-overview
+ * li#tab-blogs     →  shows .section.tab-content.tab-blogs
+ */
+function showTab(tabId) {
+  document.querySelectorAll('.section.tab-content').forEach((section) => {
+    if (section.classList.contains(tabId)) {
+      section.style.display = '';
+    } else {
+      section.style.display = 'none';
+    }
+  });
+}
+
 export default async function decorate(block) {
-  // Give the main block wrapper an ID
   block.id = 'custom-tab-primary';
 
   const ul = block.querySelector('ul');
   if (!ul) return;
 
-  // Convert <ul> to a tab navigation
   ul.classList.add('tabs-list');
   ul.setAttribute('role', 'tablist');
 
-  // Create panels container
-  const panelsContainer = document.createElement('div');
-  panelsContainer.className = 'tabs-panels';
-
   const items = [...ul.querySelectorAll('li')];
-  const panels = [];
 
+  // --- Build tab navigation ---
   items.forEach((li, i) => {
     const slug = toClassName(li.textContent.trim());
+    const tabId = `tab-${slug}`; // e.g. "tab-overview"
 
-    // Add ID and attributes to each <li>
-    li.id = `tab-${slug}`;
+    li.id = tabId;
+    li.classList.add(tabId);
     li.setAttribute('role', 'tab');
     li.setAttribute('aria-selected', i === 0);
-    li.setAttribute('aria-controls', `tabpanel-${slug}`);
-    li.setAttribute('data-tab', slug);
+    li.setAttribute('data-tab', tabId);
     li.tabIndex = i === 0 ? 0 : -1;
 
     if (i === 0) li.classList.add('active');
+  });
 
-    // Create a tab panel div for each tab
-    const panel = document.createElement('div');
-    panel.className = `tabs-panel tab-${slug}`;
-    panel.id = `tabpanel-${slug}`;
-    panel.setAttribute('role', 'tabpanel');
-    panel.setAttribute('aria-labelledby', `tab-${slug}`);
-    if (i === 0) {
-      panel.classList.add('active');
-      panel.setAttribute('aria-hidden', false);
-    } else {
-      panel.setAttribute('aria-hidden', true);
-    }
-    panelsContainer.append(panel);
-    panels.push(panel);
+  const firstTabId = items[0]?.getAttribute('data-tab');
 
-    // Click handler — toggle panels
+  // --- Tab click: show matching section, hide others ---
+  items.forEach((li) => {
     li.addEventListener('click', () => {
-      // Update active tab
+      const tabId = li.getAttribute('data-tab');
+
+      // Update active state on all tabs
       items.forEach((item) => {
         item.classList.remove('active');
         item.setAttribute('aria-selected', false);
@@ -59,20 +59,12 @@ export default async function decorate(block) {
       li.setAttribute('aria-selected', true);
       li.tabIndex = 0;
 
-      // Show/hide panels
-      panels.forEach((p) => {
-        if (p.id === `tabpanel-${slug}`) {
-          p.classList.add('active');
-          p.setAttribute('aria-hidden', false);
-        } else {
-          p.classList.remove('active');
-          p.setAttribute('aria-hidden', true);
-        }
-      });
+      // Show/hide sections
+      showTab(tabId);
     });
   });
 
-  // Keyboard navigation (Arrow Left / Right)
+  // --- Keyboard navigation ---
   ul.addEventListener('keydown', (e) => {
     const current = items.findIndex((item) => item === document.activeElement);
     let next = -1;
@@ -89,22 +81,45 @@ export default async function decorate(block) {
     }
   });
 
-  // Append panels after the tab list
-  block.append(panelsContainer);
+  // --- Observer: hide inactive tab sections after EDS loads them ---
+  // EDS sets section.style.display = null when status → "loaded",
+  // so we use rAF to apply hide AFTER EDS finishes.
+  const observer = new MutationObserver((mutations) => {
+    let needsUpdate = false;
 
-  // Move authored sections with class "tab-content" into matching panels
-  // Author adds style "tab-content" + "tab-overview" (or tab-blogs, etc.) to a section
-  items.forEach((li) => {
-    const slug = li.getAttribute('data-tab');
-    const panel = document.getElementById(`tabpanel-${slug}`);
-    if (!panel) return;
-
-    // Find all sections on the page that have the matching tab class
-    const matchingSections = document.querySelectorAll(`.section.tab-content.tab-${slug}`);
-    matchingSections.forEach((section) => {
-      panel.append(section);
-      section.classList.remove('hidden');
-      section.removeAttribute('aria-hidden');
+    mutations.forEach((mutation) => {
+      if (
+        mutation.type === 'attributes'
+        && mutation.attributeName === 'data-section-status'
+      ) {
+        const section = mutation.target;
+        if (
+          section.classList.contains('tab-content')
+          && section.dataset.sectionStatus === 'loaded'
+        ) {
+          needsUpdate = true;
+        }
+      }
     });
+
+    if (needsUpdate) {
+      requestAnimationFrame(() => {
+        const activeTab = block.querySelector('.tabs-list li.active');
+        const activeId = activeTab ? activeTab.getAttribute('data-tab') : firstTabId;
+        showTab(activeId);
+      });
+
+      // Stop observing once all tab-content sections are loaded
+      const all = document.querySelectorAll('.section.tab-content');
+      const allLoaded = all.length > 0
+        && [...all].every((s) => s.dataset.sectionStatus === 'loaded');
+      if (allLoaded) observer.disconnect();
+    }
+  });
+
+  observer.observe(document.querySelector('main'), {
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['data-section-status'],
   });
 }
