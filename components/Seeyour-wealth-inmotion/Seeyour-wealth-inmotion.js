@@ -27,15 +27,21 @@ export default async function decorateSeeyourWealthInmotion(doc) {
     const buttonLink = buttonContainer
       ? buttonContainer.querySelector('a')
       : null;
+    
+    // Extract image/GIF (picture or img element)
+    const imageElement = wrapper.querySelector('picture, img');
 
     if (!listItems.length) continue;
     const totalSlides = listItems.length;
 
-    /* ── Static header (does NOT swipe) ── */
-    const staticHeader = document.createElement('div');
-    staticHeader.className = 'sywim-static-header';
-    if (heading) staticHeader.appendChild(heading.cloneNode(true));
-    if (subtitle) staticHeader.appendChild(subtitle.cloneNode(true));
+    /* ── Separate heading and subtitle for flexible ordering ── */
+    const headingContainer = document.createElement('div');
+    headingContainer.className = 'sywim-heading';
+    if (heading) headingContainer.appendChild(heading.cloneNode(true));
+
+    const subtitleContainer = document.createElement('div');
+    subtitleContainer.className = 'sywim-subtitle';
+    if (subtitle) subtitleContainer.appendChild(subtitle.cloneNode(true));
 
     /* ── Swiper slides — one input per li ── */
     const swiperContainer = document.createElement('div');
@@ -82,12 +88,33 @@ export default async function decorateSeeyourWealthInmotion(doc) {
     }</span>`;
     paginationRow.appendChild(fraction);
 
+    /* ── Create form controls container ── */
+    const formControls = document.createElement('div');
+    formControls.className = 'sywim-form-controls';
+    formControls.appendChild(swiperContainer);
+    formControls.appendChild(paginationRow);
+
+    /* ── Create content container with proper ordering ── */
+    const contentContainer = document.createElement('div');
+    contentContainer.className = 'sywim-content';
+    
+    // Add elements in order: heading, image, subtitle, form controls
+    contentContainer.appendChild(headingContainer);
+    
+    if (imageElement) {
+      const imageContainer = document.createElement('div');
+      imageContainer.className = 'sywim-image-container';
+      imageContainer.appendChild(imageElement.cloneNode(true));
+      contentContainer.appendChild(imageContainer);
+    }
+    
+    contentContainer.appendChild(subtitleContainer);
+    contentContainer.appendChild(formControls);
+
     /* ── Replace wrapper content ── */
     wrapper.innerHTML = '';
     wrapper.className = 'sywim-wrapper';
-    wrapper.appendChild(staticHeader);
-    wrapper.appendChild(swiperContainer);
-    wrapper.appendChild(paginationRow);
+    wrapper.appendChild(contentContainer);
 
     /* ── Init Swiper ── */
     const Swiper = await loadSwiper();
