@@ -15,17 +15,17 @@ export default async function decorate(block) {
     // decorate tabpanel
     const tabpanel = block.children[i];
     tabpanel.className = 'tabs-panel';
-    tabpanel.id = `tabpanel-${id}`;
+    tabpanel.id = `tabpanel-secondary-${id}`;
     tabpanel.setAttribute('aria-hidden', !!i);
-    tabpanel.setAttribute('aria-labelledby', `tab-${id}`);
+    tabpanel.setAttribute('aria-labelledby', `tab-secondary-${id}`);
     tabpanel.setAttribute('role', 'tabpanel');
 
     // build tab button
     const button = document.createElement('button');
     button.className = 'tabs-tab';
-    button.id = `tab-${id}`;
+    button.id = `tab-secondary-${id}`;
     button.innerHTML = tab.innerHTML;
-    button.setAttribute('aria-controls', `tabpanel-${id}`);
+    button.setAttribute('aria-controls', `tabpanel-secondary-${id}`);
     button.setAttribute('aria-selected', !i);
     button.setAttribute('role', 'tab');
     button.setAttribute('type', 'button');

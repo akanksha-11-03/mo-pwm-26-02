@@ -103,7 +103,8 @@
         "tabs",
         "banner-carousel",
         "accordion",
-        "customtab"
+        "customtab",
+        "secondarytab"
       ]
     }
   ]

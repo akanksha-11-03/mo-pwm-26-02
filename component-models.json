@@ -406,23 +406,17 @@
     ]
   },
   {
-    "id": "customtab",
-    "fields": []
-  },
-  {
     "id": "customtab-item",
     "fields": [
       {
         "component": "text",
-        "name": "tabTitle",
-        "label": "Tab Title",
-        "valueType": "string"
+        "name": "title",
+        "label": "Tab Title"
       },
       {
         "component": "richtext",
-        "name": "tabContent",
-        "label": "Tab Content",
-        "valueType": "string"
+        "name": "content",
+        "label": "Tab Content"
       }
     ]
   },
@@ -528,6 +522,21 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "secondarytab-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "label": "Tab Title"
+      },
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Tab Content"
       }
     ]
   },
