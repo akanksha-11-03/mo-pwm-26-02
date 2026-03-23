@@ -2,23 +2,21 @@
 import { toClassName } from '../../scripts/aem.js';
 
 /**
- * Show the section matching the active tab, hide all others.
- * li#tab-overview  →  shows .section.tab-content.tab-overview
- * li#tab-blogs     →  shows .section.tab-content.tab-blogs
+ * Show/hide only the sections that belong to this tab block instance.
+ * @param {Set<string>} ownTabIds - the tab IDs this block owns
+ * @param {string} activeTabId - the tab to show
  */
-function showTab(tabId) {
+function showTab(ownTabIds, activeTabId) {
   document.querySelectorAll('.section.tab-content').forEach((section) => {
-    if (section.classList.contains(tabId)) {
-      section.style.display = '';
-    } else {
-      section.style.display = 'none';
-    }
+    // Skip sections that don't belong to this block instance
+    const belongsToMe = [...ownTabIds].some((id) => section.classList.contains(id));
+    if (!belongsToMe) return;
+
+    section.style.display = section.classList.contains(activeTabId) ? '' : 'none';
   });
 }
 
 export default async function decorate(block) {
-  block.id = 'custom-tab-primary';
-
   const ul = block.querySelector('ul');
   if (!ul) return;
 
@@ -26,11 +24,13 @@ export default async function decorate(block) {
   ul.setAttribute('role', 'tablist');
 
   const items = [...ul.querySelectorAll('li')];
+  const ownTabIds = new Set(); // tab IDs owned by THIS instance
 
   // --- Build tab navigation ---
   items.forEach((li, i) => {
     const slug = toClassName(li.textContent.trim());
     const tabId = `tab-${slug}`; // e.g. "tab-overview"
+    ownTabIds.add(tabId);
 
     li.id = tabId;
     li.classList.add(tabId);
@@ -44,12 +44,11 @@ export default async function decorate(block) {
 
   const firstTabId = items[0]?.getAttribute('data-tab');
 
-  // --- Tab click: show matching section, hide others ---
+  // --- Tab click: show matching section, hide others (scoped to this instance) ---
   items.forEach((li) => {
     li.addEventListener('click', () => {
       const tabId = li.getAttribute('data-tab');
 
-      // Update active state on all tabs
       items.forEach((item) => {
         item.classList.remove('active');
         item.setAttribute('aria-selected', false);
@@ -59,8 +58,7 @@ export default async function decorate(block) {
       li.setAttribute('aria-selected', true);
       li.tabIndex = 0;
 
-      // Show/hide sections
-      showTab(tabId);
+      showTab(ownTabIds, tabId);
     });
   });
 
@@ -82,8 +80,6 @@ export default async function decorate(block) {
   });
 
   // --- Observer: hide inactive tab sections after EDS loads them ---
-  // EDS sets section.style.display = null when status → "loaded",
-  // so we use rAF to apply hide AFTER EDS finishes.
   const observer = new MutationObserver((mutations) => {
     let needsUpdate = false;
 
@@ -96,6 +92,7 @@ export default async function decorate(block) {
         if (
           section.classList.contains('tab-content')
           && section.dataset.sectionStatus === 'loaded'
+          && [...ownTabIds].some((id) => section.classList.contains(id))
         ) {
           needsUpdate = true;
         }
@@ -106,13 +103,16 @@ export default async function decorate(block) {
       requestAnimationFrame(() => {
         const activeTab = block.querySelector('.tabs-list li.active');
         const activeId = activeTab ? activeTab.getAttribute('data-tab') : firstTabId;
-        showTab(activeId);
+        showTab(ownTabIds, activeId);
       });
 
-      // Stop observing once all tab-content sections are loaded
-      const all = document.querySelectorAll('.section.tab-content');
-      const allLoaded = all.length > 0
-        && [...all].every((s) => s.dataset.sectionStatus === 'loaded');
+      // Stop once all THIS instance's sections are loaded
+      const mySections = document.querySelectorAll('.section.tab-content');
+      const mine = [...mySections].filter(
+        (s) => [...ownTabIds].some((id) => s.classList.contains(id)),
+      );
+      const allLoaded = mine.length > 0
+        && mine.every((s) => s.dataset.sectionStatus === 'loaded');
       if (allLoaded) observer.disconnect();
     }
   });
