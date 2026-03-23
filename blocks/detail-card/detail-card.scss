@@ -59,16 +59,46 @@
         padding: 0;
       }
 
+      @include media(tablet-up) {
+        max-width: 1264px;
+        padding: 0 16px;
+        display: flex;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        gap: 48px 16px;
+      }
+
       .detail-content {
         display: flex;
         flex-direction: column;
         gap: 24px;
+
+        @include media(tablet-up) {
+          max-width: 32.468%;
+          width: 100%;
+          flex: 0 0 32.468%;
+        }
+
+        @media screen and (min-width: 769px) and (max-width: 1025px) {
+          max-width: 31.8%;
+          flex: 0 0 31.8%;
+        }
+
+        @media screen and (min-width: 1026px) and (max-width: 1299px) {
+          max-width: 32.24%;
+          flex: 0 0 32.24%;
+        }
 
         .detail-card-item-1 {
           position: relative;
 
           .content-1 {
             margin: 0;
+
+            @include media(tablet-up) {
+              max-height: 220px;
+              height: 100%;
+            }
 
             &::before {
               content: "";
@@ -99,7 +129,9 @@
               .inner-item {
                 width: 100%;
                 height: 100%;
-                aspect-ratio: 49/32;
+                // aspect-ratio: 49/32;
+                aspect-ratio: 16 / 9;
+                border-radius: var(--border-radius-4);
               }
             }
           }
@@ -132,6 +164,10 @@
           flex-direction: column;
           gap: 24px;
 
+          @include media(tablet-up) {
+            height: 100%;
+          }
+
           .content-1 {
             margin: 0;
             border-radius: var(--border-radius-4);
@@ -146,16 +182,29 @@
               var(--semibold),
               var(--body)
             );
+
+            @include media(tablet-up) {
+              font-size: var(--body-small-semibold-size);
+              line-height: var(--body-small-semibold-line-height);
+            }
           }
 
           .content-2 {
             margin: 0;
             list-style: none;
 
+            @include media(tablet-up) {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+            }
+
             .inner-content {
               &-1 {
                 &,
                 & .inner-item {
+                  margin: 0;
+
                   @include font-style(
                     var(--paragraph-large-regular-size),
                     var(--paragraph-medium-regular-line-height),
@@ -163,12 +212,19 @@
                     var(--medium),
                     var(--body)
                   );
+
+                  @include media(tablet-up) {
+                    font-size: var(--body-large-medium-size);
+                    line-height: var(--body-large-medium-line-height);
+                  }
                 }
               }
 
               &-2 {
+                margin-top: auto;
+
                 .inner-item {
-                  margin: 8px 0 0;
+                  margin: 8px 0 16px;
 
                   .button {
                     border: none;
@@ -188,6 +244,15 @@
                       var(--regular),
                       var(--body)
                     );
+
+                    @include media(tablet-up) {
+                      display: -webkit-box;
+                      -webkit-line-clamp: 2;
+                      -webkit-box-orient: vertical;
+                      overflow: hidden;
+                      font-size: var(--body-medium-regular-size);
+                      line-height: 24px;
+                    }
                   }
                 }
               }
@@ -198,6 +263,7 @@
                   align-items: center;
                   gap: 8px;
                   list-style: none;
+                  margin: 0 0 24px;
 
                   li {
                     display: flex;
@@ -211,6 +277,11 @@
                       var(--regular),
                       var(--body)
                     );
+
+                    @include media(tablet-up) {
+                      font-size: var(--label-medium-size);
+                      line-height: var(--label-medium-line-height);
+                    }
 
                     .icon {
                       width: 12px;
@@ -242,7 +313,7 @@
                   margin: 0;
                   line-height: 0;
 
-                  .button{
+                  .button {
                     margin: 0;
                     padding: 0;
                     border: none;
@@ -258,6 +329,11 @@
                       var(--regular),
                       var(--body)
                     );
+
+                    @include media(tablet-up) {
+                      font-size: var(--text-link-small-size);
+                      line-height: var(--text-link-small-line-height);
+                    }
                   }
                 }
               }
