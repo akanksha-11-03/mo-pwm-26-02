@@ -11,9 +11,33 @@
   background: var(--pwm-gold-100);
   border-radius: var(--border-radius-12);
   padding: var(--spacing-48) var(--spacing-40);
-  max-width: 720px;
+  max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
+}
+
+/* ── Content container: two-column layout ── */
+.sywim-content {
+  display: flex;
+  gap: var(--spacing-48);
+  align-items: center;
+}
+
+.sywim-form-container {
+  flex: 1;
+  max-width: 520px;
+}
+
+.sywim-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sywim-image-container picture, .sywim-image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ── Static Header ── */
@@ -66,6 +90,9 @@
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
+}
+.sywim-input::-moz-placeholder {
+  color: var(--neutrals-500);
 }
 .sywim-input::placeholder {
   color: var(--neutrals-500);
@@ -140,13 +167,30 @@
 }
 
 /* ── Responsive ── */
-@media (min-width: ) {
+@media screen and (max-width: 1024px) {
+  .sywim-content {
+    gap: var(--spacing-32);
+  }
+  .sywim-wrapper {
+    padding: var(--spacing-40) var(--spacing-32);
+  }
+}
+@media screen and (max-width: 900px) {
   .sywim-wrapper {
     padding: var(--spacing-32) var(--spacing-20);
+  }
+  .sywim-content {
+    flex-direction: column;
+    gap: var(--spacing-32);
+  }
+  .sywim-form-container {
+    max-width: 100%;
+  }
+  .sywim-image-container {
+    width: 100%;
+    max-width: 400px;
   }
   .sywim-static-header p {
     font-size: 15px;
   }
-}
-
-/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
+}/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */

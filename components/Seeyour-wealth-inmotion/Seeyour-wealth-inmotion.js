@@ -27,6 +27,9 @@ export default async function decorateSeeyourWealthInmotion(doc) {
     const buttonLink = buttonContainer
       ? buttonContainer.querySelector('a')
       : null;
+    
+    // Extract image/GIF (picture or img element)
+    const imageElement = wrapper.querySelector('picture, img');
 
     if (!listItems.length) continue;
     const totalSlides = listItems.length;
@@ -82,12 +85,30 @@ export default async function decorateSeeyourWealthInmotion(doc) {
     }</span>`;
     paginationRow.appendChild(fraction);
 
+    /* ── Create form container ── */
+    const formContainer = document.createElement('div');
+    formContainer.className = 'sywim-form-container';
+    formContainer.appendChild(staticHeader);
+    formContainer.appendChild(swiperContainer);
+    formContainer.appendChild(paginationRow);
+
+    /* ── Create content container (holds form + optional image) ── */
+    const contentContainer = document.createElement('div');
+    contentContainer.className = 'sywim-content';
+    contentContainer.appendChild(formContainer);
+
+    // Add image container if image exists
+    if (imageElement) {
+      const imageContainer = document.createElement('div');
+      imageContainer.className = 'sywim-image-container';
+      imageContainer.appendChild(imageElement.cloneNode(true));
+      contentContainer.appendChild(imageContainer);
+    }
+
     /* ── Replace wrapper content ── */
     wrapper.innerHTML = '';
     wrapper.className = 'sywim-wrapper';
-    wrapper.appendChild(staticHeader);
-    wrapper.appendChild(swiperContainer);
-    wrapper.appendChild(paginationRow);
+    wrapper.appendChild(contentContainer);
 
     /* ── Init Swiper ── */
     const Swiper = await loadSwiper();
