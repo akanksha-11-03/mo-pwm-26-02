@@ -437,11 +437,6 @@
         "label": "Image Alt"
       },
       {
-        "component": "aem-content",
-        "name": "col1_url",
-        "label": "Redirected Page URL"
-      },
-      {
         "component": "richtext",
         "name": "col2_text",
         "value": "",
