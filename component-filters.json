@@ -23,8 +23,7 @@
       "tabs",
       "banner-carousel",
       "accordion",
-      "customtab",
-      "secondarytab"
+      "custom-tab"
     ]
   },
   {
@@ -87,22 +86,15 @@
     ]
   },
   {
-    "id": "customtab",
+    "id": "custom-tab",
     "components": [
-      "customtab-item",
-      "secondarytab"
+      "custom-tab-item"
     ]
   },
   {
     "id": "feature-card",
     "components": [
       "feature-card-item"
-    ]
-  },
-  {
-    "id": "secondarytab",
-    "components": [
-      "secondarytab-item"
     ]
   },
   {

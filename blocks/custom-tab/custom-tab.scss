@@ -4,7 +4,7 @@
 
 /* ===== Custom Tab Block ===== */
 
-.customtab {
+.custom-tab {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -12,9 +12,12 @@
 }
 
 /* ── Tab List ── */
-.customtab .tabs-list {
+.custom-tab .tabs-list {
   display: flex;
   gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
   border-bottom: 1px solid var(--neutrals-400, #bdbdbd);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -25,9 +28,8 @@
   }
 }
 
-/* ── Tab Buttons ── */
-.customtab .tabs-list button {
-  all: unset;
+/* ── Tab Items (li) ── */
+.custom-tab .tabs-list li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,38 +48,36 @@
     color: var(--pwm-gold-700);
   }
 
+  &.active,
   &[aria-selected="true"] {
     color: var(--pwm-gold-700);
     border-bottom-color: var(--pwm-gold-700);
     font-weight: var(--semibold);
   }
-
-  p {
-    margin: 0;
-  }
 }
 
 /* ── Tab Panels ── */
-.customtab .tabs-panel {
-  padding-top: var(--spacing-32);
+.custom-tab .tabs-panels {
+  width: 100%;
 }
 
-.customtab .tabs-panel[aria-hidden="true"] {
+.custom-tab .tabs-panel {
   display: none;
+  padding-top: var(--spacing-24);
+
+  &.active {
+    display: block;
+  }
 }
 
 /* ── Responsive (mobile) ── */
 @media (max-width: 899px) {
-  .customtab .tabs-list {
+  .custom-tab .tabs-list {
     gap: 0;
   }
 
-  .customtab .tabs-list button {
+  .custom-tab .tabs-list li {
     padding: var(--spacing-12) var(--spacing-16);
     font-size: var(--body-small-regular-size);
-  }
-
-  .customtab .tabs-panel {
-    padding-top: var(--spacing-24);
   }
 }

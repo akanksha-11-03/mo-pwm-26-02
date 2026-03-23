@@ -181,6 +181,31 @@
           {
             "name": "PWM Group Section",
             "value": "pwm-group"
+          },
+          {
+            "name": "Tab Content Panels",
+            "children": [
+              {
+                "name": "Tab Content",
+                "value": "tab-content"
+              },
+              {
+                "name": "Overview Tab",
+                "value": "tab-overview"
+              },
+              {
+                "name": "Blogs Tab",
+                "value": "tab-blogs"
+              },
+              {
+                "name": "Reports Tab",
+                "value": "tab-reports"
+              },
+              {
+                "name": "Videos Tab",
+                "value": "tab-videos"
+              }
+            ]
           }
         ]
       }
@@ -406,7 +431,7 @@
     ]
   },
   {
-    "id": "customtab-item",
+    "id": "custom-tab-item",
     "fields": [
       {
         "component": "richtext",
@@ -517,21 +542,6 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
-      }
-    ]
-  },
-  {
-    "id": "secondarytab-item",
-    "fields": [
-      {
-        "component": "text",
-        "name": "title",
-        "label": "Tab Title"
-      },
-      {
-        "component": "richtext",
-        "name": "content",
-        "label": "Tab Content"
       }
     ]
   },
