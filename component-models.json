@@ -197,6 +197,10 @@
           {
             "name": "Video Detail",
             "value": "video-detail"
+          },
+          {
+            "name": "Press Release Section",
+            "value": "press-release"
           }
         ]
       }
