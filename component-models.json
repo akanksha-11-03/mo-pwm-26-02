@@ -546,6 +546,23 @@
     ]
   },
   {
+    "id": "search-bar",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "placeholder",
+        "label": "Placeholder Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "tabs-item",
     "fields": [
       {

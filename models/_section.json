@@ -128,7 +128,8 @@
         "tabs",
         "banner-carousel",
         "accordion",
-        "custom-tab"
+        "custom-tab",
+        "search-bar"
       ]
     }
   ]
