@@ -90,6 +90,10 @@
             {
               "name": "Detail Card V2",
               "value": "detail-card-v2"
+            },
+            {
+              "name": "Blog Detail Section",
+              "value": "blog-detail"
             }
           ]
         }
