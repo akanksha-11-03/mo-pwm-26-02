@@ -79,7 +79,6 @@
 @media (min-width: 768px) {
   .section.detail-card-main .detail-card .detail-content .detail-card-item-1 {
     max-height: 220px;
-    height: 100%;
   }
 }
 .section.detail-card-main .detail-card .detail-content .detail-card-item-1 p.content-1 {
