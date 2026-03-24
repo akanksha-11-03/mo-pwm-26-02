@@ -13,6 +13,7 @@ import {
 } from './aem.js';
 import { linkToBtn } from '../components/how-we-serve-you/how-we-serve-you.js';
 import decorateSeeyourWealthInmotion from '../components/Seeyour-wealth-inmotion/Seeyour-wealth-inmotion.js';
+import { decoratePressRelease } from '../components/press-release/press-release.js';
 
 
 /**
@@ -88,6 +89,7 @@ export function decorateMain(main) {
   decorateBlocks(main);
   linkToBtn(document);
   decorateSeeyourWealthInmotion(document);
+  decoratePressRelease(document);
 }
 
 export async function loadFragment(path) {
