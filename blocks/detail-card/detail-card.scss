@@ -147,7 +147,7 @@
             height: 100%;
           }
 
-          .content-1 {
+          >p:first-of-type {
             margin: 0;
             border-radius: var(--border-radius-4);
             background: var(--pwm-gold-400);
@@ -181,7 +181,7 @@
             .inner-content {
               &-1 {
                 &,
-                & .inner-item {
+                & h3 {
                   margin: 0;
 
                   @include font-style(
