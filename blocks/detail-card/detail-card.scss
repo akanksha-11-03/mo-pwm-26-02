@@ -53,6 +53,12 @@
   }
 
   &.detail-card-main {
+    padding: 0 16px;
+
+    @include media(tablet-up) {
+      padding: 0;
+    }
+
     .detail-card {
       &-wrapper {
         max-width: 100%;
@@ -102,11 +108,7 @@
             height: 100%;
           }
 
-          picture {
-            line-height: 100%;
-            display: block;
-            height: 100%;
-
+          .card-link {
             &::before {
               content: "";
               background:
@@ -127,6 +129,12 @@
               display: block;
               border-radius: var(--border-radius-8);
             }
+          }
+
+          picture {
+            line-height: 100%;
+            display: block;
+            height: 100%;
 
             img {
               width: 100%;
@@ -147,7 +155,7 @@
             height: 100%;
           }
 
-          >p:first-of-type {
+          > p:first-of-type {
             margin: 0;
             border-radius: var(--border-radius-4);
             background: var(--pwm-gold-400);
@@ -168,7 +176,7 @@
             }
           }
 
-          .content-2 {
+          > ul {
             margin: 0;
             list-style: none;
 
@@ -313,6 +321,120 @@
                       font-size: var(--text-link-small-size);
                       line-height: var(--text-link-small-line-height);
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.detail-card-v2 {
+      .detail-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 12px;
+
+        .detail-content {
+          position: relative;
+          max-width: 48.236%;
+          gap: 20px;
+
+          @include media(tablet-up) {
+            gap: 12px;
+          }
+
+          .detail-card-item-1 {
+            max-height: 164px;
+            height: auto;
+
+            @include media(tablet-up) {
+              max-height: 400px;
+            }
+
+            picture{
+              aspect-ratio: 1 / 1;
+
+              img {
+                aspect-ratio: 1 / 1;
+                height: auto;
+              }
+            }
+
+          }
+
+          .detail-card-item-2 {
+            > p {
+              position: absolute;
+              top: 10.13px;
+              left: 0;
+              border-radius: 0 2.063px 2.063px 0;
+              text-align: center;
+              padding: 4.13px;
+              min-width: 45px;
+              font-size: var(--body-xsmall-regular-size);
+              line-height: var(--body-xsmall-regular-line-height);
+              font-weight: var(--regular);
+
+              @include media(tablet-up) {
+                top: 18px;
+                padding: 8px;
+                min-width: 95px;
+                border-radius: 0 var(--border-radius-4) var(--border-radius-4) 0;
+                font-size: var(--label-large-size);
+                line-height: var(--label-large-line-height);
+              }
+            }
+
+            ul {
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+
+              @include media(tablet-up) {
+                gap: 12px;
+              }
+
+              .inner-content-1 {
+                &,
+                & h3 {
+                  font-size: var(--body-xsmall-medium-size);
+                  line-height: var(--body-xsmall-medium-line-height);
+
+                  @include media(tablet-up) {
+                    font-size: var(--body-large-medium-size);
+                    line-height: var(--body-large-medium-line-height);
+                  }
+                }
+              }
+              .inner-content-2{
+                .inner-item {
+                  display: flex;
+                  gap: var(--spacing-8);
+                  align-items: center;
+                  padding: 10px 0;
+                  margin: 0;
+  
+                  @include font-style(
+                    var(--button-medium-size),
+                    var(--button-medium-line-height),
+                    var(--text-button-default),
+                    var(--medium),
+                    var(--body)
+                  );
+  
+                  @include media(tablet-up) {
+                    color: var(--blue-1-800-primary);
+                    font-size: var(--button-medium-size);
+                    line-height: var(--button-medium-line-height);
+                  }
+  
+                  .icon {
+                    width: 16px;
+                    height: 16px;
+                    margin: 0;
                   }
                 }
               }
