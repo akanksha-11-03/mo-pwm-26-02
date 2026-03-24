@@ -375,6 +375,21 @@
           }
         },
         {
+          "title": "Detail Card Item V2",
+          "id": "detail-card-item-v2",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block/item",
+                "template": {
+                  "name": "Detail Card Item V2",
+                  "model": "detail-card-item-v2"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Embed",
           "id": "embed",
           "plugins": {

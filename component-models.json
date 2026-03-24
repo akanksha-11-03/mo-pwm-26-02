@@ -193,10 +193,6 @@
           {
             "name": "Blog Detail",
             "value": "blog-detail"
-          },
-          {
-            "name": "Video Detail",
-            "value": "video-detail"
           }
         ]
       }
@@ -440,6 +436,30 @@
         "component": "aem-content",
         "name": "col1_url",
         "label": "Redirected Page URL"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Detail Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "detail-card-item-v2",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Image Alt"
       },
       {
         "component": "richtext",

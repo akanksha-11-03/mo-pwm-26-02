@@ -90,10 +90,6 @@
             {
               "name": "Blog Detail",
               "value": "blog-detail"
-            },
-            {
-              "name": "Video Detail",
-              "value": "video-detail"
             }
           ]
         }
