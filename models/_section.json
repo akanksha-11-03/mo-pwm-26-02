@@ -80,6 +80,31 @@
               "value": "pwm-group"
             },
             {
+              "name": "Tab Content Panels",
+              "children": [
+                {
+                  "name": "Tab Content",
+                  "value": "tab-content"
+                },
+                {
+                  "name": "Overview Tab",
+                  "value": "tab-overview"
+                },
+                {
+                  "name": "Blogs Tab",
+                  "value": "tab-blogs"
+                },
+                {
+                  "name": "Reports Tab",
+                  "value": "tab-reports"
+                },
+                {
+                  "name": "Videos Tab",
+                  "value": "tab-videos"
+                }
+              ]
+            },
+            {
               "name": "Common Explore Button",
               "value": "cmmn-explr-btn"
             },
@@ -123,6 +148,8 @@
         "tabs",
         "banner-carousel",
         "accordion",
+        "custom-tab",
+        "search-bar",
         "detail-card"
       ]
     }

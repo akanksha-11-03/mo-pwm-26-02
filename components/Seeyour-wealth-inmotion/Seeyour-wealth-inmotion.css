@@ -133,11 +133,17 @@
   outline: none;
   transition: border-color 0.2s;
 }
+<<<<<<< HEAD
+.sywim-input::-moz-placeholder {
+  color: var(--neutrals-500);
+}
+=======
 
 .sywim-input::-moz-placeholder {
   color: var(--neutrals-500);
 }
 
+>>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07
 .sywim-input::placeholder {
   color: var(--neutrals-500);
 }
@@ -229,6 +235,9 @@
   .sywim-form-controls {
     max-width: 471px;
   }
+<<<<<<< HEAD
+}/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
+=======
 }
 
 @media screen and (width <= 1000px) {
@@ -271,3 +280,4 @@
     font-size: 15px;
   }
 }
+>>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07

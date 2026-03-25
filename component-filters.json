@@ -23,6 +23,8 @@
       "tabs",
       "banner-carousel",
       "accordion",
+      "custom-tab",
+      "search-bar",
       "detail-card"
     ]
   },
@@ -83,6 +85,12 @@
       "custom-rte-item",
       "custom-image-item",
       "rte-image-item"
+    ]
+  },
+  {
+    "id": "custom-tab",
+    "components": [
+      "custom-tab-item"
     ]
   },
   {

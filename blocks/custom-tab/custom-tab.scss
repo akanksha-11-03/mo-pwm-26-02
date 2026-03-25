@@ -1,0 +1,83 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
+
+/* ===== Custom Tab Block ===== */
+
+.custom-tab {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* ── Tab List ── */
+.custom-tab .tabs-list {
+  display: flex;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--neutrals-400, #bdbdbd);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* ── Tab Items (li) ── */
+.custom-tab .tabs-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  gap: var(--spacing-4);
+  padding: var(--spacing-10, 10px) 0;
+  @include font-style(var(--body-small-regular-size), 1.14, var(--neutrals-600), var(--regular), var(--body));
+  cursor: pointer;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s ease, border-color 0.2s ease;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+
+  &:hover {
+    color: var(--pwm-gold-700);
+  }
+
+  &.active,
+  &[aria-selected="true"] {
+    color: var(--pwm-gold-700);
+    border-bottom-color: var(--pwm-gold-700);
+    font-weight: var(--semibold);
+  }
+}
+
+/* ── Tab Panels ── */
+.custom-tab .tabs-panels {
+  width: 100%;
+}
+
+.custom-tab .tabs-panel {
+  display: none;
+  padding-top: var(--spacing-24);
+
+  &.active {
+    display: block;
+  }
+}
+
+/* ── Responsive (mobile) ── */
+@media (max-width: 899px) {
+  .custom-tab .tabs-list {
+    gap: 0;
+  }
+
+  .custom-tab .tabs-list li {
+    padding: var(--spacing-12) var(--spacing-16);
+    font-size: var(--body-small-regular-size);
+  }
+}

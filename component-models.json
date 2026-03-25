@@ -183,6 +183,31 @@
             "value": "pwm-group"
           },
           {
+            "name": "Tab Content Panels",
+            "children": [
+              {
+                "name": "Tab Content",
+                "value": "tab-content"
+              },
+              {
+                "name": "Overview Tab",
+                "value": "tab-overview"
+              },
+              {
+                "name": "Blogs Tab",
+                "value": "tab-blogs"
+              },
+              {
+                "name": "Reports Tab",
+                "value": "tab-reports"
+              },
+              {
+                "name": "Videos Tab",
+                "value": "tab-videos"
+              }
+            ]
+          },
+          {
             "name": "Common Explore Button",
             "value": "cmmn-explr-btn"
           },
@@ -442,6 +467,16 @@
     ]
   },
   {
+    "id": "custom-tab-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Tab Content"
+      }
+    ]
+  },
+  {
     "id": "detail-card-item",
     "fields": [
       {
@@ -595,6 +630,23 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "search-bar",
+    "fields": [
+      {
+        "component": "text",
+        "name": "heading",
+        "label": "Heading",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "searchContent",
+        "label": "Search Content (icons + placeholder)",
         "valueType": "string"
       }
     ]

@@ -25,8 +25,12 @@
   gap: var(--spacing-24);
   padding: var(--spacing-24) 0;
 }
+<<<<<<< HEAD
+@media (min-width: ) {
+=======
 
 @media (width <= 768px) {
+>>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07
   .section.say-hello .custom-rte {
     flex-direction: column;
     align-items: flex-start;
@@ -48,8 +52,12 @@
 .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner {
   line-height: 0;
 }
+<<<<<<< HEAD
+@media (min-width: ) {
+=======
 
 @media (width <= 768px) {
+>>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07
   .section.say-hello .custom-rte .say-hello-image {
     width: 49px;
     height: 64px;
@@ -78,8 +86,12 @@
   width: 100%;
   gap: var(--spacing-24);
 }
+<<<<<<< HEAD
+@media (min-width: ) {
+=======
 
 @media (width <= 768px) {
+>>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07
   .section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
     flex-direction: column;
     align-items: flex-start;

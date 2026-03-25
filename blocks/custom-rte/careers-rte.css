@@ -20,8 +20,12 @@
 .section.careers-rte .custom-rte .careers-intro {
   width: 870px;
 }
+<<<<<<< HEAD
+@media (min-width: ) {
+=======
 
 @media (width <= 768px) {
+>>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07
   .section.careers-rte .custom-rte .careers-intro {
     width: 340px;
   }
