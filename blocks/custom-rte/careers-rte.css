@@ -1,26 +1,32 @@
 @charset "UTF-8";
 @import "../../../styles/common-theme/css/fonts.css";
+
 .section.careers-rte .custom-rte {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-40);
 }
-@media (max-width: 768px) {
+
+@media (width <= 768px) {
   .section.careers-rte .custom-rte {
     gap: var(--spacing-40);
   }
 }
+
 .section.careers-rte .custom-rte {
   /* ===== Intro paragraph (first row) ===== */
 }
+
 .section.careers-rte .custom-rte .careers-intro {
   width: 870px;
 }
-@media (max-width: 768px) {
+
+@media (width <= 768px) {
   .section.careers-rte .custom-rte .careers-intro {
     width: 340px;
   }
 }
+
 .section.careers-rte .custom-rte .careers-intro .careers-col .careers-para {
   font-size: var(--body-medium-regular-size);
   line-height: var(--body-medium-regular-line-height);
@@ -31,14 +37,17 @@
   font-style: normal;
   margin: 0;
 }
+
 .section.careers-rte .custom-rte {
   /* ===== Content blocks (rows 2, 3, 4 …) ===== */
 }
+
 .section.careers-rte .custom-rte .careers-block .careers-col {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-12);
 }
+
 .section.careers-rte .custom-rte .careers-block .careers-col .careers-heading {
   font-size: var(--sub-header-large-size);
   line-height: var(--sub-header-large-line-height);
@@ -49,6 +58,7 @@
   font-style: normal;
   margin: 0;
 }
+
 .section.careers-rte .custom-rte .careers-block .careers-col .careers-para {
   font-size: var(--body-medium-regular-size);
   line-height: var(--body-medium-regular-line-height);
@@ -59,6 +69,7 @@
   font-style: normal;
   margin: 0;
 }
+
 .section.careers-rte .custom-rte .careers-block .careers-col .careers-list {
   margin: var(--spacing-4) 0 0;
   padding: 0 0 0 var(--spacing-8);
@@ -67,6 +78,7 @@
   flex-direction: column;
   gap: var(--spacing-8);
 }
+
 .section.careers-rte .custom-rte .careers-block .careers-col .careers-list .careers-list-item {
   font-size: var(--body-medium-regular-size);
   line-height: var(--body-medium-regular-line-height);
@@ -78,6 +90,7 @@
   align-items: baseline;
   gap: var(--spacing-10);
 }
+
 .section.careers-rte .custom-rte .careers-block .careers-col .careers-list .careers-list-item::before {
   content: "";
   background-color: var(--blue-1-800-primary);
@@ -85,4 +98,4 @@
   height: var(--spacing-4);
   display: block;
   border-radius: 50%;
-}/*# sourceMappingURL=careers-rte.css.map */
+}

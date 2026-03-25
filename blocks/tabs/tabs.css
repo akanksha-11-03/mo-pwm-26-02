@@ -1,4 +1,4 @@
-@import url('sharper-focus.css');
+@import 'sharper-focus.css';
 
 .tabs .tabs-list {
   display: flex;
@@ -309,6 +309,7 @@
 /* --- THE ANIMATIONS --- */
 
 /* Animates the image from grayscale to color */
+
 /* @keyframes highlightimage {
   0%, 24.99% { 
     filter: grayscale(0%);
@@ -336,6 +337,7 @@
 } */
 
 /* Base animation */
+
 /* .section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type) img {
   animation: highlightimage 8s infinite;
 }
@@ -345,6 +347,7 @@
 } */
 
 /* Item delays (highlight one by one) */
+
 /* .section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(1) img,
 .section.sharper-focus .tabs .tabs-panel .custom-rte>div:nth-child(1) p strong {
   animation-delay: 0s;
@@ -366,6 +369,7 @@
 } */
 
 /* @media screen and (width>768px) { */
+
     /* .section.sharper-focus {
         max-width: 66.745%;
         width: 100%;
@@ -418,10 +422,14 @@
     } */
 
     /* .section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type){ */
+
     /* width: 41.982%;
         height: 41.982%; */
+
     /* width: 200px; */
+
     /* height: 200px; */
+
     /* } */
 
     /* .section.sharper-focus .tabs .tabs-panel .custom-rte>div:not(:last-of-type)>div:last-of-type{
@@ -454,4 +462,5 @@
         font-size: 16px;
         line-height: 20px;
     } */
+
 /* } */

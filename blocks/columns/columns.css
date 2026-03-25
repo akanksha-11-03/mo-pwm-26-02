@@ -1,4 +1,4 @@
-@import url('pwm-group.css');
+@import 'pwm-group.css';
 
 .columns > div {
   display: flex;

@@ -1,4 +1,5 @@
 @import "../../../styles/common-theme/css/fonts.css";
+
 /* ===== Say Hello CTA Banner ===== */
 .section.say-hello {
   background: var(--pwm-gold-700);
@@ -6,14 +7,17 @@
   position: relative;
   margin: auto;
 }
+
 .section.say-hello > div {
   padding: 0;
 }
+
 .section.say-hello .custom-rte-wrapper {
   max-width: 1264px;
   width: 100%;
   padding: 0 var(--spacing-16);
 }
+
 .section.say-hello .custom-rte {
   display: flex;
   align-items: center;
@@ -21,7 +25,8 @@
   gap: var(--spacing-24);
   padding: var(--spacing-24) 0;
 }
-@media (max-width: 768px) {
+
+@media (width <= 768px) {
   .section.say-hello .custom-rte {
     flex-direction: column;
     align-items: flex-start;
@@ -29,6 +34,7 @@
     padding: var(--spacing-24) 0;
   }
 }
+
 .section.say-hello .custom-rte .say-hello-image {
   position: absolute;
   left: 0;
@@ -38,21 +44,25 @@
   opacity: 1;
   z-index: 99;
 }
+
 .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner {
   line-height: 0;
 }
-@media (max-width: 768px) {
+
+@media (width <= 768px) {
   .section.say-hello .custom-rte .say-hello-image {
     width: 49px;
     height: 64px;
     aspect-ratio: 78.83/107.44;
   }
+
   .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner picture,
   .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner img {
     width: 100px;
     height: auto;
   }
 }
+
 .section.say-hello .custom-rte .say-hello-content {
   display: flex;
   align-items: center;
@@ -60,6 +70,7 @@
   width: 100%;
   z-index: 1;
 }
+
 .section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
   display: flex;
   align-items: center;
@@ -67,13 +78,15 @@
   width: 100%;
   gap: var(--spacing-24);
 }
-@media (max-width: 768px) {
+
+@media (width <= 768px) {
   .section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-16);
   }
 }
+
 .section.say-hello .custom-rte .say-hello-content .say-hello-text {
   font-size: var(--heading-pwm-h4-size);
   line-height: var(--heading-pwm-h4-line-height);
@@ -84,10 +97,12 @@
   font-style: normal;
   margin: 0;
 }
+
 .section.say-hello .custom-rte .say-hello-content .say-hello-btn {
   margin: 0;
   flex-shrink: 0;
 }
+
 .section.say-hello .custom-rte .say-hello-content .say-hello-link,
 .section.say-hello .custom-rte .say-hello-content a.button {
   all: unset;
@@ -110,4 +125,4 @@
   font-weight: var(--medium);
   text-decoration: none;
   white-space: nowrap;
-}/*# sourceMappingURL=say-hello.css.map */
+}
