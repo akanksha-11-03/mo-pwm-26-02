@@ -1,3 +1,42 @@
 {
-  "extends": ["stylelint-config-standard"]
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": [
+    "stylelint-scss"
+  ],
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true,
+    "no-invalid-double-slash-comments": null,
+    "scss/double-slash-comment-whitespace-inside": null,
+    "selector-no-vendor-prefix": null,
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": [
+          "user-select",
+          "appearance",
+          "object-fit",
+          "object-position",
+          "width",
+          "min-width",
+          "max-width",
+          "height",
+          "column-gap",
+          "line-height"
+        ]
+      }
+    ],
+    "value-no-vendor-prefix": [
+      true,
+      {
+        "ignoreValues": [
+          "/^(-webkit-|-moz-)?max-content$/",
+          "/^(-webkit-|-moz-)?min-content$/",
+          "/^(-webkit-|-moz-)?fit-content$/"
+        ]
+      }
+    ]
+  }
 }
