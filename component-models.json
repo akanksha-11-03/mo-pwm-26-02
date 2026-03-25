@@ -197,6 +197,10 @@
           {
             "name": "Blog Detail Section",
             "value": "blog-detail"
+          },
+          {
+            "name": "Say Hello Form Section",
+            "value": "say-hello-form"
           }
         ]
       }
