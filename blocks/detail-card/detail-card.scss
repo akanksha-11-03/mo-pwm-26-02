@@ -334,7 +334,7 @@
       .detail-card {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
+        // justify-content: space-between;
         gap: 12px;
 
         .detail-content {
@@ -347,7 +347,7 @@
           }
 
           .detail-card-item-1 {
-            max-height: 164px;
+            min-height: 164px;
             height: auto;
 
             @include media(tablet-up) {
