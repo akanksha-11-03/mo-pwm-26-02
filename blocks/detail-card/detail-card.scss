@@ -347,7 +347,7 @@
           }
 
           .detail-card-item-1 {
-            min-height: 164px;
+            // max-height: 164px;
             height: auto;
 
             @include media(tablet-up) {
@@ -356,6 +356,10 @@
 
             picture{
               aspect-ratio: 1 / 1;
+
+              @include media(tablet-up) {
+                aspect-ratio: unset;
+              }
 
               img {
                 aspect-ratio: 1 / 1;

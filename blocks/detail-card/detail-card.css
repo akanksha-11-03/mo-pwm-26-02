@@ -289,7 +289,6 @@
   }
 }
 .section.detail-card-main.detail-card-v2 .detail-card .detail-content .detail-card-item-1 {
-  min-height: 164px;
   height: auto;
 }
 @media (min-width: 768px) {
@@ -299,6 +298,11 @@
 }
 .section.detail-card-main.detail-card-v2 .detail-card .detail-content .detail-card-item-1 picture {
   aspect-ratio: 1/1;
+}
+@media (min-width: 768px) {
+  .section.detail-card-main.detail-card-v2 .detail-card .detail-content .detail-card-item-1 picture {
+    aspect-ratio: unset;
+  }
 }
 .section.detail-card-main.detail-card-v2 .detail-card .detail-content .detail-card-item-1 picture img {
   aspect-ratio: 1/1;
