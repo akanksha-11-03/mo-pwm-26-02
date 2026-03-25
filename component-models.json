@@ -369,6 +369,22 @@
     ]
   },
   {
+    "id": "custom-rte",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Blog Detail Group Image",
+            "value": "detail-grp-img"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "custom-rte-item",
     "fields": [
       {
