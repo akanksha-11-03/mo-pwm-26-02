@@ -144,16 +144,13 @@
 }
 
 .section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-1 picture {
-  object-position: bottom;
      object-position: bottom;
   min-height: inherit;
 }
 
 .section.young-titans-forum .titans-forum .block-item .block-child-1 .grand-child-1 picture img {
-  object-position: bottom;
      object-position: bottom;
   min-height: inherit;
-  object-fit: fill;
      object-fit: fill;
   padding-top: 64px;
   width: 100%;

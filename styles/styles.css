@@ -10,9 +10,9 @@
  * governing permissions and limitations under the License.
  */
 
-@import '../styles/common-theme/css/_reset.scss';
+@import '../styles/common-theme/css/_reset';
 @import '../styles/common-theme/css/tokens-variable.css';
-@import '../styles/common-theme/css/_variables_mixins.scss';
+@import '../styles/common-theme/css/_variables_mixins';
 
 html,
 body,

@@ -123,15 +123,15 @@
 }
 
 .section.hero-banner .default-content-wrapper h2 {
-    color: var(--Neutrals-White, #FFF);
+    color: var(--neutrals-white, #FFF);
     font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
 
     /* Mobile/Header/H4 */
-    font-family: var(--TItle, Inter);
-    font-size: var(--Heading-H5-Size, 28px);
+    font-family: var(--title, Inter);
+    font-size: var(--heading-h5-size, 28px);
     font-style: normal;
     font-weight: 600;
-    line-height: var(--Sub-Header-Large-Line-Height, 32px);
+    line-height: var(--sub-header-large-line-height, 32px);
 
     /* 114.286% */
     max-width: 80%;
@@ -147,14 +147,14 @@
 .section.hero-banner .default-content-wrapper p.button-container .button {
     margin: 0;
     padding: 10px 31px;
-    border-radius: var(--Border-Radius-4, 4px);
+    border-radius: var(--border-radius-4, 4px);
     background: var(--blue-1800-primary, #2E2A94);
     border: none;
     min-width: 125px;
-    color: var(--Text-White, #FFF);
+    color: var(--text-white, #FFF);
     text-align: center;
     font-feature-settings: 'ss01' on, 'ss04' on, 'cv01' on, 'cv02' on, 'cv03' on, 'cv04' on, 'cv06' on, 'cv09' on, 'cv10' on, 'cv11' on;
-    font-family: var(--Body, Inter);
+    font-family: var(--body, Inter);
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -190,8 +190,8 @@
     .section.hero-banner .default-content-wrapper h2 {
         max-width: 59.654%;
         color: var(--blue-1800-primary, #2E2A94);
-        font-size: var(--Heading-H2-Size, 40px);
-        line-height: var(--Heading-H2-Line-Height, 48px);
+        font-size: var(--heading-h2-size, 40px);
+        line-height: var(--heading-h2-line-height, 48px);
 
         /* 120% */
     }
@@ -203,8 +203,8 @@
     .section.hero-banner .default-content-wrapper p.button-container .button {
         min-width: 158px;
         padding: 14px 32px;
-        color: var(--Text-White, #FFF);
-        font-family: var(--Body, Inter);
+        color: var(--text-white, #FFF);
+        font-family: var(--body, Inter);
         font-size: 17.747px;
         line-height: 19.719px;
 
