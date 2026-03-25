@@ -1,25 +1,23 @@
 import { decorateIcons } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
-  // Extract authored heading and placeholder text from block rows
   const rows = [...block.children];
-  const heading = rows[0]?.textContent.trim() || 'Press Releases';
+  const heading = rows[0]?.textContent.trim() || 'Blogs';
   const placeholder = rows[1]?.textContent.trim() || 'Search for an edition';
 
-  // Clear block content
   block.textContent = '';
 
-  // --- Heading ---
+  /* ── Heading ── */
   const h2 = document.createElement('h2');
   h2.classList.add('search-bar-heading');
   h2.textContent = heading;
   block.appendChild(h2);
 
-  // --- Search Container ---
-  const searchContainer = document.createElement('div');
-  searchContainer.classList.add('search-bar-container');
+  /* ── Search container ── */
+  const container = document.createElement('div');
+  container.classList.add('search-bar-container');
 
-  // Left side: icon + input
+  // input wrapper (icon + input)
   const inputWrapper = document.createElement('div');
   inputWrapper.classList.add('search-bar-input-wrapper');
 
@@ -34,7 +32,7 @@ export default async function decorate(block) {
   input.setAttribute('aria-label', placeholder);
   inputWrapper.appendChild(input);
 
-  // Right side: submit button with diagonal arrow
+  // submit button (diagonal arrow)
   const submitBtn = document.createElement('button');
   submitBtn.classList.add('search-bar-submit');
   submitBtn.setAttribute('aria-label', 'Search');
@@ -44,18 +42,16 @@ export default async function decorate(block) {
   arrowIcon.classList.add('icon', 'icon-diagonal-arrow');
   submitBtn.appendChild(arrowIcon);
 
-  searchContainer.appendChild(inputWrapper);
-  searchContainer.appendChild(submitBtn);
-  block.appendChild(searchContainer);
+  container.appendChild(inputWrapper);
+  container.appendChild(submitBtn);
+  block.appendChild(container);
 
-  // Decorate icons (load SVGs)
   await decorateIcons(block);
 
-  // --- Search functionality ---
+  /* ── Search action ── */
   const doSearch = () => {
     const query = input.value.trim();
     if (query) {
-      // Dispatch custom event for other blocks to listen to
       block.dispatchEvent(new CustomEvent('search', {
         detail: { query },
         bubbles: true,
