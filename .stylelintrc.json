@@ -10,6 +10,8 @@
     "scss/double-slash-comment-whitespace-inside": null,
     "selector-no-vendor-prefix": null,
     "block-no-redundant-nested-style-rules": null,
+    "declaration-block-single-line-max-declarations": null,
+    "scss/operator-no-unspaced": null,
     "property-no-vendor-prefix": [
       true,
       {
