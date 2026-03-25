@@ -555,21 +555,9 @@
         "valueType": "string"
       },
       {
-        "component": "text",
-        "name": "placeholder",
-        "label": "Placeholder Text",
-        "valueType": "string"
-      },
-      {
         "component": "richtext",
-        "name": "searchIcon",
-        "label": "Search Icon",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "submitIcon",
-        "label": "Submit Icon",
+        "name": "searchContent",
+        "label": "Search Content (icons + placeholder)",
         "valueType": "string"
       }
     ]

@@ -3,9 +3,13 @@ import { decorateIcons } from '../../scripts/aem.js';
 export default async function decorate(block) {
   const rows = [...block.children];
   const heading = rows[0]?.textContent.trim() || '';
-  const placeholder = rows[1]?.textContent.trim() || 'Search...';
-  const searchIconHtml = rows[2]?.innerHTML || '';
-  const submitIconHtml = rows[3]?.innerHTML || '';
+  const contentRow = rows[1];
+
+  // Parse richtext: extract icon spans and text for placeholder
+  const icons = contentRow ? [...contentRow.querySelectorAll('span.icon')] : [];
+  const placeholder = contentRow?.textContent.trim() || 'Search...';
+  const searchIconEl = icons[0];
+  const submitIconEl = icons[1];
 
   block.textContent = '';
 
@@ -23,10 +27,10 @@ export default async function decorate(block) {
   const inputWrapper = document.createElement('div');
   inputWrapper.classList.add('search-bar-input-wrapper');
 
-  const searchIconWrapper = document.createElement('span');
-  searchIconWrapper.classList.add('search-bar-icon');
-  searchIconWrapper.innerHTML = searchIconHtml;
-  inputWrapper.appendChild(searchIconWrapper);
+  if (searchIconEl) {
+    searchIconEl.classList.add('search-bar-icon');
+    inputWrapper.appendChild(searchIconEl);
+  }
 
   const input = document.createElement('input');
   input.type = 'text';
@@ -35,12 +39,12 @@ export default async function decorate(block) {
   input.setAttribute('aria-label', placeholder);
   inputWrapper.appendChild(input);
 
-  // submit button (arrow icon)
+  // submit button
   const submitBtn = document.createElement('button');
   submitBtn.classList.add('search-bar-submit');
   submitBtn.setAttribute('aria-label', 'Search');
   submitBtn.type = 'button';
-  submitBtn.innerHTML = submitIconHtml;
+  if (submitIconEl) submitBtn.appendChild(submitIconEl);
 
   container.appendChild(inputWrapper);
   container.appendChild(submitBtn);
