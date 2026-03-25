@@ -1,7 +1,3 @@
-/* ===== Search Bar Block ===== */
-
-/* Figma node 603:2824 — "Blogs" search bar */
-
 .search-bar {
   display: flex;
   flex-direction: column;
@@ -12,8 +8,6 @@
   margin: 0 auto;
   padding: 0;
 }
-
-/* ── Heading ── */
 .search-bar .search-bar-heading {
   width: 100%;
   text-align: center;
@@ -24,8 +18,6 @@
   color: var(--pwm-gold-700);
   margin: 0;
 }
-
-/* ── Search Container (pill shape) ── */
 .search-bar .search-bar-container {
   display: flex;
   align-items: center;
@@ -38,21 +30,17 @@
   border-radius: 48px;
   box-sizing: border-box;
 }
-
-/* ── Input Wrapper ── */
 .search-bar .search-bar-input-wrapper {
   display: flex;
   align-items: center;
   gap: var(--spacing-4);
   flex: 1;
 }
-
 .search-bar .search-bar-input-wrapper .icon {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
 }
-
 .search-bar .search-bar-input {
   flex: 1;
   border: none;
@@ -64,12 +52,12 @@
   color: var(--neutrals-900, #212121);
   outline: none;
 }
-
+.search-bar .search-bar-input::-moz-placeholder {
+  color: #939393;
+}
 .search-bar .search-bar-input::placeholder {
   color: #939393;
 }
-
-/* ── Submit Button ── */
 .search-bar .search-bar-submit {
   display: flex;
   align-items: center;
@@ -84,34 +72,27 @@
   flex-shrink: 0;
   transition: background 0.2s ease;
 }
-
 .search-bar .search-bar-submit:hover {
   background: var(--pwm-gold-400);
 }
-
 .search-bar .search-bar-submit .icon {
   width: 20px;
   height: 20px;
 }
-
-/* ── Mobile (<900px) ── */
 @media (width < 900px) {
   .search-bar {
     max-width: 100%;
     padding: 0 var(--spacing-16);
   }
-
   .search-bar .search-bar-heading {
     font-size: var(--heading-font-size-l);
   }
-
   .search-bar .search-bar-container {
     height: 48px;
     padding: 0 var(--spacing-6) 0 var(--spacing-16);
   }
-
   .search-bar .search-bar-submit {
     width: 36px;
     height: 36px;
   }
-}
+}/*# sourceMappingURL=search-bar.css.map */

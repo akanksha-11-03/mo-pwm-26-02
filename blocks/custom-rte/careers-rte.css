@@ -5,7 +5,7 @@
   flex-direction: column;
   gap: var(--spacing-40);
 }
-@media (max-width: 768px) {
+@media (min-width: ) {
   .section.careers-rte .custom-rte {
     gap: var(--spacing-40);
   }
@@ -16,7 +16,7 @@
 .section.careers-rte .custom-rte .careers-intro {
   width: 870px;
 }
-@media (max-width: 768px) {
+@media (min-width: ) {
   .section.careers-rte .custom-rte .careers-intro {
     width: 340px;
   }

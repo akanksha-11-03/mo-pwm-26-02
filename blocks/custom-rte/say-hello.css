@@ -21,7 +21,7 @@
   gap: var(--spacing-24);
   padding: var(--spacing-24) 0;
 }
-@media (max-width: 768px) {
+@media (min-width: ) {
   .section.say-hello .custom-rte {
     flex-direction: column;
     align-items: flex-start;
@@ -41,7 +41,7 @@
 .section.say-hello .custom-rte .say-hello-image .say-hello-image-inner {
   line-height: 0;
 }
-@media (max-width: 768px) {
+@media (min-width: ) {
   .section.say-hello .custom-rte .say-hello-image {
     width: 49px;
     height: 64px;
@@ -67,7 +67,7 @@
   width: 100%;
   gap: var(--spacing-24);
 }
-@media (max-width: 768px) {
+@media (min-width: ) {
   .section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
     flex-direction: column;
     align-items: flex-start;

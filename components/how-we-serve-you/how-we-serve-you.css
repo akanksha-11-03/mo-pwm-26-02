@@ -47,7 +47,8 @@
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div > .columns-img-col picture img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 0;
   display: block;
 }
@@ -132,6 +133,4 @@
     font-size: var(--body-small-regular-size);
     padding: 14px 0;
   }
-}
-
-/*# sourceMappingURL=how-we-serve-you.css.map */
+}/*# sourceMappingURL=How-we-serve-you.css.map */

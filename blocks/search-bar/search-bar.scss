@@ -1,0 +1,112 @@
+
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-20);
+  width: 100%;
+  max-width: 798px;
+  margin: 0 auto;
+  padding: 0;
+
+  .search-bar-heading {
+    width: 100%;
+    text-align: center;
+    font-family: var(--title);
+    font-weight: var(--semibold);
+    font-size: var(--heading-font-size-xl);
+    line-height: 1.2;
+    color: var(--pwm-gold-700);
+    margin: 0;
+  }
+
+  // ── Search Container (pill shape) ──
+  .search-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 52px;
+    padding: 0 var(--spacing-8) 0 var(--spacing-32);
+    background: var(--pwm-gold-200);
+    border: var(--border-width-01) solid var(--pwm-gold-400);
+    border-radius: 48px;
+    box-sizing: border-box;
+  }
+
+  // ── Input Wrapper ──
+  .search-bar-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-4);
+    flex: 1;
+
+    .icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+  }
+
+  // ── Input ──
+  .search-bar-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: var(--body);
+    font-weight: var(--regular);
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--neutrals-900, #212121);
+    outline: none;
+
+    &::placeholder {
+      color: #939393;
+    }
+  }
+
+  // ── Submit Button ──
+  .search-bar-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    padding: var(--spacing-8);
+    border: none;
+    border-radius: var(--border-radius-24);
+    background: transparent;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: var(--pwm-gold-400);
+    }
+
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  // ── Mobile (<900px) ──
+  @media (width < 900px) {
+    max-width: 100%;
+    padding: 0 var(--spacing-16);
+
+    .search-bar-heading {
+      font-size: var(--heading-font-size-l);
+    }
+
+    .search-bar-container {
+      height: 48px;
+      padding: 0 var(--spacing-6) 0 var(--spacing-16);
+    }
+
+    .search-bar-submit {
+      width: 36px;
+      height: 36px;
+    }
+  }
+}

@@ -2,8 +2,10 @@ import { decorateIcons } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   const rows = [...block.children];
-  const heading = rows[0]?.textContent.trim() || 'Blogs';
-  const placeholder = rows[1]?.textContent.trim() || 'Search for an edition';
+  const heading = rows[0]?.textContent.trim() || '';
+  const placeholder = rows[1]?.textContent.trim() || 'Search...';
+  const searchIconHtml = rows[2]?.innerHTML || '';
+  const submitIconHtml = rows[3]?.innerHTML || '';
 
   block.textContent = '';
 
@@ -21,9 +23,10 @@ export default async function decorate(block) {
   const inputWrapper = document.createElement('div');
   inputWrapper.classList.add('search-bar-input-wrapper');
 
-  const searchIcon = document.createElement('span');
-  searchIcon.classList.add('icon', 'icon-search-grey');
-  inputWrapper.appendChild(searchIcon);
+  const searchIconWrapper = document.createElement('span');
+  searchIconWrapper.classList.add('search-bar-icon');
+  searchIconWrapper.innerHTML = searchIconHtml;
+  inputWrapper.appendChild(searchIconWrapper);
 
   const input = document.createElement('input');
   input.type = 'text';
@@ -32,15 +35,12 @@ export default async function decorate(block) {
   input.setAttribute('aria-label', placeholder);
   inputWrapper.appendChild(input);
 
-  // submit button (diagonal arrow)
+  // submit button (arrow icon)
   const submitBtn = document.createElement('button');
   submitBtn.classList.add('search-bar-submit');
   submitBtn.setAttribute('aria-label', 'Search');
   submitBtn.type = 'button';
-
-  const arrowIcon = document.createElement('span');
-  arrowIcon.classList.add('icon', 'icon-diagonal-arrow');
-  submitBtn.appendChild(arrowIcon);
+  submitBtn.innerHTML = submitIconHtml;
 
   container.appendChild(inputWrapper);
   container.appendChild(submitBtn);

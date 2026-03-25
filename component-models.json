@@ -559,6 +559,18 @@
         "name": "placeholder",
         "label": "Placeholder Text",
         "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "searchIcon",
+        "label": "Search Icon",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "submitIcon",
+        "label": "Submit Icon",
+        "valueType": "string"
       }
     ]
   },

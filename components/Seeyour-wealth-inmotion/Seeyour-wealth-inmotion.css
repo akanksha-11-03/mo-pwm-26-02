@@ -67,6 +67,9 @@
   outline: none;
   transition: border-color 0.2s;
 }
+.sywim-input::-moz-placeholder {
+  color: var(--neutrals-500);
+}
 .sywim-input::placeholder {
   color: var(--neutrals-500);
 }
@@ -147,6 +150,4 @@
   .sywim-static-header p {
     font-size: 15px;
   }
-}
-
-/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
+}/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
