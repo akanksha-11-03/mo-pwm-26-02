@@ -1,8 +1,12 @@
 @use "sass:map";
-@use "../../styles/common-theme/css/variables_mixins"as *;
-@use "../../styles/common-theme/css/fluid-typography"as *;
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
 
 .section.alpha-strategist {
+  @include media(tablet-up) {
+    margin: 0;
+  }
+
   .hero {
     min-height: 660px;
     padding: 0;
@@ -24,7 +28,7 @@
       }
       &-2 {
         display: none;
-        @include media(tablet-up){
+        @include media(tablet-up) {
           display: block;
         }
       }
@@ -191,7 +195,7 @@
                             var(--body)
                           );
 
-                          @include media(tablet-up){
+                          @include media(tablet-up) {
                             color: var(--pwm-gold-900);
                             font-size: var(--body-medium-regular-size);
                             line-height: var(--body-medium-regular-line-height);
@@ -251,8 +255,7 @@
                             }
 
                             &:first-of-type {
-                              border: 1px solid
-                                var(--button-primary-default);
+                              border: 1px solid var(--button-primary-default);
                               color: var(--text-button-default);
                             }
 

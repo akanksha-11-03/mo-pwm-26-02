@@ -1,0 +1,275 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
+
+.section.say-hello-form {
+  background-color: var(--pwm-gold-700);
+  margin: 0;
+
+  .custom-rte {
+    padding: 40px 16px;
+
+    @include media(tablet-up) {
+      padding: 82px 0;
+
+      &-wrapper {
+        max-width: 1265px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+    }
+
+    .sayhello {
+      &-form-1 {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        
+        @include media(tablet-up) {
+            flex-direction: row;
+            align-items: center;
+            gap: 55px;
+        }
+        
+        @media screen and (width <= 1025px) {
+            flex-direction: column;
+        }
+      }
+
+      @include media(tablet-up) {
+        &-col-1 {
+          max-width: 21.249%;
+          width: 100%;
+
+          @media screen and (width <= 1025px) {
+            max-width: 100%;
+          }
+        }
+
+        &-col-2 {
+          max-width: calc(100% - 21.249%);
+          width: 100%;
+
+          @media screen and (width <= 1025px) {
+            max-width: 100%;
+          }
+        }
+      }
+
+      &-item-1 {
+        text-align: center;
+        margin: 0 0 4px;
+
+        @include font-style(
+          28px,
+          var(--sub-header-large-line-height),
+          var(--neutrals-white),
+          var(--regular),
+          var(--title)
+        );
+
+        @include media(tablet-up) {
+            margin: 0 0 8px;
+            font-size: var(--heading-pwm-h4-size);
+            line-height: var(--heading-pwm-h4-line-height);
+        }
+        
+        @include media(desktop-up){
+            text-align: left;
+        }
+      }
+
+      &-item-2 {
+        text-align: center;
+        margin: 0;
+
+        @include font-style(
+          var(--body-small-regular-size),
+          var(--body-small-regular-line-height),
+          var(--neutrals-white),
+          var(--regular),
+          var(--body)
+        );
+
+        @include media(tablet-up) {
+          font-size: var(--body-medium-regular-size);
+          line-height: var(--body-medium-regular-line-height);
+        }
+
+        @include media(desktop-up){
+            text-align: left;
+        }
+      }
+    }
+
+    .sayhello-form {
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include media(tablet-up) {
+          flex-direction: row;
+          align-items: center;
+          gap: 16px;
+        }
+
+        .form-field {
+          @include media(tablet-up) {
+            max-width: 40%;
+            width: 100%;
+          }
+
+          .cmmn-input {
+            padding: var(--spacing-10) var(--spacing-12);
+            border-radius: 4px;
+            border: var(--border-width-01) solid var(--neutrals-white);
+            background-color: transparent;
+            width: 100%;
+
+            @include font-style(
+              var(--body-medium-regular-size),
+              var(--body-medium-regular-line-height),
+              var(--neutrals-white),
+              var(--regular),
+              var(--body)
+            );
+
+            @include media(tablet-up) {
+              font-size: var(--body-medium-regular-size);
+              line-height: var(--body-medium-regular-line-height);
+            }
+
+            &::placeholder {
+              color: var(--neutrals-white);
+            }
+          }
+
+          @media screen and (1025px <= width <= 1299px) {
+            &.name-field {
+                max-width: 30%;
+            }
+          }
+
+          &.mob-field {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            @media screen and (1025px <= width <= 1299px) {
+                max-width: 43%;
+            }
+
+            .select-drpdwn-wrap {
+              position: relative;
+
+              .drpdwn-sltxt {
+                all: unset;
+                border-radius: 4px;
+                border: var(--border-width-01) solid var(--neutrals-white);
+                background-color: unset;
+                padding: var(--spacing-10) var(--spacing-8) var(--spacing-10)
+                  var(--spacing-12);
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                width: max-content;
+
+                .country-flag {
+                  width: 28px;
+                  height: 20px;
+                }
+
+                .country-code {
+                  display: flex;
+                  align-items: center;
+                  gap: 11px;
+
+                  @include font-style(
+                    var(--body-medium-regular-size),
+                    var(--body-medium-regular-line-height),
+                    var(--neutrals-white),
+                    var(--regular),
+                    var(--body)
+                  );
+
+                  @include media(tablet-up) {
+                    font-size: var(--body-medium-regular-size);
+                    line-height: var(--body-medium-regular-line-height);
+                  }
+
+                  &::after {
+                    content: "";
+                    background-image: url(../../icons/white-down-arrow.svg);
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    width: 20px;
+                    height: 20px;
+                    display: block;
+                    transition: transform 0.3s ease;
+                  }
+                }
+
+                &.active {
+                  .country-code {
+                    &::after {
+                      transform: rotate(180deg);
+                    }
+                  }
+
+                  ~ .drpdwn-wrap {
+                    display: block;
+                  }
+                }
+              }
+
+              .drpdwn-wrap {
+                display: none;
+                position: absolute;
+                top: 100%;
+                margin: 5px 0 0;
+                z-index: 111;
+              }
+            }
+          }
+        }
+
+        .formn-btn-wrap {
+          margin: 8px auto 0;
+          max-width: 164px;
+          width: 100%;
+
+          @include media(tablet-up) {
+            margin: 0;
+          }
+
+          .sayhello-submit {
+            all: unset;
+            border-radius: var(--border-radius-4);
+            background-color: var(--neutrals-white);
+            padding: 10px var(--spacing-12);
+            text-align: center;
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+
+            @include font-style(
+              var(--button-medium-size),
+              var(--button-medium-line-height),
+              var(--blue-1-800-primary),
+              var(--medium),
+              var(--body)
+            );
+
+            @include media(tablet-up) {
+              font-size: var(--button-medium-size);
+              line-height: var(--button-medium-line-height);
+            }
+          }
+        }
+      }
+    }
+  }
+}

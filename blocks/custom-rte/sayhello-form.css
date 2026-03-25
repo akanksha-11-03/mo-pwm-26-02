@@ -1,0 +1,251 @@
+@import "../../../styles/common-theme/css/fonts.css";
+.section.say-hello-form {
+  background-color: var(--pwm-gold-700);
+  margin: 0;
+}
+.section.say-hello-form .custom-rte {
+  padding: 40px 16px;
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte {
+    padding: 82px 0;
+  }
+  .section.say-hello-form .custom-rte-wrapper {
+    max-width: 1265px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-form-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-form-1 {
+    flex-direction: row;
+    align-items: center;
+    gap: 55px;
+  }
+}
+@media screen and (width <= 1025px) {
+  .section.say-hello-form .custom-rte .sayhello-form-1 {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-col-1 {
+    max-width: 21.249%;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (width <= 1025px) {
+  .section.say-hello-form .custom-rte .sayhello-col-1 {
+    max-width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-col-2 {
+    max-width: 78.751%;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) and (width <= 1025px) {
+  .section.say-hello-form .custom-rte .sayhello-col-2 {
+    max-width: 100%;
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-item-1 {
+  text-align: center;
+  margin: 0 0 4px;
+  font-size: 28px;
+  line-height: var(--sub-header-large-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-item-1 {
+    margin: 0 0 8px;
+    font-size: var(--heading-pwm-h4-size);
+    line-height: var(--heading-pwm-h4-line-height);
+  }
+}
+@media (min-width: 1025px) {
+  .section.say-hello-form .custom-rte .sayhello-item-1 {
+    text-align: left;
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-item-2 {
+  text-align: center;
+  margin: 0;
+  font-size: var(--body-small-regular-size);
+  line-height: var(--body-small-regular-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-item-2 {
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
+  }
+}
+@media (min-width: 1025px) {
+  .section.say-hello-form .custom-rte .sayhello-item-2 {
+    text-align: left;
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-form .form-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-form .form-group .form-field {
+    max-width: 40%;
+    width: 100%;
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field .cmmn-input {
+  padding: var(--spacing-10) var(--spacing-12);
+  border-radius: 4px;
+  border: var(--border-width-01) solid var(--neutrals-white);
+  background-color: transparent;
+  width: 100%;
+  font-size: var(--body-medium-regular-size);
+  line-height: var(--body-medium-regular-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-form .form-group .form-field .cmmn-input {
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field .cmmn-input::-moz-placeholder {
+  color: var(--neutrals-white);
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field .cmmn-input::placeholder {
+  color: var(--neutrals-white);
+}
+@media screen and (1025px <= width <= 1299px) {
+  .section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.name-field {
+    max-width: 30%;
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+@media screen and (1025px <= width <= 1299px) {
+  .section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field {
+    max-width: 43%;
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap {
+  position: relative;
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap .drpdwn-sltxt {
+  all: unset;
+  border-radius: 4px;
+  border: var(--border-width-01) solid var(--neutrals-white);
+  background-color: unset;
+  padding: var(--spacing-10) var(--spacing-8) var(--spacing-10) var(--spacing-12);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: -moz-max-content;
+  width: max-content;
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap .drpdwn-sltxt .country-flag {
+  width: 28px;
+  height: 20px;
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap .drpdwn-sltxt .country-code {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: var(--body-medium-regular-size);
+  line-height: var(--body-medium-regular-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap .drpdwn-sltxt .country-code {
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap .drpdwn-sltxt .country-code::after {
+  content: "";
+  background-image: url(../../icons/white-down-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap .drpdwn-sltxt.active .country-code::after {
+  transform: rotate(180deg);
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap .drpdwn-sltxt.active ~ .drpdwn-wrap {
+  display: block;
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .form-field.mob-field .select-drpdwn-wrap .drpdwn-wrap {
+  display: none;
+  position: absolute;
+  top: 100%;
+  margin: 5px 0 0;
+  z-index: 111;
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .formn-btn-wrap {
+  margin: 8px auto 0;
+  max-width: 164px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-form .form-group .formn-btn-wrap {
+    margin: 0;
+  }
+}
+.section.say-hello-form .custom-rte .sayhello-form .form-group .formn-btn-wrap .sayhello-submit {
+  all: unset;
+  border-radius: var(--border-radius-4);
+  background-color: var(--neutrals-white);
+  padding: 10px var(--spacing-12);
+  text-align: center;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  font-size: var(--button-medium-size);
+  line-height: var(--button-medium-line-height);
+  color: var(--blue-1-800-primary);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
+}
+@media (min-width: 768px) {
+  .section.say-hello-form .custom-rte .sayhello-form .form-group .formn-btn-wrap .sayhello-submit {
+    font-size: var(--button-medium-size);
+    line-height: var(--button-medium-line-height);
+  }
+}/*# sourceMappingURL=sayhello-form.css.map */

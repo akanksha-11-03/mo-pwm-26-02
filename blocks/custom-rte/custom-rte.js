@@ -1,3 +1,7 @@
+import {
+  div, input, img, form, span, button,
+} from '../../scripts/dom-helpers.js';
+
 export default function decorate(block) {
   if (block.closest('.who-we-are')) {
     // console.log('swdfv');
@@ -86,5 +90,87 @@ export default function decorate(block) {
         }
       }
     });
+  }
+
+  if (block.closest('.say-hello-form')) {
+    const rows = Array.from(block.children);
+    rows.forEach((row, i) => {
+      row.classList.add(`sayhello-form-${i + 1}`);
+      Array.from(row.children).forEach((col, ind) => {
+        col.classList.add(`sayhello-col-${ind + 1}`);
+        Array.from(col.children).forEach((item, index) => {
+          item.classList.add(`sayhello-item-${index + 1}`);
+          Array.from(item.children).forEach((el, indd) => {
+            el.classList.add(`sayhello-list-${indd + 1}`);
+          });
+        });
+      });
+    });
+
+    // Creating form structure
+    const nameLabel = block.querySelector('.sayhello-item-3 .sayhello-list-1').textContent || 'Anurag';
+    const indImg = block.querySelector('.sayhello-item-3 .sayhello-list-2 img').src;
+    const contCode = block.querySelector('.sayhello-item-3 .sayhello-list-2').textContent;
+    const mobNumberLabel = block.querySelector('.sayhello-item-3 .sayhello-list-3').textContent;
+    const btnLabel = block.querySelector('.sayhello-item-3 .sayhello-list-4').textContent;
+
+    const sayHelloForm = div(
+      { class: 'sayhello-col-2' },
+      form(
+        { class: 'sayhello-form' },
+        div(
+          { class: 'form-group' },
+          div(
+            { class: 'form-field name-field' },
+            input({
+              type: 'text', name: 'name', placeholder: nameLabel, class: 'cmmn-input',
+            }),
+          ),
+          div(
+            { class: 'form-field mob-field' },
+            div(
+              { class: 'select-drpdwn-wrap' },
+              button(
+                { class: 'drpdwn-sltxt', type: 'button' },
+                img({ src: indImg, alt: 'India Flag', class: 'country-flag' }),
+                span({ class: 'country-code' }, contCode),
+              ),
+              div(
+                { class: 'drpdwn-wrap' },
+                div(
+                  { class: 'drpdwn-menu' },
+                  button(
+                    { class: 'drpdwn-list', type: 'button' },
+                    img({ src: indImg, alt: 'Flag', class: 'code-flag' }),
+                    span({ class: 'code-list' }, contCode),
+                  ),
+                  button(
+                    { class: 'drpdwn-list', type: 'button' },
+                    img({ src: indImg, alt: 'Flag', class: 'code-flag' }),
+                    span({ class: 'code-list' }, contCode),
+                  ),
+                  button(
+                    { class: 'drpdwn-list', type: 'button' },
+                    img({ src: indImg, alt: 'Flag', class: 'code-flag' }),
+                    span({ class: 'code-list' }, contCode),
+                  ),
+                ),
+              ),
+            ),
+            input({
+              type: 'number', name: 'mobile', placeholder: mobNumberLabel, class: 'cmmn-input',
+            }),
+          ),
+          div(
+            { class: 'formn-btn-wrap' },
+            button({ type: 'submit', class: 'sayhello-submit' }, btnLabel),
+          ),
+        ),
+      ),
+    );
+
+    const sayHelloContainer = block.querySelector('.sayhello-form-1');
+    block.querySelector('.sayhello-item-3').remove();
+    sayHelloContainer.appendChild(sayHelloForm);
   }
 }
