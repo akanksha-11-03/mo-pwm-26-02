@@ -1,26 +1,49 @@
 @charset "UTF-8";
 @import "../../../styles/common-theme/css/fonts.css";
+
 /* ===== See Your Wealth In Motion — Component ===== */
 .section.seeyour-wealth-inmotion {
+  background: var(--pwm-gold-100);
   display: flex;
   justify-content: center;
-  padding: var(--spacing-48) var(--spacing-16);
+  padding: var(--spacing-40) var(--spacing-16);
+  box-sizing: border-box;
+  margin: var(--spacing-none);
+  position: relative;
 }
 
 .sywim-wrapper {
-  background: var(--pwm-gold-100);
-  border-radius: var(--border-radius-12);
-  padding: var(--spacing-48) var(--spacing-40);
-  max-width: 720px;
+  max-width: 1366px;
   width: 100%;
-  box-sizing: border-box;
+  padding: var(--spacing-40) var(--spacing-32);
+  margin: var(--spacing-74) var(--spacing-none);
 }
 
-/* ── Static Header ── */
-.sywim-static-header {
-  margin-bottom: var(--spacing-24);
+/* ── Content container: flexible layout ── */
+.sywim-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  grid-template-areas: "heading image" "subtitle image" "form image";
+  margin: var(--spacing-72) var(--spacing-none);
 }
-.sywim-static-header h1, .sywim-static-header h2, .sywim-static-header h3, .sywim-static-header h4, .sywim-static-header h5, .sywim-static-header h6 {
+
+@media screen and (width <= 1025px) {
+  .sywim-content {
+    margin: var(--spacing-none);
+  }
+}
+
+.sywim-heading {
+  grid-area: heading;
+}
+
+.sywim-heading h1,
+.sywim-heading h2,
+.sywim-heading h3,
+.sywim-heading h4,
+.sywim-heading h5,
+.sywim-heading h6 {
   font-size: var(--heading-pwm-h4-size);
   line-height: var(--heading-pwm-h4-line-height);
   color: var(--pwm-gold-700);
@@ -29,7 +52,13 @@
   font-weight: var(--regular);
   margin: 0 0 var(--spacing-12);
 }
-.sywim-static-header p {
+
+.sywim-subtitle {
+  grid-area: subtitle;
+  margin-bottom: var(--spacing-24);
+}
+
+.sywim-subtitle p {
   font-size: 18px;
   line-height: 1.5;
   color: var(--blue-1-800-primary);
@@ -37,6 +66,43 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--medium);
   margin: 0;
+}
+
+.sywim-form-controls {
+  grid-area: form;
+  max-width: 520px;
+}
+
+.sywim-image-container {
+  grid-area: image;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 17%;
+  right: 0;
+  width: 51%;
+}
+
+@media screen and (width <= 1025px) {
+  .sywim-image-container {
+    top: 22%;
+  }
+}
+
+@media screen and (width >= 1707px) {
+  .sywim-image-container {
+    width: 24%;
+    right: 27%;
+    top: unset;
+  }
+}
+
+.sywim-image-container picture,
+.sywim-image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* ── Swiper area ── */
@@ -67,12 +133,21 @@
   outline: none;
   transition: border-color 0.2s;
 }
+<<<<<<< HEAD
 .sywim-input::-moz-placeholder {
   color: var(--neutrals-500);
 }
+=======
+
+.sywim-input::-moz-placeholder {
+  color: var(--neutrals-500);
+}
+
+>>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07
 .sywim-input::placeholder {
   color: var(--neutrals-500);
 }
+
 .sywim-input:focus {
   border-color: var(--pwm-gold-700);
 }
@@ -96,6 +171,7 @@
   box-sizing: border-box;
   transition: background 0.2s;
 }
+
 .sywim-btn:hover {
   background: var(--button-primary-hover);
 }
@@ -112,6 +188,7 @@
   display: flex;
   gap: var(--spacing-8);
 }
+
 .sywim-pagination .swiper-pagination-bullet {
   width: var(--spacing-12);
   height: var(--spacing-12);
@@ -121,6 +198,7 @@
   transition: opacity 0.3s;
   cursor: pointer;
 }
+
 .sywim-pagination .swiper-pagination-bullet-active {
   opacity: 1;
 }
@@ -133,21 +211,73 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
+
 .sywim-fraction .sywim-fraction-current {
   font-weight: var(--semibold);
   color: var(--blue-1-800-primary);
 }
+
 .sywim-fraction .sywim-fraction-total {
   font-weight: var(--semibold);
   color: var(--blue-1-800-primary);
 }
 
 /* ── Responsive ── */
-@media (min-width: ) {
+@media screen and (width <= 1025px) {
   .sywim-wrapper {
-    padding: var(--spacing-32) var(--spacing-20);
+    padding: var(--spacing-40) var(--spacing-32);
   }
-  .sywim-static-header p {
+
+  .sywim-content {
+         column-gap: 20px;
+  }
+
+  .sywim-form-controls {
+    max-width: 471px;
+  }
+<<<<<<< HEAD
+}/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
+=======
+}
+
+@media screen and (width <= 1000px) {
+  main > .section > div {
+    padding: var(--spacing-none);
+  }
+
+  .sywim-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24);
+    margin: var(--spacing-none);
+  }
+
+  .sywim-heading {
+    order: 1;
+  }
+
+  .sywim-image-container {
+    order: 2;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    position: unset;
+  }
+
+  .sywim-subtitle {
+    order: 3;
+    margin-bottom: 0;
+  }
+
+  .sywim-form-controls {
+    order: 4;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: ) {
+  .sywim-subtitle p {
     font-size: 15px;
   }
-}/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
+}
+>>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07

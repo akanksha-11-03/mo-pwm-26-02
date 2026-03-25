@@ -1,6 +1,7 @@
-@import url('mo-header.css');
+@import 'mo-header.css';
 
 /* header and nav layout */
+
 /* header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
@@ -61,6 +62,7 @@ header nav[aria-expanded='true'] {
 } */
 
 /* hamburger */
+
 /* header nav .nav-hamburger {
   grid-area: hamburger;
   height: 22px;
@@ -142,6 +144,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 } */
 
 /* brand */
+
 /* header .nav-brand {
   grid-area: brand;
   flex-basis: 128px;
@@ -156,6 +159,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 } */
 
 /* sections */
+
 /* header nav .nav-sections {
   grid-area: sections;
   flex: 1 1 auto;
@@ -269,6 +273,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 }
 
 /* tools */
+
 /* header nav .nav-tools {
   grid-area: tools;
 } */

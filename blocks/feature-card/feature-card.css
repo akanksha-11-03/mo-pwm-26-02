@@ -76,7 +76,7 @@
 .feature-card .feature-card-text > h2,
 .feature-card .feature-card-text > h3,
 .feature-card .feature-card-text > h4 {
-  font-family: 'Inter', var(--body-font-family);
+  font-family: Inter, var(--body-font-family);
   font-weight: 500;
   font-size: 20px;
   line-height: 1.4;
@@ -87,7 +87,7 @@
 /* Description */
 .feature-card .feature-card-text > p:nth-child(2),
 .feature-card .feature-card-text > p:last-child:not(:first-child) {
-  font-family: 'Inter', var(--body-font-family);
+  font-family: Inter, var(--body-font-family);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -117,7 +117,7 @@
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .feature-card ul {
     flex-direction: column;
     align-items: center;

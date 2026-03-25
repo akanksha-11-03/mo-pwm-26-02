@@ -206,6 +206,22 @@
                 "value": "tab-videos"
               }
             ]
+          },
+          {
+            "name": "Common Explore Button",
+            "value": "cmmn-explr-btn"
+          },
+          {
+            "name": "Detail Card",
+            "value": "detail-card-main"
+          },
+          {
+            "name": "Detail Card V2",
+            "value": "detail-card-v2"
+          },
+          {
+            "name": "Blog Detail Section",
+            "value": "blog-detail"
           }
         ]
       }
@@ -437,6 +453,59 @@
         "component": "richtext",
         "name": "content",
         "label": "Tab Content"
+      }
+    ]
+  },
+  {
+    "id": "detail-card-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "aem-content",
+        "name": "col1_url",
+        "label": "Redirected Page URL"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Detail Content",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "detail-card-item-v2",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "col1_image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "name": "col1_imageAlt",
+        "label": "Image Alt"
+      },
+      {
+        "component": "richtext",
+        "name": "col2_text",
+        "value": "",
+        "label": "Detail Content",
+        "valueType": "string"
       }
     ]
   },

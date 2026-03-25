@@ -103,6 +103,22 @@
                   "value": "tab-videos"
                 }
               ]
+            },
+            {
+              "name": "Common Explore Button",
+              "value": "cmmn-explr-btn"
+            },
+            {
+              "name": "Detail Card",
+              "value": "detail-card-main"
+            },
+            {
+              "name": "Detail Card V2",
+              "value": "detail-card-v2"
+            },
+            {
+              "name": "Blog Detail Section",
+              "value": "blog-detail"
             }
           ]
         }
@@ -129,7 +145,8 @@
         "banner-carousel",
         "accordion",
         "custom-tab",
-        "search-bar"
+        "search-bar",
+        "detail-card"
       ]
     }
   ]

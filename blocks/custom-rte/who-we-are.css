@@ -1,40 +1,46 @@
 @import "../../../styles/common-theme/css/fonts.css";
+
 .section.who-we-are .custom-rte-wrapper {
   padding: 64px 16px 57px;
   max-width: 1264px;
   width: 100%;
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte-wrapper {
     max-width: 1269px;
     padding: 0 16px;
   }
 }
+
 .section.who-we-are .custom-rte {
   display: flex;
   flex-direction: column;
   gap: 37px;
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte {
-    flex-direction: row;
+    flex-flow: row wrap;
     align-items: center;
     gap: 25px;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte .who-we-are-1 {
     max-width: 46.096%;
     width: 100%;
   }
 }
-@media (min-width: 1025px) {
+
+@media (width >= 1025px) {
   .section.who-we-are .custom-rte .who-we-are-1 {
     max-width: 340px;
   }
 }
+
 .section.who-we-are .custom-rte .who-we-are-1 .innercontent-1 .item-1 {
   margin: 0 0 8px;
   font-size: var(--body-medium-medium-size);
@@ -44,12 +50,14 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--medium);
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte .who-we-are-1 .innercontent-1 .item-1 {
     font-size: var(--body-medium-medium-size);
     line-height: var(--body-medium-medium-line-height);
   }
 }
+
 .section.who-we-are .custom-rte .who-we-are-1 .innercontent-1 .item-2 {
   margin: 0;
   font-size: 20px;
@@ -59,24 +67,28 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte .who-we-are-1 .innercontent-1 .item-2 {
     font-size: var(--heading-pwm-h6-size);
     line-height: var(--heading-pwm-h6-line-height);
   }
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte .who-we-are-2 {
     max-width: 50.434%;
   }
 }
-@media (min-width: 1025px) {
+
+@media (width >= 1025px) {
   .section.who-we-are .custom-rte .who-we-are-2 {
     /* max-width: 43.978%; */
     max-width: 544px;
     width: 100%;
   }
 }
+
 .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 {
   margin: 0;
   padding: 0;
@@ -85,13 +97,15 @@
   gap: 37px;
   list-style: none;
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 {
     flex-direction: unset;
     flex-wrap: wrap;
     gap: 50px;
   }
 }
+
 .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem {
   font-size: 36px;
   line-height: 40px;
@@ -100,22 +114,26 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--semibold);
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem {
     flex-basis: 42.406%;
     font-size: var(--heading-h2-size);
     line-height: var(--heading-h2-line-height);
   }
 }
-@media (min-width: 1025px) {
+
+@media (width >= 1025px) {
   .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem {
     flex-basis: 45.406%;
   }
 }
+
 .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem .innerlist-1 {
   margin: 0;
   list-style: none;
 }
+
 .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem .innerlist-1 .inneritem-1 {
   margin: 8px 0 0;
   font-size: var(--body-medium-regular-size);
@@ -125,11 +143,12 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-@media (min-width: 768px) {
+
+@media (width >= 768px) {
   .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem .innerlist-1 .inneritem-1 {
     margin: 14px 0 0;
     color: var(--neutrals-700);
     font-size: var(--body-medium-regular-size);
     line-height: var(--body-medium-regular-line-height);
   }
-}/*# sourceMappingURL=who-we-are.css.map */
+}

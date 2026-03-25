@@ -24,7 +24,8 @@
       "banner-carousel",
       "accordion",
       "custom-tab",
-      "search-bar"
+      "search-bar",
+      "detail-card"
     ]
   },
   {
@@ -90,6 +91,12 @@
     "id": "custom-tab",
     "components": [
       "custom-tab-item"
+    ]
+  },
+  {
+    "id": "detail-card",
+    "components": [
+      "detail-card-item"
     ]
   },
   {
