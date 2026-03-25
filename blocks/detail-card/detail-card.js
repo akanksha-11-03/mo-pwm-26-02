@@ -36,6 +36,10 @@ export default function decorate(block) {
   eachCard.forEach((card) => {
     const cardFirstItem = card.querySelector('.detail-card-item-1');
     const cardContent = cardFirstItem.querySelector('.content-1');
+    const cardPicture = cardFirstItem.querySelector('picture');
+    if (!cardPicture) {
+      cardFirstItem.remove();
+    };
     const cardLink = cardFirstItem.querySelector('a');
     if (!cardLink) return;
     const redirectURL = cardLink.getAttribute('href');
