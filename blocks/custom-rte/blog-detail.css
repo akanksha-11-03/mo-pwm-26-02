@@ -100,6 +100,19 @@
   flex-wrap: wrap;
   gap: 16px;
 }
+.section.blog-detail .custom-rte.detail-grp-img > div {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .section.blog-detail .custom-rte.detail-grp-img > div {
+    max-width: 49%;
+  }
+}
+@media screen and (768px <= width <= 900px) {
+  .section.blog-detail .custom-rte.detail-grp-img > div {
+    max-width: 48.9%;
+  }
+}
 .section.blog-detail .custom-rte.detail-grp-img > div picture {
   line-height: 0;
   height: 100%;

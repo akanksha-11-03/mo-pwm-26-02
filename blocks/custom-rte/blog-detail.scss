@@ -3,7 +3,6 @@
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
 .section.blog-detail {
-  // background-color: red;
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
@@ -124,11 +123,16 @@
       gap: 16px;
 
       > div {
-        // max-width: 49%;
+        max-width: 100%;
 
-        // @media screen and (width <= 900px) {
-        //     max-width: 48.9%;
-        // }
+        @include media(tablet-up) {
+          max-width: 49%;
+        }
+        
+        @media screen and (768px <=width <= 900px) {
+          max-width: 48.9%;
+        }
+
 
         picture {
           line-height: 0;
@@ -142,7 +146,6 @@
 
             @include media(tablet-up) {
               min-height: 230px;
-            //   max-width: 416px;
             }
           }
         }
