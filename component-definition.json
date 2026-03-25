@@ -294,7 +294,7 @@
                 "template": {
                   "name": "Custom RTE",
                   "filter": "custom-rte",
-                  "modal": "custom-rte"
+                  "model": "custom-rte"
                 }
               }
             }
