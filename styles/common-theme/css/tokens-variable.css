@@ -1,5 +1,4 @@
 @import "../../../styles/common-theme/css/fonts.css";
-
 :root {
   /* Font weight start */
   --light: 300;
@@ -9,9 +8,7 @@
   --bold: 700;
   --extrabold: 800;
   --heavy: 900;
-
   /* Font weight end */
-
   /* typeface baseline start */
   --title: "Inter", sans-serif;
   --body: "Inter", sans-serif;
@@ -22,9 +19,7 @@
   --font-features-default:
     "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on,
     "cv09" on, "cv10" on, "cv11" on;
-
   /* typeface baseline end */
-
   /* Size tokens mode start */
   --spacing-none: 0px;
   --spacing-2: 2px;
@@ -64,9 +59,7 @@
   --spacing-68: 68px;
   --spacing-76: 76px;
   --spacing-80: 80px;
-
   /* Size tokens mode end */
-
   /* Colors start */
   --neutrals-black: #111;
   --neutrals-900: #212121;
@@ -155,9 +148,7 @@
   --pwm-gold-300: #ede2cc;
   --pwm-gold-200: #f0e6dc;
   --pwm-gold-100: #f8f3ef;
-
   /* Colors end */
-
   /* semantic light start */
   --text-header: var(--blue-1-600);
   --text-sub-header: var(--neutrals-900);
@@ -213,9 +204,7 @@
   --text-typed-input: var(--neutrals-black);
   --text-button-focus: var(--blue-1-700);
   --text-button-disabled: var(--neutrals-500);
-
   /* semantic light end */
-
   /* typescale mobile start */
   --body-xlarge-bold-font: var(--body);
   --body-xlarge-bold-weight: var(--weight-semibold);
@@ -246,6 +235,7 @@
   --heading-h5-line-height: var(--spacing-28);
   --sub-header-large-font: var(--body);
   --sub-header-large-weight: var(--weight-medium);
+  --sub-header-large-size: var(--spacing-24);
   --sub-header-large-line-height: var(--spacing-32);
   --sub-header-medium-font: var(--body);
   --sub-header-medium-weight: var(--weight-medium);
@@ -411,11 +401,10 @@
   --sub-header-pwm-large-font: var(--body);
   --sub-header-pwm-large-weight: var(--weight-regular);
   --sub-header-pwm-large-line-height: var(--spacing-32);
-
   /* typescale mobile end */
 }
 
-@media (width >= 768px) {
+@media (min-width: 768px) {
   :root {
     /* typescale desktop start */
     --body-xlarge-bold-font: var(--body);
@@ -500,6 +489,7 @@
     --body-small-regular-line-height: var(--spacing-16);
     --button-large-font: var(--body);
     --button-large-weight: var(--weight-semibold);
+    --button-large-line-height: var(--spacing-20);
     --button-medium-font: var(--body);
     --button-medium-weight: var(--weight-semibold);
     --button-medium-size: var(--spacing-16);
@@ -611,7 +601,6 @@
     --sub-header-pwm-large-weight: var(--weight-regular);
     --sub-header-pwm-large-size: var(--spacing-24);
     --sub-header-pwm-large-line-height: var(--spacing-32);
-
     /* typescale desktop end */
   }
-}
+}/*# sourceMappingURL=tokens-variable.css.map */
