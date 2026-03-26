@@ -10,7 +10,11 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata,
 } from './aem.js';
+import {
+  a, li,
+} from './dom-helpers.js';
 import { linkToBtn } from '../components/how-we-serve-you/how-we-serve-you.js';
 import decorateSeeyourWealthInmotion from '../components/Seeyour-wealth-inmotion/Seeyour-wealth-inmotion.js';
 
@@ -58,6 +62,111 @@ async function loadFonts() {
     if (!window.location.hostname.includes('localhost')) sessionStorage.setItem('fonts-loaded', 'true');
   } catch (e) {
     // do nothing
+  }
+}
+
+
+
+function decorateBreadcrumbItems(title, url, icon = '') {
+  // return li(a({ href: url }, title));
+  const listItem = li();
+
+  // Add separator span with aria-hidden for screen readers
+  const separatorSpan = document.createElement('span');
+  separatorSpan.setAttribute('aria-hidden', 'true');
+  listItem.appendChild(separatorSpan);
+
+  if (icon) {
+    const link = a({ href: url });
+    const imgLink = document.createElement('img');
+    imgLink.classList.add('homeicon');
+    imgLink.src = icon;
+
+    link.appendChild(imgLink);
+    listItem.appendChild(link);
+    return listItem;
+  }
+
+  listItem.appendChild(a({ href: url }, title));
+  return listItem;
+}
+// breadcrumbs use chat gpt2
+export async function createBreadcrumbs() {
+  // 1. Get breadcrumbs_title from <meta> or fallback to document.title
+  const segments = window.location.pathname.split('/').filter(Boolean);
+
+  let currentPath = '';
+  // splice(0, segments.length - 1)
+  const items = await Promise.all(
+    segments.slice(0, segments.length - 1).map(async (segment) => {
+      currentPath += `/${segment}`;
+      const url = `${currentPath}`;
+      // const url = `/mutual-fund/in/en${currentPath}`;
+      const resp = await fetch(url);
+      const html = await resp.text();
+      const tempDiv = document.createElement('div');
+      tempDiv.innerHTML = html;
+      const breadcrumbTitle = tempDiv.querySelector('meta[name="breadcrumbs_title"]')
+        || tempDiv.querySelector('meta[property="og:title"]');
+      const breadcrumbHide = tempDiv.querySelector(
+        'meta[name="breadcrumbs_hide"]',
+      );
+      if (breadcrumbHide.getAttribute('content') === 'true') return null;
+      return decorateBreadcrumbItems(
+        breadcrumbTitle.getAttribute('content'),
+        url,
+      );
+    }),
+  );
+  const homeIcon = '/icons/home-icon.svg';
+  const homeLink = '/';
+  // if (window.location.origin.includes('motilaloswalmf')) {
+  //   homeLink = `${window.location.origin}/`;
+  // }
+  const breadcrumbList = document.createElement('ol');
+  breadcrumbList.append(
+    decorateBreadcrumbItems('Home', homeLink, homeIcon),
+    ...items.filter((item) => item !== null),
+    decorateBreadcrumbItems(
+      getMetadata('breadcrumbs_title'),
+      window.location.pathname,
+    ),
+  );
+  return breadcrumbList;
+}
+
+async function decorateBreadcrumbs() {
+  try {
+    if (getMetadata('breadcrumbs') === 'true') {
+      const breadcrumb = await createBreadcrumbs();
+      breadcrumb.classList.add('breadul');
+      Array.from(breadcrumb.children).forEach((brelesub) => {
+        brelesub.classList.add('breadli');
+      });
+      if (Array.from(breadcrumb.children).length > 1) {
+        Array.from(breadcrumb.children).at(-1)?.querySelector('a')?.removeAttribute('href');
+      }
+      // --- CHANGE IS HERE ---
+      // Select the first element that has EITHER [data-id="breadcrumb"] OR .breadcrumbs-fdp
+      const container = document.querySelector('main .section');
+
+      // Check if a container was found
+      if (container) {
+        container.prepend(breadcrumb);
+      }
+
+      const bdcrumbsAnchor = document.querySelectorAll('.breadcrumbs .breadul .breadli a');
+      bdcrumbsAnchor.forEach((link) => {
+        link.classList.add('breadlist');
+        link.removeAttribute('aria-current');
+      });
+      const lastCrumbLink = breadcrumb.lastElementChild?.querySelector('a');
+      if (lastCrumbLink) {
+        lastCrumbLink.setAttribute('aria-current', 'page');
+      }
+    }
+  } catch (error) {
+    // console.error('Error decorating breadcrumbs:', error);
   }
 }
 
@@ -176,6 +285,7 @@ async function loadEager(doc) {
  */
 async function loadLazy(doc) {
   const main = doc.querySelector('main');
+  decorateBreadcrumbs();
   await loadSections(main);
 
   const { hash } = window.location;
