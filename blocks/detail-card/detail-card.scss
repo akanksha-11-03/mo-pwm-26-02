@@ -429,12 +429,10 @@
 
           h3 ~ p:not(h3 + p) {
             margin: 0;
+            line-height: 0;
+
             .button {
-              margin: 0;
-              padding: 0;
-              border: none;
-              border-radius: unset;
-              background-color: unset;
+              all: unset;
               text-decoration: underline;
               text-underline-offset: 2.8px;
 
@@ -634,7 +632,7 @@
           justify-content: space-between;
         }
 
-        .detail-content{
+        .detail-content {
           @include media(tablet-up) {
             max-width: 47.078%;
             flex: 0 0 47.078%;
@@ -643,11 +641,11 @@
           .detail-card-item-2 {
             p {
               margin: 0;
-  
+
               .button {
                 all: unset;
                 display: block;
-  
+
                 @include font-style(
                   var(--body-large-regular-size),
                   var(--body-large-regular-line-height),
@@ -657,17 +655,16 @@
                 );
               }
             }
-  
-            p + ul{
-              li{
-                ul{
+
+            p + ul {
+              li {
+                ul {
                   margin: 0;
                 }
               }
             }
           }
         }
-
       }
     }
   }

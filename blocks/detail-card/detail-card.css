@@ -286,13 +286,10 @@
 }
 .section.detail-card-main .detail-card .detail-content .detail-card-item-2 h3 ~ p:not(h3 + p) {
   margin: 0;
+  line-height: 0;
 }
 .section.detail-card-main .detail-card .detail-content .detail-card-item-2 h3 ~ p:not(h3 + p) .button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  border-radius: unset;
-  background-color: unset;
+  all: unset;
   text-decoration: underline;
   text-underline-offset: 2.8px;
   font-size: var(--text-link-small-size);
