@@ -53,6 +53,10 @@
   src: url("../../../fonts/Inter-ExtraBold.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 } 
+@import "../../../styles/common-theme/css/fonts.css";
+.ourofferingcards-section {
+  margin: 80px 16px;
+}
 .ourofferingcards-section .cards-wrapper {
   padding: 0;
 }
@@ -89,7 +93,11 @@
   font-weight: var(--regular);
   margin: 0;
 }
+<<<<<<< HEAD
 @media (min-width: ) {
+=======
+@media (max-width: 899px) {
+>>>>>>> 7ff90def8a14235fc4be4c6ab81f98c4709ce6a6
   .ourofferingcards-section .cards-wrapper .ourofferingcards-heading {
     margin-bottom: var(--spacing-24);
     padding-bottom: 0;
@@ -221,7 +229,14 @@
 .cards.ourofferingcards {
   /* ===== Responsive — no animation, vertical cards ===== */
 }
+<<<<<<< HEAD
 @media (min-width: ) {
+=======
+@media (max-width: 899px) {
+  .cards.ourofferingcards {
+    margin: 80px 16px;
+  }
+>>>>>>> 7ff90def8a14235fc4be4c6ab81f98c4709ce6a6
   .cards.ourofferingcards .ourofferingcards-stack-section {
     height: auto !important;
   }

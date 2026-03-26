@@ -3,6 +3,8 @@
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
 .ourofferingcards-section {
+  margin: 80px 16px;
+
   .cards-wrapper {
     padding: 0;
 
@@ -28,7 +30,7 @@
       }
     }
 
-    @include media(mobile-ed) {
+    @media (max-width: 899px) {
       .ourofferingcards-heading {
         margin-bottom: var(--spacing-24);
         padding-bottom: 0;
@@ -152,7 +154,9 @@
   }
 
   /* ===== Responsive — no animation, vertical cards ===== */
-  @include media(mobile-ed) {
+  @media (max-width: 899px) {
+    margin: 80px 16px;
+
     .ourofferingcards-stack-section {
       height: auto !important;
     }
