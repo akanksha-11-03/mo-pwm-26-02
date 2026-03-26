@@ -77,7 +77,6 @@
 }
 .motilal-oswal-ecosystem .custom-rte {
   background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/106.945% 100.028% no-repeat;
-<<<<<<< HEAD
 }
 @media (min-width: ) {
   .motilal-oswal-ecosystem .custom-rte {
@@ -85,8 +84,6 @@
   }
 }
 .motilal-oswal-ecosystem .custom-rte {
-=======
->>>>>>> 7ff90def8a14235fc4be4c6ab81f98c4709ce6a6
   border-radius: var(--border-radius-4);
   display: grid;
   grid-template-columns: 1fr;

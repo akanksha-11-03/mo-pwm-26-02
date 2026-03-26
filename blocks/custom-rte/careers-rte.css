@@ -53,14 +53,11 @@
   src: url("../../../fonts/Inter-ExtraBold.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 } 
-@import "../../../styles/common-theme/css/fonts.css";
-
 .section.careers-rte .custom-rte {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-40);
 }
-<<<<<<< HEAD
 @media (min-width: ) {
   .section.careers-rte .custom-rte {
     gap: var(--spacing-40);
@@ -69,20 +66,12 @@
 .section.careers-rte .custom-rte {
   /* ===== Intro paragraph (first row) ===== */
 }
-=======
-
->>>>>>> 7ff90def8a14235fc4be4c6ab81f98c4709ce6a6
 .section.careers-rte .custom-rte .careers-intro {
-  width: 340px;
+  width: 870px;
 }
-<<<<<<< HEAD
 @media (min-width: ) {
-=======
-
-@media (width >= 900px) {
->>>>>>> 7ff90def8a14235fc4be4c6ab81f98c4709ce6a6
   .section.careers-rte .custom-rte .careers-intro {
-    width: 870px;
+    width: 340px;
   }
 }
 .section.careers-rte .custom-rte .careers-intro .careers-col .careers-para {
@@ -95,13 +84,9 @@
   font-style: normal;
   margin: 0;
 }
-<<<<<<< HEAD
 .section.careers-rte .custom-rte {
   /* ===== Content blocks (rows 2, 3, 4 …) ===== */
 }
-=======
-
->>>>>>> 7ff90def8a14235fc4be4c6ab81f98c4709ce6a6
 .section.careers-rte .custom-rte .careers-block .careers-col {
   display: flex;
   flex-direction: column;

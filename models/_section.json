@@ -123,14 +123,6 @@
             {
               "name": "Say Hello Form Section",
               "value": "say-hello-form"
-            },
-            {
-              "name": "Careers RTE Section",
-              "value": "careers-rte"
-            },
-            {
-              "name": "Say Hello Section",
-              "value": "say-hello"
             }
           ]
         }
