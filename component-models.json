@@ -20,21 +20,6 @@
         "name": "keywords",
         "multi": true,
         "label": "Keywords"
-      },
-      {
-        "component": "boolean",
-        "name": "breadcrumbs",
-        "label": "Breadcrumb"
-      },
-      {
-        "component": "text",
-        "name": "breadcrumbs_title",
-        "label": "Breadcrumb Title"
-      },
-      {
-        "component": "boolean",
-        "name": "breadcrumbs_hide",
-        "label": "Hide On Breadcrumbs"
       }
     ]
   },
@@ -233,6 +218,10 @@
           {
             "name": "Detail Card V2",
             "value": "detail-card-v2"
+          },
+          {
+            "name": "Detail Card V3",
+            "value": "detail-card-v3"
           },
           {
             "name": "Blog Detail Section",
