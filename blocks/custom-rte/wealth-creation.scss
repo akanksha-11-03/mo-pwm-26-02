@@ -1,6 +1,6 @@
 @use "sass:map";
-@use "../../styles/common-theme/css/variables_mixins"as *;
-@use "../../styles/common-theme/css/fluid-typography"as *;
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
 
 .section.wealth-creation {
   background: var(--pwm-gold-200);
@@ -12,14 +12,15 @@
     padding: 53px 16px;
     margin: 0;
   }
-  
-  @include media(desktop-up){
+
+  @include media(desktop-up) {
     padding: 53px 70px 53px 64px;
   }
 
   .custom-rte {
     &-wrapper {
       padding: 0;
+
       @include media(tablet-up) {
         max-width: 1232px;
         min-height: inherit;
@@ -50,15 +51,13 @@
           .wc-inner-item-1 {
             margin: 0 0 10px;
 
-            @include font-style(
-              28px,
+            @include font-style(28px,
               var(--sub-header-large-line-height),
               var(--pwm-gold-700),
               var(--regular),
-              var(--title)
-            );
+              var(--title));
 
-            @include media(tablet-up){
+            @include media(tablet-up) {
               font-size: var(--heading-pwm-h4-size);
               line-height: var(--heading-pwm-h4-line-height);
             }
@@ -67,15 +66,13 @@
           .wc-inner-item-2 {
             margin: 0;
 
-            @include font-style(
-              var(--body-medium-regular-size),
+            @include font-style(var(--body-medium-regular-size),
               var(--body-medium-regular-line-height),
               var(--blue-1-800-primary),
               var(--regular),
-              var(--body)
-            );
+              var(--body));
 
-            @include media(tablet-up){
+            @include media(tablet-up) {
               font-size: var(--body-medium-regular-size);
               line-height: var(--body-medium-regular-line-height);
             }
@@ -84,6 +81,7 @@
       }
 
       .wc-item-2 {
+
         &,
         & .wc-inner-1 {
           min-height: 160px;
@@ -133,15 +131,13 @@
             &-1 {
               margin: 0 0 6px;
 
-              @include font-style(
-                var(--body-small-semibold-size),
+              @include font-style(var(--body-small-semibold-size),
                 var(--body-small-semibold-line-height),
                 var(--pwm-gold-700),
                 var(--semibold),
-                var(--body)
-              );
+                var(--body));
 
-              @include media(tablet-up){
+              @include media(tablet-up) {
                 font-weight: var(--medium);
                 font-size: var(--body-small-semibold-size);
                 line-height: var(--body-small-semibold-line-height);
@@ -160,13 +156,11 @@
                     display: flex;
                     gap: 10px;
 
-                    @include font-style(
-                      var(--paragraph-small-regular-size),
+                    @include font-style(var(--paragraph-small-regular-size),
                       var(--paragraph-small-regular-line-height),
                       var(--blue-1-800-primary),
                       var(--regular),
-                      var(--body)
-                    );
+                      var(--body));
 
                     &::before {
                       content: "";
@@ -178,7 +172,7 @@
                       margin: 8px 0 0;
                     }
 
-                    @include media(tablet-up){
+                    @include media(tablet-up) {
                       font-size: var(--body-small-regular-size);
                       line-height: var(--label-large-line-height);
                     }
@@ -199,15 +193,13 @@
                 border: none;
                 border-radius: unset;
 
-                @include font-style(
-                  var(--text-link-small-size),
+                @include font-style(var(--text-link-small-size),
                   var(--text-link-small-line-height),
                   var(--text-text-link),
                   var(--regular),
-                  var(--body)
-                );
+                  var(--body));
 
-                @include media(tablet-up){
+                @include media(tablet-up) {
                   font-size: var(--text-link-small-size);
                   line-height: var(--text-link-small-line-height);
                 }
@@ -226,15 +218,13 @@
                 text-decoration: none;
                 width: 100%;
 
-                @include font-style(
-                  var(--button-medium-size),
+                @include font-style(var(--button-medium-size),
                   var(--button-medium-line-height),
                   var(--text-white),
                   var(--medium),
-                  var(--body)
-                );
+                  var(--body));
 
-                @include media(tablet-up){
+                @include media(tablet-up) {
                   font-size: var(--button-large-size);
                   line-height: var(--button-large-line-height);
                 }

@@ -58,7 +58,7 @@
   margin: 0;
 }
 .motilal-oswal-ecosystem .default-content-wrapper {
-  margin-bottom: var(--spacing-32);
+  margin: 0 16px 32px 16px;
 }
 .motilal-oswal-ecosystem .default-content-wrapper h2 {
   font-size: var(--heading-pwm-h5-size);
