@@ -1,6 +1,19 @@
-// @use "../../../styles/fonts.css";
 @use "sass:map";
-@import "../../../styles/common-theme/css/fonts.css";
+@use "../../../styles/common-theme/css/fonts.css";
+
+// ----------------------------------------
+// FONTS
+// ----------------------------------------
+$inter: "Inter", sans-serif;
+$font-weights: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+  extrabold: 800,
+  heavy: 900
+);
 
 // Font mixin
 @mixin font-style($size, $line-height, $color, $weight: null, $family: $body) {
@@ -51,3 +64,146 @@ $breakpoints: (
   align-items: $align;
   justify-content: $justify;
 }
+
+// ----------------------------------------
+// COLORS
+// ----------------------------------------
+
+// Primary colors
+$primary-black: #000;
+$primary-white: #fff;
+$primary-blue: #2e2a94;
+$primary-blue-dark: #2b2e8c;
+$primary-blue-1-900: #242177;
+
+// Brand buttons
+$button-primary: (
+  default: #2e2a94,
+  hover: #2b2e8c,
+  active: #262a84,
+  disabled: #969696,
+);
+$button-secondary: (
+  default: #fff,
+  hover: #f3f3f3,
+  active: #e6e6e6,
+  disabled: #b0b0b0,
+  text: #2e2a94,
+);
+
+// Neutral colors blue-1-25
+$blue-1: (
+  b25: #EDF1FF,
+  b50: #D5DEFF,
+  b200: #9DADFE,
+  b300: #7986fd,
+  b400: #5659FA,
+  b900: #242177,
+  b500: #4338f3,
+  b700: #332ab5,
+  b150:#D5DEFF
+);
+
+// body-Color
+
+$color-text-body: #424242;
+
+// Old Silver
+$old-silver: (
+  00: #efefef,
+  50: #f3f3f3,
+  75: #ccc,
+  100: #b7b7b7,
+  200: #989898,
+  300: #838383,
+  400: #5c5c5c,
+  500: #505050,
+  600: #545454,
+  700: #404040,
+);
+
+// Olive Drab
+$olive-drab: (
+  50: #ededec,
+  75: #b6b3b1,
+  100: #989490,
+  200: #6c6560,
+  300: #4e4640,
+  400: #37312d,
+  500: #302b27,
+);
+
+// Dark Liver
+$dark-liver: (
+  50: #edeeed,
+  75: #b6b8b6,
+  100: #979a98,
+  200: #6a6f6b,
+  300: #4c514d,
+  400: #353936,
+  500: #2e312f,
+);
+
+// strokes
+$strokes: (
+  default:#9E9E9E,
+  typing: #1887D2,
+  disabled: #BDBDBD,
+);
+
+
+// Success
+$success: (
+  50: #e9fdec,
+  75: #a4f8b2,
+  100: #7ef591,
+  200: #46f062,
+  300: #20ed42,
+  400: #16a62e,
+  500: #149128,
+);
+
+// Alarm
+$alarm: (
+  50: #fdf6e9,
+  75: #f8dca4,
+  100: #f5cd7e,
+  200: #f0b846,
+  300: #eda920,
+  400: #a67616,
+  500: #916714,
+);
+
+// Danger
+$danger: (
+  50: #fde9e9,
+  75: #f8a4a4,
+  100: #f57e7e,
+  200: #f04646,
+  300: #ed2020,
+  400: #a61616,
+  500: #911414,
+  600: #EE212E,
+);
+
+// ----------------------------------------
+// MISC COLORS
+// ----------------------------------------
+
+$blue-100: #4e78e6;
+$dark-500: #7b7b7b;
+$light-600: #9d9d9d;
+$text-header: #382ad7;
+$neutrals-50: #FAFAFA;
+$neutrals-400: #bdbdbd;
+$neutrals-300: #E0E0E0;
+$neutrals-200: #EEE;
+$neutrals-550: #737373;
+$neutrals-600: #757575;
+$text-body-2: #616161;
+$neutrals-black: #111;
+$black-450: #28303F;
+$neutrals-500: #99A1B0;
+$neutrals-100: #F5F5F5;
+$fund-icon-bg: #BDCBFF;
+$sub-header: #212121;

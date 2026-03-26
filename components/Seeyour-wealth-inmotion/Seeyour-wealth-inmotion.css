@@ -1,6 +1,58 @@
 @charset "UTF-8";
-@import "../../../styles/common-theme/css/fonts.css";
-
+/* Inter Light (300) */
+@font-face {
+  font-family: Inter;
+  font-style: "Italic";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../../fonts/Inter-LightItalic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Light (400) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Regular.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (500) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Medium.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (600) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../../fonts/Inter-SemiBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (700) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Bold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter ExtraBold (800) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../../../fonts/Inter-ExtraBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} 
 /* ===== See Your Wealth In Motion — Component ===== */
 .section.seeyour-wealth-inmotion {
   background: var(--pwm-gold-100);
@@ -27,8 +79,7 @@
   grid-template-areas: "heading image" "subtitle image" "form image";
   margin: var(--spacing-72) var(--spacing-none);
 }
-
-@media screen and (width <= 1025px) {
+@media screen and (max-width: 1025px) {
   .sywim-content {
     margin: var(--spacing-none);
   }
@@ -37,7 +88,6 @@
 .sywim-heading {
   grid-area: heading;
 }
-
 .sywim-heading h1,
 .sywim-heading h2,
 .sywim-heading h3,
@@ -57,7 +107,6 @@
   grid-area: subtitle;
   margin-bottom: var(--spacing-24);
 }
-
 .sywim-subtitle p {
   font-size: 18px;
   line-height: 1.5;
@@ -83,21 +132,18 @@
   right: 0;
   width: 51%;
 }
-
-@media screen and (width <= 1025px) {
+@media screen and (max-width: 1025px) {
   .sywim-image-container {
     top: 22%;
   }
 }
-
-@media screen and (width >= 1707px) {
+@media screen and (min-width: 1707px) {
   .sywim-image-container {
     width: 24%;
     right: 27%;
     top: unset;
   }
 }
-
 .sywim-image-container picture,
 .sywim-image-container img {
   max-width: 100%;
@@ -133,21 +179,12 @@
   outline: none;
   transition: border-color 0.2s;
 }
-<<<<<<< HEAD
 .sywim-input::-moz-placeholder {
   color: var(--neutrals-500);
 }
-=======
-
-.sywim-input::-moz-placeholder {
-  color: var(--neutrals-500);
-}
-
->>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07
 .sywim-input::placeholder {
   color: var(--neutrals-500);
 }
-
 .sywim-input:focus {
   border-color: var(--pwm-gold-700);
 }
@@ -171,7 +208,6 @@
   box-sizing: border-box;
   transition: background 0.2s;
 }
-
 .sywim-btn:hover {
   background: var(--button-primary-hover);
 }
@@ -188,7 +224,6 @@
   display: flex;
   gap: var(--spacing-8);
 }
-
 .sywim-pagination .swiper-pagination-bullet {
   width: var(--spacing-12);
   height: var(--spacing-12);
@@ -198,7 +233,6 @@
   transition: opacity 0.3s;
   cursor: pointer;
 }
-
 .sywim-pagination .swiper-pagination-bullet-active {
   opacity: 1;
 }
@@ -211,51 +245,41 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-
 .sywim-fraction .sywim-fraction-current {
   font-weight: var(--semibold);
   color: var(--blue-1-800-primary);
 }
-
 .sywim-fraction .sywim-fraction-total {
   font-weight: var(--semibold);
   color: var(--blue-1-800-primary);
 }
 
 /* ── Responsive ── */
-@media screen and (width <= 1025px) {
+@media screen and (max-width: 1025px) {
   .sywim-wrapper {
     padding: var(--spacing-40) var(--spacing-32);
   }
-
   .sywim-content {
+    -moz-column-gap: 20px;
          column-gap: 20px;
   }
-
   .sywim-form-controls {
     max-width: 471px;
   }
-<<<<<<< HEAD
-}/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
-=======
 }
-
-@media screen and (width <= 1000px) {
+@media screen and (max-width: 1000px) {
   main > .section > div {
     padding: var(--spacing-none);
   }
-
   .sywim-content {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-24);
     margin: var(--spacing-none);
   }
-
   .sywim-heading {
     order: 1;
   }
-
   .sywim-image-container {
     order: 2;
     width: 100%;
@@ -263,21 +287,17 @@
     margin: 0 auto;
     position: unset;
   }
-
   .sywim-subtitle {
     order: 3;
     margin-bottom: 0;
   }
-
   .sywim-form-controls {
     order: 4;
     max-width: 100%;
   }
 }
-
 @media (min-width: ) {
   .sywim-subtitle p {
     font-size: 15px;
   }
-}
->>>>>>> 3b4f82fd8f0311a9c65119bf07840d8179cb8f07
+}/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */

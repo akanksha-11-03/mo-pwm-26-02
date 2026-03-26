@@ -17,14 +17,7 @@ $default-max-bp: 1440px;
 }
 
 
-@function rem($px) {
-  $rems: math.div($px, 16px) * 1rem;
-
-  @return $rems;
-}
-
 // Convert px to rem
-
 @function px-to-rem($px) {
   @if math.unit($px) != "px" {
     @error "Expected px unit but got #{unit($px)}";
@@ -33,7 +26,6 @@ $default-max-bp: 1440px;
   @return math.div($px, 16px) * 1rem;
 }
 
-// Alias for convenience
 @function rem($px) {
   @return px-to-rem($px);
 }

@@ -141,6 +141,10 @@ async function decorateBreadcrumbs() {
       const breadcrumb = await createBreadcrumbs();
       breadcrumb.classList.add('breadul');
       Array.from(breadcrumb.children).forEach((brelesub) => {
+        const breadcrumbLink = brelesub.querySelector('a');
+        if (!brelesub.querySelector('img')) {
+          breadcrumbLink.textContent = breadcrumbLink.textContent.replace('amp;', '');
+        }
         brelesub.classList.add('breadli');
       });
       if (Array.from(breadcrumb.children).length > 1) {

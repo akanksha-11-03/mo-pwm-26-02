@@ -1,15 +1,65 @@
-@import "../../../styles/common-theme/css/fonts.css";
-
+/* Inter Light (300) */
+@font-face {
+  font-family: Inter;
+  font-style: "Italic";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../../fonts/Inter-LightItalic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Light (400) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Regular.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (500) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Medium.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (600) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../../fonts/Inter-SemiBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (700) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Bold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter ExtraBold (800) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../../../fonts/Inter-ExtraBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} 
 /* ===== Motilal Oswal Ecosystem Section ===== */
 .motilal-oswal-ecosystem > div {
   padding: 0;
   margin: 0;
 }
-
 .motilal-oswal-ecosystem .default-content-wrapper {
   margin-bottom: var(--spacing-32);
 }
-
 .motilal-oswal-ecosystem .default-content-wrapper h2 {
   font-size: var(--heading-pwm-h5-size);
   line-height: 1.25em;
@@ -19,24 +69,20 @@
   font-weight: var(--regular);
   margin: 0;
 }
-
 .motilal-oswal-ecosystem .default-content-wrapper strong {
   color: var(--blue-1-800-primary);
   font-weight: var(--regular);
   font-size: var(--heading-pwm-h5-size);
   font-family: var(--title);
 }
-
 .motilal-oswal-ecosystem .custom-rte {
   background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/106.945% 100.028% no-repeat;
 }
-
-@media (width <= 768px) {
+@media (min-width: ) {
   .motilal-oswal-ecosystem .custom-rte {
     background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/119.945% 100.028% no-repeat;
   }
 }
-
 .motilal-oswal-ecosystem .custom-rte {
   border-radius: var(--border-radius-4);
   display: grid;
@@ -44,26 +90,21 @@
   overflow: hidden;
   position: relative;
 }
-
 .motilal-oswal-ecosystem .custom-rte > div {
   padding: 0;
 }
-
 .motilal-oswal-ecosystem .custom-rte > div > div {
   padding: 0;
   height: 100%;
 }
-
 .motilal-oswal-ecosystem .custom-rte ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:first-child {
   border-bottom: 0.5px solid var(--neutrals-white);
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li {
   padding: 26px var(--spacing-20);
   font-size: var(--heading-pwm-h5-size);
@@ -73,11 +114,9 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul {
   margin-top: var(--spacing-18);
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul > li {
   font-size: var(--body-small-regular-size);
   line-height: 1.25em;
@@ -86,12 +125,10 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul {
   display: grid;
   grid-template-columns: 1fr;
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li {
   padding: var(--spacing-20);
   border-bottom: 0.5px solid var(--neutrals-white);
@@ -102,11 +139,9 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--medium);
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul {
   margin-top: var(--spacing-8);
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul > li {
   font-size: var(--body-small-regular-size);
   line-height: 1.25em;
@@ -115,45 +150,36 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-
 .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:last-child {
   border-bottom: none;
 }
-
-@media (width >= 900px) {
+@media (min-width: 900px) {
   .motilal-oswal-ecosystem {
     padding: var(--spacing-40) 67px;
   }
-
   .motilal-oswal-ecosystem .default-content-wrapper {
     margin-bottom: var(--spacing-48);
   }
-
   .motilal-oswal-ecosystem .default-content-wrapper h2 {
     font-size: var(--spacing-32);
     line-height: 1.25em;
   }
-
   .motilal-oswal-ecosystem .custom-rte {
     grid-template-columns: 34.14% 1fr;
     min-height: 656px;
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:first-child {
     border-bottom: none;
     border-right: 0.5px solid var(--neutrals-white);
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:first-child > div {
     display: flex;
     width: 100%;
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul {
     display: flex;
     width: 100%;
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li {
     display: flex;
     flex-direction: column;
@@ -164,22 +190,18 @@
     line-height: 1.25em;
     width: 100%;
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul {
     margin-top: var(--spacing-18);
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul > li {
     font-size: var(--body-medium-regular-size);
     line-height: 1.25em;
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     height: 100%;
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li {
     padding: 26px 22px;
     font-weight: var(--medium);
@@ -190,33 +212,27 @@
     flex-direction: column;
     gap: var(--spacing-20);
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:nth-child(odd) {
     border-right: 0.5px solid var(--neutrals-white);
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li:nth-last-child(-n+2) {
     border-bottom: none;
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul {
     margin-top: 0;
   }
-
   .motilal-oswal-ecosystem .custom-rte > div:last-child > div > ul > li > ul > li {
     font-size: var(--body-medium-regular-size);
     line-height: 1.25em;
   }
 }
-
-@media (width >= 1200px) {
+@media (min-width: 1200px) {
   .motilal-oswal-ecosystem .custom-rte {
     max-width: 1236px;
     margin: 0 auto;
   }
-
   .motilal-oswal-ecosystem .default-content-wrapper {
     margin-left: auto;
     margin-right: auto;
   }
-}
+}/*# sourceMappingURL=motilal-oswal-ecosystem.css.map */

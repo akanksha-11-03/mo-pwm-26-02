@@ -1,15 +1,12 @@
 .accordion details {
   /* stylelint-disable-next-line no-descending-specificity */
 }
-
 .accordion details + details {
   margin-top: 24px;
 }
-
 .accordion details p {
   margin-bottom: 0.8em;
 }
-
 .accordion details summary {
   position: relative;
   padding: 0 16px;
@@ -19,15 +16,12 @@
   overflow: auto;
   transition: background-color 0.2s;
 }
-
 .accordion details summary:focus, .accordion details summary:hover {
   background-color: var(--pwm-gold-300);
 }
-
 .accordion details summary::-webkit-details-marker {
   display: none;
 }
-
 .accordion details summary::after {
   content: "";
   position: absolute;
@@ -40,19 +34,15 @@
   border-width: 2px 2px 0 0;
   transition: transform 0.2s;
 }
-
 .accordion details .accordion-item-body {
   padding: 0 16px;
 }
-
 .accordion details[open] summary {
   background-color: var(--pwm-gold-300);
 }
-
 .accordion details[open] summary::after {
   transform: translateY(-50%) rotate(-45deg);
 }
-
 .accordion details[open] .accordion-item-body {
   background-color: var(--pwm-gold-300);
 }
@@ -62,37 +52,30 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 40px;
 }
-
-@media screen and (width <= 900px) {
+@media screen and (max-width: 900px) {
   .footer .accordion {
     grid-template-columns: 1fr;
     gap: 0;
   }
 }
-
 .footer .accordion .accordion-item {
   margin-top: 0;
 }
-
 .footer .accordion .accordion-item .accordion-item-label {
   margin: 0;
   padding: 0;
 }
-
 .footer .accordion .accordion-item .accordion-item-label::after {
   display: none;
 }
-
-@media screen and (width <= 900px) {
+@media screen and (max-width: 900px) {
   .footer .accordion .accordion-item .accordion-item-label::after {
     display: block;
   }
 }
-
 .footer .accordion .accordion-item .accordion-item-label p {
   margin: 0;
 }
-
 .footer .accordion .accordion-item .accordion-item-label p strong a {
   margin: 0;
   padding: 0;
@@ -105,11 +88,9 @@
   font-weight: var(--semibold);
   color: var(--pwm-gold-700);
 }
-
 .footer .accordion .accordion-item .accordion-item-body {
   padding: 0;
 }
-
 .footer .accordion .accordion-item .accordion-item-body ul {
   list-style-type: none;
   padding: 0;
@@ -119,17 +100,15 @@
   gap: 8px;
   line-height: var(--spacing-16);
 }
-
-@media screen and (width <= 900px) {
+@media screen and (max-width: 900px) {
   .footer .accordion .accordion-item .accordion-item-body ul {
     gap: 0;
   }
 }
-
 .footer .accordion .accordion-item .accordion-item-body ul li a {
   color: var(--pwm-gold-700);
   text-decoration: none;
   font-size: var(--spacing-12);
   font-weight: var(--regular);
   letter-spacing: 0%;
-}
+}/*# sourceMappingURL=accordion.css.map */

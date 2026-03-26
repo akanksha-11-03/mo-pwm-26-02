@@ -1,11 +1,62 @@
-@import "../../../styles/common-theme/css/fonts.css";
-
-@media (width >= 768px) {
+/* Inter Light (300) */
+@font-face {
+  font-family: Inter;
+  font-style: "Italic";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../../fonts/Inter-LightItalic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Light (400) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Regular.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (500) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Medium.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (600) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../../fonts/Inter-SemiBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (700) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Bold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter ExtraBold (800) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../../../fonts/Inter-ExtraBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} 
+@media (min-width: 768px) {
   .section.our-key-differences {
     padding: 0 16px;
   }
 }
-
 .section.our-key-differences .cards-wrapper {
   padding: 0;
   max-width: 100%;
@@ -13,19 +64,16 @@
   position: relative;
   background-color: var(--pwm-gold-200);
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper {
     max-width: 1232px;
     margin: 0 auto;
   }
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards {
   display: flex;
   gap: 0;
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list {
   border: none;
   background-color: unset;
@@ -36,8 +84,7 @@
   padding: 56px 32px;
   width: 100%;
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list {
     flex-direction: row;
     align-items: center;
@@ -45,56 +92,48 @@
     padding: 20px;
   }
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-image {
   min-height: 358px;
   height: auto;
   width: auto;
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-image {
     max-width: 548px;
     max-height: 580px;
     width: 100%;
   }
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-image * {
   min-height: 358px;
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-image .key-picture {
   line-height: 0;
   height: 100%;
   display: block;
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-image .key-picture .key-image {
+  -o-object-fit: fill;
      object-fit: fill;
   width: 100%;
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-image .key-picture .key-image {
     aspect-ratio: unset;
   }
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-body {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-body {
     max-width: 460px;
     padding: 139px 0;
   }
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-body .key-text-1 {
   margin: 0 0 26px;
   font-size: 28px;
@@ -104,15 +143,13 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-body .key-text-1 {
     margin: 0 0 43px;
     font-size: var(--heading-pwm-h4-size);
     line-height: var(--heading-pwm-h4-line-height);
   }
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-body .key-text-2 {
   margin: 0;
   font-size: var(--body-xlarge-regular-size);
@@ -122,14 +159,12 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-body .key-text-2 {
     font-size: var(--body-xlarge-regular-size);
     line-height: var(--body-xlarge-regular-line-height);
   }
 }
-
 .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-body .key-text-3 {
   margin: 0;
   padding: 0 0 40px;
@@ -140,15 +175,13 @@
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-body .key-text-3 {
     padding: 0 0 67px;
     font-size: var(--body-medium-regular-size);
     line-height: 24px;
   }
 }
-
 .section.our-key-differences .cards-wrapper .swiper-pagination {
   display: flex;
   justify-content: center;
@@ -161,15 +194,13 @@
   max-width: max-content;
   transform: translateX(-50%);
 }
-
-@media (width >= 768px) {
+@media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .swiper-pagination {
     bottom: 155px;
     left: calc(50% + 24px);
     transform: unset;
   }
 }
-
 .section.our-key-differences .cards-wrapper .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
@@ -177,7 +208,6 @@
   opacity: 1;
   margin: 0;
 }
-
 .section.our-key-differences .cards-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: var(--blue-1-800-primary);
-}
+}/*# sourceMappingURL=key-difference.css.map */

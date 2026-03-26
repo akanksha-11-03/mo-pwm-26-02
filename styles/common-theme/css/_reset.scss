@@ -1,5 +1,6 @@
+@use "sass:map";
 @use "./variables_mixins" as *;
-@use "./fluid-typography";
+@use "./fluid-typography" as *;
 
 // ----------------------------------------
 // BASE RESET
@@ -157,7 +158,7 @@ th {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: $neutrals-n50;
+  background: #464343;
   border-radius: 40px;
 }
 

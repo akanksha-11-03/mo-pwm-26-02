@@ -1,26 +1,74 @@
-@import "../../../styles/common-theme/css/fonts.css";
-
+/* Inter Light (300) */
+@font-face {
+  font-family: Inter;
+  font-style: "Italic";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../../fonts/Inter-LightItalic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Light (400) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Regular.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (500) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Medium.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (600) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../../fonts/Inter-SemiBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (700) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Bold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter ExtraBold (800) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../../../fonts/Inter-ExtraBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} 
 .how-we-serve-you {
   background-color: var(--pwm-gold-100);
   padding: var(--spacing-60) 0;
 }
-
 .how-we-serve-you .columns-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-32);
 }
-
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div {
   display: flex;
   align-items: center;
   gap: var(--spacing-40);
 }
-
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div > .hwsy-content-col {
   flex: 1;
 }
-
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div > .hwsy-content-col h6 {
   font-size: var(--body-small-regular-size);
   line-height: 1.4;
@@ -32,7 +80,6 @@
   text-transform: none;
   letter-spacing: 0.02em;
 }
-
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div > .hwsy-content-col h5 {
   font-size: var(--heading-pwm-h4-size);
   line-height: var(--heading-pwm-h4-line-height);
@@ -42,17 +89,14 @@
   font-weight: var(--regular);
   margin: 0 0 var(--spacing-32) 0;
 }
-
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div > .columns-img-col {
   flex: 1;
 }
-
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div > .columns-img-col picture {
   display: block;
   width: 100%;
   height: 100%;
 }
-
 .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div > .columns-img-col picture img {
   width: 100%;
   height: 100%;
@@ -61,14 +105,12 @@
   border-radius: 0;
   display: block;
 }
-
 .how-we-serve-you .columns-wrapper .divwithlinks {
   display: flex;
   flex-direction: column;
   margin-bottom: var(--spacing-40);
   margin-top: var(--spacing-40);
 }
-
 .how-we-serve-you .columns-wrapper .divwithlinks a {
   all: unset;
   display: flex;
@@ -85,11 +127,9 @@
   border-bottom: 1px solid #dadada;
   transition: border-color 0.4s ease, background-color 0.4s ease;
 }
-
 .how-we-serve-you .columns-wrapper .divwithlinks a:hover {
-  box-shadow: 0 2px 0 -1px rgb(66 66 66 / 50.2%);
+  box-shadow: 0px 2px 0px -1px rgba(66, 66, 66, 0.5019607843);
 }
-
 .how-we-serve-you .columns-wrapper .divwithlinks a .icon {
   display: flex;
   align-items: center;
@@ -98,17 +138,14 @@
   height: var(--spacing-20);
   flex-shrink: 0;
 }
-
 .how-we-serve-you .columns-wrapper .divwithlinks a .icon img {
   width: var(--spacing-16);
   height: var(--spacing-16);
   filter: brightness(0) saturate(100%) invert(18%) sepia(60%) saturate(2000%) hue-rotate(230deg);
 }
-
 .how-we-serve-you .columns-wrapper .button-container {
   margin: 0;
 }
-
 .how-we-serve-you .columns-wrapper .button-container strong a.button {
   all: unset;
   display: inline-block;
@@ -125,7 +162,6 @@
   transition: background-color 0.2s ease;
   letter-spacing: 0.02em;
 }
-
 .how-we-serve-you .columns-wrapper .button-container strong a.button:hover {
   background-color: var(--button-primary-hover);
 }
@@ -134,24 +170,20 @@
   .how-we-serve-you {
     padding: var(--spacing-40) 0;
   }
-
   .how-we-serve-you .columns-wrapper {
     padding: 0 var(--spacing-24);
   }
-
   .how-we-serve-you .columns-wrapper .columns.columns-2-cols > div {
     flex-direction: column;
     gap: var(--spacing-32);
   }
 }
-
 @media (min-width: ) {
   .how-we-serve-you {
     padding: var(--spacing-32) 0;
   }
-
   .how-we-serve-you .columns-wrapper .divwithlinks a {
     font-size: var(--body-small-regular-size);
     padding: 14px 0;
   }
-}
+}/*# sourceMappingURL=How-we-serve-you.css.map */
