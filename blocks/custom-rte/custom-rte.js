@@ -1,4 +1,13 @@
+import { loadCSS } from '../../scripts/aem.js';
+
 export default function decorate(block) {
+  const section = block.closest('.section');
+  const variant = ['who-we-are', 'wealth-creation', 'careers-rte', 'say-hello']
+    .find((cls) => section?.classList.contains(cls));
+  if (variant) {
+    loadCSS(`${window.hlx.codeBasePath}/blocks/custom-rte/${variant}.css`);
+  }
+
   if (block.closest('.who-we-are')) {
     // console.log('swdfv');
     Array.from(block.children).forEach((child, i) => {

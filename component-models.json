@@ -222,6 +222,14 @@
           {
             "name": "Blog Detail Section",
             "value": "blog-detail"
+          },
+          {
+            "name": "Careers RTE Section",
+            "value": "careers-rte"
+          },
+          {
+            "name": "Say Hello Section",
+            "value": "say-hello"
           }
         ]
       }
