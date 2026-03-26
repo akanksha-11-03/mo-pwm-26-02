@@ -899,8 +899,9 @@ body,
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
-  --font-features-default: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on,
-    "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  --font-features-default:
+    "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on,
+    "cv09" on, "cv10" on, "cv11" on;
   /* fonts */
   --body-font-family: inter, inter-fallback, sans-serif;
   --heading-font-family: inter-bold, inter-bold-fallback, sans-serif;
@@ -1176,26 +1177,60 @@ main .section.highlight {
 
 /* Breadcrumbs */
 .section.breadcrumbs {
-  margin: 16px 0;
+  margin: 0;
 }
-
 .section.breadcrumbs .breadul {
-  list-style: none;
-  padding: 24px 0;
-  display: flex;
-  gap: 8px;
-}
-
-.section.breadcrumbs .breadli {
+  margin: 0;
+  width: 100%;
   display: flex;
   align-items: center;
+  gap: 8px;
+  padding: 22px 16px;
 }
-
-.section.breadcrumbs .breadli a {
+@media (min-width: 768px) {
+  .section.breadcrumbs .breadul {
+    max-width: 1264px;
+    margin: 0 auto;
+  }
+}
+.section.breadcrumbs .breadul .breadli {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section.breadcrumbs .breadul .breadli::before {
+  content: "/";
+  color: var(--neutrals-800);
+  font-family: var(--body);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px; /* 133.333% */
+}
+.section.breadcrumbs .breadul .breadli:first-of-type::before {
+  content: unset;
+}
+.section.breadcrumbs .breadul .breadli span {
+  display: none;
+}
+.section.breadcrumbs .breadul .breadli.home-icon {
+  width: 16px;
+  height: 16px;
+}
+.section.breadcrumbs .breadul .breadli .breadlist {
+  font-size: var(--label-small-size);
+  line-height: var(--label-small-line-height);
+  color: var(--pwm-gold-800);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.breadcrumbs .breadul .breadli .breadlist {
+    font-size: var(--label-small-size);
+    line-height: var(--label-small-line-height);
+  }
+}
+.section.breadcrumbs .breadul .breadli .breadlist:hover {
   text-decoration: none;
-  color: var(--link-color);
-}
-
-.section.breadcrumbs .breadli a:hover {
-  text-decoration: underline;
 }/*# sourceMappingURL=styles.css.map */
