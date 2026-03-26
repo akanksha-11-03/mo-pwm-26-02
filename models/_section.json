@@ -31,8 +31,8 @@
           "label": "Style",
           "options": [
             {
-              "name": "Highlight",
-              "value": "highlight"
+              "name": "Breadcrumbs",
+              "value": "breadcrumbs"
             },
             {
               "name": "Hero Banner Variation",

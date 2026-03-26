@@ -304,3 +304,29 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+
+/* Breadcrumbs */
+.section.breadcrumbs {
+  margin: 16px 0;
+}
+
+.section.breadcrumbs .breadul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
+
+.section.breadcrumbs .breadli {
+  display: flex;
+  align-items: center;
+}
+
+.section.breadcrumbs .breadli a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.section.breadcrumbs .breadli a:hover {
+  text-decoration: underline;
+}

@@ -20,21 +20,6 @@
         "name": "keywords",
         "multi": true,
         "label": "Keywords"
-      },
-      {
-        "component": "boolean",
-        "name": "breadcrumbs",
-        "label": "Breadcrumb"
-      },
-      {
-        "component": "text",
-        "name": "breadcrumbs_title",
-        "label": "Breadcrumb Title"
-      },
-      {
-        "component": "boolean",
-        "name": "breadcrumbs_hide",
-        "label": "Hide On Breadcrumbs"
       }
     ]
   },
@@ -149,8 +134,8 @@
         "label": "Style",
         "options": [
           {
-            "name": "Highlight",
-            "value": "highlight"
+            "name": "Breadcrumbs",
+            "value": "breadcrumbs"
           },
           {
             "name": "Hero Banner Variation",
