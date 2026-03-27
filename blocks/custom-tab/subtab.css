@@ -1,0 +1,80 @@
+/* Subtab — pill-shaped filter tabs */
+
+/* ── Container ── */
+#subtab-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background-color: var(--neutrals-white, #fff);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+/* ── Individual tab pill ── */
+#subtab-container li {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  padding: 8px 16px;
+  border: 1px solid var(--neutrals-600, #616161);
+  border-radius: 1000px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+#subtab-container li a,
+#subtab-container li p,
+#subtab-container li span {
+  all: unset;
+  font-family: var(--body, Inter, sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.14;
+  color: var(--neutrals-600, #616161);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* ── Selected / Active state ── */
+#subtab-container li.subtab-active {
+  background-color: var(--pwm-gold-700, #866e44);
+  border-color: var(--pwm-gold-700, #866e44);
+}
+
+#subtab-container li.subtab-active a,
+#subtab-container li.subtab-active p,
+#subtab-container li.subtab-active span {
+  font-weight: 600;
+  color: var(--pwm-gold-50, #f8f3ef);
+}
+
+/* ── Hover state (non-active) ── */
+#subtab-container li:not(.subtab-active):hover {
+  border-color: var(--pwm-gold-700, #866e44);
+}
+
+#subtab-container li:not(.subtab-active):hover a,
+#subtab-container li:not(.subtab-active):hover p,
+#subtab-container li:not(.subtab-active):hover span {
+  color: var(--pwm-gold-700, #866e44);
+}
+
+/* ── Mobile — horizontal scroll ── */
+@media (width <= 899px) {
+  #subtab-container {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+  }
+
+  #subtab-container::-webkit-scrollbar {
+    display: none;
+  }
+}

@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import { toClassName } from '../../scripts/aem.js';
+import { toClassName, loadCSS } from '../../scripts/aem.js';
 
 /**
  * Show the section matching the active tab, hide all others.
@@ -80,6 +80,25 @@ export default async function decorate(block) {
       items[next].click();
     }
   });
+
+  // --- Subtab: pill-shaped filter tabs (second <ul> in the block) ---
+  const allUls = block.querySelectorAll('ul');
+  if (allUls.length > 1) {
+    loadCSS(`${window.hlx.codeBasePath}/blocks/custom-tab/subtab.css`);
+
+    const subtabUl = allUls[1];
+    subtabUl.id = 'subtab-container';
+
+    const subtabItems = subtabUl.querySelectorAll('li');
+    if (subtabItems.length) subtabItems[0].classList.add('subtab-active');
+
+    subtabItems.forEach((li) => {
+      li.addEventListener('click', () => {
+        subtabUl.querySelectorAll('li').forEach((el) => el.classList.remove('subtab-active'));
+        li.classList.add('subtab-active');
+      });
+    });
+  }
 
   // --- Observer: hide inactive tab sections after EDS loads them ---
   // EDS sets section.style.display = null when status → "loaded",
