@@ -4,23 +4,11 @@ export default function decorate(block) {
   setClassPrefixes(['detail-content', 'detail-card-item-', 'content-', 'inner-content-', 'inner-item-']);
   addIndexed(block);
 
-  // Array.from(block.children).forEach((child) => {
-  //   child.classList.add('detail-content');
-  //   Array.from(child.children).forEach((item, i) => {
-  //     item.classList.add(`detail-card-item-${i + 1}`);
-  //     Array.from(item.children).forEach((el, ind) => {
-  //       el.classList.add(`content-${ind + 1}`);
-  //       Array.from(el.children).forEach((elem, indd) => {
-  //         elem.classList.add(`inner-content-${indd + 1}`);
-  //         Array.from(elem.children).forEach((elee) => {
-  //           elee.classList.add('inner-item');
-  //         });
-  //       });
-  //     });
-  //   });
-  // });
+  Array.from(block.children).forEach((child) => {
+    child.classList.add('detail-content');
+  });
 
-  const eachCard = block.querySelectorAll('[class*="detail-content"]');
+  const eachCard = block.querySelectorAll('.detail-content');
   eachCard.forEach((card) => {
     const cardFirstItem = card.querySelector('.detail-card-item-1');
     const cardContent = cardFirstItem.querySelector('.content-1');
