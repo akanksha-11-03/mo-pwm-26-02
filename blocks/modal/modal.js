@@ -69,3 +69,16 @@ export async function openModal(fragmentUrl) {
   const { showModal } = await createModal(fragment.childNodes);
   showModal();
 }
+
+export function initializeModalHandlers() {
+  document.body.addEventListener('click', async (e) => {
+    const link = e.target.closest('a');
+    if (!link || !link.href) return;
+
+    // Check if it's a link to a modal fragment
+    if (link.href.includes('/modals/')) {
+      e.preventDefault();
+      await openModal(link.href);
+    }
+  });
+}
