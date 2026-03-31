@@ -477,16 +477,6 @@
     ]
   },
   {
-    "id": "subtab-item",
-    "fields": [
-      {
-        "component": "richtext",
-        "name": "content",
-        "label": "Subtab Content"
-      }
-    ]
-  },
-  {
     "id": "detail-card-item",
     "fields": [
       {
@@ -658,6 +648,16 @@
         "name": "searchContent",
         "label": "Search Content (icons + placeholder)",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "subtab-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Subtab Content"
       }
     ]
   },

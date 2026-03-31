@@ -95,12 +95,6 @@
     ]
   },
   {
-    "id": "subtab",
-    "components": [
-      "subtab-item"
-    ]
-  },
-  {
     "id": "detail-card",
     "components": [
       "detail-card-item"
@@ -110,6 +104,12 @@
     "id": "feature-card",
     "components": [
       "feature-card-item"
+    ]
+  },
+  {
+    "id": "subtab",
+    "components": [
+      "subtab-item"
     ]
   },
   {
