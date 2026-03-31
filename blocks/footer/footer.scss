@@ -6,11 +6,12 @@
   .footer {
     max-width: 1366px;
     margin: 0 auto;
-    color: var(--pwm-gold-700);
-    padding: 60px 67px 49.85px 60px;
+    color: var(--pwm-gold-900);
+    padding: 60px 67px 49.85px;
 
     @media screen and (max-width: 900px) {
       padding: 60px 16px 33.11px;
+      color: var(--pwm-gold-700);
     }
 
     .footer-sections-wrapper {
@@ -35,7 +36,7 @@
           flex-direction: column;
           flex: 1;
           gap: 32px;
-          margin-bottom: 18px;
+          // margin-bottom: 18px;
 
           p {
             margin: 0;
@@ -75,6 +76,11 @@
             a {
               width: 16px;
               height: 16px;
+              display: flex;
+
+              &:nth-child(3) {
+                width: 20px;
+              }
 
               span {
                 width: 100%;
@@ -129,8 +135,8 @@
                   margin: 0;
                   p:first-child {
                     margin: 0;
-                    font-size: var(--spacing-14);
-                    line-height: var(--spacing-16);
+                    font-size: var(--body-small-regular-size);
+                    line-height: var(--label-large-line-height);
                     color: var(--neutrals-black);
                     font-weight: var(--regular);
                     letter-spacing: 0%;
@@ -139,11 +145,10 @@
                   p:last-child {
                     color: var(--neutrals-black);
                     font-weight: var(--semibold);
-                    font-size: var(--spacing-14);
-                    line-height: var(--spacing-16);
                     letter-spacing: 0%;
                     margin: 0;
-
+                    line-height: 0;
+                    
                     strong {
                       a {
                         background-color: transparent;
@@ -152,6 +157,8 @@
                         color: var(--neutrals-black);
                         margin: 0;
                         padding: 0;
+                        font-size: var(--body-small-semibold-size);
+                        line-height: var(--body-small-semibold-line-height);
                       }
                     }
                   }
@@ -198,8 +205,8 @@
                   margin: 0;
                   p:first-child {
                     margin: 0;
-                    font-size: var(--spacing-14);
-                    line-height: var(--spacing-16);
+                    font-size: var(--paragraph-small-regular-size);
+                    line-height: var(--paragraph-small-regular-line-height);
                     color: var(--neutrals-black);
                     font-weight: var(--regular);
                     letter-spacing: 0%;
@@ -208,8 +215,8 @@
                   p:last-child {
                     color: var(--neutrals-black);
                     font-weight: var(--semibold);
-                    font-size: var(--spacing-14);
-                    line-height: var(--spacing-16);
+                    font-size: var(--body-small-semibold-size);
+                    line-height: var(--body-small-semibold-line-height);
                     letter-spacing: 0%;
                     margin: 0;
 
@@ -264,7 +271,7 @@
           line-height: var(--spacing-16);
           letter-spacing: 0%;
           font-weight: var(--medium);
-          color: var(--pwm-gold-700);
+          color: var(--pwm-gold-900);
           text-align: left;
         }
 
@@ -296,13 +303,17 @@
               font-weight: var(--regular);
               font-style: normal;
               letter-spacing: 0%;
-              color: var(--pwm-gold-700);
+              color: var(--pwm-gold-900);
+
+              @media screen and (max-width: 900px) {
+                color: var(--pwm-gold-700);
+              }
 
               span {
                 width: 16px;
                 height: 16px;
                 flex-shrink: 0;
-                margin-top: 4px;
+                margin-top: 3px;
                 img {
                   width: 100%;
                   height: 100%;
@@ -312,7 +323,7 @@
             }
           }
 
-          .contact-phone{
+          .contact-phone {
             display: flex;
             white-space: nowrap;
           }
@@ -346,6 +357,10 @@
           font-weight: var(--regular);
           margin-bottom: 16px;
 
+          @media screen and (max-width: 900px) {
+            color: var(--pwm-gold-700);
+          }
+
           a {
             color: var(--pwm-gold-700);
             text-decoration: underline;
@@ -358,6 +373,11 @@
 
         p:last-child {
           margin-top: 40px;
+          color: var(--pwm-gold-800);
+
+          @media screen and (max-width: 900px) {
+            color: var(--pwm-gold-700);
+          }
         }
       }
     }

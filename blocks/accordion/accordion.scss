@@ -107,9 +107,10 @@
               line-height: var(--spacing-14);
               letter-spacing: 0%;
               font-weight: var(--semibold);
-              color: var(--pwm-gold-700);
-
+              color: var(--pwm-gold-900);
+              
               @media screen and (max-width: 900px) {
+                color: var(--pwm-gold-700);
                 font-size: var(--body-small-semibold-size);
                 line-height: var(--body-small-semibold-line-height);
               }
