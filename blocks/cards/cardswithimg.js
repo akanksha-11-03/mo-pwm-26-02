@@ -75,6 +75,10 @@ export default async function decoratecardwithimgs(block) {
       const headerRow = document.createElement('div');
       headerRow.className = 'accordion-header';
 
+      // Left side: title + description together
+      const contentWrap = document.createElement('div');
+      contentWrap.className = 'accordion-content';
+
       const titleWrap = document.createElement('div');
       titleWrap.className = 'accordion-title';
 
@@ -82,6 +86,16 @@ export default async function decoratecardwithimgs(block) {
       if (children.length > 0) {
         titleWrap.append(children[0]);
       }
+
+      // Visible description (shown in collapsed state, below title)
+      const visibleDesc = document.createElement('div');
+      visibleDesc.className = 'accordion-desc';
+      // Second child = short description
+      if (children.length > 1) {
+        visibleDesc.append(children[1]);
+      }
+
+      contentWrap.append(titleWrap, visibleDesc);
 
       // +/- toggle button
       const toggleBtn = document.createElement('button');
@@ -97,22 +111,14 @@ export default async function decoratecardwithimgs(block) {
       icon.alt = 'Toggle';
       toggleBtn.append(icon);
 
-      headerRow.append(titleWrap, toggleBtn);
-
-      // Visible description (shown in collapsed state, below title)
-      const visibleDesc = document.createElement('div');
-      visibleDesc.className = 'accordion-desc';
-      // Second child = short description
-      if (children.length > 1) {
-        visibleDesc.append(children[1]);
-      }
+      headerRow.append(contentWrap, toggleBtn);
 
       // Hidden detail (shown only when expanded)
       const detail = document.createElement('div');
       detail.className = 'accordion-detail';
       children.slice(2).forEach((child) => detail.append(child));
 
-      bodyCol.replaceChildren(headerRow, visibleDesc, detail);
+      bodyCol.replaceChildren(headerRow, detail);
     }
 
     wrapperEl.append(slide);
@@ -134,7 +140,7 @@ export default async function decoratecardwithimgs(block) {
     img.closest('picture').replaceWith(pic);
   });
 
-  // Initialize Swiper — 3 visible + partial peek of 4th
+  // Initialize Swiper — 3 cards visible on desktop
   // eslint-disable-next-line no-new
   new Swiper(swiperEl, {
     slidesPerView: 1.15,
@@ -142,11 +148,11 @@ export default async function decoratecardwithimgs(block) {
     loop: true,
     pagination: {
       el: pagination,
-      clickable: true,
+      type: 'progressbar',
     },
     breakpoints: {
-      640: { slidesPerView: 2.15, spaceBetween: 20 },
-      1024: { slidesPerView: 3.15, spaceBetween: 24 },
+      640: { slidesPerView: 2.15 },
+      1024: { slidesPerView: 3 },
     },
   });
 }

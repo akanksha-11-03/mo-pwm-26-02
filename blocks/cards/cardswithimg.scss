@@ -4,15 +4,18 @@
 
 .cardswithimg-section {
   .cardswithimg-heading {
-    margin-bottom: var(--spacing-40);
+    padding: 0;
+    margin: 0 67px 32px;
 
     // Label — "Who we serve"
     .cardswithimg-label {
-      @include font-style(var(--body-medium-regular-size), 1.5, var(--pwm-gold-700), var(--medium), var(--body));
+      @include font-style(var(--body-medium-regular-size), 20px, var(--pwm-gold-700), var(--medium), var(--body));
       margin: 0 0 var(--spacing-8) 0;
     }
 
-    > h1, > h2, > h3 {
+    >h1,
+    >h2,
+    >h3 {
       @include font-style(var(--heading-pwm-h4-size), var(--heading-pwm-h4-line-height), var(--blue-1-800-primary), var(--regular), var(--title));
       margin: 0;
     }
@@ -23,10 +26,16 @@
     }
   }
 
-  @include media(mobile-ed) {
+  @media(mobile) {
     .cardswithimg-heading {
-      margin-bottom: var(--spacing-24);
+      margin : 0 16px 32px;
+      padding: 0;
     }
+  }
+
+  .cards-wrapper {
+    padding: 0;
+    margin: 0 67px;
   }
 }
 
@@ -41,24 +50,29 @@
     padding-bottom: 48px; // room for pagination
     overflow: hidden;
   }
+
   .swiper-slide {
     box-sizing: border-box;
-    border-radius: var(--border-radius-8);
+    border-radius: var(--border-radius-4);
     overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
-    height: 480px;
-    background: var(--pwm-gold-200);
+    width: 400px;
+    height: 427px;
+    background: var(--neutrals-white);
+
   }
 
   // ===== Body — sits at TOP of card with beige bg =====
   .cardswithimg-card-body {
+    height: 110px;
+    gap: 8px;
     position: relative;
     z-index: 2;
     display: flex;
     flex-direction: column;
-    padding: var(--spacing-20) var(--spacing-20) var(--spacing-16);
+    padding: var(--spacing-16) var(--spacing-20);
     background: var(--pwm-gold-200);
     flex-shrink: 0;
     transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -73,8 +87,8 @@
     max-height: 100%;
     opacity: 1;
     transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.6s ease,
-                flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity 0.6s ease,
+      flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 
     picture {
       display: block;
@@ -109,14 +123,27 @@
     justify-content: space-between;
     gap: var(--spacing-16);
     flex-shrink: 0;
+
+    .accordion-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-8);
+
+    }
+
   }
 
   .accordion-title {
     flex: 1;
 
-    h1, h2, h3, h4, h5, h6 {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 0;
-      @include font-style(22px, 1.3, var(--pwm-gold-800), var(--semibold), var(--body));
+      @include font-style(20px, 28px, var(--pwm-gold-800), var(--medium), var(--body));
     }
 
     p {
@@ -143,14 +170,14 @@
   }
 
   .accordion-toggle-icon {
-    width: var(--spacing-20);
-    height: var(--spacing-20);
+    width: var(--spacing-14);
+    height: var(--spacing-14);
     transition: transform 0.3s ease;
   }
 
   // ===== Visible Description (always shown below title) =====
   .accordion-desc {
-    margin-top: var(--spacing-8);
+    // margin-top: var(--spacing-8);
 
     p {
       margin: 0;
@@ -168,7 +195,7 @@
     overflow: hidden;
     opacity: 0;
     transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1),
-                opacity 0.4s ease 0.1s;
+      opacity 0.4s ease 0.1s;
 
     p {
       margin: 0;
@@ -186,21 +213,21 @@
     opacity: 1;
   }
 
-  // ===== Pagination dots =====
+  // ===== Pagination progressbar =====
   .swiper-pagination {
-    bottom: var(--spacing-8) !important;
+    bottom: 0;
+    top: auto ;
+    left: 50% ;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 2px;
+    background: var(--neutrals-400, #e0dcd5);
+    border-radius: 3px;
   }
 
-  .swiper-pagination-bullet {
-    width: var(--spacing-40);
-    height: 4px;
-    border-radius: 2px;
-    background: var(--neutrals-400);
-    opacity: 1;
-  }
-
-  .swiper-pagination-bullet-active {
+  .swiper-pagination-progressbar-fill {
     background: var(--blue-1-800-primary);
+    border-radius: 3px;
   }
 
   // ===== Responsive =====
@@ -214,7 +241,14 @@
     }
 
     .accordion-title {
-      h1, h2, h3, h4, h5, h6, p {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
         font-size: 18px;
       }
     }
@@ -240,7 +274,14 @@
     }
 
     .accordion-title {
-      h1, h2, h3, h4, h5, h6, p {
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p {
         font-size: var(--body-medium-regular-size);
       }
     }

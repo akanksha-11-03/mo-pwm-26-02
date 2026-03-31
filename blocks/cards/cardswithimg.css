@@ -53,18 +53,21 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 } 
 .cardswithimg-section .cardswithimg-heading {
-  margin-bottom: var(--spacing-40);
+  padding: 0;
+  margin: 0 67px 32px;
 }
 .cardswithimg-section .cardswithimg-heading .cardswithimg-label {
   font-size: var(--body-medium-regular-size);
-  line-height: 1.5;
+  line-height: 20px;
   color: var(--pwm-gold-700);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--medium);
   margin: 0 0 var(--spacing-8) 0;
 }
-.cardswithimg-section .cardswithimg-heading > h1, .cardswithimg-section .cardswithimg-heading > h2, .cardswithimg-section .cardswithimg-heading > h3 {
+.cardswithimg-section .cardswithimg-heading > h1,
+.cardswithimg-section .cardswithimg-heading > h2,
+.cardswithimg-section .cardswithimg-heading > h3 {
   font-size: var(--heading-pwm-h4-size);
   line-height: var(--heading-pwm-h4-line-height);
   color: var(--blue-1-800-primary);
@@ -82,10 +85,15 @@
   font-weight: var(--regular);
   margin: 0;
 }
-@media (min-width: ) {
+@media (mobile) {
   .cardswithimg-section .cardswithimg-heading {
-    margin-bottom: var(--spacing-24);
+    margin: 0 16px 32px;
+    padding: 0;
   }
+}
+.cardswithimg-section .cards-wrapper {
+  padding: 0;
+  margin: 0 67px;
 }
 
 .cards.cardswithimg {
@@ -99,20 +107,23 @@
 }
 .cards.cardswithimg .swiper-slide {
   box-sizing: border-box;
-  border-radius: var(--border-radius-8);
+  border-radius: var(--border-radius-4);
   overflow: hidden;
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 480px;
-  background: var(--pwm-gold-200);
+  width: 400px;
+  height: 427px;
+  background: var(--neutrals-white);
 }
 .cards.cardswithimg .cardswithimg-card-body {
+  height: 110px;
+  gap: 8px;
   position: relative;
   z-index: 2;
   display: flex;
   flex-direction: column;
-  padding: var(--spacing-20) var(--spacing-20) var(--spacing-16);
+  padding: var(--spacing-16) var(--spacing-20);
   background: var(--pwm-gold-200);
   flex-shrink: 0;
   transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
@@ -154,17 +165,27 @@
   gap: var(--spacing-16);
   flex-shrink: 0;
 }
+.cards.cardswithimg .accordion-header .accordion-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
 .cards.cardswithimg .accordion-title {
   flex: 1;
 }
-.cards.cardswithimg .accordion-title h1, .cards.cardswithimg .accordion-title h2, .cards.cardswithimg .accordion-title h3, .cards.cardswithimg .accordion-title h4, .cards.cardswithimg .accordion-title h5, .cards.cardswithimg .accordion-title h6 {
+.cards.cardswithimg .accordion-title h1,
+.cards.cardswithimg .accordion-title h2,
+.cards.cardswithimg .accordion-title h3,
+.cards.cardswithimg .accordion-title h4,
+.cards.cardswithimg .accordion-title h5,
+.cards.cardswithimg .accordion-title h6 {
   margin: 0;
-  font-size: 22px;
-  line-height: 1.3;
+  font-size: 20px;
+  line-height: 28px;
   color: var(--pwm-gold-800);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  font-weight: var(--semibold);
+  font-weight: var(--medium);
 }
 .cards.cardswithimg .accordion-title p {
   margin: 0;
@@ -190,12 +211,9 @@
   opacity: 0.7;
 }
 .cards.cardswithimg .accordion-toggle-icon {
-  width: var(--spacing-20);
-  height: var(--spacing-20);
+  width: var(--spacing-14);
+  height: var(--spacing-14);
   transition: transform 0.3s ease;
-}
-.cards.cardswithimg .accordion-desc {
-  margin-top: var(--spacing-8);
 }
 .cards.cardswithimg .accordion-desc p {
   margin: 0;
@@ -234,17 +252,18 @@
   opacity: 1;
 }
 .cards.cardswithimg .swiper-pagination {
-  bottom: var(--spacing-8) !important;
+  bottom: 0;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 2px;
+  background: var(--neutrals-400, #e0dcd5);
+  border-radius: 3px;
 }
-.cards.cardswithimg .swiper-pagination-bullet {
-  width: var(--spacing-40);
-  height: 4px;
-  border-radius: 2px;
-  background: var(--neutrals-400);
-  opacity: 1;
-}
-.cards.cardswithimg .swiper-pagination-bullet-active {
+.cards.cardswithimg .swiper-pagination-progressbar-fill {
   background: var(--blue-1-800-primary);
+  border-radius: 3px;
 }
 @media (min-width: ) {
   .cards.cardswithimg .swiper-slide {
@@ -253,7 +272,13 @@
   .cards.cardswithimg .cardswithimg-card-body {
     padding: var(--spacing-16) var(--spacing-16) var(--spacing-12);
   }
-  .cards.cardswithimg .accordion-title h1, .cards.cardswithimg .accordion-title h2, .cards.cardswithimg .accordion-title h3, .cards.cardswithimg .accordion-title h4, .cards.cardswithimg .accordion-title h5, .cards.cardswithimg .accordion-title h6, .cards.cardswithimg .accordion-title p {
+  .cards.cardswithimg .accordion-title h1,
+  .cards.cardswithimg .accordion-title h2,
+  .cards.cardswithimg .accordion-title h3,
+  .cards.cardswithimg .accordion-title h4,
+  .cards.cardswithimg .accordion-title h5,
+  .cards.cardswithimg .accordion-title h6,
+  .cards.cardswithimg .accordion-title p {
     font-size: 18px;
   }
   .cards.cardswithimg .accordion-toggle {
@@ -272,7 +297,13 @@
   .cards.cardswithimg .cardswithimg-card-body {
     padding: 14px 14px 10px;
   }
-  .cards.cardswithimg .accordion-title h1, .cards.cardswithimg .accordion-title h2, .cards.cardswithimg .accordion-title h3, .cards.cardswithimg .accordion-title h4, .cards.cardswithimg .accordion-title h5, .cards.cardswithimg .accordion-title h6, .cards.cardswithimg .accordion-title p {
+  .cards.cardswithimg .accordion-title h1,
+  .cards.cardswithimg .accordion-title h2,
+  .cards.cardswithimg .accordion-title h3,
+  .cards.cardswithimg .accordion-title h4,
+  .cards.cardswithimg .accordion-title h5,
+  .cards.cardswithimg .accordion-title h6,
+  .cards.cardswithimg .accordion-title p {
     font-size: var(--body-medium-regular-size);
   }
   .cards.cardswithimg .accordion-desc p {
