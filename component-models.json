@@ -230,6 +230,10 @@
           {
             "name": "Say Hello Form Section",
             "value": "say-hello-form"
+          },
+          {
+            "name": "Career Section",
+            "value": "career-section"
           }
         ]
       }
