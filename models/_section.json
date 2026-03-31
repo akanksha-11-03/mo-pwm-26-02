@@ -48,6 +48,10 @@
               ]
             },
             {
+              "name": "Career Section",
+              "value": "career-section"
+            },
+            {
               "name": "Who We Are Section",
               "value": "who-we-are"
             },
@@ -149,6 +153,7 @@
         "banner-carousel",
         "accordion",
         "custom-tab",
+        "subtab",
         "search-bar",
         "detail-card"
       ]

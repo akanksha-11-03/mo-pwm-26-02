@@ -115,10 +115,10 @@
 }
 .section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   width: 100%;
   gap: var(--spacing-24);
+  flex-direction: column;
 }
 @media (min-width: ) {
   .section.say-hello .custom-rte .say-hello-content .say-hello-content-inner {

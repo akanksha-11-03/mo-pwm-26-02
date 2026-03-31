@@ -20,21 +20,6 @@
         "name": "keywords",
         "multi": true,
         "label": "Keywords"
-      },
-      {
-        "component": "boolean",
-        "name": "breadcrumbs",
-        "label": "Breadcrumb"
-      },
-      {
-        "component": "text",
-        "name": "breadcrumbs_title",
-        "label": "Breadcrumb Title"
-      },
-      {
-        "component": "boolean",
-        "name": "breadcrumbs_hide",
-        "label": "Hide On Breadcrumbs"
       }
     ]
   },
@@ -164,6 +149,10 @@
                 "value": "hero-video-banner"
               }
             ]
+          },
+          {
+            "name": "Career Section",
+            "value": "career-section"
           },
           {
             "name": "Who We Are Section",
@@ -667,6 +656,16 @@
         "name": "searchContent",
         "label": "Search Content (icons + placeholder)",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "subtab-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "content",
+        "label": "Subtab Content"
       }
     ]
   },

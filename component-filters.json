@@ -24,6 +24,7 @@
       "banner-carousel",
       "accordion",
       "custom-tab",
+      "subtab",
       "search-bar",
       "detail-card"
     ]
@@ -103,6 +104,12 @@
     "id": "feature-card",
     "components": [
       "feature-card-item"
+    ]
+  },
+  {
+    "id": "subtab",
+    "components": [
+      "subtab-item"
     ]
   },
   {
