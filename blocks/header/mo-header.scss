@@ -47,7 +47,7 @@ header {
         justify-content: space-between;
         gap: 0 32px;
         max-width: 1264px;
-        padding: 0 32px;
+        padding: 0 16px;
 
         &.menu-open {
           &::before {
@@ -108,7 +108,7 @@ header {
         font-weight: 700;
         line-height: 1;
         height: 48px;
-        width: 78px;
+        width: 79px;
 
         @include media(tablet-lg-up) {
           width: 97px;
@@ -279,7 +279,7 @@ header {
           "brand hamburger" 56px
           "sections sections" 1fr
           "tools tools" auto / auto 1fr;
-        overflow-y: auto;
+        // overflow-y: auto;
         min-height: 100dvh;
         height: unset;
         align-items: unset;
