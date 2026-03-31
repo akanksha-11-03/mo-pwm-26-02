@@ -151,6 +151,10 @@
             ]
           },
           {
+            "name": "Career Section",
+            "value": "career-section"
+          },
+          {
             "name": "Who We Are Section",
             "value": "who-we-are"
           },
