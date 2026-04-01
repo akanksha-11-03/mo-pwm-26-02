@@ -4,6 +4,8 @@
  * https://www.hlx.live/developer/block-collection/embed
  */
 
+import { openModal } from '../modal/modal.js';
+
 const loadScript = (url, callback, type) => {
   const head = document.querySelector('head');
   const script = document.createElement('script');
@@ -55,8 +57,17 @@ const embedTwitter = (url) => {
   return embedHTML;
 };
 
+const isModalLink = (link) => link.includes('/modals/');
+
+
 const loadEmbed = (block, link, autoplay) => {
   if (block.classList.contains('embed-is-loaded')) {
+    return;
+  }
+
+  if (isModalLink(link)) {
+    openModal(link);
+    block.classList.add('embed-is-loaded');
     return;
   }
 
@@ -91,8 +102,17 @@ export default function decorate(block) {
   const placeholder = block.querySelector('picture');
   const link = block.querySelector('a').href;
   block.textContent = '';
-
-  if (placeholder) {
+  if (isModalLink(link)) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'embed-placeholder embed-modal-trigger';
+    if (placeholder) {
+      wrapper.prepend(placeholder);
+    }
+    wrapper.addEventListener('click', () => {
+      openModal(link);
+    });
+    block.append(wrapper);
+  } else if (placeholder) {
     const wrapper = document.createElement('div');
     wrapper.className = 'embed-placeholder';
     wrapper.innerHTML = '<div class="embed-placeholder-play"><button type="button" title="Play"></button></div>';

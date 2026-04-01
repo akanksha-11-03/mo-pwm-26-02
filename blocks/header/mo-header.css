@@ -95,7 +95,7 @@ header .nav-wrapper nav {
     justify-content: space-between;
     gap: 0 32px;
     max-width: 1264px;
-    padding: 0 32px;
+    padding: 0 16px;
   }
   header .nav-wrapper nav.menu-open::before {
     content: "";
@@ -150,7 +150,7 @@ header .nav-wrapper nav .nav-brand {
   font-weight: 700;
   line-height: 1;
   height: 48px;
-  width: 78px;
+  width: 79px;
 }
 @media (min-width: 899px) {
   header .nav-wrapper nav .nav-brand {
@@ -294,7 +294,6 @@ header .nav-wrapper nav .nav-tools .header-tool .header-toollist:last-of-type.ac
 }
 header .nav-wrapper nav[aria-expanded=true] {
   grid-template: "brand hamburger" 56px "sections sections" 1fr "tools tools" auto/auto 1fr;
-  overflow-y: auto;
   min-height: 100dvh;
   height: unset;
   align-items: unset;

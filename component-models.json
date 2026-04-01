@@ -224,16 +224,16 @@
             "value": "detail-card-v2"
           },
           {
+            "name": "Detail Card V3",
+            "value": "detail-card-v3"
+          },
+          {
             "name": "Blog Detail Section",
             "value": "blog-detail"
           },
           {
             "name": "Say Hello Form Section",
             "value": "say-hello-form"
-          },
-          {
-            "name": "Career Section",
-            "value": "career-section"
           }
         ]
       }

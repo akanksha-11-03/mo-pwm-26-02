@@ -140,12 +140,15 @@ async function decorateBreadcrumbs() {
     if (getMetadata('breadcrumbs') === 'true') {
       const breadcrumb = await createBreadcrumbs();
       breadcrumb.classList.add('breadul');
-      Array.from(breadcrumb.children).forEach((brelesub) => {
+      Array.from(breadcrumb.children).forEach((brelesub, i) => {
         const breadcrumbLink = brelesub.querySelector('a');
         if (!brelesub.querySelector('img')) {
           breadcrumbLink.textContent = breadcrumbLink.textContent.replace('amp;', '');
         }
         brelesub.classList.add('breadli');
+        if (i === 0) {
+          brelesub.classList.add('home-icon');
+        }
       });
       if (Array.from(breadcrumb.children).length > 1) {
         Array.from(breadcrumb.children).at(-1)?.querySelector('a')?.removeAttribute('href');
@@ -301,6 +304,8 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+  const { initializeModalHandlers } = await import('../blocks/modal/modal.js');
+  initializeModalHandlers();
 }
 
 /**
