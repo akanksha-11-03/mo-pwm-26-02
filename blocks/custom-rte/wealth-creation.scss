@@ -52,11 +52,13 @@
           .wc-inner-item-1 {
             margin: 0 0 10px;
 
-            @include font-style(28px,
+            @include font-style(
+              28px,
               var(--sub-header-large-line-height),
               var(--pwm-gold-700),
               var(--regular),
-              var(--title));
+              var(--title)
+            );
 
             @include media(tablet-up) {
               margin: 0 0 8px;
@@ -68,11 +70,13 @@
           .wc-inner-item-2 {
             margin: 0;
 
-            @include font-style(var(--body-medium-regular-size),
+            @include font-style(
+              var(--body-medium-regular-size),
               var(--body-medium-regular-line-height),
               var(--blue-1-800-primary),
               var(--regular),
-              var(--body));
+              var(--body)
+            );
 
             @include media(tablet-up) {
               font-size: var(--body-medium-regular-size);
@@ -82,8 +86,8 @@
         }
       }
 
-      .wc-item-2 {
-
+      .wc-item-2,
+      .wc-item-3 {
         &,
         & .wc-inner-1 {
           min-height: 160px;
@@ -99,28 +103,41 @@
         }
 
         .wc-inner-1 {
-          background: linear-gradient(109deg, #d6bc7d 0%, #91774b 83.36%);
-          border-radius: 4px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
           margin: 30px 0 16px;
 
           @include media(tablet-up) {
             margin: 0;
             min-height: inherit;
-            background: linear-gradient(108.99deg, #c2aa74 0%, #866e44 83.36%);
           }
 
           .wc-inner-item-1 {
             line-height: 0;
             height: 100%;
             display: block;
+
+            .wc-list-4{
+              border-radius: 4px;
+              width: 100%;
+            }
           }
         }
       }
 
+      @include media(tablet-up) {
+        .wc-item-2 {
+          display: none;
+        }
+      }
+
       .wc-item-3 {
+        display: none;
+
+        @include media(tablet-up) {
+          display: block;
+        }
+      }
+
+      .wc-item-4 {
         @include media(tablet-up) {
           grid-column: 2;
           grid-row: 2;
@@ -133,14 +150,16 @@
             &-1 {
               margin: 0 0 6px;
 
-              @include font-style(var(--body-small-semibold-size),
+              @include font-style(
+                var(--body-small-semibold-size),
                 var(--body-small-semibold-line-height),
                 var(--pwm-gold-700),
                 var(--semibold),
-                var(--body));
+                var(--body)
+              );
 
               @include media(tablet-up) {
-                margin: 0 0 12px 7px ;
+                margin: 0 0 12px 7px;
                 font-weight: var(--medium);
                 font-size: var(--body-medium-medium-size);
                 line-height: var(--body-medium-medium-line-height);
@@ -154,7 +173,7 @@
               .wc-list-1 {
                 .listitem-1 {
                   margin: 0 0 14px 8px;
-                  
+
                   @include media(tablet-up) {
                     margin: 0 0 16px 8px;
                   }
@@ -163,11 +182,13 @@
                     display: flex;
                     gap: 10px;
 
-                    @include font-style(var(--paragraph-small-regular-size),
+                    @include font-style(
+                      var(--paragraph-small-regular-size),
                       var(--paragraph-small-regular-line-height),
                       var(--blue-1-800-primary),
                       var(--regular),
-                      var(--body));
+                      var(--body)
+                    );
 
                     &::before {
                       content: "";
@@ -191,7 +212,7 @@
             &-3 {
               margin: 0 0 30px 0;
               line-height: 0;
-              
+
               @include media(tablet-up) {
                 margin: 0 0 30px 9px;
               }
@@ -205,11 +226,13 @@
                 border: none;
                 border-radius: unset;
 
-                @include font-style(var(--text-link-small-size),
+                @include font-style(
+                  var(--text-link-small-size),
                   var(--text-link-small-line-height),
                   var(--text-text-link),
                   var(--regular),
-                  var(--body));
+                  var(--body)
+                );
 
                 @include media(tablet-up) {
                   font-size: var(--text-link-small-size);
@@ -231,13 +254,15 @@
                 width: 100%;
                 border: none;
                 min-width: 235px;
-                
-                @include font-style(var(--button-medium-size),
-                var(--button-medium-line-height),
-                var(--text-white),
-                var(--medium),
-                var(--body));
-                
+
+                @include font-style(
+                  var(--button-medium-size),
+                  var(--button-medium-line-height),
+                  var(--text-white),
+                  var(--medium),
+                  var(--body)
+                );
+
                 @include media(tablet-up) {
                   padding: 14px var(--spacing-12);
                   font-size: var(--button-large-size);
