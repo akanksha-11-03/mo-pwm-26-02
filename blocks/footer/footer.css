@@ -47,10 +47,17 @@
   background-color: transparent;
   border: none;
   border-radius: 0%;
+  line-height: 0;
 }
 .footer-wrapper .footer .footer-sections-wrapper .section.social-section .default-content-wrapper p:first-child a span {
   width: 151px;
   height: 77px;
+}
+@media screen and (max-width: 900px) {
+  .footer-wrapper .footer .footer-sections-wrapper .section.social-section .default-content-wrapper p:first-child a span {
+    width: 169px;
+    height: 86px;
+  }
 }
 .footer-wrapper .footer .footer-sections-wrapper .section.social-section .default-content-wrapper p:first-child a span img {
   width: 100%;
@@ -72,7 +79,13 @@
   height: 16px;
   display: flex;
 }
-.footer-wrapper .footer .footer-sections-wrapper .section.social-section .default-content-wrapper p:nth-child(2) a:nth-child(3) {
+@media screen and (max-width: 900px) {
+  .footer-wrapper .footer .footer-sections-wrapper .section.social-section .default-content-wrapper p:nth-child(2) a {
+    width: 20px;
+    height: 20px;
+  }
+}
+.footer-wrapper .footer .footer-sections-wrapper .section.social-section .default-content-wrapper p:nth-child(2) a[title=twitter] {
   width: 20px;
 }
 .footer-wrapper .footer .footer-sections-wrapper .section.social-section .default-content-wrapper p:nth-child(2) a span {
@@ -227,6 +240,11 @@
   color: var(--pwm-gold-900);
   text-align: left;
 }
+@media screen and (max-width: 900px) {
+  .footer-wrapper .footer .section.contact-us-section .default-content-wrapper p {
+    font-weight: var(--semibold);
+  }
+}
 .footer-wrapper .footer .section.contact-us-section .default-content-wrapper ul {
   margin: 0;
   padding: 0;
@@ -271,6 +289,11 @@
   width: 100%;
   height: 100%;
   display: block;
+}
+@media screen and (max-width: 900px) {
+  .footer-wrapper .footer .section.contact-us-section .default-content-wrapper ul li a span img {
+    opacity: 0.95;
+  }
 }
 .footer-wrapper .footer .section.contact-us-section .default-content-wrapper ul .contact-phone {
   display: flex;

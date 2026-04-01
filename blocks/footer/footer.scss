@@ -24,24 +24,24 @@
         gap: 36px;
         padding-bottom: 24px;
       }
-
+      
       // Social section
       .section.social-section {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        
         .default-content-wrapper {
           display: flex;
           flex-direction: column;
           flex: 1;
           gap: 32px;
           // margin-bottom: 18px;
-
+          
           p {
             margin: 0;
           }
-
+          
           // logo image
           p:first-child {
             a {
@@ -50,10 +50,17 @@
               background-color: transparent;
               border: none;
               border-radius: 0%;
-
+              line-height: 0;
+              
               span {
                 width: 151px;
                 height: 77px;
+                
+                @media screen and (max-width: 900px) {
+                  width: 169px;
+                  height: 86px;
+                }
+
                 img {
                   width: 100%;
                   height: 100%;
@@ -72,13 +79,18 @@
               justify-content: unset;
               gap: 22.79px;
             }
-
+            
             a {
               width: 16px;
               height: 16px;
               display: flex;
+              
+              @media screen and (max-width: 900px) {
+                width: 20px;
+                height: 20px;
+              }
 
-              &:nth-child(3) {
+              &[title='twitter'] {
                 width: 20px;
               }
 
@@ -251,12 +263,12 @@
         display: flex;
         align-items: flex-start;
         gap: 140px;
-
+        
         @media screen and (max-width: 1104px) {
           flex-direction: column;
           gap: 12px;
         }
-
+        
         // Contact us text
         p {
           min-width: 151px;
@@ -273,6 +285,9 @@
           font-weight: var(--medium);
           color: var(--pwm-gold-900);
           text-align: left;
+          @media screen and (max-width: 900px) {
+            font-weight: var(--semibold);
+          }
         }
 
         // Contact us links
@@ -308,7 +323,7 @@
               @media screen and (max-width: 900px) {
                 color: var(--pwm-gold-700);
               }
-
+              
               span {
                 width: 16px;
                 height: 16px;
@@ -318,6 +333,10 @@
                   width: 100%;
                   height: 100%;
                   display: block;
+                  
+                  @media screen and (max-width: 900px) {
+                    opacity: 0.95;
+                  }
                 }
               }
             }
