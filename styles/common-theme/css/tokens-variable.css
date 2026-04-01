@@ -549,9 +549,7 @@
     --button-medium-size: var(--spacing-16);
     --button-medium-line-height: var(--spacing-20);
     --button-large-size: var(--spacing-18);
-    --button-large-line-height: var(--spacing-20);
     --button-small-font: var(--body);
-    --button-small-weight: var(--weight-semibold);
     --button-small-size: var(--spacing-14);
     --button-small-line-height: var(--spacing-16);
     --label-medium-font: var(--body);

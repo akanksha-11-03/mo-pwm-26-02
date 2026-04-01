@@ -2,8 +2,7 @@
 @use "../../styles/common-theme/css/variables_mixins" as *;
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
-.cardswithimg-section {
-  .cardswithimg-heading {
+.cardswithimg-section {  .cardswithimg-heading {
     padding: 0;
     margin: 0 67px 32px;
 
@@ -26,16 +25,33 @@
     }
   }
 
-  @media(mobile) {
+  @media screen and (width <=768px) {
     .cardswithimg-heading {
-      margin : 0 16px 32px;
       padding: 0;
+      margin: 0 16px 32px;
+
+      >h1,
+      >h2,
+      >h3 {
+        @include font-style(var(--heading-pwm-h4-size), var(--sub-header-pwm-large-line-height), var(--blue-1-800-primary), var(--regular), var(--title));
+        margin: 0;
+      }
+
+      .cardswithimg-main-heading {
+        @include font-style(var(--heading-pwm-h4-size), var(--sub-header-pwm-large-line-height), var(--blue-1-800-primary), var(--regular), var(--title));
+        margin: 0;
+      }
     }
   }
 
   .cards-wrapper {
     padding: 0;
     margin: 0 67px;
+    max-width: 1323px;
+
+    @media screen and (width <=768px) {
+      margin: 0 16px;
+    }
   }
 }
 
@@ -47,7 +63,7 @@
   // Swiper container
   .cardswithimg-swiper {
     width: 100%;
-    padding-bottom: 48px; // room for pagination
+    padding-bottom: 32px; // room for pagination
     overflow: hidden;
   }
 
@@ -181,16 +197,14 @@
 
     p {
       margin: 0;
-      @include font-style(var(--body-small-regular-size), 1.5, var(--blue-1-800-primary), var(--regular), var(--body));
+      @include font-style(var(--body-small-regular-size), 16px, var(--blue-1-800-primary), var(--regular), var(--body));
     }
   }
 
   // ===== Accordion Detail (hidden, expands on + click) =====
   .accordion-detail {
-    margin-top: var(--spacing-12);
     display: flex;
     flex-direction: column;
-    gap: 10px;
     max-height: 0;
     overflow: hidden;
     opacity: 0;
@@ -215,25 +229,32 @@
 
   // ===== Pagination progressbar =====
   .swiper-pagination {
+    position: absolute;
     bottom: 0;
-    top: auto ;
-    left: 50% ;
+    top: auto;
+    left: 50%;
     transform: translateX(-50%);
     width: 400px;
     height: 2px;
     background: var(--neutrals-400, #e0dcd5);
     border-radius: 3px;
+
+    @media screen and (width <=768px) {
+      width: 340px;
+    }
   }
 
   .swiper-pagination-progressbar-fill {
-    background: var(--blue-1-800-primary);
+    background: var(--blue-1-800-primary) !important;
     border-radius: 3px;
+    height: 100% !important;
   }
 
   // ===== Responsive =====
-  @include media(mobile-ed) {
+  @media screen and (width <=768px) {
     .swiper-slide {
-      height: 400px;
+      width: 325px;
+      height: 344px;
     }
 
     .cardswithimg-card-body {
