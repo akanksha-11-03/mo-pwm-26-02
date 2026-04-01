@@ -200,6 +200,7 @@
                             font-size: var(--body-medium-regular-size);
                             line-height: var(--body-medium-regular-line-height);
                             margin: 0 0 24px;
+                            font-weight: var(--regular);
                           }
                         }
                       }
@@ -217,6 +218,7 @@
                           );
 
                           @include media(tablet-up) {
+                            margin: 0 0 27px;
                             color: var(--pwm-gold-900);
                             font-size: var(--body-small-regular-size);
                             line-height: var(--label-large-line-height);

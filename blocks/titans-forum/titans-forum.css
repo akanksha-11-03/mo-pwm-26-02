@@ -236,7 +236,6 @@
   flex-direction: column-reverse;
   justify-content: space-between;
   align-items: center;
-  pointer-events: none;
 }
 @media (min-width: 899px) {
   .section.young-titans-forum .titans-forum .block-item .content-wrap {
@@ -263,6 +262,8 @@
 @media (min-width: 899px) {
   .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 {
     align-self: flex-end;
+    width: 301px;
+    height: 127px;
   }
   .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-2 picture {
     line-height: 100%;
@@ -307,7 +308,7 @@
   .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .grand-child-2 {
     margin: 4px 0 40px;
     font-size: var(--body-large-regular-size);
-    line-height: var(--body-large-regular-line-height);
+    line-height: 28px;
   }
 }
 .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .button-container {
@@ -316,7 +317,7 @@
 }
 @media (min-width: 899px) {
   .section.young-titans-forum .titans-forum .block-item .content-wrap .block-child-3 .button-container {
-    max-width: 100%;
+    max-width: 308px;
     width: 100%;
   }
 }
