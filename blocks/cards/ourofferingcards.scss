@@ -2,7 +2,7 @@
 @use "../../styles/common-theme/css/variables_mixins" as *;
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
-main > .section.ourofferingcards-section {
+main>.section.ourofferingcards-section {
   margin: 80px 16px;
 }
 
@@ -15,7 +15,7 @@ main > .section.ourofferingcards-section {
       padding-bottom: var(--spacing-48);
 
       .ourofferingcards-label {
-        @include font-style(var(--body-medium-regular-size), 1.5, var(--pwm-gold-700), var(--medium), var(--body));
+        @include font-style(var(--body-medium-regular-size), 20px, var(--pwm-gold-700), var(--medium), var(--body));
         margin: 0 0 var(--spacing-8) 0;
       }
 
@@ -34,14 +34,20 @@ main > .section.ourofferingcards-section {
 
     @media (max-width: 899px) {
       .ourofferingcards-heading {
-        margin-bottom: var(--spacing-24);
+        // margin-bottom: var(--spacing-32);
         padding-bottom: 0;
 
         >h1,
         >h2,
         >h3,
         .ourofferingcards-main-heading {
-          font-size: var(--heading-pwm-h3-size);
+          font-size: var(--heading-pwm-h4-size);
+          line-height: var(--sub-header-pwm-large-line-height);
+          color: var(--blue-1-800-primary);
+          font-family: var(--title);
+          font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+          font-weight: var(--regular);
+          margin: 0;
         }
       }
     }
@@ -79,7 +85,7 @@ main > .section.ourofferingcards-section {
     align-items: center;
     gap: var(--spacing-40);
     background-color: var(--pwm-gold-100);
-    border-radius: var(--border-radius-12);
+    border-radius: var(--border-radius-4);
     overflow: hidden;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
   }
@@ -122,7 +128,7 @@ main > .section.ourofferingcards-section {
   .ourofferingcard-text {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-12);
+    gap: var(--spacing-4);
 
     .ourofferingcard-title {
       @include font-style(var(--heading-pwm-h4-size), 1.333, var(--pwm-gold-700), var(--medium), var(--body));
@@ -145,8 +151,9 @@ main > .section.ourofferingcards-section {
     a.button,
     a {
       all: unset;
-      @include font-style(var(--body-medium-regular-size), 1.5, var(--blue-1-800-primary), var(--regular), var(--body));
+      @include font-style(var(--body-small-medium-size), 20px, var(--blue-1-800-primary), var(--regular), var(--body));
       text-decoration: underline;
+      text-decoration-style: solid;
       cursor: pointer;
 
       &:hover {
@@ -166,7 +173,7 @@ main > .section.ourofferingcards-section {
       height: auto;
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-20);
+      gap: var(--spacing-32);
     }
 
     .ourofferingcard {
@@ -185,17 +192,17 @@ main > .section.ourofferingcards-section {
       flex: none;
       width: 100%;
       height: auto;
-      border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
+      border-radius: var(--border-radius-4) var(--border-radius-4) var(--border-radius-4) var(--border-radius-4) ;
 
       img {
         height: 220px;
-        border-radius: var(--border-radius-8) var(--border-radius-8) 0 0;
+        border-radius: var(--border-radius-4) var(--border-radius-4) var(--border-radius-4) var(--border-radius-4);
       }
     }
 
     .ourofferingcard-content {
       width: 100%;
-      padding: var(--spacing-24);
+      padding: var(--spacing-24) 0 0 0;
     }
   }
 }

@@ -26,7 +26,17 @@ export default async function decoratecardwithimgs(block) {
     const dcw = section.querySelector('.default-content-wrapper');
     if (dcw) {
       dcw.classList.add('cardswithimg-heading');
-      // Add explicit classes instead of relying on :first-child / :nth-child
+      // On mobile, merge multiple h3s into one
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+      if (isMobile) {
+        const h3s = [...dcw.querySelectorAll('h3')];
+        if (h3s.length > 1) {
+          const combined = h3s.map((h) => h.textContent.trim()).join(' ');
+          h3s[0].textContent = combined;
+          h3s.slice(1).forEach((h) => h.remove());
+        }
+      }
+      // Add explicit classes
       const headingChildren = [...dcw.children];
       if (headingChildren[0]) headingChildren[0].classList.add('cardswithimg-label');
       if (headingChildren[1]) headingChildren[1].classList.add('cardswithimg-main-heading');
@@ -97,8 +107,6 @@ export default async function decoratecardwithimgs(block) {
       icon.alt = 'Toggle';
       toggleBtn.append(icon);
 
-      headerRow.append(titleWrap, toggleBtn);
-
       // Visible description (shown in collapsed state, below title)
       const visibleDesc = document.createElement('div');
       visibleDesc.className = 'accordion-desc';
@@ -107,12 +115,19 @@ export default async function decoratecardwithimgs(block) {
         visibleDesc.append(children[1]);
       }
 
+      // Wrap title + desc together in accordion-content
+      const contentWrap = document.createElement('div');
+      contentWrap.className = 'accordion-content';
+      contentWrap.append(titleWrap, visibleDesc);
+
+      headerRow.append(contentWrap, toggleBtn);
+
       // Hidden detail (shown only when expanded)
       const detail = document.createElement('div');
       detail.className = 'accordion-detail';
       children.slice(2).forEach((child) => detail.append(child));
 
-      bodyCol.replaceChildren(headerRow, visibleDesc, detail);
+      bodyCol.replaceChildren(headerRow, detail);
     }
 
     wrapperEl.append(slide);
@@ -134,19 +149,18 @@ export default async function decoratecardwithimgs(block) {
     img.closest('picture').replaceWith(pic);
   });
 
-  // Initialize Swiper — 3 visible + partial peek of 4th
+  // Initialize Swiper — 3 cards on desktop, auto on mobile
   // eslint-disable-next-line no-new
   new Swiper(swiperEl, {
-    slidesPerView: 1.15,
+    slidesPerView: 'auto',
     spaceBetween: 16,
     loop: true,
     pagination: {
       el: pagination,
-      clickable: true,
+      type: 'progressbar',
     },
     breakpoints: {
-      640: { slidesPerView: 2.15, spaceBetween: 20 },
-      1024: { slidesPerView: 3.15, spaceBetween: 24 },
+      1024: { slidesPerView: 3 },
     },
   });
 }
