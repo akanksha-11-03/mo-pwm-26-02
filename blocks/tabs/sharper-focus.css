@@ -86,12 +86,13 @@
   }
 }
 .section.sharper-focus .default-content-wrapper {
-  margin: 0 0 48px;
+  margin: 0 0 60px;
   padding: 0;
 }
 @media (min-width: 768px) {
   .section.sharper-focus .default-content-wrapper {
     padding: 0 23px;
+    margin: 0 0 var(--spacing-48);
   }
 }
 .section.sharper-focus .default-content-wrapper h2 {
@@ -262,6 +263,12 @@
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.sharper-focus .tabs-wrapper .tabs-panel .custom-rte .circle-item .inner-content-2 .child-item, .section.sharper-focus .tabs-wrapper .tabs-panel .custom-rte .circle-item .inner-content-2 .child-item strong {
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
+  }
 }
 .section.sharper-focus .tabs-wrapper .tabs-panel .custom-rte .circle-item .inner-content-2 .child-item strong {
   animation: highlighttext 8s infinite;

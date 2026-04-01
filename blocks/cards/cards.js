@@ -64,10 +64,12 @@ export default function decorate(block) {
 
     const swiperInstance = Swiper(block, {
       loop: true,
-      // autoplay: {
-      //   delay: 5000,
-      //   disableOnInteraction: false,
-      // },
+      observer: true,
+      observeParents: true,
+      autoplay: {
+        delay: 1200,
+        disableOnInteraction: false,
+      },
       pagination: {
         el: wrapper.querySelector('.swiper-pagination'),
         clickable: true,

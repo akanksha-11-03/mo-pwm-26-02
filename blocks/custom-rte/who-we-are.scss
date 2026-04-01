@@ -5,13 +5,13 @@
 .section.who-we-are {
   .custom-rte {
     &-wrapper {
-      padding: 64px 16px 57px;
+      padding: 40px 16px;
       max-width: 1264px;
       width: 100%;
 
       @include media(tablet-up) {
         max-width: 1269px;
-        padding: 0 16px;
+        padding: 31px 16px 133px;
       }
     }
 
@@ -101,7 +101,7 @@
               @include media(tablet-up) {
                 flex-direction: unset;
                 flex-wrap: wrap;
-                gap: 50px;
+                gap: 55px 50px;
               }
 
               .listitem {

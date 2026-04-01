@@ -54,19 +54,19 @@
 } 
 .section.wealth-creation {
   background: var(--pwm-gold-200);
-  padding: 43px 16px;
+  padding: 61px 16px;
+  margin: 0;
 }
 @media (min-width: 768px) {
   .section.wealth-creation {
     /* min-height: 600px; */
-    min-height: 494px;
-    padding: 53px 16px;
+    padding: 60px 16px;
     margin: 0;
   }
 }
 @media (min-width: 1025px) {
   .section.wealth-creation {
-    padding: 53px 70px 53px 64px;
+    padding: 60px 64px;
   }
 }
 .section.wealth-creation .custom-rte-wrapper {
@@ -74,8 +74,7 @@
 }
 @media (min-width: 768px) {
   .section.wealth-creation .custom-rte-wrapper {
-    max-width: 1232px;
-    min-height: inherit;
+    max-width: 1238px;
   }
 }
 @media (min-width: 768px) {
@@ -87,8 +86,7 @@
     grid-template-columns: minmax(0, 426px) minmax(0, 476px);
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
-    min-height: inherit;
+    gap: var(--spacing-60);
   }
 }
 @media (min-width: 768px) {
@@ -109,6 +107,7 @@
 }
 @media (min-width: 768px) {
   .section.wealth-creation .custom-rte .wc-item-1 .wc-inner-1 .wc-inner-item-1 {
+    margin: 0 0 8px;
     font-size: var(--heading-pwm-h4-size);
     line-height: var(--heading-pwm-h4-line-height);
   }
@@ -180,9 +179,10 @@
 }
 @media (min-width: 768px) {
   .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-1 {
+    margin: 0 0 12px 7px;
     font-weight: var(--medium);
-    font-size: var(--body-small-semibold-size);
-    line-height: var(--body-small-semibold-line-height);
+    font-size: var(--body-medium-medium-size);
+    line-height: var(--body-medium-medium-line-height);
   }
 }
 .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-2 {
@@ -191,6 +191,11 @@
 }
 .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-2 .wc-list-1 .listitem-1 {
   margin: 0 0 14px 8px;
+}
+@media (min-width: 768px) {
+  .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-2 .wc-list-1 .listitem-1 {
+    margin: 0 0 16px 8px;
+  }
 }
 .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-2 .wc-list-1 .listitem-1 .inneritem {
   display: flex;
@@ -218,12 +223,18 @@
   }
 }
 .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-3 {
-  margin: 0 0 33px;
+  margin: 0 0 30px 0;
+  line-height: 0;
+}
+@media (min-width: 768px) {
+  .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-3 {
+    margin: 0 0 30px 9px;
+  }
 }
 .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-3 .wc-list-1 {
   text-decoration-line: underline;
   text-underline-offset: 20%;
-  margin: 0 0 33px;
+  margin: 0;
   padding: 0;
   background-color: unset;
   border: none;
@@ -252,6 +263,8 @@
   margin: 0;
   text-decoration: none;
   width: 100%;
+  border: none;
+  min-width: 235px;
   font-size: var(--button-medium-size);
   line-height: var(--button-medium-line-height);
   color: var(--text-white);
@@ -261,7 +274,10 @@
 }
 @media (min-width: 768px) {
   .section.wealth-creation .custom-rte .wc-item-3 .wc-inner-1 .wc-inner-item-4 .wc-list-1 {
+    padding: 14px var(--spacing-12);
     font-size: var(--button-large-size);
     line-height: var(--button-large-line-height);
+    width: -moz-max-content;
+    width: max-content;
   }
 }/*# sourceMappingURL=wealth-creation.css.map */
