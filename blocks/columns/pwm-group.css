@@ -74,7 +74,7 @@
 }
 .section.pwm-group .pwm-child-1 .item-1 {
   margin: 0;
-  font-size: var(--heading-pwm-h5-size);
+  font-size: 28px;
   line-height: var(--sub-header-large-line-height);
   color: var(--pwm-gold-700);
   font-family: var(--title);
@@ -90,6 +90,7 @@
 .section.pwm-group .pwm-child-1 .item-1 strong {
   display: block;
   color: var(--blue-1-800-primary);
+  font-weight: var(--regular);
 }
 @media (min-width: 768px) {
   .section.pwm-group .pwm-child-1 .item-1 strong {
@@ -129,7 +130,7 @@
   }
 }
 .section.pwm-group .column-main-wrap .columns-wrapper.item-1 .innerchild-1 .childinner-1 {
-  margin: 0 0 18px;
+  margin: 0;
   font-size: 32px;
   line-height: 40px;
   color: var(--pwm-gold-700);

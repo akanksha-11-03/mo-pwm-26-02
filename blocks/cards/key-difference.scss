@@ -13,6 +13,7 @@
     margin: 20px 0 0;
     position: relative;
     background-color: var(--pwm-gold-200);
+    border-radius: 4px;
 
     @include media(tablet-up) {
       max-width: 1232px;
@@ -32,6 +33,7 @@
         background: var(--pwm-gold-200);
         padding: 56px 32px;
         width: 100%;
+        border-radius: 4px;
 
         @include media(tablet-up) {
           flex-direction: row;
@@ -63,6 +65,7 @@
             .key-image {
               object-fit: fill;
               width: 100%;
+              border-radius: 4px;
 
               @include media(tablet-up) {
                 aspect-ratio: unset;

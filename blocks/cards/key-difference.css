@@ -63,6 +63,7 @@
   margin: 20px 0 0;
   position: relative;
   background-color: var(--pwm-gold-200);
+  border-radius: 4px;
 }
 @media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper {
@@ -83,6 +84,7 @@
   background: var(--pwm-gold-200);
   padding: 56px 32px;
   width: 100%;
+  border-radius: 4px;
 }
 @media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list {
@@ -116,6 +118,7 @@
   -o-object-fit: fill;
      object-fit: fill;
   width: 100%;
+  border-radius: 4px;
 }
 @media (min-width: 768px) {
   .section.our-key-differences .cards-wrapper .key-differences-cards .key-list .cards-card-image .key-picture .key-image {

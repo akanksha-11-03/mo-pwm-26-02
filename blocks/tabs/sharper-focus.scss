@@ -43,11 +43,12 @@
   }
 
   .default-content-wrapper {
-    margin: 0 0 48px;
+    margin: 0 0 60px;
     padding: 0;
 
     @include media(tablet-up) {
       padding: 0 23px;
+      margin: 0 0 var(--spacing-48);
     }
 
     h2 {
@@ -190,7 +191,7 @@
             /* width: 137px; */
             /* height: 137px; */
             width: 48%;
-            height: 48%;
+            // height: 48%;
             aspect-ratio: 1/1;
             display: inline-block;
             position: relative;
@@ -235,6 +236,11 @@
                       var(--regular),
                       var(--body)
                     );
+
+                    @include media(tablet-up) {
+                      font-size: var(--body-medium-regular-size);
+                      line-height: var(--body-medium-regular-line-height);
+                    }
                   }
 
                   & strong {

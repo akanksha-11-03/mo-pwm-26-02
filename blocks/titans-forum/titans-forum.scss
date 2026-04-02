@@ -206,7 +206,7 @@
         flex-direction: column-reverse;
         justify-content: space-between;
         align-items: center;
-        pointer-events: none;
+        // pointer-events: none;
 
         @include media(tablet-lg-up) {
           top: 50%;
@@ -231,6 +231,8 @@
         .block-child-2 {
           @include media(tablet-lg-up) {
             align-self: flex-end;
+            width: 301px;
+            height: 127px;
 
             picture {
               line-height: 100%;
@@ -280,7 +282,7 @@
             @include media(tablet-lg-up) {
               margin: 4px 0 40px;
               font-size: var(--body-large-regular-size);
-              line-height: var(--body-large-regular-line-height);
+              line-height: 28px;
             }
           }
 
@@ -289,7 +291,7 @@
             line-height: 0;
 
             @include media(tablet-lg-up) {
-              max-width: 100%;
+              max-width: 308px;
               width: 100%;
             }
 

@@ -227,6 +227,7 @@
     font-size: var(--body-medium-regular-size);
     line-height: var(--body-medium-regular-line-height);
     margin: 0 0 24px;
+    font-weight: var(--regular);
   }
 }
 .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-2, .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-2 p {
@@ -240,6 +241,7 @@
 }
 @media (min-width: 768px) {
   .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-2, .section.alpha-strategist .hero .strategist-3 .innercontent-1 .item-1 .listitem-2 .innerlist-2 .inneritem-2 p {
+    margin: 0 0 27px;
     color: var(--pwm-gold-900);
     font-size: var(--body-small-regular-size);
     line-height: var(--label-large-line-height);

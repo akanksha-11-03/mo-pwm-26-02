@@ -33,7 +33,7 @@
         content: "";
         position: absolute;
         top: 50%;
-        right: 18px;
+        right: 0;
         transform: translateY(-50%) rotate(135deg);
         width: 6px;
         height: 6px;
@@ -107,9 +107,10 @@
               line-height: var(--spacing-14);
               letter-spacing: 0%;
               font-weight: var(--semibold);
-              color: var(--pwm-gold-700);
-
+              color: var(--pwm-gold-900);
+              
               @media screen and (max-width: 900px) {
+                color: var(--pwm-gold-700);
                 font-size: var(--body-small-semibold-size);
                 line-height: var(--body-small-semibold-line-height);
               }
