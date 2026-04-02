@@ -64,15 +64,18 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                gap: 12px;
                 padding: var(--spacing-24) 0;
-                @include font-style(18px, 1.5, var(--blue-1-800-primary), var(--regular), var(--body));
+                @include font-style(18px, 24px, var(--pwm-gold-700), var(--regular), var(--body));
                 cursor: pointer;
-                border-bottom: 1px solid #dadada;
-                transition: border-color 0.4s ease, background-color 0.4s ease;
+                // border-bottom: 1px solid #dadada;
+                // transition: border-color 0.4s ease, background-color 0.4s ease;
+                position: relative;
+                transition: font-size 0.3s ease;
 
-                &:hover {
-                    box-shadow: 0px 2px 0px -1px #42424280;
-                }
+                // &:hover {
+                //     box-shadow: 0px 2px 0px -1px #42424280;
+                // }
 
                 .icon {
                     display: flex;
@@ -86,6 +89,40 @@
                         width: var(--spacing-16);
                         height: var(--spacing-16);
                         filter: brightness(0) saturate(100%) invert(18%) sepia(60%) saturate(2000%) hue-rotate(230deg);
+                    }
+                }
+
+                .border-with-shadow{
+                    position: absolute;
+                    // background: rgba(66, 66, 66, 0.50);
+                    width: 100%;
+                    height: 1px;
+                    top: 100%;
+                    border-bottom: 1px solid rgba(66, 66, 66, 0.50);
+
+                    &::after{
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        display: block;
+                        position: absolute;
+                        top: calc(100% + 0.01px);
+                        /* box-shadow: 1px 1px 3px rgba(66, 66, 66, 0.5); */
+                        box-shadow: 0px 2px 4px 1px rgba(66, 66, 66, 0.5);
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                    }
+                }
+
+                &:hover{
+                    @media screen and (max-width: 900px) {
+                        font-size: 16px;
+                    }
+
+                    .border-with-shadow{
+                        &::after{
+                            opacity: 1;
+                        }
                     }
                 }
             }
