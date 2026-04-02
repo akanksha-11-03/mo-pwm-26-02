@@ -2,12 +2,7 @@
 @use "../../styles/common-theme/css/variables_mixins" as *;
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
-.cardswithimg-section {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
-
-  .cardswithimg-heading {
+.cardswithimg-section {  .cardswithimg-heading {
     padding: 0;
     margin: 0 67px 32px;
 
