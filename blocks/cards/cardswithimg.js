@@ -13,7 +13,11 @@ async function loadSwiper() {
 function toggleAccordion(slide) {
   const isOpen = slide.classList.toggle('accordion-open');
   const icon = slide.querySelector('.accordion-toggle-icon');
-  if (icon) icon.style.transform = isOpen ? 'rotate(45deg)' : 'rotate(0deg)';
+  if (icon) {
+    icon.src = isOpen
+      ? `${window.hlx.codeBasePath}/icons/minus.svg`
+      : `${window.hlx.codeBasePath}/icons/Union-puls.svg`;
+  }
 }
 
 export default async function decoratecardwithimgs(block) {
