@@ -20,16 +20,16 @@ function initSwiper(wrapper, block) {
 
   // Initialize Swiper with the specified configuration
   swiperInstance = new Swiper(wrapper, {
-    slidesPerView: 1.1,
+    slidesPerView: 1.14,
     grabCursor: true,
     touchEventsTarget: 'container',
     touchRatio: 1,
     simulateTouch: true,
-    spaceBetween: 16,
+    spaceBetween: 20,
     breakpoints: {
       768: {
         slidesPerView: 3, // desktop
-        spaceBetween: 16,
+        spaceBetween: 20,
       },
       1024: {
         slidesPerView: 3,

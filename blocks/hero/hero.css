@@ -46,6 +46,7 @@
   padding: 167px 37px 112px;
   box-sizing: border-box;
   background: linear-gradient(180deg, #000 -22.57%, rgb(0 0 0 / 0%) 38.92%);
+  margin-top: -60px;
 }
 
 .section.hero-image-banner .hero>div:nth-child(2) {
@@ -75,7 +76,7 @@
 
   /* Mobile/Header/H4 */
   font-family: var(--title, Inter);
-  font-size: var(--heading-h5-size, 28px);
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
   line-height: var(--sub-header-large-line-height, 32px);
