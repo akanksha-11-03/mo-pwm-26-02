@@ -3,7 +3,7 @@
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
 main>.section.ourofferingcards-section {
-  margin: 80px 16px;
+  margin: 40px 16px;
 }
 
 .ourofferingcards-section {
@@ -97,7 +97,7 @@ main>.section.ourofferingcards-section {
     height: 342px;
     line-height: 0;
     background-color: var(--neutrals-white);
-    border-radius: var(--border-radius-12) 0 0 var(--border-radius-12);
+    border-radius: var(--border-radius-4);
     overflow: hidden;
 
     picture {
@@ -121,17 +121,16 @@ main>.section.ourofferingcards-section {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-20);
-    padding: var(--spacing-32) var(--spacing-40) var(--spacing-32) 0;
     box-sizing: border-box;
   }
 
   .ourofferingcard-text {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-4);
+    gap: var(--spacing-12);
 
     .ourofferingcard-title {
-      @include font-style(var(--heading-pwm-h4-size), 1.333, var(--pwm-gold-700), var(--medium), var(--body));
+      @include font-style(var(--sub-header-large-size), 32px, var(--pwm-gold-700), var(--medium), var(--body));
       margin: 0;
     }
 
@@ -151,9 +150,10 @@ main>.section.ourofferingcards-section {
     a.button,
     a {
       all: unset;
-      @include font-style(var(--body-small-medium-size), 20px, var(--blue-1-800-primary), var(--regular), var(--body));
+      @include font-style(var(--text-link-medium-size), var(--text-link-medium-line-height), var(--blue-1-800-primary), var(--regular), var(--body));
       text-decoration: underline;
       text-decoration-style: solid;
+      text-underline-offset: 20%;
       cursor: pointer;
 
       &:hover {
