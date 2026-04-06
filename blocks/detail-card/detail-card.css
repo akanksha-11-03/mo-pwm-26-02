@@ -320,9 +320,11 @@
   height: 16px;
 }
 .section.detail-card-main .detail-card .comlist .detail-card-item-2 > ul > li:nth-child(2) ul li:first-of-type a {
+  min-width: 158px;
   padding: 10px 0;
 }
 .section.detail-card-main .detail-card .comlist .detail-card-item-2 > ul > li:nth-child(2) ul li:last-of-type a {
+  min-width: 164px;
   border-radius: 4px;
   border: 1px solid var(--button-primary-default);
 }
