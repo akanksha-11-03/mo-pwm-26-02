@@ -485,13 +485,18 @@
     ]
   },
   {
-    "component": "multiselect",
-    "name": "classes",
-    "label": "Style",
-    "options": [
+    "id": "detail-card",
+    "fields": [
       {
-        "name": "Detail Card Full Width",
-        "value": "card-full-width"
+        "component": "multiselect",
+        "name": "classes",
+        "label": "Style",
+        "options": [
+          {
+            "name": "Detail Card Full Width",
+            "value": "card-full-width"
+          }
+        ]
       }
     ]
   },
