@@ -54,7 +54,7 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 } 
 main > .section.ourofferingcards-section {
-  margin: 80px 16px;
+  margin: 40px 16px;
 }
 
 .ourofferingcards-section .cards-wrapper {
@@ -155,7 +155,7 @@ main > .section.ourofferingcards-section {
   height: 342px;
   line-height: 0;
   background-color: var(--neutrals-white);
-  border-radius: var(--border-radius-12) 0 0 var(--border-radius-12);
+  border-radius: var(--border-radius-4);
   overflow: hidden;
 }
 .cards.ourofferingcards .ourofferingcard-image picture {
@@ -179,17 +179,16 @@ main > .section.ourofferingcards-section {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-20);
-  padding: var(--spacing-32) var(--spacing-40) var(--spacing-32) 0;
   box-sizing: border-box;
 }
 .cards.ourofferingcards .ourofferingcard-text {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-4);
+  gap: var(--spacing-12);
 }
 .cards.ourofferingcards .ourofferingcard-text .ourofferingcard-title {
-  font-size: var(--heading-pwm-h4-size);
-  line-height: 1.333;
+  font-size: var(--sub-header-large-size);
+  line-height: 32px;
   color: var(--pwm-gold-700);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
@@ -214,14 +213,15 @@ main > .section.ourofferingcards-section {
 .cards.ourofferingcards .ourofferingcard-link a.button,
 .cards.ourofferingcards .ourofferingcard-link a {
   all: unset;
-  font-size: var(--body-small-medium-size);
-  line-height: 20px;
+  font-size: var(--text-link-medium-size);
+  line-height: var(--text-link-medium-line-height);
   color: var(--blue-1-800-primary);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
   text-decoration: underline;
   text-decoration-style: solid;
+  text-underline-offset: 20%;
   cursor: pointer;
 }
 .cards.ourofferingcards .ourofferingcard-link a.button:hover,

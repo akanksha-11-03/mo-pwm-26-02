@@ -6,7 +6,7 @@
 
 .motilal-oswal-ecosystem {
 
-    > div {
+    >div {
         padding: 0;
         margin: 0;
     }
@@ -14,42 +14,44 @@
     // ===== Section Heading =====
     .default-content-wrapper {
         // margin-bottom: var(--spacing-32);
-            margin: 0 16px 32px 16px;
+        margin: 0 16px 16px;
 
         h2 {
-            @include font-style(
-                var(--heading-pwm-h5-size),
-                1.25em,
-                #C3A560,
+            @include font-style(var(--heading-pwm-h5-size),
+                var(--sub-header-large-line-height),
+               var(--pwm-gold-700),
                 var(--regular),
-                var(--title)
-            );
+                var(--title));
             margin: 0;
         }
+
         strong {
             color: var(--blue-1-800-primary);
             font-weight: var(--regular);
             font-size: var(--heading-pwm-h5-size);
             font-family: var(--title);
+            line-height: var( --sub-header-large-line-height);
         }
     }
 
     // ===== Block Grid =====
     .custom-rte {
         background: url('../../icons/ecosystem-background-Image.png') lightgray -73.496px -0.092px / 106.945% 100.028% no-repeat;
+
         @include media(mobile) {
-        background: url('../../icons/ecosystem-background-Image.png') lightgray -73.496px -0.092px / 119.945% 100.028% no-repeat;
+            background: url('../../icons/ecosystem-background-Image.png') lightgray -73.496px -0.092px / 119.945% 100.028% no-repeat;
         }
+
         border-radius: var(--border-radius-4);
         display: grid;
         grid-template-columns: 1fr;
         overflow: hidden;
         position: relative;
 
-        > div {
+        >div {
             padding: 0;
 
-            > div {
+            >div {
                 padding: 0;
                 height: 100%;
             }
@@ -64,75 +66,68 @@
     }
 
     // ===== First column — Private Wealth (single card, full height) =====
-    .custom-rte > div:first-child {
+    .custom-rte>div:first-child {
         border-bottom: 0.5px solid var(--neutrals-white);
 
-        > div > ul > li {
-            padding: 26px var(--spacing-20);
+        >div>ul>li {
+            padding: 25px 19px;
 
             // Title
-            @include font-style(
-                var(--heading-pwm-h5-size),
-                1.25em,
+            @include font-style(var(--heading-h5-size),
+                var(--sub-header-large-line-height),
                 var(--pwm-gold-100),
                 var(--regular),
-                var(--title)
-            );
+                var(--title));
+                
 
             // Description (nested ul > li)
-            > ul {
+            >ul {
                 margin-top: var(--spacing-18);
 
-                > li {
-                    @include font-style(
-                        var(--body-small-regular-size),
-                        1.25em,
+                >li {
+                    @include font-style(var(--body-medium-regular-size),
+                        var(--body-medium-regular-line-height),
                         var(--pwm-gold-100),
                         var(--regular),
-                        var(--body)
-                    );
+                        var(--body));
                 }
             }
         }
     }
 
     // ===== Remaining items in grid =====
-    .custom-rte > div:last-child {
-        > div > ul {
+    .custom-rte>div:last-child {
+        >div>ul {
             display: grid;
             grid-template-columns: 1fr;
 
-            > li {
+            >li {
                 padding: var(--spacing-20);
                 border-bottom: 0.5px solid var(--neutrals-white);
 
                 // Title
-                @include font-style(
-                    var(--body-medium-medium-size),
+                @include font-style(var(--body-medium-medium-size),
                     1.2em,
                     var(--pwm-gold-100),
                     var(--medium),
-                    var(--body)
-                );
+                    var(--body));
 
                 // Description (nested ul > li)
-                > ul {
+                >ul {
                     margin-top: var(--spacing-8);
 
-                    > li {
-                        @include font-style(
-                            var(--body-small-regular-size),
+                    >li {
+                        @include font-style(var(--body-small-regular-size),
                             1.25em,
                             var(--pwm-gold-100),
                             var(--regular),
-                            var(--body)
-                        );
+                            var(--body));
                     }
                 }
             }
 
             // Remove border on last item in mobile
-            > li:last-child {
+            >li:last-child {
                 border-bottom: none;
             }
         }
@@ -158,21 +153,21 @@
         }
 
         // Private Wealth — full left column
-        .custom-rte > div:first-child {
+        .custom-rte>div:first-child {
             border-bottom: none;
             border-right: 0.5px solid var(--neutrals-white);
 
-            > div {
+            >div {
                 display: flex;
                 width: 100%;
             }
 
-            > div > ul {
+            >div>ul {
                 display: flex;
                 width: 100%;
             }
 
-            > div > ul > li {
+            >div>ul>li {
                 display: flex;
                 flex-direction: column;
                 justify-content: flex-start;
@@ -182,10 +177,10 @@
                 line-height: 1.25em;
                 width: 100%;
 
-                > ul {
+                >ul {
                     margin-top: var(--spacing-18);
 
-                    > li {
+                    >li {
                         font-size: var(--body-medium-regular-size);
                         line-height: 1.25em;
                     }
@@ -194,14 +189,14 @@
         }
 
         // 6 items — 2-column × 3-row grid
-        .custom-rte > div:last-child {
-            > div > ul {
+        .custom-rte>div:last-child {
+            >div>ul {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: 1fr 1fr 1fr;
                 height: 100%;
             }
 
-            > div > ul > li {
+            >div>ul>li {
                 padding: 26px 22px;
                 font-weight: var(--medium);
                 font-size: var(--body-xlarge-regular-size);
@@ -221,10 +216,10 @@
                     border-bottom: none;
                 }
 
-                > ul {
+                >ul {
                     margin-top: 0; // gap handles spacing
 
-                    > li {
+                    >li {
                         font-size: var(--body-medium-regular-size);
                         line-height: 1.25em;
                     }

@@ -58,12 +58,12 @@
   margin: 0;
 }
 .motilal-oswal-ecosystem .default-content-wrapper {
-  margin: 0 16px 32px 16px;
+  margin: 0 16px 16px;
 }
 .motilal-oswal-ecosystem .default-content-wrapper h2 {
   font-size: var(--heading-pwm-h5-size);
-  line-height: 1.25em;
-  color: #C3A560;
+  line-height: var(--sub-header-large-line-height);
+  color: var(--pwm-gold-700);
   font-family: var(--title);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
@@ -74,6 +74,7 @@
   font-weight: var(--regular);
   font-size: var(--heading-pwm-h5-size);
   font-family: var(--title);
+  line-height: var(--sub-header-large-line-height);
 }
 .motilal-oswal-ecosystem .custom-rte {
   background: url("../../icons/ecosystem-background-Image.png") lightgray -73.496px -0.092px/106.945% 100.028% no-repeat;
@@ -106,9 +107,9 @@
   border-bottom: 0.5px solid var(--neutrals-white);
 }
 .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li {
-  padding: 26px var(--spacing-20);
-  font-size: var(--heading-pwm-h5-size);
-  line-height: 1.25em;
+  padding: 25px 19px;
+  font-size: var(--heading-h5-size);
+  line-height: var(--sub-header-large-line-height);
   color: var(--pwm-gold-100);
   font-family: var(--title);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
@@ -118,8 +119,8 @@
   margin-top: var(--spacing-18);
 }
 .motilal-oswal-ecosystem .custom-rte > div:first-child > div > ul > li > ul > li {
-  font-size: var(--body-small-regular-size);
-  line-height: 1.25em;
+  font-size: var(--body-medium-regular-size);
+  line-height: var(--body-medium-regular-line-height);
   color: var(--pwm-gold-100);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
