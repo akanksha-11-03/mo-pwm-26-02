@@ -1,3 +1,5 @@
+import { setClassPrefixes, addIndexed } from '../../scripts/constant.js';
+
 export default function decorate(block) {
   if (block.closest('.career-section')) {
     const rows = Array.from(block.children);
@@ -35,5 +37,10 @@ export default function decorate(block) {
         });
       });
     });
+  }
+
+  if (block.closest('.insight-research-landing-banner')) {
+    setClassPrefixes(['insres-banner', 'insres-item-', 'insres-content-', 'insres-inner-', 'insres-inneritem-', 'insres-child-']);
+    addIndexed(block);
   }
 }
