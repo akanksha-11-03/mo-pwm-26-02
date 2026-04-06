@@ -234,6 +234,10 @@
           {
             "name": "Say Hello Form Section",
             "value": "say-hello-form"
+          },
+          {
+            "name": "Insight Research Landing Banner",
+            "value": "insight-research-landing-banner"
           }
         ]
       }
