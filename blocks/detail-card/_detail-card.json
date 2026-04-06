@@ -48,6 +48,17 @@
     ],
     "models": [
         {
+            "component": "multiselect",
+            "name": "classes",
+            "label": "Style",
+            "options": [
+                {
+                    "name": "Detail Card Full Width",
+                    "value": "card-full-width"
+                }
+            ]
+        },
+        {
             "id": "detail-card-item",
             "fields": [
                 {
