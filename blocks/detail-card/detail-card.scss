@@ -372,10 +372,10 @@
             }
           }
 
-          ul {
+          > ul {
             margin: 16px 0 0;
 
-            li {
+            > li:nth-child(1) {
               ul {
                 display: flex;
                 align-items: center;
@@ -425,6 +425,61 @@
                 }
               }
             }
+
+            > li:nth-child(2) {
+              ul {
+                margin: 16px 0 0;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                @include media(tablet-up) {
+                  margin: 24px 0 0;
+                  flex-direction: row;
+                }
+
+                li {
+                  a {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: var(--spacing-8);
+                    padding: 10px var(--spacing-12);
+
+                    @include font-style(
+                      var(--button-medium-size),
+                      var(--button-medium-line-height),
+                      var(--text-button-default),
+                      var(--medium),
+                      var(--body)
+                    );
+
+                    @include media(tablet-up) {
+                      font-size: var(--button-medium-size);
+                      line-height: var(--button-medium-line-height);
+                    }
+
+                    span {
+                      width: 16px;
+                      height: 16px;
+                    }
+                  }
+
+                  &:first-of-type {
+                    a {
+                      padding: 10px 0;
+                    }
+                  }
+
+                  &:last-of-type {
+                    a {
+                      border-radius: 4px;
+                      border: 1px solid var(--button-primary-default);
+                    }
+                  }
+                }
+              }
+            }
           }
 
           h3 ~ p:not(h3 + p) {
@@ -448,6 +503,32 @@
                 font-size: var(--text-link-small-size);
                 line-height: var(--text-link-small-line-height);
               }
+            }
+          }
+        }
+      }
+
+      &.card-full-width{
+        .comlist:first-of-type{
+          max-width: 100%;
+          flex: 100%;
+          flex-direction: row;
+          align-items: center;
+          gap: 16px;
+
+          .detail-card-item{
+            &-1,
+            &-2{
+              max-width: 49.4%;
+              width: 100%;
+            }
+
+            &-1{
+              max-height: 343px;
+            }
+
+            &-2{
+              height: auto;
             }
           }
         }

@@ -65,9 +65,10 @@
                 padding: var(--spacing-24) var(--spacing-12);
                 @include font-style(18px, var(--body-large-medium-line-height), var(--pwm-gold-700), var(--regular), var(--body));
                 cursor: pointer;
-                border-bottom: 1px solid #dadada;
+                // border-bottom: 1px solid #dadada;
                 transition: border-color 0.4s ease, background-color 0.4s ease;
                 gap: var(--spacing-12);
+                position: relative;
 
                 // &:hover {
                 //     box-shadow: 0px 2px 0px -1px #42424280;
