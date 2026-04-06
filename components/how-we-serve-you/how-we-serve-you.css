@@ -146,6 +146,7 @@
   width: 100%;
   height: 1px;
   top: 100%;
+  left: 0;
   border-bottom: 1px solid rgba(66, 66, 66, 0.5);
 }
 .how-we-serve-you .columns-wrapper .divwithlinks a .border-with-shadow::after {
