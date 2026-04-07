@@ -2,9 +2,38 @@
 @use "../../styles/common-theme/css/variables_mixins" as *;
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
-.section.blog-detail-banner{
-    // background-color: red;
-    .hero.block{
-        
+.section.blog-detail-banner {
+  background-color: var(--pwm-gold-200);
+
+  .hero.block {
+    padding: 82px 16px 80px 15px;
+
+    .blde-banner-3 {
+      .blde-content-1 {
+        border-radius: var(--border-radius-4);
+        background: var(--pwm-gold-400);
+        padding: 8px;
+        width: max-content;
+        margin: 0 0 16px;
+
+        @include font-style(
+          var(--body-small-semibold-size),
+          var(--body-small-semibold-line-height),
+          var(--pwm-gold-900),
+          var(--semibold),
+          var(--body)
+        );
+      }
+
+      .blde-content-2 {
+        @include font-style(
+          var(--sub-header-large-size),
+          var(--sub-header-medium-line-height),
+          var(--pwm-gold-800),
+          var(--regular),
+          var(--title)
+        );
+      }
     }
+  }
 }

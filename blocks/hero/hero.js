@@ -40,7 +40,7 @@ export default function decorate(block) {
   }
 
   if (block.closest('.blog-detail-banner')) {
-    setClassPrefixes(['blde-banner', 'blde-item-', 'blde-content-', 'blde-inner-', 'blde-inneritem-', 'blde-child-']);
+    setClassPrefixes(['blde-banner-', 'blde-item-', 'blde-content-', 'blde-inner-', 'blde-inneritem-', 'blde-child-']);
     addIndexed(block);
   }
 }
