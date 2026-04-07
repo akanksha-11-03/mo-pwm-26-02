@@ -39,8 +39,8 @@ export default function decorate(block) {
     });
   }
 
-  if (block.closest('.insight-research-landing-banner')) {
-    setClassPrefixes(['insres-banner', 'insres-item-', 'insres-content-', 'insres-inner-', 'insres-inneritem-', 'insres-child-']);
+  if (block.closest('.blog-detail-banner')) {
+    setClassPrefixes(['blde-banner', 'blde-item-', 'blde-content-', 'blde-inner-', 'blde-inneritem-', 'blde-child-']);
     addIndexed(block);
   }
 }
