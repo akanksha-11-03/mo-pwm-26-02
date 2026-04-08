@@ -27,4 +27,15 @@ export default function decorate(block) {
     cardFirstItem.appendChild(anchor);
     cardFirstItem.querySelector('.content-2')?.remove();
   });
+
+  const btnRowDwn = block.closest('.btn-row-dwn');
+  if (btnRowDwn) {
+    const divWrapper = document.createElement('div');
+    divWrapper.classList.add('detail-card-btn-wrapper');
+    Array.from(btnRowDwn.children).forEach((child) => {
+      divWrapper.appendChild(child);
+    });
+    btnRowDwn.appendChild(divWrapper);
+
+  }
 }

@@ -52,42 +52,6 @@
   src: url("../../../fonts/Inter-ExtraBold.woff2") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 } 
-.section.cmmn-explr-btn .default-content-wrapper .button-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0;
-  list-style: none;
-}
-.section.cmmn-explr-btn .default-content-wrapper .button-list .list-item-1 .button {
-  margin: 0;
-  list-style: none;
-}
-.section.cmmn-explr-btn .default-content-wrapper .button-list .list-item-1 .button-text {
-  font-size: 28px;
-  line-height: var(--sub-header-large-line-height);
-  color: var(--pwm-gold-700);
-  font-family: var(--title);
-  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  font-weight: var(--regular);
-}
-.section.cmmn-explr-btn .default-content-wrapper .button-list .list-item-2 {
-  line-height: 0;
-}
-.section.cmmn-explr-btn .default-content-wrapper .button-list .list-item-2 .button {
-  border-radius: var(--border-radius-4);
-  background: var(--button-primary-default);
-  padding: 12px;
-  min-width: 160px;
-  margin: 0;
-  border: none;
-  font-size: 14px;
-  line-height: 16px;
-  color: var(--text-white);
-  font-family: var(--body);
-  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  font-weight: var(--medium);
-}
 .section.detail-card-main {
   padding: 0 16px;
 }
@@ -248,7 +212,6 @@
   align-items: center;
   gap: 8px;
   list-style: none;
-  margin: 0 0 24px;
 }
 .section.detail-card-main .detail-card .comlist .detail-card-item-2 > ul > li:nth-child(1) ul li {
   display: flex;
@@ -510,4 +473,100 @@
 }
 .section.detail-card-main.detail-card-v3 .detail-card .comlist .detail-card-item-2 p + ul li ul {
   margin: 0;
+}
+.section.btn-row-dwn .detail-card-btn-wrapper {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .section.btn-row-dwn .detail-card-btn-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "heading button" "card card";
+    align-items: center;
+    gap: 32px;
+    max-width: 1264px;
+    padding: 0 16px;
+    width: 100%;
+  }
+}
+.section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:first-of-type {
+  max-width: 100%;
+  width: 100%;
+  padding: 0 0 32px;
+}
+@media (min-width: 768px) {
+  .section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:first-of-type {
+    grid-area: heading;
+    max-width: 1066px;
+    padding: 0;
+  }
+}
+.section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:first-of-type p {
+  margin: 0;
+  font-size: 28px;
+  line-height: 32px;
+  color: var(--pwm-gold-700);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:first-of-type p {
+    font-size: var(--heading-pwm-h4-size);
+    line-height: var(--heading-pwm-h4-line-height);
+  }
+}
+.section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:last-of-type {
+  max-width: 100%;
+  width: 100%;
+  padding: 32px 0 0;
+}
+@media (min-width: 768px) {
+  .section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:last-of-type {
+    grid-area: button;
+    padding: 0;
+    max-width: 1066px;
+  }
+}
+.section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:last-of-type .button-container {
+  margin: 0;
+  display: flex;
+}
+@media (min-width: 768px) {
+  .section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:last-of-type .button-container {
+    min-width: 160px;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+}
+.section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:last-of-type .button-container .button {
+  all: unset;
+  margin: 0;
+  padding: var(--spacing-12) var(--spacing-32);
+  border-radius: var(--border-radius-4);
+  background: var(--button-primary-default);
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--text-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--medium);
+}
+@media (min-width: 768px) {
+  .section.btn-row-dwn .detail-card-btn-wrapper .default-content-wrapper:last-of-type .button-container .button {
+    width: 100%;
+    padding: var(--spacing-8) var(--spacing-12);
+    font-size: var(--button-small-size);
+    line-height: var(--button-small-line-height);
+  }
+}
+@media (min-width: 768px) {
+  .section.btn-row-dwn .detail-card-btn-wrapper div:nth-child(2) {
+    grid-area: card;
+  }
+  .section.btn-row-dwn .detail-card-btn-wrapper div:nth-child(2) .detail-card {
+    max-width: 100%;
+    padding: 0;
+  }
 }/*# sourceMappingURL=detail-card.css.map */

@@ -3,55 +3,6 @@
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
 .section {
-  &.cmmn-explr-btn {
-    .default-content-wrapper {
-      .button-list {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin: 0;
-        list-style: none;
-
-        .list-item-1 {
-          .button {
-            margin: 0;
-            list-style: none;
-            &-text {
-              @include font-style(
-                28px,
-                var(--sub-header-large-line-height),
-                var(--pwm-gold-700),
-                var(--regular),
-                var(--title)
-              );
-            }
-          }
-        }
-
-        .list-item-2 {
-          line-height: 0;
-
-          .button {
-            border-radius: var(--border-radius-4);
-            background: var(--button-primary-default);
-            padding: 12px;
-            min-width: 160px;
-            margin: 0;
-            border: none;
-
-            @include font-style(
-              14px,
-              16px,
-              var(--text-white),
-              var(--medium),
-              var(--body)
-            );
-          }
-        }
-      }
-    }
-  }
-
   &.detail-card-main {
     padding: 0 16px;
 
@@ -381,7 +332,7 @@
                 align-items: center;
                 gap: 8px;
                 list-style: none;
-                margin: 0 0 24px;
+                // margin: 0 0 24px;
 
                 li {
                   display: flex;
@@ -471,7 +422,7 @@
                       padding: 10px 0;
                     }
                   }
-                  
+
                   &:last-of-type {
                     a {
                       min-width: 164px;
@@ -510,9 +461,9 @@
         }
       }
 
-      &.card-full-width{
-        .comlist:first-of-type{
-          @include media (tablet-up){
+      &.card-full-width {
+        .comlist:first-of-type {
+          @include media(tablet-up) {
             flex-direction: row;
             gap: 16px;
             align-items: center;
@@ -520,22 +471,22 @@
             flex: 100%;
           }
 
-          .detail-card-item{
+          .detail-card-item {
             &-1,
-            &-2{              
-              @include media (tablet-up){
+            &-2 {
+              @include media(tablet-up) {
                 max-width: 49.4%;
                 width: 100%;
               }
             }
-            
-            &-1{
-              @include media (tablet-up){
+
+            &-1 {
+              @include media(tablet-up) {
                 max-height: 343px;
               }
             }
 
-            &-2{
+            &-2 {
               height: auto;
             }
           }
@@ -752,6 +703,117 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  &.btn-row-dwn {
+    .detail-card-btn-wrapper {
+      padding: 0;
+
+      @include media(tablet-up) {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+          "heading button"
+          "card card";
+        align-items: center;
+        gap: 32px;
+        max-width: 1264px;
+        padding: 0 16px;
+        width: 100%;
+      }
+
+      .default-content-wrapper:first-of-type {
+        max-width: 100%;
+        width: 100%;
+        padding: 0 0 32px;
+
+        @include media(tablet-up) {
+          // grid-column: 1;
+          // grid-row: 1;
+          grid-area: heading;
+          max-width: 1066px;
+          padding: 0;
+        }
+
+        p {
+          margin: 0;
+
+          @include font-style(
+            28px,
+            32px,
+            var(--pwm-gold-700),
+            var(--regular),
+            var(--title)
+          );
+
+          @include media(tablet-up) {
+            font-size: var(--heading-pwm-h4-size);
+            line-height: var(--heading-pwm-h4-line-height);
+          }
+        }
+      }
+
+      .default-content-wrapper:last-of-type {
+        max-width: 100%;
+        width: 100%;
+        padding: 32px 0 0;
+
+        @include media(tablet-up) {
+          // grid-column: 2;
+          // grid-row: 1;
+          grid-area: button;
+          padding: 0;
+          max-width: 1066px;
+        }
+
+        .button-container {
+          margin: 0;
+          display: flex;
+
+          @include media(tablet-up) {
+            min-width: 160px;
+            max-width: max-content;
+          }
+
+          .button {
+            all: unset;
+            margin: 0;
+            padding: var(--spacing-12) var(--spacing-32);
+            border-radius: var(--border-radius-4);
+            background: var(--button-primary-default);
+            text-align: center;
+
+            @include font-style(
+              14px,
+              16px,
+              var(--text-white),
+              var(--medium),
+              var(--body)
+            );
+
+            @include media(tablet-up) {
+              width: 100%;
+              padding: var(--spacing-8) var(--spacing-12);
+              font-size: var(--button-small-size);
+              line-height: var(--button-small-line-height);
+            }
+          }
+        }
+      }
+
+      div:nth-child(2) {
+        @include media(tablet-up) {
+          // grid-column: 1 / -1;
+          // grid-row: 2;
+          grid-area: card;
+
+          .detail-card{
+            max-width: 100%;
+            padding: 0;
           }
         }
       }
