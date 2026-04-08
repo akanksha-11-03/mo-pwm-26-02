@@ -293,7 +293,7 @@
   border: 1px solid var(--button-primary-default);
 }
 .section.detail-card-main .detail-card .comlist .detail-card-item-2 h3 ~ p:not(h3 + p) {
-  margin: 0;
+  margin: 24px 0 0;
   line-height: 0;
 }
 .section.detail-card-main .detail-card .comlist .detail-card-item-2 h3 ~ p:not(h3 + p) .button {
@@ -335,6 +335,10 @@
 }
 .section.detail-card-main .detail-card.card-full-width .comlist:first-of-type .detail-card-item-2 {
   height: auto;
+}
+.section.detail-card-main .detail-card .swiper-wrapper {
+  display: flex;
+  gap: 0;
 }
 .section.detail-card-main.detail-card-v2 .detail-card {
   display: flex;
