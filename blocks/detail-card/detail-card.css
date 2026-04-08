@@ -212,6 +212,7 @@
   align-items: center;
   gap: 8px;
   list-style: none;
+  margin: 0;
 }
 .section.detail-card-main .detail-card .comlist .detail-card-item-2 > ul > li:nth-child(1) ul li {
   display: flex;
