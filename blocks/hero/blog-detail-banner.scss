@@ -3,15 +3,16 @@
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
 .section.blog-detail-banner {
-  // background-color: var(--pwm-gold-200);
+  background-color: antiquewhite;
 
   .hero.block {
     padding: 82px 16px 80px 15px;
-    background: linear-gradient(to bottom, var(--pwm-gold-200), transparent);
+    margin-top: -60px;
+    // background: linear-gradient(to bottom, var(--pwm-gold-200), transparent);
 
     @include media(tablet-up) {
       padding: 69px 67px 39px;
-      background: linear-gradient(to right, var(--pwm-gold-200), transparent);
+      // background: linear-gradient(to right, var(--pwm-gold-200), transparent);
     }
 
     .blde-banner-3 {
