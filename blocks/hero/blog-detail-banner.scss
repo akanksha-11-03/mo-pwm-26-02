@@ -3,12 +3,24 @@
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
 .section.blog-detail-banner {
-  background-color: var(--pwm-gold-200);
+  // background-color: var(--pwm-gold-200);
 
   .hero.block {
     padding: 82px 16px 80px 15px;
+    background: linear-gradient(to bottom, var(--pwm-gold-200), transparent);
+
+    @include media(tablet-up) {
+      padding: 69px 67px 39px;
+      background: linear-gradient(to right, var(--pwm-gold-200), transparent);
+    }
 
     .blde-banner-3 {
+      @include media(tablet-up) {
+        max-width: 1236px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
       .blde-content-1 {
         border-radius: var(--border-radius-4);
         background: var(--pwm-gold-400);
@@ -23,16 +35,145 @@
           var(--semibold),
           var(--body)
         );
+
+        @include media(tablet-up) {
+          font-size: var(--body-small-semibold-size);
+          line-height: var(--body-small-semibold-line-height);
+        }
       }
 
       .blde-content-2 {
+        margin: 0;
+
         @include font-style(
           var(--sub-header-large-size),
-          var(--sub-header-medium-line-height),
+          28px,
           var(--pwm-gold-800),
           var(--regular),
           var(--title)
         );
+
+        @include media(tablet-up) {
+          font-size: var(--heading-pwm-h4-size);
+          line-height: var(--heading-pwm-h4-line-height);
+        }
+      }
+
+      .blde-content-3 {
+        margin: 4px 0 16px;
+
+        @include font-style(
+          var(--paragraph-medium-regular-size),
+          var(--paragraph-medium-regular-line-height),
+          var(--pwm-gold-800),
+          var(--regular),
+          var(--body)
+        );
+
+        @include media(tablet-up) {
+          font-size: var(--body-medium-regular-size);
+          line-height: 24px;
+        }
+      }
+
+      .blde-content-4 {
+        margin: 16px 0 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include media(tablet-up) {
+          gap: 24px;
+        }
+
+        .blde-inner-1 {
+          .blde-inneritem-1 {
+            margin: 0;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+
+            .comlist-6 {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+
+              @include font-style(
+                var(--label-small-size),
+                var(--label-small-line-height),
+                var(--neutrals-800),
+                var(--regular),
+                var(--body)
+              );
+
+              @include media(tablet-up) {
+                font-size: var(--label-large-size);
+                line-height: var(--label-large-line-height);
+              }
+
+              &::after {
+                content: "";
+                width: 4px;
+                height: 4px;
+                background-color: var(--pwm-gold-500);
+                border-radius: 50%;
+              }
+
+              &:last-of-type {
+                &::after {
+                  content: unset;
+                }
+              }
+
+              .icon {
+                width: 12px;
+                height: 12px;
+              }
+            }
+          }
+        }
+
+        .blde-inner-2 {
+          .blde-inneritem-1 {
+            margin: 0;
+            display: flex;
+            gap: 16px;
+            align-items: center;
+
+            @include media(tablet-up) {
+              gap: 12px;
+            }
+
+            .comlist-6:not(:first-of-type) {
+              width: 32px;
+              height: 32px;
+
+              @include media(tablet-up) {
+                width: 48px;
+                height: 48px;
+              }
+
+              .icon {
+                width: 100%;
+                height: 100%;
+              }
+            }
+
+            .blde-child-1 {
+              @include font-style(
+                14px,
+                22px,
+                var(--pwm-gold-700),
+                var(--regular),
+                var(--body)
+              );
+
+              @include media(tablet-up) {
+                display: none;
+              }
+            }
+          }
+        }
       }
     }
   }

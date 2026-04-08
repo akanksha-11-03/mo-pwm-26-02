@@ -512,21 +512,27 @@
 
       &.card-full-width{
         .comlist:first-of-type{
-          max-width: 100%;
-          flex: 100%;
-          flex-direction: row;
-          align-items: center;
-          gap: 16px;
+          @include media (tablet-up){
+            flex-direction: row;
+            gap: 16px;
+            align-items: center;
+            max-width: 100%;
+            flex: 100%;
+          }
 
           .detail-card-item{
             &-1,
-            &-2{
-              max-width: 49.4%;
-              width: 100%;
+            &-2{              
+              @include media (tablet-up){
+                max-width: 49.4%;
+                width: 100%;
+              }
             }
-
+            
             &-1{
-              max-height: 343px;
+              @include media (tablet-up){
+                max-height: 343px;
+              }
             }
 
             &-2{
