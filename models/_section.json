@@ -109,8 +109,8 @@
               ]
             },
             {
-              "name": "Common Explore Button",
-              "value": "cmmn-explr-btn"
+              "name": "Common Button Row Down",
+              "value": "btn-row-dwn"
             },
             {
               "name": "Detail Card",
