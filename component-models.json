@@ -238,10 +238,6 @@
           {
             "name": "Blog Detail Banner",
             "value": "blog-detail-banner"
-          },
-          {
-            "name": "Card Swiper Mobile",
-            "value": "card-swiper-short"
           }
         ]
       }
@@ -503,6 +499,10 @@
           {
             "name": "Detail Card Full Width",
             "value": "card-full-width"
+          },
+          {
+            "name": "Card Swiper Mobile",
+            "value": "card-swiper-short"
           }
         ]
       }

@@ -135,10 +135,6 @@
             {
               "name": "Blog Detail Banner",
               "value": "blog-detail-banner"
-            },
-            {
-              "name": "Card Swiper Mobile",
-              "value": "card-swiper-short"
             }
           ]
         }
