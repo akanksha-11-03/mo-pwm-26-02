@@ -146,8 +146,8 @@
   }
 }
 .section.who-we-are .custom-rte .who-we-are-2 .innercontent-1 .item-1 .listitem {
-  font-size: 36px;
-  line-height: 40px;
+  font-size: 34px;
+  line-height: var(--heading-h2-line-height);
   color: var(--pwm-gold-700);
   font-family: var(--title);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
@@ -185,4 +185,4 @@
     font-size: var(--body-medium-regular-size);
     line-height: var(--body-medium-regular-line-height);
   }
-}/*# sourceMappingURL=who-we-are.css.map */
+}
