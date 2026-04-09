@@ -259,6 +259,10 @@
             "value": "blog-landing-banner"
           },
           {
+            "name": "News Landing Banner",
+            "value": "news-landing-banner"
+          },
+          {
             "name": "Explore Alpha Strategist Section",
             "value": "explr-alpha-strategy"
           },
