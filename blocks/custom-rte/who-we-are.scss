@@ -106,8 +106,8 @@
 
               .listitem {
                 @include font-style(
-                  36px,
-                  40px,
+                  34px,
+                  var(--heading-h2-line-height),
                   var(--pwm-gold-700),
                   var(--semibold),
                   var(--title)
