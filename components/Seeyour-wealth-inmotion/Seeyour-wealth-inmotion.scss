@@ -177,11 +177,12 @@
   .swiper-pagination-bullet {
     width: var(--spacing-12);
     height: var(--spacing-12);
-    background: var(--pwm-gold-800);
+    background: var(--pwm-gold-700);
     opacity: 1;
     border-radius: 50%;
     transition: opacity 0.3s;
     cursor: pointer;
+    margin: 0 !important;
   }
 
   .swiper-pagination-bullet-active {
