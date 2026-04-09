@@ -43,4 +43,9 @@ export default function decorate(block) {
     setClassPrefixes(['blde-banner-', 'blde-item-', 'blde-content-', 'blde-inner-', 'blde-inneritem-', 'blde-child-']);
     addIndexed(block);
   }
+
+  if (block.closest('.blog-landing-banner')) {
+    setClassPrefixes(['blolan-banner-', 'blolan-item-', 'blolan-content-', 'blolan-inner-', 'blolan-inneritem-', 'blolan-child-']);
+    addIndexed(block);
+  }
 }
