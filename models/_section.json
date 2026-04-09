@@ -135,6 +135,10 @@
             {
               "name": "Blog Detail Banner",
               "value": "blog-detail-banner"
+            },
+            {
+              "name": "Blog Landing Banner",
+              "value": "blog-landing-banner"
             }
           ]
         }
