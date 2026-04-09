@@ -227,14 +227,14 @@
 .sywim-pagination .swiper-pagination-bullet {
   width: var(--spacing-12);
   height: var(--spacing-12);
-  background: #2E2A94;
+  background: var(--pwm-gold-800);
   opacity: 1;
   border-radius: 50%;
   transition: opacity 0.3s;
   cursor: pointer;
 }
 .sywim-pagination .swiper-pagination-bullet-active {
-  background: var(--pwm-gold-800);
+  background: var(--blue-1-800-primary);
   opacity: 1;
 }
 
