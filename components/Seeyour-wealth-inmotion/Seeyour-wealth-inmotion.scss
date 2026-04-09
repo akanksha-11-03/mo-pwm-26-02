@@ -193,7 +193,7 @@
 .sywim-fraction {
   @include font-style(var(--body-medium-regular-size),
     1.5,
-    var(--neutrals-500),
+    var(--neutrals-800),
     var(--regular),
     var(--body));
 
@@ -211,7 +211,7 @@
 
   .sywim-fraction-total {
     font-weight: var(--regular);
-    color: var(--pwm-gold-800);
+    color: var(--pwm-gold-700);
   }
 }
 
