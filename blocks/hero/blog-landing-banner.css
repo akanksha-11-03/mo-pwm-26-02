@@ -1,0 +1,168 @@
+/* Inter Light (300) */
+@font-face {
+  font-family: Inter;
+  font-style: "Italic";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../../../fonts/Inter-LightItalic.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Light (400) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Regular.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (500) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Medium.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (600) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../../../fonts/Inter-SemiBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter Bold (700) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../../../fonts/Inter-Bold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* Inter ExtraBold (800) */
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../../../fonts/Inter-ExtraBold.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+} 
+.section.blog-landing-banner .hero {
+  min-height: 466px;
+  height: auto;
+  padding: 25px 15px 24px 16px;
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero {
+    padding: 70px 67px;
+    min-height: 347px;
+  }
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-1 {
+    display: none;
+  }
+}
+.section.blog-landing-banner .hero .blolan-banner-2 {
+  display: none;
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-2 {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-3 {
+    max-width: 1232px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 {
+    max-width: 58.686%;
+    width: 100%;
+  }
+}
+.section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--pwm-gold-100);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--semibold);
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-1 {
+    font-size: var(--heading-h2-size);
+    line-height: var(--heading-h2-line-height);
+  }
+}
+.section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-2 {
+  margin: 0;
+  font-size: var(--body-xlarge-regular-size);
+  line-height: var(--body-xlarge-regular-line-height);
+  color: var(--neutrals-white);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-2 {
+    max-width: 68.327%;
+    width: 100%;
+    font-size: var(--body-xlarge-regular-size);
+    line-height: var(--body-xlarge-regular-line-height);
+  }
+}
+.section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-3 {
+  margin: 37px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-3 {
+    margin: 34px 0 0;
+    flex-direction: row;
+    gap: var(--spacing-68);
+  }
+}
+.section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-3 .comlist-4 .blolan-inneritem-1 {
+  margin: 0;
+}
+.section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-3 .comlist-4 .blolan-inneritem-1 .blolan-child-1 {
+  padding: 0 0 4px;
+  font-size: 32px;
+  line-height: 40px;
+  color: var(--pwm-gold-100);
+  font-family: var(--title);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--semibold);
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-3 .comlist-4 .blolan-inneritem-1 .blolan-child-1 {
+    font-size: var(--heading-h3-size);
+    line-height: var(--heading-h3-line-height);
+  }
+}
+.section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-3 .comlist-4 .blolan-inneritem-1 .blolan-child-2 {
+  font-size: var(--body-medium-regular-size);
+  line-height: var(--body-medium-regular-line-height);
+  color: var(--pwm-gold-100);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
+}
+@media (min-width: 768px) {
+  .section.blog-landing-banner .hero .blolan-banner-3 .blolan-item-1 .blolan-content-3 .comlist-4 .blolan-inneritem-1 .blolan-child-2 {
+    font-size: var(--body-medium-regular-size);
+    line-height: var(--body-medium-regular-line-height);
+  }
+}/*# sourceMappingURL=blog-landing-banner.css.map */

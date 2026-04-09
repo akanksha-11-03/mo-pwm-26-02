@@ -1,4 +1,5 @@
 import { setClassPrefixes, addIndexed } from '../../scripts/constant.js';
+import Swiper from '../swiper/swiper-bundle.js';
 
 export default function decorate(block) {
   setClassPrefixes(['detail-content', 'detail-card-item-', 'content-', 'inner-content-', 'inner-item-']);
@@ -28,6 +29,7 @@ export default function decorate(block) {
     cardFirstItem.querySelector('.content-2')?.remove();
   });
 
+  // Common Button Row Down
   const btnRowDwn = block.closest('.btn-row-dwn');
   if (btnRowDwn) {
     const divWrapper = document.createElement('div');
@@ -37,5 +39,39 @@ export default function decorate(block) {
     });
     btnRowDwn.appendChild(divWrapper);
 
+  }
+
+  // Detail Card Swiper For Mobile
+  if (block.classList.contains('card-swiper-short') && window.matchMedia('(max-width: 768px)').matches) {
+    block.style.backgroundColor = 'red';
+    block.classList.add('swiper');
+    const swiperWrapper = document.createElement('div');
+    swiperWrapper.classList.add('swiper-wrapper');
+    Array.from(block.children).forEach((child) => {
+      child.classList.add('swiper-slide');
+      swiperWrapper.appendChild(child);
+    });
+    block.appendChild(swiperWrapper);
+
+    const swiperInstance = Swiper(block, {
+      loop: true,
+      // observer: true,
+      // observeParents: true,
+      // autoplay: {
+      //   delay: 1200,
+      //   disableOnInteraction: false,
+      // },
+      // pagination: {
+      //   el: wrapper.querySelector('.swiper-pagination'),
+      //   clickable: true,
+      // },
+    });
+  }
+
+  // Landing page Explore Alpha Strategist
+  const exploreAlphaStrategy = block.closest('.explr-alpha-strategy');
+  if (exploreAlphaStrategy) {
+    setClassPrefixes(['alpha-list-', 'alpha-item-', 'alpha-sublist-', 'alpha-innerlist-']);
+    addIndexed(exploreAlphaStrategy.querySelector('.default-content-wrapper'));
   }
 }

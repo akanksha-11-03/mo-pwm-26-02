@@ -1,5 +1,6 @@
 @import 'alpha-strategist.css';
 @import 'blog-detail-banner.css';
+@import 'blog-landing-banner.css';
 
 .hero-container .hero-wrapper {
   max-width: unset;

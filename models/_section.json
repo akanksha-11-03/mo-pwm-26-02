@@ -135,6 +135,18 @@
             {
               "name": "Blog Detail Banner",
               "value": "blog-detail-banner"
+            },
+            {
+              "name": "Blog Landing Banner",
+              "value": "blog-landing-banner"
+            },
+            {
+              "name": "Explore Alpha Strategist Section",
+              "value": "explr-alpha-strategy"
+            },
+            {
+              "name": "More Reports Section",
+              "value": "more-reports"
             }
           ]
         }

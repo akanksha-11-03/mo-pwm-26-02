@@ -1,0 +1,133 @@
+@use "sass:map";
+@use "../../styles/common-theme/css/variables_mixins" as *;
+@use "../../styles/common-theme/css/fluid-typography" as *;
+
+.section.blog-landing-banner {
+  // background-color: red;
+  .hero {
+    min-height: 466px;
+    height: auto;
+    padding: 25px 15px 24px 16px;
+
+    @include media(tablet-up) {
+      padding: 70px 67px;
+      min-height: 347px;
+    }
+
+    @include media(tablet-up) {
+      .blolan-banner-1 {
+        display: none;
+      }
+    }
+
+    .blolan-banner-2 {
+      display: none;
+
+      @include media(tablet-up) {
+        display: block;
+      }
+    }
+
+    .blolan-banner-3 {
+      @include media(tablet-up) {
+        max-width: 1232px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .blolan-item-1 {
+        @include media(tablet-up) {
+          max-width: 58.686%;
+          width: 100%;
+        }
+
+        .blolan-content-1 {
+          margin: 0 0 10px;
+
+          @include font-style(
+            32px,
+            40px,
+            var(--pwm-gold-100),
+            var(--semibold),
+            var(--title)
+          );
+
+          @include media(tablet-up) {
+            font-size: var(--heading-h2-size);
+            line-height: var(--heading-h2-line-height);
+          }
+        }
+
+        .blolan-content-2 {
+          margin: 0;
+
+          @include font-style(
+            var(--body-xlarge-regular-size),
+            var(--body-xlarge-regular-line-height),
+            var(--neutrals-white),
+            var(--regular),
+            var(--body)
+          );
+
+          @include media(tablet-up) {
+            max-width: 68.327%;
+            width: 100%;
+            font-size: var(--body-xlarge-regular-size);
+            line-height: var(--body-xlarge-regular-line-height);
+          }
+        }
+
+        .blolan-content-3 {
+          margin: 37px 0 0;
+          display: flex;
+          flex-direction: column;
+          gap: var(--spacing-16);
+
+          @include media(tablet-up) {
+            margin: 34px 0 0;
+            flex-direction: row;
+            gap: var(--spacing-68);
+          }
+
+          .comlist-4 {
+            .blolan-inneritem-1 {
+              margin: 0;
+
+              .blolan-child-1 {
+                padding: 0 0 4px;
+
+                @include font-style(
+                  32px,
+                  40px,
+                  var(--pwm-gold-100),
+                  var(--semibold),
+                  var(--title)
+                );
+
+                @include media(tablet-up) {
+                  font-size: var(--heading-h3-size);
+                  line-height: var(--heading-h3-line-height);
+                }
+              }
+
+              .blolan-child-2 {
+                @include font-style(
+                  var(--body-medium-regular-size),
+                  var(--body-medium-regular-line-height),
+                  var(--pwm-gold-100),
+                  var(--regular),
+                  var(--body)
+                );
+
+                @include media(tablet-up) {
+                  font-size: var(--body-medium-regular-size);
+                  line-height: var(--body-medium-regular-line-height);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

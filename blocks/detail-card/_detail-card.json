@@ -59,6 +59,10 @@
                         {
                             "name": "Detail Card Full Width",
                             "value": "card-full-width"
+                        },
+                        {
+                            "name": "Card Swiper Mobile",
+                            "value": "card-swiper-short"
                         }
                     ]
                 }
