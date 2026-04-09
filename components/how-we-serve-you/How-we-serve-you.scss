@@ -63,7 +63,7 @@
                 justify-content: space-between;
                 align-items: center;
                 padding: var(--spacing-24) var(--spacing-12);
-                @include font-style(18px, var(--body-large-medium-line-height), var(--pwm-gold-700), var(--regular), var(--body));
+                @include font-style(18px, var(--body-large-medium-line-height), var(--pwm-gold-700), var(--medium), var(--body));
                 cursor: pointer;
                 // border-bottom: 1px solid #dadada;
                 transition: border-color 0.4s ease, background-color 0.4s ease;

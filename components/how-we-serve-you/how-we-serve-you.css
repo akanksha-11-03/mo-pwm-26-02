@@ -120,7 +120,7 @@
   color: var(--pwm-gold-700);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
-  font-weight: var(--regular);
+  font-weight: var(--medium);
   cursor: pointer;
   transition: border-color 0.4s ease, background-color 0.4s ease;
   gap: var(--spacing-12);
