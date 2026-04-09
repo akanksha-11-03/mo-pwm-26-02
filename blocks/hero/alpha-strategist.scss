@@ -3,6 +3,8 @@
 @use "../../styles/common-theme/css/fluid-typography" as *;
 
 .section.alpha-strategist {
+  margin: 0;
+
   @include media(tablet-up) {
     margin: 0;
   }

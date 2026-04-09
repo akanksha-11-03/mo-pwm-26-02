@@ -303,8 +303,11 @@
     max-width: 100%;
   }
 }
-@media (min-width: ) {
+@media screen and (max-width: 769px) {
   .sywim-subtitle p {
-    font-size: 15px;
+    font-size: 16px;
+  }
+  .sywim-form-controls {
+    padding-bottom: 20px;
   }
 }/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
