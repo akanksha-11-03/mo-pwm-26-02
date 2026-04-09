@@ -493,7 +493,7 @@
         }
       }
 
-      & .swiper-wrapper{
+      & .swiper-wrapper {
         display: flex;
         gap: 0;
       }
@@ -816,9 +816,114 @@
           // grid-row: 2;
           grid-area: card;
 
-          .detail-card{
+          .detail-card {
             max-width: 100%;
             padding: 0;
+          }
+        }
+      }
+    }
+  }
+
+  // Landing page Explore Alpha Strategist
+  &.explr-alpha-strategy {
+    padding: 40px 16px;
+    margin: 0;
+
+    @include media(tablet-up) {
+      padding: 40px 0;
+    }
+
+    .default-content-wrapper {
+      max-width: 100%;
+      padding: 0 0 48px;
+
+      @include media(tablet-up) {
+        max-width: 1264px;
+        margin: 0 auto;
+        padding: 0 16px 48px;
+      }
+
+      .alpha-list-1 {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include media(tablet-up) {
+          flex-direction: row;
+          gap: 40px;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .alpha-item-1 {
+          .alpha-sublist-1 {
+            margin: 0;
+
+            .alpha-innerlist-1 {
+              padding: 0 0 8px;
+
+              @include font-style(
+                28px,
+                var(--sub-header-large-line-height),
+                var(--pwm-gold-700),
+                var(--regular),
+                var(--title)
+              );
+
+              @include media(tablet-up) {
+                font-size: var(--heading-pwm-h4-size);
+                line-height: var(--heading-pwm-h4-line-height);
+              }
+            }
+
+            .alpha-innerlist-2 {
+              @include font-style(
+                var(--body-medium-regular-size),
+                var(--body-medium-regular-line-height),
+                var(--blue-1-800-primary),
+                var(--regular),
+                var(--body)
+              );
+
+              @include media(tablet-up) {
+                font-size: var(--body-medium-regular-size);
+                line-height: var(--body-medium-regular-line-height);
+              }
+            }
+          }
+        }
+
+        .alpha-item-2 {
+          .alpha-sublist-1 {
+            margin: 0;
+            display: flex;
+            min-width: 235px;
+
+            .alpha-innerlist-1 {
+              all: unset;
+              margin: 0;
+              width: 100%;
+              padding: 10px var(--spacing-32);
+              border-radius: var(--border-radius-4);
+              background: var(--button-primary-default);
+              text-align: center;
+
+              @include font-style(
+                var(--button-medium-size),
+                var(--button-medium-line-height),
+                var(--text-white),
+                var(--medium),
+                var(--body)
+              );
+
+              @include media(tablet-up) {
+                padding: 14px 12px;
+                font-size: var(--button-large-size);
+                line-height: var(--button-large-line-height);
+              }
+            }
           }
         }
       }

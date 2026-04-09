@@ -67,4 +67,11 @@ export default function decorate(block) {
       // },
     });
   }
+
+  // Landing page Explore Alpha Strategist
+  const exploreAlphaStrategy = block.closest('.explr-alpha-strategy');
+  if (exploreAlphaStrategy) {
+    setClassPrefixes(['alpha-list-', 'alpha-item-', 'alpha-sublist-', 'alpha-innerlist-']);
+    addIndexed(exploreAlphaStrategy.querySelector('.default-content-wrapper'));
+  }
 }

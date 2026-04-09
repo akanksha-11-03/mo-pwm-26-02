@@ -143,6 +143,10 @@
             {
               "name": "Explore Alpha Strategist Section",
               "value": "explr-alpha-strategy"
+            },
+            {
+              "name": "More Reports Section",
+              "value": "more-reports"
             }
           ]
         }
