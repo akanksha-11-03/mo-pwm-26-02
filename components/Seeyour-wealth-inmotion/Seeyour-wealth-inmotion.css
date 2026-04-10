@@ -165,7 +165,7 @@
 /* Input field */
 .sywim-input {
   width: 100%;
-  padding: var(--spacing-16);
+  padding: var(--spacing-10) var(--spacing-12);
   font-size: var(--body-medium-regular-size);
   line-height: var(--spacing-20);
   color: var(--neutrals-700);
@@ -174,7 +174,7 @@
   font-weight: var(--regular);
   background: var(--pwm-gold-100);
   border: var(--border-width-01) solid var(--neutrals-500);
-  border-radius: var(--border-radius-8);
+  border-radius: var(--border-radius-4);
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
@@ -324,6 +324,10 @@
   }
   .sywim-form-controls {
     padding-bottom: 20px;
+  }
+  .sywim-input {
+    padding: var(--spacing-12);
+    height: var(--spacing-40);
   }
   .sywim-btn {
     font-size: var(--body-small-semibold-size);
