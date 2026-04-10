@@ -716,6 +716,91 @@
           }
         }
       }
+
+      // Landing News Press Release Full Width
+      &.detail-card-v3-full {
+        background-color: var(--pwm-gold-200);
+        padding: 40px 16px;
+
+        @include media(tablet-up) {
+          padding: 40px 0;
+        }
+
+        .default-content-wrapper {
+          max-width: 100%;
+          width: 100%;
+          margin: 0 auto;
+          padding: 0;
+
+          @include media(tablet-up) {
+            max-width: 1264px;
+            padding: 0 16px;
+          }
+
+          h3 {
+            margin: 0 0 48px;
+
+            @include font-style(
+              28px,
+              var(--sub-header-large-line-height),
+              var(--pwm-gold-700),
+              var(--regular),
+              var(--title)
+            );
+
+            @include media(tablet-up) {
+              font-size: var(--heading-pwm-h4-size);
+              line-height: var(--heading-pwm-h4-line-height);
+            }
+          }
+        }
+
+        .detail-card {
+          .comlist {
+            @include media(tablet-up) {
+              max-width: 100%;
+              flex: 100%;
+            }
+
+            .detail-card-item-2 {
+              p:first-of-type:not(.button-container) {
+                margin: 0 0 16px;
+
+                @include media(tablet-up) {
+                  margin: 0 0 12px;
+                }
+              }
+              p.button-container {
+                padding: 0 46px 0 0;
+
+                @include media(tablet-up) {
+                  padding: 0;
+                }
+
+                .button {
+                  font-size: 20px;
+                  line-height: 24px;
+
+                  @include media(tablet-up) {
+                    font-size: var(--heading-pwm-h6-size);
+                    line-height: var(--heading-pwm-h6-line-height);
+                  }
+                }
+              }
+              > ul {
+                @include media(tablet-up) {
+                  padding: 12px 0 0;
+                }
+                > li:nth-child(1) ul li {
+                  color: var(--neutrals-800);
+                  font-size: var(--label-large-size);
+                  line-height: var(--label-large-line-height);
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 
@@ -760,7 +845,7 @@
             var(--title)
           );
 
-          @include media(tablet-up){
+          @include media(tablet-up) {
             margin: 0 0 32px;
             font-size: var(--heading-pwm-h4-size);
             line-height: var(--heading-pwm-h4-line-height);
