@@ -119,19 +119,23 @@
   width: 100%;
   padding: var(--spacing-16);
   @include font-style(var(--body-medium-regular-size),
-    20px,
-    var(--neutrals-800),
+    var(--spacing-20),
+    var(--neutrals-700),
     var(--regular),
     var(--body));
-  background: var(--neutrals-white);
-  border: 1px solid #ccc;
+  background: var(--pwm-gold-100);
+  border: var(--border-width-01) solid var(--neutrals-500);
   border-radius: var(--border-radius-8);
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
 
   &::placeholder {
-    color: var(--neutrals-500);
+    @include font-style(var(--body-medium-regular-size),
+    var(--spacing-20),
+    var(--neutrals-700),
+    var(--regular),
+    var(--body));
   }
 
   &:focus {
