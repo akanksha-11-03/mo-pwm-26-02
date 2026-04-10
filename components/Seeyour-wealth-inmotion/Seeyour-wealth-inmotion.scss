@@ -5,7 +5,7 @@
 /* ===== See Your Wealth In Motion — Component ===== */
 
 .section.seeyour-wealth-inmotion {
-  background: var(--pwm-gold-100);
+  background: #F4F3EF;
   display: flex;
   justify-content: center;
   padding: var(--spacing-40) var(--spacing-16);
@@ -129,7 +129,7 @@
     var(--regular),
     var(--body)
   );
-  background: var(--pwm-gold-100);
+  background: #F4F3EF;
   border: var(--border-width-01) solid var(--neutrals-500);
   border-radius: var(--border-radius-4);
   box-sizing: border-box;
@@ -302,6 +302,7 @@
 
     .sywim-heading h2 {
       margin-bottom: 33px;
+      line-height: 34px;
     }
 
     .sywim-subtitle {
