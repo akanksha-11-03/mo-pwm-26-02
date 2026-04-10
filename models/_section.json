@@ -125,6 +125,10 @@
               "value": "detail-card-v3"
             },
             {
+              "name": "Detail Card V3 Full",
+              "value": "detail-card-v3-full"
+            },
+            {
               "name": "Blog Detail Section",
               "value": "blog-detail"
             },

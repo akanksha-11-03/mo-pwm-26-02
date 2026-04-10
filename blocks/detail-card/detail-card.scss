@@ -436,7 +436,7 @@
             }
           }
 
-          h3 + p + ul{
+          h3 + p + ul {
             margin: 0;
           }
 
@@ -749,7 +749,25 @@
           padding: 0;
         }
 
-        p {
+        h2 {
+          margin: 0 0 20px;
+
+          @include font-style(
+            28px,
+            var(--sub-header-large-line-height),
+            var(--pwm-gold-700),
+            var(--regular),
+            var(--title)
+          );
+
+          @include media(tablet-up){
+            margin: 0 0 32px;
+            font-size: var(--heading-pwm-h4-size);
+            line-height: var(--heading-pwm-h4-line-height);
+          }
+        }
+
+        h3 {
           margin: 0;
 
           @include font-style(
