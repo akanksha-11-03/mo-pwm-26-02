@@ -47,11 +47,13 @@
   h4,
   h5,
   h6 {
-    @include font-style(var(--heading-pwm-h4-size),
+    @include font-style(
+      var(--heading-pwm-h4-size),
       var(--heading-pwm-h4-line-height),
       var(--pwm-gold-800),
       var(--regular),
-      var(--title));
+      var(--title)
+    );
     margin: 0 0 var(--spacing-16);
   }
 }
@@ -61,11 +63,13 @@
   margin-bottom: var(--spacing-8);
 
   p {
-    @include font-style(18px,
+    @include font-style(
+      18px,
       24px,
       var(--blue-1-800-primary),
       var(--medium),
-      var(--body));
+      var(--body)
+    );
     margin: 0;
   }
 }
@@ -118,11 +122,13 @@
 .sywim-input {
   width: 100%;
   padding: var(--spacing-10) var(--spacing-12);
-  @include font-style(var(--body-medium-regular-size),
+  @include font-style(
+    var(--body-medium-regular-size),
     var(--spacing-20),
     var(--neutrals-700),
     var(--regular),
-    var(--body));
+    var(--body)
+  );
   background: var(--pwm-gold-100);
   border: var(--border-width-01) solid var(--neutrals-500);
   border-radius: var(--border-radius-4);
@@ -131,11 +137,13 @@
   transition: border-color 0.2s;
 
   &::placeholder {
-    @include font-style(var(--body-medium-regular-size),
-    var(--spacing-20),
-    var(--neutrals-700),
-    var(--regular),
-    var(--body));
+    @include font-style(
+      var(--body-medium-regular-size),
+      var(--spacing-20),
+      var(--neutrals-700),
+      var(--regular),
+      var(--body)
+    );
   }
 
   &:focus {
@@ -149,11 +157,13 @@
   display: block;
   width: 100%;
   padding: 12px 0;
-  @include font-style(var(--body-medium-regular-size),
+  @include font-style(
+    var(--body-medium-regular-size),
     20px,
     var(--neutrals-white),
     var(--medium),
-    var(--body));
+    var(--body)
+  );
   text-align: center;
   background: var(--button-primary-default);
   border-radius: var(--border-radius-4);
@@ -202,22 +212,25 @@
 }
 
 .sywim-fraction {
-  @include font-style(var(--body-medium-regular-size),
+  @include font-style(
+    var(--body-medium-regular-size),
     1.5,
     var(--neutrals-800),
     var(--regular),
-    var(--body));
+    var(--body)
+  );
 
   .sywim-fraction-current {
-    @include font-style(var(--body-medium-regular-size),
+    @include font-style(
+      var(--body-medium-regular-size),
       1.5,
       var(--neutrals-500),
       var(--regular),
-      var(--body));
+      var(--body)
+    );
 
     font-weight: var(--regular);
     color: var(--neutrals-800);
-
   }
 
   .sywim-fraction-total {
@@ -244,7 +257,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  main>.section>div {
+  main > .section > div {
     padding: var(--spacing-none);
   }
 
@@ -280,22 +293,37 @@
 
 // Mobile view - additional adjustments
 @media screen and (max-width: 769px) {
-  .sywim-subtitle {
-    p {
-      font-size: 16px;
+  .sywim-content {
+    gap: var(--spacing-none);
+
+    .sywim-image-container {
+      margin-bottom: 33px;
     }
-  }
-  .sywim-form-controls {
-    padding-bottom: 20px;
-  }
 
-  .sywim-input {
-    padding: var(--spacing-12);
-    height: var(--spacing-40);
-  }
+    .sywim-heading h2 {
+      margin-bottom: 33px;
+    }
 
-  .sywim-btn {
-    font-size: var(--body-small-semibold-size);
-    line-height: var(--spacing-16);
+    .sywim-subtitle {
+      p {
+        font-size: 16px;
+        font-weight: var(--regular);
+        line-height: var(--spacing-20);
+        margin-bottom: 8px;
+      }
+    }
+    .sywim-form-controls {
+      padding-bottom: 20px;
+    }
+
+    .sywim-input {
+      padding: var(--spacing-12);
+      height: var(--spacing-40);
+    }
+
+    .sywim-btn {
+      font-size: var(--body-small-semibold-size);
+      line-height: var(--spacing-16);
+    }
   }
 }
