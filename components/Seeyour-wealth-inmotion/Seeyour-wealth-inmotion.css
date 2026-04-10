@@ -206,10 +206,14 @@
   border-radius: var(--border-radius-4);
   cursor: pointer;
   box-sizing: border-box;
-  transition: background 0.2s;
 }
 .sywim-btn:hover {
   background: var(--button-primary-hover);
+}
+.sywim-btn:focus, .sywim-btn:active {
+  background: var(--button-primary-default);
+  color: var(--neutrals-white);
+  outline: none;
 }
 
 /* ── Pagination row: dots left, fraction right ── */
@@ -310,5 +314,9 @@
   }
   .sywim-form-controls {
     padding-bottom: 20px;
+  }
+  .sywim-btn {
+    font-size: var(--body-small-semibold-size);
+    line-height: var(--spacing-16);
   }
 }/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
