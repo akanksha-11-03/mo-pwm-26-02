@@ -5,7 +5,7 @@
 /* ===== See Your Wealth In Motion — Component ===== */
 
 .section.seeyour-wealth-inmotion {
-  background: var(--pwm-gold-100);
+  background: #F4F3EF;
   display: flex;
   justify-content: center;
   padding: var(--spacing-40) var(--spacing-16);
@@ -47,11 +47,13 @@
   h4,
   h5,
   h6 {
-    @include font-style(var(--heading-pwm-h4-size),
+    @include font-style(
+      var(--heading-pwm-h4-size),
       var(--heading-pwm-h4-line-height),
       var(--pwm-gold-800),
       var(--regular),
-      var(--title));
+      var(--title)
+    );
     margin: 0 0 var(--spacing-16);
   }
 }
@@ -61,11 +63,13 @@
   margin-bottom: var(--spacing-8);
 
   p {
-    @include font-style(18px,
+    @include font-style(
+      18px,
       24px,
       var(--blue-1-800-primary),
       var(--medium),
-      var(--body));
+      var(--body)
+    );
     margin: 0;
   }
 }
@@ -117,21 +121,29 @@
 /* Input field */
 .sywim-input {
   width: 100%;
-  padding: var(--spacing-16);
-  @include font-style(var(--body-medium-regular-size),
-    20px,
-    var(--neutrals-800),
+  padding: var(--spacing-10) var(--spacing-12);
+  @include font-style(
+    var(--body-medium-regular-size),
+    var(--spacing-20),
+    var(--neutrals-700),
     var(--regular),
-    var(--body));
-  background: var(--neutrals-white);
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius-8);
+    var(--body)
+  );
+  background: #F4F3EF;
+  border: var(--border-width-01) solid var(--neutrals-500);
+  border-radius: var(--border-radius-4);
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
 
   &::placeholder {
-    color: var(--neutrals-500);
+    @include font-style(
+      var(--body-medium-regular-size),
+      var(--spacing-20),
+      var(--neutrals-700),
+      var(--regular),
+      var(--body)
+    );
   }
 
   &:focus {
@@ -145,20 +157,28 @@
   display: block;
   width: 100%;
   padding: 12px 0;
-  @include font-style(var(--body-medium-regular-size),
+  @include font-style(
+    var(--body-medium-regular-size),
     20px,
     var(--neutrals-white),
     var(--medium),
-    var(--body));
+    var(--body)
+  );
   text-align: center;
   background: var(--button-primary-default);
   border-radius: var(--border-radius-4);
   cursor: pointer;
   box-sizing: border-box;
-  transition: background 0.2s;
 
   &:hover {
     background: var(--button-primary-hover);
+  }
+
+  &:focus,
+  &:active {
+    background: var(--button-primary-default);
+    color: var(--neutrals-white);
+    outline: none;
   }
 }
 
@@ -177,41 +197,45 @@
   .swiper-pagination-bullet {
     width: var(--spacing-12);
     height: var(--spacing-12);
-    background: #2E2A94;
+    background: var(--pwm-gold-700);
     opacity: 1;
     border-radius: 50%;
     transition: opacity 0.3s;
     cursor: pointer;
+    margin: 0 !important;
   }
 
   .swiper-pagination-bullet-active {
-    background: var(--pwm-gold-800);
+    background: var(--blue-1-800-primary);
     opacity: 1;
   }
 }
 
 .sywim-fraction {
-  @include font-style(var(--body-medium-regular-size),
+  @include font-style(
+    var(--body-medium-regular-size),
     1.5,
-    var(--neutrals-500),
+    var(--neutrals-800),
     var(--regular),
-    var(--body));
+    var(--body)
+  );
 
   .sywim-fraction-current {
-    @include font-style(var(--body-medium-regular-size),
+    @include font-style(
+      var(--body-medium-regular-size),
       1.5,
       var(--neutrals-500),
       var(--regular),
-      var(--body));
+      var(--body)
+    );
 
     font-weight: var(--regular);
     color: var(--neutrals-800);
-
   }
 
   .sywim-fraction-total {
     font-weight: var(--regular);
-    color: var(--pwm-gold-800);
+    color: var(--pwm-gold-700);
   }
 }
 
@@ -233,7 +257,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  main>.section>div {
+  main > .section > div {
     padding: var(--spacing-none);
   }
 
@@ -268,10 +292,39 @@
 }
 
 // Mobile view - additional adjustments
-@include media(mobile) {
-  .sywim-subtitle {
-    p {
-      font-size: 15px;
+@media screen and (max-width: 769px) {
+  .sywim-content {
+    gap: var(--spacing-none);
+
+    .sywim-image-container {
+      margin-bottom: 33px;
+    }
+
+    .sywim-heading h2 {
+      margin-bottom: 33px;
+      line-height: 34px;
+    }
+
+    .sywim-subtitle {
+      p {
+        font-size: 16px;
+        font-weight: var(--regular);
+        line-height: var(--spacing-20);
+        margin-bottom: 8px;
+      }
+    }
+    .sywim-form-controls {
+      padding-bottom: 20px;
+    }
+
+    .sywim-input {
+      padding: var(--spacing-12);
+      height: var(--spacing-40);
+    }
+
+    .sywim-btn {
+      font-size: var(--body-small-semibold-size);
+      line-height: var(--spacing-16);
     }
   }
 }

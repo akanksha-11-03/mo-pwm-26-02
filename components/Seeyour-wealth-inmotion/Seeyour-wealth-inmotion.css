@@ -55,7 +55,7 @@
 } 
 /* ===== See Your Wealth In Motion — Component ===== */
 .section.seeyour-wealth-inmotion {
-  background: var(--pwm-gold-100);
+  background: #F4F3EF;
   display: flex;
   justify-content: center;
   padding: var(--spacing-40) var(--spacing-16);
@@ -165,25 +165,35 @@
 /* Input field */
 .sywim-input {
   width: 100%;
-  padding: var(--spacing-16);
+  padding: var(--spacing-10) var(--spacing-12);
   font-size: var(--body-medium-regular-size);
-  line-height: 20px;
-  color: var(--neutrals-800);
+  line-height: var(--spacing-20);
+  color: var(--neutrals-700);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
-  background: var(--neutrals-white);
-  border: 1px solid #ccc;
-  border-radius: var(--border-radius-8);
+  background: #F4F3EF;
+  border: var(--border-width-01) solid var(--neutrals-500);
+  border-radius: var(--border-radius-4);
   box-sizing: border-box;
   outline: none;
   transition: border-color 0.2s;
 }
 .sywim-input::-moz-placeholder {
-  color: var(--neutrals-500);
+  font-size: var(--body-medium-regular-size);
+  line-height: var(--spacing-20);
+  color: var(--neutrals-700);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }
 .sywim-input::placeholder {
-  color: var(--neutrals-500);
+  font-size: var(--body-medium-regular-size);
+  line-height: var(--spacing-20);
+  color: var(--neutrals-700);
+  font-family: var(--body);
+  font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
+  font-weight: var(--regular);
 }
 .sywim-input:focus {
   border-color: var(--pwm-gold-700);
@@ -206,10 +216,14 @@
   border-radius: var(--border-radius-4);
   cursor: pointer;
   box-sizing: border-box;
-  transition: background 0.2s;
 }
 .sywim-btn:hover {
   background: var(--button-primary-hover);
+}
+.sywim-btn:focus, .sywim-btn:active {
+  background: var(--button-primary-default);
+  color: var(--neutrals-white);
+  outline: none;
 }
 
 /* ── Pagination row: dots left, fraction right ── */
@@ -227,21 +241,22 @@
 .sywim-pagination .swiper-pagination-bullet {
   width: var(--spacing-12);
   height: var(--spacing-12);
-  background: #2E2A94;
+  background: var(--pwm-gold-700);
   opacity: 1;
   border-radius: 50%;
   transition: opacity 0.3s;
   cursor: pointer;
+  margin: 0 !important;
 }
 .sywim-pagination .swiper-pagination-bullet-active {
-  background: var(--pwm-gold-800);
+  background: var(--blue-1-800-primary);
   opacity: 1;
 }
 
 .sywim-fraction {
   font-size: var(--body-medium-regular-size);
   line-height: 1.5;
-  color: var(--neutrals-500);
+  color: var(--neutrals-800);
   font-family: var(--body);
   font-feature-settings: "ss01" on, "ss04" on, "cv01" on, "cv02" on, "cv03" on, "cv04" on, "cv06" on, "cv09" on, "cv10" on, "cv11" on;
   font-weight: var(--regular);
@@ -258,7 +273,7 @@
 }
 .sywim-fraction .sywim-fraction-total {
   font-weight: var(--regular);
-  color: var(--pwm-gold-800);
+  color: var(--pwm-gold-700);
 }
 
 /* ── Responsive ── */
@@ -303,8 +318,32 @@
     max-width: 100%;
   }
 }
-@media (min-width: ) {
-  .sywim-subtitle p {
-    font-size: 15px;
+@media screen and (max-width: 769px) {
+  .sywim-content {
+    gap: var(--spacing-none);
+  }
+  .sywim-content .sywim-image-container {
+    margin-bottom: 33px;
+  }
+  .sywim-content .sywim-heading h2 {
+    margin-bottom: 33px;
+    line-height: 34px;
+  }
+  .sywim-content .sywim-subtitle p {
+    font-size: 16px;
+    font-weight: var(--regular);
+    line-height: var(--spacing-20);
+    margin-bottom: 8px;
+  }
+  .sywim-content .sywim-form-controls {
+    padding-bottom: 20px;
+  }
+  .sywim-content .sywim-input {
+    padding: var(--spacing-12);
+    height: var(--spacing-40);
+  }
+  .sywim-content .sywim-btn {
+    font-size: var(--body-small-semibold-size);
+    line-height: var(--spacing-16);
   }
 }/*# sourceMappingURL=Seeyour-wealth-inmotion.css.map */
